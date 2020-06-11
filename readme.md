@@ -1,7 +1,6 @@
 ![Microchip logo](https://raw.githubusercontent.com/wiki/Microchip-MPLAB-Harmony/Microchip-MPLAB-Harmony.github.io/images/microchip_logo.png)
-![Harmony logo small](https://raw.githubusercontent.com/wiki/Microchip-MPLAB-Harmony/Microchip-MPLAB-Harmony.github.io/images/microchip_mplab_harmony_logo_small.png)
 
-# MPLAB® Harmony 3 Bootloader Module
+# MPLAB® Harmony 3 USB Bootloader Application Examples
 
 MPLAB® Harmony 3 is an extension of the MPLAB® ecosystem for creating
 embedded firmware solutions for Microchip 32-bit SAM and PIC® microcontroller
@@ -13,35 +12,45 @@ and microprocessor devices. Refer to the following links for more information.
 - [Microchip MPLAB Harmony](https://www.microchip.com/mplab/mplab-harmony)
 - [Microchip MPLAB Harmony Pages](https://microchip-mplab-harmony.github.io/)
 
-This repository contains the MPLAB® Harmony 3 Bootloader. The bootloader module
-components provide framework to develop bootloaders for Microchip 32-bit SAM
-microcontrollers. Refer to the following links for release notes, training materials,
-and interface reference information.
+This repository contains the MPLAB® Harmony 3 USB Bootloader application examples
 
-- [Release Notes](./release_notes.md)
+- [Release Notes](release_notes.md)
 - [MPLAB® Harmony License](mplab_harmony_license.md)
-- [MPLAB® Harmony 3 Bootloader Wiki](https://github.com/Microchip-MPLAB-Harmony/bootloader/wiki)
-- [MPLAB® Harmony 3 Bootloader API Help](https://microchip-mplab-harmony.github.io/bootloader)
 
-# Contents Summary
+To clone or download these application from Github,go to the [main page of this repository](https://github.com/Microchip-MPLAB-Harmony/bootloader_apps_usb) and then click Clone button to clone this repo or download as zip file. This content can also be download using content manager by following [these instructions](https://github.com/Microchip-MPLAB-Harmony/contentmanager/wiki)
 
-| Folder    | Description                                                |
-|-----------|------------------------------------------------------------|
-| apps      | Bootloader example applications                            |
-| config    | Bootloader module configuration scripts                    |
-| doc       | Bootloader module library help documentation               |
-| docs      | Bootloader module library HTML help documentation          |
-| templates | Bootloader and system file templates                       |
-| tools     | Bootl0ader Host scripts                                    |
+## Contents Summary
 
+| Folder     | Description                             |
+| ---        | ---                                     |
+| apps       | USB Bootloader example applications    |
+| docs       | Applications help documentation         |
+
+
+## Bootloader Examples
+
+The following applications are provided to demonstrate the USB bootloader
+
+| Name                                                                  | Description                                                       |
+| ---------                                                             | -----------                                                       |
+| [USB Device HID Bootloader](apps/usb_device_hid_bootloader/readme.md) | This example application shows how to use the Bootloader Library to bootload an application using USB Device HID protocol |
+
+
+## Bootloader Library
+
+Refer to [Bootloader Library Help](https://microchip-mplab-harmony.github.io/bootloader) for understanding
+- Bootloader framework
+- How the Bootloader library works
+- Bootloader library configurations
+- Bootloader memory layout
 
 ____
 
-[![License](https://img.shields.io/badge/license-Harmony%20license-orange.svg)](https://github.com/Microchip-MPLAB-Harmony/bootloader/blob/master/mplab_harmony_license.md)
-[![Latest release](https://img.shields.io/github/release/Microchip-MPLAB-Harmony/bootloader.svg)](https://github.com/Microchip-MPLAB-Harmony/bootloader/releases/latest)
-[![Latest release date](https://img.shields.io/github/release-date/Microchip-MPLAB-Harmony/bootloader.svg)](https://github.com/Microchip-MPLAB-Harmony/bootloader/releases/latest)
-[![Commit activity](https://img.shields.io/github/commit-activity/y/Microchip-MPLAB-Harmony/bootloader.svg)](https://github.com/Microchip-MPLAB-Harmony/bootloader/graphs/commit-activity)
-[![Contributors](https://img.shields.io/github/contributors-anon/Microchip-MPLAB-Harmony/bootloader.svg)]()
+[![License](https://img.shields.io/badge/license-Harmony%20license-orange.svg)](https://github.com/Microchip-MPLAB-Harmony/bootloader_apps_usb/blob/master/mplab_harmony_license.md)
+[![Latest release](https://img.shields.io/github/release/Microchip-MPLAB-Harmony/bootloader_apps_usb.svg)](https://github.com/Microchip-MPLAB-Harmony/bootloader_apps_usb/releases/latest)
+[![Latest release date](https://img.shields.io/github/release-date/Microchip-MPLAB-Harmony/bootloader_apps_usb.svg)](https://github.com/Microchip-MPLAB-Harmony/bootloader_apps_usb/releases/latest)
+[![Commit activity](https://img.shields.io/github/commit-activity/y/Microchip-MPLAB-Harmony/bootloader_apps_usb.svg)](https://github.com/Microchip-MPLAB-Harmony/bootloader_apps_usb/graphs/commit-activity)
+[![Contributors](https://img.shields.io/github/contributors-anon/Microchip-MPLAB-Harmony/bootloader_apps_usb.svg)]()
 
 ____
 
@@ -50,7 +59,7 @@ ____
 [![Follow us on Facebook](https://img.shields.io/badge/Facebook-Follow%20us%20on%20Facebook-blue.svg)](https://www.facebook.com/microchiptechnology/)
 [![Follow us on Twitter](https://img.shields.io/twitter/follow/MicrochipTech.svg?style=social)](https://twitter.com/MicrochipTech)
 
-[![](https://img.shields.io/github/stars/Microchip-MPLAB-Harmony/core.svg?style=social)]()
-[![](https://img.shields.io/github/watchers/Microchip-MPLAB-Harmony/core.svg?style=social)]()
+[![](https://img.shields.io/github/stars/Microchip-MPLAB-Harmony/bootloader_apps_usb.svg?style=social)]()
+[![](https://img.shields.io/github/watchers/Microchip-MPLAB-Harmony/bootloader_apps_usb.svg?style=social)]()
 
 
