@@ -34,6 +34,7 @@ The following applications are provided to demonstrate the USB bootloader
 | Name                                                                  | Description                                                       |
 | ---------                                                             | -----------                                                       |
 | [USB Device HID Bootloader](apps/usb_device_hid_bootloader/readme.md) | This example application shows how to use the Bootloader Library to bootload an application using USB Device HID protocol |
+| [USB Host MSD Bootloader](apps/usb_host_msd_bootloader/readme.md)     | This example application shows how to use the Bootloader Library to bootload an application using USB Host MSD protocol   |
 
 
 ## Bootloader Library
