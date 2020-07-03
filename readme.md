@@ -1,3 +1,10 @@
+﻿---
+title: USB Bootloader Applications
+has_children: true
+has_toc: false
+nav_order: 1
+---
+
 ![Microchip logo](https://raw.githubusercontent.com/wiki/Microchip-MPLAB-Harmony/Microchip-MPLAB-Harmony.github.io/images/microchip_logo.png)
 
 # MPLAB® Harmony 3 USB Bootloader Application Examples
@@ -34,7 +41,7 @@ The following applications are provided to demonstrate the USB bootloader
 | Name                                                                  | Description                                                       |
 | ---------                                                             | -----------                                                       |
 | [USB Device HID Bootloader](apps/usb_device_hid_bootloader/readme.md) | This example application shows how to use the Bootloader Library to bootload an application using USB Device HID protocol |
-| [USB Host MSD Bootloader](apps/usb_host_msd_bootloader/readme.md)     | This example application shows how to use the Bootloader Library to bootload an application using USB Host MSD protocol   |
+| [USB Host MSD Bootloader](apps/usb_host_msd_bootloader/readme.md)     | This example application shows how to use the Bootloader Library to bootload an application using USB Host MSD protocol |
 
 
 ## Bootloader Library

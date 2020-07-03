@@ -1,3 +1,10 @@
+---
+grand_parent: USB Bootloader Applications
+parent: USB Device HID Bootloader
+title: Building and Running on PIC32MZ Embedded Connectivity with FPU (EF) Starter Kit
+has_toc: false
+---
+
 [![MCHP](https://www.microchip.com/ResourcePackages/Microchip/assets/dist/images/logo.png)](https://www.microchip.com)
 
 # Building and Running the USB Device HID Bootloader applications
