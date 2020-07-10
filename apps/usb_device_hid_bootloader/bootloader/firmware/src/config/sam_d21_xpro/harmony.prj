@@ -22,8 +22,8 @@
           <Security dnOrder="2">NON_SECURE</Security>
           <LogicalPath dnOrder="3">config/sam_d21_xpro/bootloader/</LogicalPath>
           <PhysicalPath dnOrder="4">/bootloader/</PhysicalPath>
-          <GeneratedChecksum dnOrder="5">E852BC8EC966A244CFDB4900A179076E</GeneratedChecksum>
-          <UserChecksum dnOrder="6">E852BC8EC966A244CFDB4900A179076E</UserChecksum>
+          <GeneratedChecksum dnOrder="5">2BC72A871666AA243DDE22A6698DF21F</GeneratedChecksum>
+          <UserChecksum dnOrder="6">2BC72A871666AA243DDE22A6698DF21F</UserChecksum>
         </File>
         <File dnOrder="2">
           <Type dnOrder="0">SOURCE</Type>
@@ -58,8 +58,8 @@
           <Security dnOrder="2">NON_SECURE</Security>
           <LogicalPath dnOrder="3">config/sam_d21_xpro/driver/usb/usbfsv1/src/</LogicalPath>
           <PhysicalPath dnOrder="4">/driver/usb/usbfsv1/src/</PhysicalPath>
-          <GeneratedChecksum dnOrder="5">BFA06465728C80414F183336C887094D</GeneratedChecksum>
-          <UserChecksum dnOrder="6">BFA06465728C80414F183336C887094D</UserChecksum>
+          <GeneratedChecksum dnOrder="5">941C09024124A4937C0E368A25C140DE</GeneratedChecksum>
+          <UserChecksum dnOrder="6">941C09024124A4937C0E368A25C140DE</UserChecksum>
         </File>
         <File dnOrder="6">
           <Type dnOrder="0">SOURCE</Type>
@@ -67,8 +67,8 @@
           <Security dnOrder="2">NON_SECURE</Security>
           <LogicalPath dnOrder="3">config/sam_d21_xpro/driver/usb/usbfsv1/src/</LogicalPath>
           <PhysicalPath dnOrder="4">/driver/usb/usbfsv1/src/</PhysicalPath>
-          <GeneratedChecksum dnOrder="5">8B2A2E1DE069F4F1AB4F207628213503</GeneratedChecksum>
-          <UserChecksum dnOrder="6">8B2A2E1DE069F4F1AB4F207628213503</UserChecksum>
+          <GeneratedChecksum dnOrder="5">3A81EC933827016FDE19946C5460628D</GeneratedChecksum>
+          <UserChecksum dnOrder="6">3A81EC933827016FDE19946C5460628D</UserChecksum>
         </File>
         <File dnOrder="7">
           <Type dnOrder="0">SOURCE</Type>
@@ -85,8 +85,8 @@
           <Security dnOrder="2">NON_SECURE</Security>
           <LogicalPath dnOrder="3">config/sam_d21_xpro/</LogicalPath>
           <PhysicalPath dnOrder="4">/</PhysicalPath>
-          <GeneratedChecksum dnOrder="5">939F7C6C754498186C1BA648681AAF5C</GeneratedChecksum>
-          <UserChecksum dnOrder="6">939F7C6C754498186C1BA648681AAF5C</UserChecksum>
+          <GeneratedChecksum dnOrder="5">D9DA5B0D2D4818FEB6B726945BD77834</GeneratedChecksum>
+          <UserChecksum dnOrder="6">D9DA5B0D2D4818FEB6B726945BD77834</UserChecksum>
         </File>
         <File dnOrder="9">
           <Type dnOrder="0">SOURCE</Type>
@@ -211,8 +211,8 @@
           <Security dnOrder="2">NON_SECURE</Security>
           <LogicalPath dnOrder="3">config/sam_d21_xpro/</LogicalPath>
           <PhysicalPath dnOrder="4">/</PhysicalPath>
-          <GeneratedChecksum dnOrder="5">478BF9F006CBBA21E6A0A76B4F53FF75</GeneratedChecksum>
-          <UserChecksum dnOrder="6">478BF9F006CBBA21E6A0A76B4F53FF75</UserChecksum>
+          <GeneratedChecksum dnOrder="5">9A8A02AF3D16D3B5B7CC9ED9E36A4295</GeneratedChecksum>
+          <UserChecksum dnOrder="6">9A8A02AF3D16D3B5B7CC9ED9E36A4295</UserChecksum>
         </File>
         <File dnOrder="23">
           <Type dnOrder="0">SOURCE</Type>
@@ -454,8 +454,8 @@
           <Security dnOrder="2">NON_SECURE</Security>
           <LogicalPath dnOrder="3">config/sam_d21_xpro/driver/usb/</LogicalPath>
           <PhysicalPath dnOrder="4">/driver/usb/</PhysicalPath>
-          <GeneratedChecksum dnOrder="5">38148410A4C123F6D3C8D2A5684C2D2D</GeneratedChecksum>
-          <UserChecksum dnOrder="6">38148410A4C123F6D3C8D2A5684C2D2D</UserChecksum>
+          <GeneratedChecksum dnOrder="5">DF147276AE56CA76E3E9BEB8447620AB</GeneratedChecksum>
+          <UserChecksum dnOrder="6">DF147276AE56CA76E3E9BEB8447620AB</UserChecksum>
         </File>
         <File dnOrder="50">
           <Type dnOrder="0">HEADER</Type>
@@ -472,8 +472,8 @@
           <Security dnOrder="2">NON_SECURE</Security>
           <LogicalPath dnOrder="3">config/sam_d21_xpro/driver/usb/usbfsv1</LogicalPath>
           <PhysicalPath dnOrder="4">/driver/usb/usbfsv1/</PhysicalPath>
-          <GeneratedChecksum dnOrder="5">30777A59DDB7129E4144132BF7BE78D4</GeneratedChecksum>
-          <UserChecksum dnOrder="6">30777A59DDB7129E4144132BF7BE78D4</UserChecksum>
+          <GeneratedChecksum dnOrder="5">8CB3090FD67D3B706DD56057C97A1CF8</GeneratedChecksum>
+          <UserChecksum dnOrder="6">8CB3090FD67D3B706DD56057C97A1CF8</UserChecksum>
         </File>
         <File dnOrder="52">
           <Type dnOrder="0">HEADER</Type>
@@ -481,8 +481,8 @@
           <Security dnOrder="2">NON_SECURE</Security>
           <LogicalPath dnOrder="3">config/sam_d21_xpro/driver/usb/usbfsv1/src</LogicalPath>
           <PhysicalPath dnOrder="4">/driver/usb/usbfsv1/src/</PhysicalPath>
-          <GeneratedChecksum dnOrder="5">9433B6CA2E9EE8DEEA6C63B4FCB14AD2</GeneratedChecksum>
-          <UserChecksum dnOrder="6">9433B6CA2E9EE8DEEA6C63B4FCB14AD2</UserChecksum>
+          <GeneratedChecksum dnOrder="5">9AC35C4BCA2D22ABB5D1787F040BE1A7</GeneratedChecksum>
+          <UserChecksum dnOrder="6">9AC35C4BCA2D22ABB5D1787F040BE1A7</UserChecksum>
         </File>
         <File dnOrder="53">
           <Type dnOrder="0">HEADER</Type>
@@ -490,8 +490,8 @@
           <Security dnOrder="2">NON_SECURE</Security>
           <LogicalPath dnOrder="3">config/sam_d21_xpro/driver/usb/usbfsv1/src</LogicalPath>
           <PhysicalPath dnOrder="4">/driver/usb/usbfsv1/src/</PhysicalPath>
-          <GeneratedChecksum dnOrder="5">7F2089A3BD81A16A4050AA486E0F5C0E</GeneratedChecksum>
-          <UserChecksum dnOrder="6">7F2089A3BD81A16A4050AA486E0F5C0E</UserChecksum>
+          <GeneratedChecksum dnOrder="5">AEC6FEA1066A2BC7D54BC5A8E99EB16B</GeneratedChecksum>
+          <UserChecksum dnOrder="6">AEC6FEA1066A2BC7D54BC5A8E99EB16B</UserChecksum>
         </File>
         <File dnOrder="54">
           <Type dnOrder="0">HEADER</Type>
@@ -895,8 +895,8 @@
           <Security dnOrder="2">NON_SECURE</Security>
           <LogicalPath dnOrder="3">config/sam_d21_xpro/usb/</LogicalPath>
           <PhysicalPath dnOrder="4">/usb/</PhysicalPath>
-          <GeneratedChecksum dnOrder="5">6E02B466F420C1B312E5D72D71D0F93C</GeneratedChecksum>
-          <UserChecksum dnOrder="6">6E02B466F420C1B312E5D72D71D0F93C</UserChecksum>
+          <GeneratedChecksum dnOrder="5">F258661D72F9E844BF936D43BF859BE7</GeneratedChecksum>
+          <UserChecksum dnOrder="6">F258661D72F9E844BF936D43BF859BE7</UserChecksum>
         </File>
         <File dnOrder="99">
           <Type dnOrder="0">HEADER</Type>
@@ -966,7 +966,7 @@
       <Setting dnOrder="2" key="FORCE_OPTIMIZATION" value="false"/>
       <Setting dnOrder="3" key="GENERATE_BACKUP" value="true"/>
       <Setting dnOrder="4" key="MERGE_STRATEGY" value="USER_ALL"/>
-      <Setting dnOrder="5" key="PackageFilter" value="bootloader;bootloader_apps_i2c;bootloader_apps_sdcard;bootloader_apps_uart;bootloader_apps_usb;bsp;core;csp;usb;"/>
+      <Setting dnOrder="5" key="PackageFilter" value="bootloader;bootloader_apps_ethernet;bootloader_apps_i2c;bootloader_apps_sdcard;bootloader_apps_uart;bootloader_apps_usb;bsp;core;csp;net;usb;"/>
     </Settings>
   </Configurator>
 </Configuration>
