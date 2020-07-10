@@ -165,6 +165,7 @@
       <itemPath>Makefile</itemPath>
       <itemPath>../src/config/sam_e70_xult/harmony.prj</itemPath>
       <itemPath>../src/config/sam_e70_xult/sam_e70_xult.xml</itemPath>
+      <itemPath>../../../../../../mhc/../bootloader_apps_usb/apps/usb_host_msd_bootloader/test_app/firmware/src/config/sam_e70_xult/sam_e70_xult.xml</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
@@ -178,14 +179,14 @@
         <targetDevice>ATSAME70Q21B</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool></platformTool>
+        <platformTool>noID</platformTool>
         <languageToolchain>XC32</languageToolchain>
         <languageToolchainVersion>2.41</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
         <pack name="CMSIS" vendor="ARM" version="5.4.0"/>
-        <pack name="SAME70_DFP" vendor="Microchip" version="4.2.59"/>
+        <pack name="SAME70_DFP" vendor="Microchip" version="4.3.67"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>
