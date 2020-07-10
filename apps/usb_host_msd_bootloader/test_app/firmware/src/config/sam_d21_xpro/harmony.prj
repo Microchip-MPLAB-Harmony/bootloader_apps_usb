@@ -624,7 +624,7 @@
         <Setting append="true" category="C32" delimiter=";" dnOrder="0" key="extra-include-directories" security="NON_SECURE" value="../src;../src/config/sam_d21_xpro;../src/packs/ATSAMD21J18A_DFP;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/CMSIS/"/>
         <Setting category="C32-LD" dnOrder="1" key="heap-size" security="NON_SECURE" value="512"/>
         <Setting category="C32-LD" dnOrder="2" key="no-device-startup-code" security="NON_SECURE" value="true"/>
-        <Setting append="true" category="C32-LD" delimiter=";" dnOrder="3" key="preprocessor-macros" security="NON_SECURE" value="ROM_ORIGIN=0x9800;ROM_LENGTH=0x36800"/>
+        <Setting append="true" category="C32-LD" delimiter=";" dnOrder="3" key="preprocessor-macros" security="NON_SECURE" value="ROM_ORIGIN=0xA800;ROM_LENGTH=0x35800"/>
       </Settings>
     </Manifest>
     <Settings dnOrder="5">
@@ -633,7 +633,7 @@
       <Setting dnOrder="2" key="FORCE_OPTIMIZATION" value="false"/>
       <Setting dnOrder="3" key="GENERATE_BACKUP" value="true"/>
       <Setting dnOrder="4" key="MERGE_STRATEGY" value="USER_ALL"/>
-      <Setting dnOrder="5" key="PackageFilter" value="bootloader;bootloader_apps_i2c;bootloader_apps_sdcard;bootloader_apps_uart;bootloader_apps_usb;bsp;core;csp;usb;"/>
+      <Setting dnOrder="5" key="PackageFilter" value="bootloader;bootloader_apps_ethernet;bootloader_apps_i2c;bootloader_apps_sdcard;bootloader_apps_uart;bootloader_apps_usb;bsp;core;csp;net;usb;"/>
     </Settings>
   </Configurator>
 </Configuration>

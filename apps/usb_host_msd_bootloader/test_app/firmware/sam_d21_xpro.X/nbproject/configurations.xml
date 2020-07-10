@@ -153,6 +153,7 @@
       <itemPath>Makefile</itemPath>
       <itemPath>../src/config/sam_d21_xpro/harmony.prj</itemPath>
       <itemPath>../src/config/sam_d21_xpro/sam_d21_xpro.xml</itemPath>
+      <itemPath>../../../../../../mhc/../bootloader_apps_usb/apps/usb_host_msd_bootloader/test_app/firmware/src/config/sam_d21_xpro/sam_d21_xpro.xml</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
@@ -166,7 +167,7 @@
         <targetDevice>ATSAMD21J18A</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>noID</platformTool>
+        <platformTool></platformTool>
         <languageToolchain>XC32</languageToolchain>
         <languageToolchainVersion>2.41</languageToolchainVersion>
         <platform>3</platform>
@@ -309,7 +310,7 @@
         <property key="oXC32ld-extra-opts" value=""/>
         <property key="optimization-level" value=""/>
         <property key="preprocessor-macros"
-                  value="ROM_ORIGIN=0x9800;ROM_LENGTH=0x36800"/>
+                  value="ROM_ORIGIN=0xA800;ROM_LENGTH=0x35800"/>
         <property key="remove-unused-sections" value="true"/>
         <property key="report-memory-usage" value="false"/>
         <property key="serial-length" value=""/>
