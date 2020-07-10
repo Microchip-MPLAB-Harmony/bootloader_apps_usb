@@ -22,8 +22,8 @@
           <Security dnOrder="2">NON_SECURE</Security>
           <LogicalPath dnOrder="3">config/sam_l22_xpro/bootloader/</LogicalPath>
           <PhysicalPath dnOrder="4">/bootloader/</PhysicalPath>
-          <GeneratedChecksum dnOrder="5">E852BC8EC966A244CFDB4900A179076E</GeneratedChecksum>
-          <UserChecksum dnOrder="6">E852BC8EC966A244CFDB4900A179076E</UserChecksum>
+          <GeneratedChecksum dnOrder="5">2BC72A871666AA243DDE22A6698DF21F</GeneratedChecksum>
+          <UserChecksum dnOrder="6">2BC72A871666AA243DDE22A6698DF21F</UserChecksum>
         </File>
         <File dnOrder="2">
           <Type dnOrder="0">SOURCE</Type>
@@ -67,8 +67,8 @@
           <Security dnOrder="2">NON_SECURE</Security>
           <LogicalPath dnOrder="3">config/sam_l22_xpro/driver/usb/usbfsv1/src/</LogicalPath>
           <PhysicalPath dnOrder="4">/driver/usb/usbfsv1/src/</PhysicalPath>
-          <GeneratedChecksum dnOrder="5">1C2CEF459A1A2DCCBEAD8BE769D178DC</GeneratedChecksum>
-          <UserChecksum dnOrder="6">1C2CEF459A1A2DCCBEAD8BE769D178DC</UserChecksum>
+          <GeneratedChecksum dnOrder="5">72FC284BF554EF75E5063CB31E067354</GeneratedChecksum>
+          <UserChecksum dnOrder="6">72FC284BF554EF75E5063CB31E067354</UserChecksum>
         </File>
         <File dnOrder="7">
           <Type dnOrder="0">SOURCE</Type>
@@ -85,8 +85,8 @@
           <Security dnOrder="2">NON_SECURE</Security>
           <LogicalPath dnOrder="3">config/sam_l22_xpro/</LogicalPath>
           <PhysicalPath dnOrder="4">/</PhysicalPath>
-          <GeneratedChecksum dnOrder="5">D9A8DE3FC1F0588DC15E5DC89160D165</GeneratedChecksum>
-          <UserChecksum dnOrder="6">D9A8DE3FC1F0588DC15E5DC89160D165</UserChecksum>
+          <GeneratedChecksum dnOrder="5">E5E4A424BC30FE3EF22D8762451AD563</GeneratedChecksum>
+          <UserChecksum dnOrder="6">E5E4A424BC30FE3EF22D8762451AD563</UserChecksum>
         </File>
         <File dnOrder="9">
           <Type dnOrder="0">SOURCE</Type>
@@ -220,8 +220,8 @@
           <Security dnOrder="2">NON_SECURE</Security>
           <LogicalPath dnOrder="3">config/sam_l22_xpro/</LogicalPath>
           <PhysicalPath dnOrder="4">/</PhysicalPath>
-          <GeneratedChecksum dnOrder="5">D4CCFDE335AB40E7F84BF8EB3334C4A6</GeneratedChecksum>
-          <UserChecksum dnOrder="6">D4CCFDE335AB40E7F84BF8EB3334C4A6</UserChecksum>
+          <GeneratedChecksum dnOrder="5">9A8A02AF3D16D3B5B7CC9ED9E36A4295</GeneratedChecksum>
+          <UserChecksum dnOrder="6">9A8A02AF3D16D3B5B7CC9ED9E36A4295</UserChecksum>
         </File>
         <File dnOrder="24">
           <Type dnOrder="0">SOURCE</Type>
@@ -472,8 +472,8 @@
           <Security dnOrder="2">NON_SECURE</Security>
           <LogicalPath dnOrder="3">config/sam_l22_xpro/driver/usb/</LogicalPath>
           <PhysicalPath dnOrder="4">/driver/usb/</PhysicalPath>
-          <GeneratedChecksum dnOrder="5">38148410A4C123F6D3C8D2A5684C2D2D</GeneratedChecksum>
-          <UserChecksum dnOrder="6">38148410A4C123F6D3C8D2A5684C2D2D</UserChecksum>
+          <GeneratedChecksum dnOrder="5">DF147276AE56CA76E3E9BEB8447620AB</GeneratedChecksum>
+          <UserChecksum dnOrder="6">DF147276AE56CA76E3E9BEB8447620AB</UserChecksum>
         </File>
         <File dnOrder="52">
           <Type dnOrder="0">HEADER</Type>
@@ -499,8 +499,8 @@
           <Security dnOrder="2">NON_SECURE</Security>
           <LogicalPath dnOrder="3">config/sam_l22_xpro/driver/usb/usbfsv1/src</LogicalPath>
           <PhysicalPath dnOrder="4">/driver/usb/usbfsv1/src/</PhysicalPath>
-          <GeneratedChecksum dnOrder="5">9433B6CA2E9EE8DEEA6C63B4FCB14AD2</GeneratedChecksum>
-          <UserChecksum dnOrder="6">9433B6CA2E9EE8DEEA6C63B4FCB14AD2</UserChecksum>
+          <GeneratedChecksum dnOrder="5">8BAC7A381B4CBAACF2FF5F3CD136D377</GeneratedChecksum>
+          <UserChecksum dnOrder="6">8BAC7A381B4CBAACF2FF5F3CD136D377</UserChecksum>
         </File>
         <File dnOrder="55">
           <Type dnOrder="0">HEADER</Type>
@@ -508,8 +508,8 @@
           <Security dnOrder="2">NON_SECURE</Security>
           <LogicalPath dnOrder="3">config/sam_l22_xpro/driver/usb/usbfsv1/src</LogicalPath>
           <PhysicalPath dnOrder="4">/driver/usb/usbfsv1/src/</PhysicalPath>
-          <GeneratedChecksum dnOrder="5">44B6833DDC69950D8EDA67B7548C1A3C</GeneratedChecksum>
-          <UserChecksum dnOrder="6">44B6833DDC69950D8EDA67B7548C1A3C</UserChecksum>
+          <GeneratedChecksum dnOrder="5">586A97A48A8F079B26CB0F629C08FA3E</GeneratedChecksum>
+          <UserChecksum dnOrder="6">586A97A48A8F079B26CB0F629C08FA3E</UserChecksum>
         </File>
         <File dnOrder="56">
           <Type dnOrder="0">HEADER</Type>
@@ -967,8 +967,8 @@
           <Security dnOrder="2">NON_SECURE</Security>
           <LogicalPath dnOrder="3">config/sam_l22_xpro/usb/</LogicalPath>
           <PhysicalPath dnOrder="4">/usb/</PhysicalPath>
-          <GeneratedChecksum dnOrder="5">6E02B466F420C1B312E5D72D71D0F93C</GeneratedChecksum>
-          <UserChecksum dnOrder="6">6E02B466F420C1B312E5D72D71D0F93C</UserChecksum>
+          <GeneratedChecksum dnOrder="5">F258661D72F9E844BF936D43BF859BE7</GeneratedChecksum>
+          <UserChecksum dnOrder="6">F258661D72F9E844BF936D43BF859BE7</UserChecksum>
         </File>
         <File dnOrder="107">
           <Type dnOrder="0">HEADER</Type>
@@ -1038,7 +1038,7 @@
       <Setting dnOrder="2" key="FORCE_OPTIMIZATION" value="false"/>
       <Setting dnOrder="3" key="GENERATE_BACKUP" value="true"/>
       <Setting dnOrder="4" key="MERGE_STRATEGY" value="USER_ALL"/>
-      <Setting dnOrder="5" key="PackageFilter" value="bootloader;bootloader_apps_i2c;bootloader_apps_sdcard;bootloader_apps_uart;bootloader_apps_usb;bsp;core;csp;usb;"/>
+      <Setting dnOrder="5" key="PackageFilter" value="bootloader;bootloader_apps_ethernet;bootloader_apps_i2c;bootloader_apps_sdcard;bootloader_apps_uart;bootloader_apps_usb;bsp;core;csp;net;usb;"/>
       <Setting dnOrder="6" key="TRUSTZONE" value="false"/>
     </Settings>
   </Configurator>

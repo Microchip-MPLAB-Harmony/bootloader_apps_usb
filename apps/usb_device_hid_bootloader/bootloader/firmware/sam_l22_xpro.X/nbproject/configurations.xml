@@ -234,6 +234,7 @@
       <itemPath>Makefile</itemPath>
       <itemPath>../src/config/sam_l22_xpro/harmony.prj</itemPath>
       <itemPath>../src/config/sam_l22_xpro/sam_l22_xpro.xml</itemPath>
+      <itemPath>../../../../../../mhc/../bootloader_apps_usb/apps/usb_device_hid_bootloader/bootloader/firmware/src/config/sam_l22_xpro/sam_l22_xpro.xml</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
