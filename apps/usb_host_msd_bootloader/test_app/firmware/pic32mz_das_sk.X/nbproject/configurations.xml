@@ -90,6 +90,7 @@
       <itemPath>Makefile</itemPath>
       <itemPath>../src/config/pic32mz_das_sk/harmony.prj</itemPath>
       <itemPath>../src/config/pic32mz_das_sk/pic32mz_das_sk.xml</itemPath>
+      <itemPath>../../../../../../mhc/../bootloader_apps_usb/apps/usb_host_msd_bootloader/test_app/firmware/src/config/pic32mz_das_sk/pic32mz_das_sk.xml</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
@@ -103,7 +104,7 @@
         <targetDevice>PIC32MZ2064DAS169</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool></platformTool>
+        <platformTool>noID</platformTool>
         <languageToolchain>XC32</languageToolchain>
         <languageToolchainVersion>2.41</languageToolchainVersion>
         <platform>3</platform>
@@ -146,7 +147,7 @@
         <property key="enable-unroll-loops" value="false"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../src;../src/config/pic32mz_das_sk;../src/packs/PIC32MZ2064DAS169_DFP;"/>
+                  value="../src;../src/config/pic32mz_das_sk;../src/packs/PIC32MZ2064DAS169_DFP"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
