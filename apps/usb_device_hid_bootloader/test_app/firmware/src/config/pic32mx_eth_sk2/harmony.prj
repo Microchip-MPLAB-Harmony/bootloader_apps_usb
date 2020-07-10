@@ -40,8 +40,8 @@
           <Security dnOrder="2">NON_SECURE</Security>
           <LogicalPath dnOrder="3">config/pic32mx_eth_sk2/</LogicalPath>
           <PhysicalPath dnOrder="4">/</PhysicalPath>
-          <GeneratedChecksum dnOrder="5">96376DF8D1B4A9ADC24183FE3418BF46</GeneratedChecksum>
-          <UserChecksum dnOrder="6">96376DF8D1B4A9ADC24183FE3418BF46</UserChecksum>
+          <GeneratedChecksum dnOrder="5">3BA11D641A24D786C3E0B4899D84D3AC</GeneratedChecksum>
+          <UserChecksum dnOrder="6">3BA11D641A24D786C3E0B4899D84D3AC</UserChecksum>
         </File>
         <File dnOrder="4">
           <Type dnOrder="0">SOURCE</Type>
@@ -157,8 +157,8 @@
           <Security dnOrder="2">NON_SECURE</Security>
           <LogicalPath dnOrder="3">config/pic32mx_eth_sk2/</LogicalPath>
           <PhysicalPath dnOrder="4">/</PhysicalPath>
-          <GeneratedChecksum dnOrder="5">FF071D02A815D15BF32F3ABB66F079A0</GeneratedChecksum>
-          <UserChecksum dnOrder="6">FF071D02A815D15BF32F3ABB66F079A0</UserChecksum>
+          <GeneratedChecksum dnOrder="5">D14C09FB3C4F7973D761905AFF637DDA</GeneratedChecksum>
+          <UserChecksum dnOrder="6">D14C09FB3C4F7973D761905AFF637DDA</UserChecksum>
         </File>
         <File dnOrder="17">
           <Type dnOrder="0">HEADER</Type>
