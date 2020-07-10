@@ -165,6 +165,7 @@
       <itemPath>Makefile</itemPath>
       <itemPath>../src/config/sam_l22_xpro/harmony.prj</itemPath>
       <itemPath>../src/config/sam_l22_xpro/sam_l22_xpro.xml</itemPath>
+      <itemPath>../../../../../../mhc/../bootloader_apps_usb/apps/usb_device_hid_bootloader/test_app/firmware/src/config/sam_l22_xpro/sam_l22_xpro.xml</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
@@ -184,8 +185,8 @@
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="CMSIS" vendor="ARM" version="5.4.0"/>
         <pack name="SAML22_DFP" vendor="Microchip" version="3.3.47"/>
+        <pack name="CMSIS" vendor="ARM" version="5.4.0"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>
@@ -207,8 +208,8 @@
       <makeCustomizationType>
         <makeCustomizationPreStepEnabled>false</makeCustomizationPreStepEnabled>
         <makeCustomizationPreStep></makeCustomizationPreStep>
-        <makeCustomizationPostStepEnabled>true</makeCustomizationPostStepEnabled>
-        <makeCustomizationPostStep>${MP_CC_DIR}/xc32-objcopy -I ihex -O binary ${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.hex ${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.bin</makeCustomizationPostStep>
+        <makeCustomizationPostStepEnabled>false</makeCustomizationPostStepEnabled>
+        <makeCustomizationPostStep></makeCustomizationPostStep>
         <makeCustomizationPutChecksumInUserID>false</makeCustomizationPutChecksumInUserID>
         <makeCustomizationEnableLongLines>false</makeCustomizationEnableLongLines>
         <makeCustomizationNormalizeHexFile>true</makeCustomizationNormalizeHexFile>
