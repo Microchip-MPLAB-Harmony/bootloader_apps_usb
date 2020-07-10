@@ -107,10 +107,13 @@ _GEN_EXCPT_ADDR                = _ebase_address + 0x180;
 
 MEMORY
 {
-    /* All C files will be located here.*/
-    kseg0_program_mem  (rx) : ORIGIN = 0x9D012000, LENGTH = 0x100000 - 0x480 - 0x1000 - 0x11000 /* Size of Bootloader is 0x11000 */
+    /* Size of Bootloader is 0x11000 */
+    kseg0_program_mem  (rx) : ORIGIN = 0x9D012000, LENGTH = 0x100000 - 0x1000 - 0x11000
     kseg1_boot_mem          : ORIGIN = 0x9D011000, LENGTH = 0x480
-    kseg0_data_mem     (w!x): ORIGIN = 0x80000000 + 16, LENGTH = 0x40000 - 16 /* Reserve 16 Bytes to Store Bootloader Trigger Pattern */
+
+    /* Reserve 16 Bytes to Store Bootloader Trigger Pattern */
+    kseg0_data_mem     (w!x): ORIGIN = 0x80000000 + 16, LENGTH = 0x40000 - 16
+
     sfrs                    : ORIGIN = 0xBF800000, LENGTH = 0x100000
 }
 

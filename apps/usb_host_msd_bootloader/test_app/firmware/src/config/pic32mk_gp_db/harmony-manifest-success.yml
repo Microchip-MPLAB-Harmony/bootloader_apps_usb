@@ -4,22 +4,18 @@
 
 
 project: test_app
-creation_date: 2020-05-25T12:06:03.535+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
+creation_date: 2020-07-10T09:40:23.657+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
 operating_system: Windows 10
-mhc_mode: IDE            # [IDE|Standalone|Headless]
-mplabx_version: v5.40        # if MPLAB X plugin only
-plugin_version: v3.5.0        # if MPLAB X plugin only
+mhc_mode: Headless              # [IDE|Standalone|Headless]
+mplabx_version:         # if MPLAB X plugin only
+plugin_version:         # if MPLAB X plugin only
 
 modules:
-    - {name: "bootloader", version: "unknown"}
-    - {name: "bootloader_apps_i2c", version: "unknown"}
-    - {name: "bootloader_apps_sdcard", version: "unknown"}
-    - {name: "bootloader_apps_uart", version: "unknown"}
-    - {name: "bootloader_apps_usb", version: "unknown"}
+    - {name: "bootloader", version: "v3.4.0"}
+    - {name: "bootloader_apps_usb", version: "v3.0.0"}
     - {name: "bsp", version: "v3.7.0"}
-    - {name: "core", version: "v3.7.1"}
+    - {name: "core", version: "v3.7.2"}
     - {name: "csp", version: "v3.7.1"}
     - {name: "dev_packs", version: "v3.7.0"}
-    - {name: "mhc", version: "v3.4.0"}
-    - {name: "usb", version: "v3.5.0"}
-
+    - {name: "mhc", version: "v3.4.1"}
+    - {name: "usb", version: "v3.6.0"}
