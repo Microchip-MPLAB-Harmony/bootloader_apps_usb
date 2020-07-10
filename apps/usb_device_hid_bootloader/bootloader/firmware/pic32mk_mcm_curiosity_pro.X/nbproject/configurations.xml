@@ -288,6 +288,7 @@
       <itemPath>Makefile</itemPath>
       <itemPath>../src/config/pic32mk_mcm_curiosity_pro/harmony.prj</itemPath>
       <itemPath>../src/config/pic32mk_mcm_curiosity_pro/pic32mk_mcm_curiosity_pro.xml</itemPath>
+      <itemPath>../../../../../../mhc/../bootloader_apps_usb/apps/usb_device_hid_bootloader/bootloader/firmware/src/config/pic32mk_mcm_curiosity_pro/pic32mk_mcm_curiosity_pro.xml</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
@@ -344,7 +345,7 @@
         <property key="enable-unroll-loops" value="false"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../src;../src/config/pic32mk_mcm_curiosity_pro;../src/packs/PIC32MK1024MCM100_DFP;"/>
+                  value="../src;../src/config/pic32mk_mcm_curiosity_pro;../src/packs/PIC32MK1024MCM100_DFP"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
