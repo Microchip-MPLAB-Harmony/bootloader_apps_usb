@@ -252,6 +252,7 @@
       <itemPath>Makefile</itemPath>
       <itemPath>../src/config/pic32mz_das_sk/harmony.prj</itemPath>
       <itemPath>../src/config/pic32mz_das_sk/pic32mz_das_sk.xml</itemPath>
+      <itemPath>../../../../../../mhc/../bootloader_apps_usb/apps/usb_host_msd_bootloader/bootloader/firmware/src/config/pic32mz_das_sk/pic32mz_das_sk.xml</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
@@ -308,7 +309,7 @@
         <property key="enable-unroll-loops" value="false"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value=";../src/config/pic32mz_das_sk/system/fs/fat_fs/file_system;../src/config/pic32mz_das_sk/system/fs/fat_fs/hardware_access;../src;../src/config/pic32mz_das_sk;../src/packs/PIC32MZ2064DAS169_DFP"/>
+                  value="../src/config/pic32mz_das_sk/system/fs/fat_fs/file_system;../src/config/pic32mz_das_sk/system/fs/fat_fs/hardware_access;../src;../src/config/pic32mz_das_sk;../src/packs/PIC32MZ2064DAS169_DFP"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -500,7 +501,6 @@
         <property key="ToolFirmwareFilePath"
                   value="Press to browse for a specific firmware version"/>
         <property key="ToolFirmwareOption.UseLatestFirmware" value="true"/>
-        <property key="firmware.download.all" value="false"/>
         <property key="memories.configurationmemory" value="true"/>
         <property key="memories.dataflash" value="true"/>
         <property key="memories.eeprom" value="true"/>
