@@ -234,6 +234,7 @@
       <itemPath>Makefile</itemPath>
       <itemPath>../src/config/sam_l21_xpro/harmony.prj</itemPath>
       <itemPath>../src/config/sam_l21_xpro/sam_l21_xpro.xml</itemPath>
+      <itemPath>../../../../../../mhc/../bootloader_apps_usb/apps/usb_device_hid_bootloader/bootloader/firmware/src/config/sam_l21_xpro/sam_l21_xpro.xml</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
@@ -253,8 +254,8 @@
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="CMSIS" vendor="ARM" version="5.4.0"/>
         <pack name="SAML21_DFP" vendor="Microchip" version="3.3.68"/>
+        <pack name="CMSIS" vendor="ARM" version="5.4.0"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>
