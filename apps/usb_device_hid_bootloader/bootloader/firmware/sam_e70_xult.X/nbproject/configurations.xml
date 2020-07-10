@@ -234,6 +234,7 @@
       <itemPath>Makefile</itemPath>
       <itemPath>../src/config/sam_e70_xult/harmony.prj</itemPath>
       <itemPath>../src/config/sam_e70_xult/sam_e70_xult.xml</itemPath>
+      <itemPath>../../../../../../mhc/../bootloader_apps_usb/apps/usb_device_hid_bootloader/bootloader/firmware/src/config/sam_e70_xult/sam_e70_xult.xml</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>

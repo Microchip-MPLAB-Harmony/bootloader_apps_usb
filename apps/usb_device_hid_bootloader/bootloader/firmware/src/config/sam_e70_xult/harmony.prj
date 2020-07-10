@@ -22,8 +22,8 @@
           <Security dnOrder="2">NON_SECURE</Security>
           <LogicalPath dnOrder="3">config/sam_e70_xult/bootloader/</LogicalPath>
           <PhysicalPath dnOrder="4">/bootloader/</PhysicalPath>
-          <GeneratedChecksum dnOrder="5">E852BC8EC966A244CFDB4900A179076E</GeneratedChecksum>
-          <UserChecksum dnOrder="6">E852BC8EC966A244CFDB4900A179076E</UserChecksum>
+          <GeneratedChecksum dnOrder="5">2BC72A871666AA243DDE22A6698DF21F</GeneratedChecksum>
+          <UserChecksum dnOrder="6">2BC72A871666AA243DDE22A6698DF21F</UserChecksum>
         </File>
         <File dnOrder="2">
           <Type dnOrder="0">SOURCE</Type>
@@ -85,8 +85,8 @@
           <Security dnOrder="2">NON_SECURE</Security>
           <LogicalPath dnOrder="3">config/sam_e70_xult/</LogicalPath>
           <PhysicalPath dnOrder="4">/</PhysicalPath>
-          <GeneratedChecksum dnOrder="5">A58AD1EFB44FA01B5F88D50810021C7F</GeneratedChecksum>
-          <UserChecksum dnOrder="6">A58AD1EFB44FA01B5F88D50810021C7F</UserChecksum>
+          <GeneratedChecksum dnOrder="5">CED716C5305D9B6295A69CB4CB10DEDD</GeneratedChecksum>
+          <UserChecksum dnOrder="6">CED716C5305D9B6295A69CB4CB10DEDD</UserChecksum>
         </File>
         <File dnOrder="9">
           <Type dnOrder="0">SOURCE</Type>
@@ -211,8 +211,8 @@
           <Security dnOrder="2">NON_SECURE</Security>
           <LogicalPath dnOrder="3">config/sam_e70_xult/</LogicalPath>
           <PhysicalPath dnOrder="4">/</PhysicalPath>
-          <GeneratedChecksum dnOrder="5">194C800B3A980B78D8A6B7215D0C16BB</GeneratedChecksum>
-          <UserChecksum dnOrder="6">194C800B3A980B78D8A6B7215D0C16BB</UserChecksum>
+          <GeneratedChecksum dnOrder="5">BEFDBE508B323FC4A0BD404AEAF1B733</GeneratedChecksum>
+          <UserChecksum dnOrder="6">BEFDBE508B323FC4A0BD404AEAF1B733</UserChecksum>
         </File>
         <File dnOrder="23">
           <Type dnOrder="0">SOURCE</Type>
@@ -454,8 +454,8 @@
           <Security dnOrder="2">NON_SECURE</Security>
           <LogicalPath dnOrder="3">config/sam_e70_xult/driver/usb/</LogicalPath>
           <PhysicalPath dnOrder="4">/driver/usb/</PhysicalPath>
-          <GeneratedChecksum dnOrder="5">38148410A4C123F6D3C8D2A5684C2D2D</GeneratedChecksum>
-          <UserChecksum dnOrder="6">38148410A4C123F6D3C8D2A5684C2D2D</UserChecksum>
+          <GeneratedChecksum dnOrder="5">DF147276AE56CA76E3E9BEB8447620AB</GeneratedChecksum>
+          <UserChecksum dnOrder="6">DF147276AE56CA76E3E9BEB8447620AB</UserChecksum>
         </File>
         <File dnOrder="50">
           <Type dnOrder="0">HEADER</Type>
@@ -472,8 +472,8 @@
           <Security dnOrder="2">NON_SECURE</Security>
           <LogicalPath dnOrder="3">config/sam_e70_xult/driver/usb/usbhsv1</LogicalPath>
           <PhysicalPath dnOrder="4">/driver/usb/usbhsv1/</PhysicalPath>
-          <GeneratedChecksum dnOrder="5">5F3963DE6BCBD886668BF40A9DE41ED5</GeneratedChecksum>
-          <UserChecksum dnOrder="6">5F3963DE6BCBD886668BF40A9DE41ED5</UserChecksum>
+          <GeneratedChecksum dnOrder="5">CBC5FB04D6370CCAE8C4C64D1BDE7049</GeneratedChecksum>
+          <UserChecksum dnOrder="6">CBC5FB04D6370CCAE8C4C64D1BDE7049</UserChecksum>
         </File>
         <File dnOrder="52">
           <Type dnOrder="0">HEADER</Type>
@@ -976,8 +976,8 @@
           <Security dnOrder="2">NON_SECURE</Security>
           <LogicalPath dnOrder="3">config/sam_e70_xult/usb/</LogicalPath>
           <PhysicalPath dnOrder="4">/usb/</PhysicalPath>
-          <GeneratedChecksum dnOrder="5">6E02B466F420C1B312E5D72D71D0F93C</GeneratedChecksum>
-          <UserChecksum dnOrder="6">6E02B466F420C1B312E5D72D71D0F93C</UserChecksum>
+          <GeneratedChecksum dnOrder="5">F258661D72F9E844BF936D43BF859BE7</GeneratedChecksum>
+          <UserChecksum dnOrder="6">F258661D72F9E844BF936D43BF859BE7</UserChecksum>
         </File>
         <File dnOrder="108">
           <Type dnOrder="0">HEADER</Type>
@@ -1077,7 +1077,7 @@
       <Setting dnOrder="2" key="FORCE_OPTIMIZATION" value="false"/>
       <Setting dnOrder="3" key="GENERATE_BACKUP" value="true"/>
       <Setting dnOrder="4" key="MERGE_STRATEGY" value="USER_ALL"/>
-      <Setting dnOrder="5" key="PackageFilter" value="bootloader;bootloader_apps_i2c;bootloader_apps_sdcard;bootloader_apps_uart;bootloader_apps_usb;bsp;core;csp;usb;"/>
+      <Setting dnOrder="5" key="PackageFilter" value="bootloader;bootloader_apps_ethernet;bootloader_apps_i2c;bootloader_apps_sdcard;bootloader_apps_uart;bootloader_apps_usb;bsp;core;csp;net;usb;"/>
     </Settings>
   </Configurator>
 </Configuration>
