@@ -321,6 +321,7 @@
       <itemPath>Makefile</itemPath>
       <itemPath>../src/config/pic32mx_eth_sk2/harmony.prj</itemPath>
       <itemPath>../src/config/pic32mx_eth_sk2/pic32mx_eth_sk2.xml</itemPath>
+      <itemPath>../../../../../../mhc/../bootloader_apps_usb/apps/usb_host_msd_bootloader/bootloader/firmware/src/config/pic32mx_eth_sk2/pic32mx_eth_sk2.xml</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
@@ -377,7 +378,7 @@
         <property key="enable-unroll-loops" value="false"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value=";../src/config/pic32mx_eth_sk2/system/fs/fat_fs/file_system;../src/config/pic32mx_eth_sk2/system/fs/fat_fs/hardware_access;../src;../src/config/pic32mx_eth_sk2;../src/packs/PIC32MX795F512L_DFP"/>
+                  value="../src/config/pic32mx_eth_sk2/system/fs/fat_fs/file_system;../src/config/pic32mx_eth_sk2/system/fs/fat_fs/hardware_access;../src;../src/config/pic32mx_eth_sk2;../src/packs/PIC32MX795F512L_DFP"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
