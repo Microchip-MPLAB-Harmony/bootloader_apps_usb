@@ -88,6 +88,7 @@
       <itemPath>Makefile</itemPath>
       <itemPath>../src/config/pic32mx_eth_sk2/harmony.prj</itemPath>
       <itemPath>../src/config/pic32mx_eth_sk2/pic32mx_eth_sk2.xml</itemPath>
+      <itemPath>../../../../../../mhc/../bootloader_apps_usb/apps/usb_host_msd_bootloader/test_app/firmware/src/config/pic32mx_eth_sk2/pic32mx_eth_sk2.xml</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
