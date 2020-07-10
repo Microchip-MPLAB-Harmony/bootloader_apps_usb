@@ -50,7 +50,7 @@
 #include "system/fs/sys_fs.h"
 #include "usb/usb_host.h"
 
-#define APP_START_ADDRESS       (0x9800UL)
+#define APP_START_ADDRESS       (0xa800UL)
 
 #define FLASH_START             (0x00000000UL)
 #define FLASH_LENGTH            (0x40000UL)
