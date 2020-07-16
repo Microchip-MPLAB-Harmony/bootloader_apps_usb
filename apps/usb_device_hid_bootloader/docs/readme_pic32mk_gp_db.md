@@ -33,7 +33,7 @@ To build the application, refer to the following table and open the project usin
 
 - Connect a micro USB cable to the USB to UART port J25. This will enumerate as a COM port on the PC. 
 - For programming, Connect a micro USB cable to the USB DEBUG port J12
-- Use the micro-AB port J213 (which is located on the bottom side of the board) to connect the USB Device to the USB Host PC
+- Use the micro-AB port J13 (which is located on the bottom side of the board) to connect the USB Device to the USB Host PC
 - Place the Switch S4 direction towards DEVICE
 - Jumper J28 must be open
 
