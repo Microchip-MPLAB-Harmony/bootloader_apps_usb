@@ -1,0 +1,74 @@
+{
+	"metaDataVersion": "1.0.0",
+	"category": "com.microchip.ide.project",
+	"content": {
+		"metaDataVersion": "1.1.0",
+		"name": "com.microchip.mcu32.mplabx.project.bootloader_apps_usb_usb_device_hid_bootloader_sam_l21_xpro",
+		"version": "3.0.2",
+		"displayName": "USB Device HID Bootloader Example for SAM L21/L22 Family",
+		"projectName": "usb_device_hid_bootloader_sam_l21_xpro",
+		"shortDescription": "This example application shows how to use the Bootloader Library to bootload an application using USB Device HID protocol.",
+		"ide": {
+			"name": "MPLABX",
+			"semverRange": ">=5.40.0"
+		},
+		"compiler": [
+			{
+				"name": "XC32",
+				"semverRange": ">=2.40.0"
+			}
+		],
+		"dfp": {
+			"name": "SAML21_DFP",
+			"semverRange": "^3.3.68"
+		},
+		"configurator": {
+			"name": "MHC",
+			"semverRange": ">=3.4.1"
+		},
+		"device": {
+			"metaDataVersion": "1.0.0",
+			"category": "com.microchip.portal.contentRef",
+			"content": {
+				"metaDataVersion": "1.0.0",
+				"category": "com.microchip.device",
+				"name": "ATSAML21J18B",
+				"versionRange": "*"
+			}
+		},
+		"author": "Microchip",
+		"subcategories": [
+			[
+				"Development Kit", "SAM L21 Xplained Pro Evaluation Kit"
+			],
+			[
+				"Harmony", "Bootloader", "USB"
+			],
+			[
+				"Bootloader", "USB"
+			]
+		],
+		"peripherals": [
+			"Bootloader"
+		],
+		"keywords": [
+			"MHC",
+			"Harmony",
+			"Bootloader",
+			"USB",
+			"ATSAML21J18B",
+			"SAM L21/L22 Family"
+		],
+		"additionalData": {
+			"longDescription": {
+				"metaDataVersion": "1.0.0",
+				"category": "com.microchip.portal.fileRef",
+				"content": {
+					"metaDataVersion": "1.0.0",
+					"fileName": "./../../../readme.md",
+					"mimeType": "text/markdown"
+				}
+			}
+		}
+	}
+}
