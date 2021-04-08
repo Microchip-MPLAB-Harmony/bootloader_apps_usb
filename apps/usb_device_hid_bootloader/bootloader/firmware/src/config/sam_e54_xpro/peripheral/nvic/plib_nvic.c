@@ -51,7 +51,7 @@
 void NVIC_Initialize( void )
 {
     /* Priority 0 to 7 and no sub-priority. 0 is the highest priority */
-    NVIC_SetPriorityGrouping( 0x04 );
+    NVIC_SetPriorityGrouping( 0x00 );
 
     /* Enable NVIC Controller */
     __DMB();
@@ -59,8 +59,6 @@ void NVIC_Initialize( void )
 
     /* Enable the interrupt sources and configure the priorities as configured
      * from within the "Interrupt Manager" of MHC. */
-    NVIC_SetPriority(PAC_IRQn, 7);
-    NVIC_EnableIRQ(PAC_IRQn);
     NVIC_SetPriority(USB_OTHER_IRQn, 7);
     NVIC_EnableIRQ(USB_OTHER_IRQn);
     NVIC_SetPriority(USB_SOF_HSOF_IRQn, 7);
@@ -72,5 +70,36 @@ void NVIC_Initialize( void )
 
 
 
-    return;
+}
+
+void NVIC_INT_Enable( void )
+{
+    __DMB();
+    __enable_irq();
+}
+
+bool NVIC_INT_Disable( void )
+{
+    bool processorStatus;
+
+    processorStatus = (bool) (__get_PRIMASK() == 0);
+
+    __disable_irq();
+    __DMB();
+
+    return processorStatus;
+}
+
+void NVIC_INT_Restore( bool state )
+{
+    if( state == true )
+    {
+        __DMB();
+        __enable_irq();
+    }
+    else
+    {
+        __disable_irq();
+        __DMB();
+    }
 }
