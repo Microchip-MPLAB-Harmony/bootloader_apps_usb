@@ -349,13 +349,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 9E5602A2533684B9E16192285CDEE1D4
-- generatedChecksum: 264B0CD35ADADBA48D203E8C8EBB4CE2
+- generatedChecksum: A7DC73F20E66B285AF44A4EC2F569B1C
   logicalPath: config\sam_l21_xpro
   name: definitions.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: 264B0CD35ADADBA48D203E8C8EBB4CE2
+  userChecksum: A7DC73F20E66B285AF44A4EC2F569B1C
 - generatedChecksum: 03C74F9372CB60DB77E34E1F485FBA7A
   logicalPath: config\sam_l21_xpro
   name: device.h

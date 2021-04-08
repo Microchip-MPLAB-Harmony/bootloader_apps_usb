@@ -83,4 +83,4 @@ children:
         children:
         - {type: Value, value: USB Device}
 - type: ElementPosition
-  attributes: {x: '348', y: '149', id: usb_device_hid_bootloader}
+  attributes: {x: '331', y: '195', id: usb_device_hid_bootloader}

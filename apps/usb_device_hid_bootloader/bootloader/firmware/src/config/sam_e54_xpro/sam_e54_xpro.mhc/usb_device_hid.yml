@@ -53,4 +53,4 @@ children:
             children:
             - {type: Value, value: btl_USB_DEVICE_HID_dependency}
 - type: ElementPosition
-  attributes: {x: '163', y: '171', id: usb_device_hid}
+  attributes: {x: '175', y: '184', id: usb_device_hid}

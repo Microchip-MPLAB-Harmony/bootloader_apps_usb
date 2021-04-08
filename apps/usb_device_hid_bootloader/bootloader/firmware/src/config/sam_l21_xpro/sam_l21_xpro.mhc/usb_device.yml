@@ -61,4 +61,4 @@ children:
       - type: Dynamic
         attributes: {id: usb_device, value: USB HID Bootloader}
 - type: ElementPosition
-  attributes: {x: '5', y: '254', id: usb_device}
+  attributes: {x: '3', y: '247', id: usb_device}
