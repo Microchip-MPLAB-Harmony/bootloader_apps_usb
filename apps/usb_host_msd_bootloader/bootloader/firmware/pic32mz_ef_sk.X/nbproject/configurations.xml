@@ -55,6 +55,11 @@
             <itemPath>../src/config/pic32mz_ef_sk/driver/driver.h</itemPath>
             <itemPath>../src/config/pic32mz_ef_sk/driver/driver_common.h</itemPath>
           </logicalFolder>
+          <logicalFolder name="f7" displayName="osal" projectFiles="true">
+            <itemPath>../src/config/pic32mz_ef_sk/osal/osal.h</itemPath>
+            <itemPath>../src/config/pic32mz_ef_sk/osal/osal_definitions.h</itemPath>
+            <itemPath>../src/config/pic32mz_ef_sk/osal/osal_impl_basic.h</itemPath>
+          </logicalFolder>
           <logicalFolder name="f1" displayName="peripheral" projectFiles="true">
             <logicalFolder name="f4" displayName="cache" projectFiles="true">
               <itemPath>../src/config/pic32mz_ef_sk/peripheral/cache/plib_cache.h</itemPath>
@@ -137,18 +142,8 @@
           <itemPath>../src/config/pic32mz_ef_sk/definitions.h</itemPath>
           <itemPath>../src/config/pic32mz_ef_sk/user.h</itemPath>
           <itemPath>../src/config/pic32mz_ef_sk/configuration.h</itemPath>
-        </logicalFolder>
-      </logicalFolder>
-      <logicalFolder name="f3" displayName="osal" projectFiles="true">
-        <itemPath>../src/config/pic32mz_ef_sk/osal/osal.h</itemPath>
-        <itemPath>../src/config/pic32mz_ef_sk/osal/osal_definitions.h</itemPath>
-        <itemPath>../src/config/pic32mz_ef_sk/osal/osal_impl_basic.h</itemPath>
-      </logicalFolder>
-      <logicalFolder name="f2" displayName="packs" projectFiles="true">
-        <logicalFolder name="f1"
-                       displayName="PIC32MZ2048EFH144_DFP"
-                       projectFiles="true">
-          <itemPath>../src/packs/PIC32MZ2048EFH144_DFP/device.h</itemPath>
+          <itemPath>../src/config/pic32mz_ef_sk/device.h</itemPath>
+          <itemPath>../src/config/pic32mz_ef_sk/interrupts.h</itemPath>
         </logicalFolder>
       </logicalFolder>
       <itemPath>../src/app.h</itemPath>
@@ -249,10 +244,25 @@
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
                    projectFiles="false">
+      <logicalFolder name="f1" displayName="pic32mz_ef_sk.mhc" projectFiles="true">
+        <itemPath>../src/config/pic32mz_ef_sk/pic32mz_ef_sk.mhc/BSP_PIC32MZ_EF_Starter_Kit.yml</itemPath>
+        <itemPath>../src/config/pic32mz_ef_sk/pic32mz_ef_sk.mhc/core.yml</itemPath>
+        <itemPath>../src/config/pic32mz_ef_sk/pic32mz_ef_sk.mhc/core_timer.yml</itemPath>
+        <itemPath>../src/config/pic32mz_ef_sk/pic32mz_ef_sk.mhc/dfp.yml</itemPath>
+        <itemPath>../src/config/pic32mz_ef_sk/pic32mz_ef_sk.mhc/drv_usbhs_v1.yml</itemPath>
+        <itemPath>../src/config/pic32mz_ef_sk/pic32mz_ef_sk.mhc/file_system_bootloader.yml</itemPath>
+        <itemPath>../src/config/pic32mz_ef_sk/pic32mz_ef_sk.mhc/GraphSettings.yml</itemPath>
+        <itemPath>../src/config/pic32mz_ef_sk/pic32mz_ef_sk.mhc/HarmonyCore.yml</itemPath>
+        <itemPath>../src/config/pic32mz_ef_sk/pic32mz_ef_sk.mhc/nvm.yml</itemPath>
+        <itemPath>../src/config/pic32mz_ef_sk/pic32mz_ef_sk.mhc/project.yml</itemPath>
+        <itemPath>../src/config/pic32mz_ef_sk/pic32mz_ef_sk.mhc/settings.yml</itemPath>
+        <itemPath>../src/config/pic32mz_ef_sk/pic32mz_ef_sk.mhc/sys_fs.yml</itemPath>
+        <itemPath>../src/config/pic32mz_ef_sk/pic32mz_ef_sk.mhc/sys_time.yml</itemPath>
+        <itemPath>../src/config/pic32mz_ef_sk/pic32mz_ef_sk.mhc/usb_host.yml</itemPath>
+        <itemPath>../src/config/pic32mz_ef_sk/pic32mz_ef_sk.mhc/usb_host_msd.yml</itemPath>
+      </logicalFolder>
       <itemPath>Makefile</itemPath>
-      <itemPath>../src/config/pic32mz_ef_sk/harmony.prj</itemPath>
-      <itemPath>../src/config/pic32mz_ef_sk/pic32mz_ef_sk.xml</itemPath>
-      <itemPath>../../../../../../mhc/../bootloader_apps_usb/apps/usb_host_msd_bootloader/bootloader/firmware/src/config/pic32mz_ef_sk/pic32mz_ef_sk.xml</itemPath>
+      <itemPath>../src/config/pic32mz_ef_sk/harmony-manifest-success.yml</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
@@ -293,6 +303,7 @@
       </compileType>
       <makeCustomizationType>
         <makeCustomizationPreStepEnabled>false</makeCustomizationPreStepEnabled>
+        <makeUseCleanTarget>false</makeUseCleanTarget>
         <makeCustomizationPreStep></makeCustomizationPreStep>
         <makeCustomizationPostStepEnabled>false</makeCustomizationPostStepEnabled>
         <makeCustomizationPostStep></makeCustomizationPostStep>
@@ -309,7 +320,7 @@
         <property key="enable-unroll-loops" value="false"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../src/config/pic32mz_ef_sk/system/fs/fat_fs/file_system;../src/config/pic32mz_ef_sk/system/fs/fat_fs/hardware_access;../src;../src/config/pic32mz_ef_sk;../src/packs/PIC32MZ2048EFH144_DFP"/>
+                  value="../src;../src/config/pic32mz_ef_sk;../src/config/pic32mz_ef_sk/system/fs/fat_fs/file_system;../src/config/pic32mz_ef_sk/system/fs/fat_fs/hardware_access;../src/packs/PIC32MZ2048EFH144_DFP"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -404,7 +415,8 @@
         <property key="enable-unroll-loops" value="false"/>
         <property key="exceptions" value="true"/>
         <property key="exclude-floating-point" value="false"/>
-        <property key="extra-include-directories" value=""/>
+        <property key="extra-include-directories"
+                  value="../src;../src/config/pic32mz_ef_sk;../src/config/pic32mz_ef_sk/system/fs/fat_fs/file_system;../src/config/pic32mz_ef_sk/system/fs/fat_fs/hardware_access;../src/packs/PIC32MZ2048EFH144_DFP"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
