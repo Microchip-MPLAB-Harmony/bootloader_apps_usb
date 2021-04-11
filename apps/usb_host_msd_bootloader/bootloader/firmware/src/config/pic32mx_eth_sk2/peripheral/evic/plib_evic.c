@@ -43,6 +43,7 @@
 #include "device.h"
 #include "plib_evic.h"
 
+
 // *****************************************************************************
 // *****************************************************************************
 // Section: IRQ Implementation
@@ -53,9 +54,11 @@ void EVIC_Initialize( void )
 {
     INTCONSET = _INTCON_MVEC_MASK;
 
-    /* Set up priority / subpriority of enabled interrupts */
+    /* Set up priority and subpriority of enabled interrupts */
     IPC0SET = 0x4 | 0x0;  /* CORE_TIMER:  Priority 1 / Subpriority 0 */
     IPC11SET = 0x400 | 0x0;  /* USB_1:  Priority 1 / Subpriority 0 */
+
+
 }
 
 void EVIC_SourceEnable( INT_SOURCE source )
@@ -104,3 +107,29 @@ void EVIC_SourceStatusClear( INT_SOURCE source )
     *IFSxCLR = 1 << (source & 0x1f);
 }
 
+void EVIC_INT_Enable( void )
+{
+    __builtin_enable_interrupts();
+}
+
+bool EVIC_INT_Disable( void )
+{
+    uint32_t processorStatus;
+
+    /* Save the processor status and then Disable the global interrupt */
+    processorStatus = ( uint32_t )__builtin_disable_interrupts();
+
+    /* return the interrupt status */
+    return (bool)(processorStatus & 0x01);
+}
+
+void EVIC_INT_Restore( bool state )
+{
+    if (state)
+    {
+        /* restore the state of CP0 Status register before the disable occurred */
+        __builtin_enable_interrupts();
+    }
+}
+
+/* End of file */

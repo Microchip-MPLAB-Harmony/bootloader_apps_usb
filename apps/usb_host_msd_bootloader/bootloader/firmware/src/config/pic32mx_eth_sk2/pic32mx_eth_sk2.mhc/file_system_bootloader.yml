@@ -1,0 +1,91 @@
+format_version: v1.0
+type: UniqueComponent
+attributes: {id: file_system_bootloader}
+children:
+- type: Symbols
+  children:
+  - type: Comment
+    attributes: {id: BTL_APP_START_ADDR_COMMENT}
+    children:
+    - type: Attributes
+      children:
+      - type: String
+        attributes: {id: text}
+        children:
+        - {type: Value, value: WARNING!!! Application Start Address Should be equal
+            to or Greater than Bootloader Size !!!}
+      - type: Boolean
+        attributes: {id: visible}
+        children:
+        - {type: Value, value: 'false'}
+  - type: String
+    attributes: {id: BTL_SIZE}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: readOnly}
+        children:
+        - {type: Value, value: 'false'}
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: file_system_bootloader, value: '69632'}
+  - type: Boolean
+    attributes: {id: BTL_TRIGGER_ENABLE}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: 'true'}
+  - type: String
+    attributes: {id: BTL_TRIGGER_LEN}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: visible}
+        children:
+        - {type: Value, value: 'true'}
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: '16'}
+  - type: String
+    attributes: {id: BTL_TYPE}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: file_system_bootloader, value: USB_HOST_MSD}
+  - type: KeyValueSet
+    attributes: {id: MEDIA_TYPE}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: '2'}
+  - type: String
+    attributes: {id: MEM_USED}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: file_system_bootloader, value: NVM}
+- type: Attachments
+  children:
+  - type: DirectDependency
+    attributes: {id: btl_MEMORY_dependency}
+    children:
+    - type: Attributes
+      children:
+      - type: String
+        attributes: {id: targetComponentID}
+        children:
+        - {type: Value, value: nvm}
+      - type: String
+        attributes: {id: targetAttachmentID}
+        children:
+        - {type: Value, value: NVM_MEMORY}
+- type: ElementPosition
+  attributes: {x: '288', y: '197', id: file_system_bootloader}
