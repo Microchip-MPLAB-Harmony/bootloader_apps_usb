@@ -27,6 +27,11 @@
             <itemPath>../src/config/sam_d21_xpro/driver/driver.h</itemPath>
             <itemPath>../src/config/sam_d21_xpro/driver/driver_common.h</itemPath>
           </logicalFolder>
+          <logicalFolder name="f7" displayName="osal" projectFiles="true">
+            <itemPath>../src/config/sam_d21_xpro/osal/osal.h</itemPath>
+            <itemPath>../src/config/sam_d21_xpro/osal/osal_definitions.h</itemPath>
+            <itemPath>../src/config/sam_d21_xpro/osal/osal_impl_basic.h</itemPath>
+          </logicalFolder>
           <logicalFolder name="f1" displayName="peripheral" projectFiles="true">
             <logicalFolder name="f4" displayName="clock" projectFiles="true">
               <itemPath>../src/config/sam_d21_xpro/peripheral/clock/plib_clock.h</itemPath>
@@ -106,12 +111,10 @@
           <itemPath>../src/config/sam_d21_xpro/definitions.h</itemPath>
           <itemPath>../src/config/sam_d21_xpro/user.h</itemPath>
           <itemPath>../src/config/sam_d21_xpro/configuration.h</itemPath>
+          <itemPath>../src/config/sam_d21_xpro/interrupts.h</itemPath>
+          <itemPath>../src/config/sam_d21_xpro/device_vectors.h</itemPath>
+          <itemPath>../src/config/sam_d21_xpro/device.h</itemPath>
         </logicalFolder>
-      </logicalFolder>
-      <logicalFolder name="f3" displayName="osal" projectFiles="true">
-        <itemPath>../src/config/sam_d21_xpro/osal/osal.h</itemPath>
-        <itemPath>../src/config/sam_d21_xpro/osal/osal_definitions.h</itemPath>
-        <itemPath>../src/config/sam_d21_xpro/osal/osal_impl_basic.h</itemPath>
       </logicalFolder>
       <logicalFolder name="f2" displayName="packs" projectFiles="true">
         <logicalFolder name="f1" displayName="ATSAMD21J18A_DFP" projectFiles="true">
@@ -140,12 +143,48 @@
             <itemPath>../src/packs/ATSAMD21J18A_DFP/component/usb.h</itemPath>
             <itemPath>../src/packs/ATSAMD21J18A_DFP/component/wdt.h</itemPath>
           </logicalFolder>
+          <logicalFolder name="f3" displayName="instance" projectFiles="true">
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/instance/ac.h</itemPath>
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/instance/adc.h</itemPath>
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/instance/dac.h</itemPath>
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/instance/dmac.h</itemPath>
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/instance/dsu.h</itemPath>
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/instance/eic.h</itemPath>
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/instance/evsys.h</itemPath>
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/instance/gclk.h</itemPath>
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/instance/i2s.h</itemPath>
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/instance/mtb.h</itemPath>
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/instance/nvmctrl.h</itemPath>
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/instance/pac0.h</itemPath>
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/instance/pac1.h</itemPath>
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/instance/pac2.h</itemPath>
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/instance/pm.h</itemPath>
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/instance/port.h</itemPath>
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/instance/ptc.h</itemPath>
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/instance/rtc.h</itemPath>
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/instance/sbmatrix.h</itemPath>
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/instance/sercom0.h</itemPath>
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/instance/sercom1.h</itemPath>
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/instance/sercom2.h</itemPath>
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/instance/sercom3.h</itemPath>
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/instance/sercom4.h</itemPath>
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/instance/sercom5.h</itemPath>
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/instance/sysctrl.h</itemPath>
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/instance/tc3.h</itemPath>
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/instance/tc4.h</itemPath>
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/instance/tc5.h</itemPath>
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/instance/tc6.h</itemPath>
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/instance/tc7.h</itemPath>
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/instance/tcc0.h</itemPath>
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/instance/tcc1.h</itemPath>
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/instance/tcc2.h</itemPath>
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/instance/usb.h</itemPath>
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/instance/wdt.h</itemPath>
+          </logicalFolder>
           <logicalFolder name="f2" displayName="pio" projectFiles="true">
             <itemPath>../src/packs/ATSAMD21J18A_DFP/pio/samd21j18a.h</itemPath>
           </logicalFolder>
-          <itemPath>../src/packs/ATSAMD21J18A_DFP/device.h</itemPath>
-          <itemPath>../src/packs/ATSAMD21J18A_DFP/atsamd21j18a_compat.h</itemPath>
-          <itemPath>../src/packs/ATSAMD21J18A_DFP/atsamd21j18a.h</itemPath>
+          <itemPath>../src/packs/ATSAMD21J18A_DFP/samd21j18a.h</itemPath>
         </logicalFolder>
         <logicalFolder name="f2" displayName="CMSIS" projectFiles="true">
           <logicalFolder name="f1" displayName="CMSIS" projectFiles="true">
@@ -160,6 +199,7 @@
                 <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cmsis_armclang_ltm.h</itemPath>
                 <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/core_cm0plus.h</itemPath>
                 <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/mpu_armv7.h</itemPath>
+                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cachel1_armv7.h</itemPath>
               </logicalFolder>
             </logicalFolder>
           </logicalFolder>
@@ -168,12 +208,35 @@
       <itemPath>../src/app.h</itemPath>
     </logicalFolder>
     <logicalFolder name="f1" displayName="Important Files" projectFiles="true">
-      <itemPath>../src/config/sam_d21_xpro/harmony.prj</itemPath>
-      <itemPath>../src/config/sam_d21_xpro/sam_d21_xpro.xml</itemPath>
+      <logicalFolder name="f1" displayName="sam_d21_xpro.mhc" projectFiles="true">
+        <itemPath>../src/config/sam_d21_xpro/sam_d21_xpro.mhc/BSP_SAM_D21_Xplained_Pro.yml</itemPath>
+        <itemPath>../src/config/sam_d21_xpro/sam_d21_xpro.mhc/cmsis.yml</itemPath>
+        <itemPath>../src/config/sam_d21_xpro/sam_d21_xpro.mhc/core.yml</itemPath>
+        <itemPath>../src/config/sam_d21_xpro/sam_d21_xpro.mhc/dfp.yml</itemPath>
+        <itemPath>../src/config/sam_d21_xpro/sam_d21_xpro.mhc/drv_usbfs_v1.yml</itemPath>
+        <itemPath>../src/config/sam_d21_xpro/sam_d21_xpro.mhc/evsys.yml</itemPath>
+        <itemPath>../src/config/sam_d21_xpro/sam_d21_xpro.mhc/file_system_bootloader.yml</itemPath>
+        <itemPath>../src/config/sam_d21_xpro/sam_d21_xpro.mhc/GraphSettings.yml</itemPath>
+        <itemPath>../src/config/sam_d21_xpro/sam_d21_xpro.mhc/HarmonyCore.yml</itemPath>
+        <itemPath>../src/config/sam_d21_xpro/sam_d21_xpro.mhc/nvmctrl.yml</itemPath>
+        <itemPath>../src/config/sam_d21_xpro/sam_d21_xpro.mhc/project.yml</itemPath>
+        <itemPath>../src/config/sam_d21_xpro/sam_d21_xpro.mhc/settings.yml</itemPath>
+        <itemPath>../src/config/sam_d21_xpro/sam_d21_xpro.mhc/sys_fs.yml</itemPath>
+        <itemPath>../src/config/sam_d21_xpro/sam_d21_xpro.mhc/sys_time.yml</itemPath>
+        <itemPath>../src/config/sam_d21_xpro/sam_d21_xpro.mhc/tc3.yml</itemPath>
+        <itemPath>../src/config/sam_d21_xpro/sam_d21_xpro.mhc/usb_host.yml</itemPath>
+        <itemPath>../src/config/sam_d21_xpro/sam_d21_xpro.mhc/usb_host_msd.yml</itemPath>
+      </logicalFolder>
+      <itemPath>../src/config/sam_d21_xpro/harmony-manifest-success.yml</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
                    projectFiles="true">
+      <logicalFolder name="f1" displayName="config" projectFiles="true">
+        <logicalFolder name="f1" displayName="sam_d21_xpro" projectFiles="true">
+          <itemPath>../src/config/sam_d21_xpro/ATSAMD21J18A.ld</itemPath>
+        </logicalFolder>
+      </logicalFolder>
     </logicalFolder>
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
@@ -300,6 +363,7 @@
       </compileType>
       <makeCustomizationType>
         <makeCustomizationPreStepEnabled>false</makeCustomizationPreStepEnabled>
+        <makeUseCleanTarget>false</makeUseCleanTarget>
         <makeCustomizationPreStep></makeCustomizationPreStep>
         <makeCustomizationPostStepEnabled>false</makeCustomizationPostStepEnabled>
         <makeCustomizationPostStep></makeCustomizationPostStep>
@@ -340,7 +404,7 @@
         <property key="enable-unroll-loops" value="false"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../src;../src/config/sam_d21_xpro;../src/packs/ATSAMD21J18A_DFP;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/CMSIS/;../src/config/sam_d21_xpro/system/fs/fat_fs/file_system;../src/config/sam_d21_xpro/system/fs/fat_fs/hardware_access"/>
+                  value="../src;../src/config/sam_d21_xpro;../src/config/sam_d21_xpro/system/fs/fat_fs/file_system;../src/config/sam_d21_xpro/system/fs/fat_fs/hardware_access;../src/packs/ATSAMD21J18A_DFP;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core/Include"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -415,7 +479,7 @@
         <property key="oXC32ld-extra-opts" value=""/>
         <property key="optimization-level" value=""/>
         <property key="preprocessor-macros"
-                  value="ROM_LENGTH=0xa800;RAM_ORIGIN=0x20000010;RAM_LENGTH=0x7ff0"/>
+                  value="RAM_LENGTH=0x7ff0;RAM_ORIGIN=0x20000010;ROM_LENGTH=0xa800"/>
         <property key="remove-unused-sections" value="true"/>
         <property key="report-memory-usage" value="false"/>
         <property key="serial-length" value=""/>
@@ -436,7 +500,8 @@
         <property key="enable-unroll-loops" value="false"/>
         <property key="exceptions" value="true"/>
         <property key="exclude-floating-point" value="false"/>
-        <property key="extra-include-directories" value=""/>
+        <property key="extra-include-directories"
+                  value="../src;../src/config/sam_d21_xpro;../src/config/sam_d21_xpro/system/fs/fat_fs/file_system;../src/config/sam_d21_xpro/system/fs/fat_fs/hardware_access;../src/packs/ATSAMD21J18A_DFP;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core/Include"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>

@@ -54,6 +54,7 @@
 */
 
 #include "plib_tc3.h"
+#include "interrupts.h"
 
 
 // *****************************************************************************
@@ -125,6 +126,15 @@ void TC3_TimerStop( void )
 uint32_t TC3_TimerFrequencyGet( void )
 {
     return (uint32_t)(48005120UL);
+}
+
+void TC3_TimerCommandSet(TC_COMMAND command)
+{
+    TC3_REGS->COUNT16.TC_CTRLBSET = command << TC_CTRLBSET_CMD_Pos;
+    while((TC3_REGS->COUNT16.TC_STATUS & TC_STATUS_SYNCBUSY_Msk))
+    {
+        /* Wait for Write Synchronization */
+    }    
 }
 
 /* Get the current timer counter value */
