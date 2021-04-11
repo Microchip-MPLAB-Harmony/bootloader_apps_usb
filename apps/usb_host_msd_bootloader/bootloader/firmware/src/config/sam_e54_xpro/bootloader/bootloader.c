@@ -190,7 +190,10 @@ void bootloader_NvmAppErase( uint32_t appLength )
     {
         NVMCTRL_BlockErase(flashAddr);
 
-        while(NVMCTRL_IsBusy() == true);
+        while(NVMCTRL_IsBusy() == true)
+        {
+
+        }
 
         flashAddr += ERASE_BLOCK_SIZE;
         appLength -= ERASE_BLOCK_SIZE;
@@ -201,7 +204,10 @@ void bootloader_NVMPageWrite(uint8_t* data)
 {
     NVMCTRL_PageWrite((uint32_t *)data, btlData.progAddr);
 
-    while(NVMCTRL_IsBusy() == true);
+    while(NVMCTRL_IsBusy() == true)
+    {
+
+    }
 
     btlData.progAddr += PAGE_SIZE;
 }

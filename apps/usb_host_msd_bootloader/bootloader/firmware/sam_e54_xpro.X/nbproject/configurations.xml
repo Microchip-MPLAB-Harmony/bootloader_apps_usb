@@ -27,6 +27,11 @@
             <itemPath>../src/config/sam_e54_xpro/driver/driver.h</itemPath>
             <itemPath>../src/config/sam_e54_xpro/driver/driver_common.h</itemPath>
           </logicalFolder>
+          <logicalFolder name="f7" displayName="osal" projectFiles="true">
+            <itemPath>../src/config/sam_e54_xpro/osal/osal.h</itemPath>
+            <itemPath>../src/config/sam_e54_xpro/osal/osal_definitions.h</itemPath>
+            <itemPath>../src/config/sam_e54_xpro/osal/osal_impl_basic.h</itemPath>
+          </logicalFolder>
           <logicalFolder name="f1" displayName="peripheral" projectFiles="true">
             <logicalFolder name="f4" displayName="clock" projectFiles="true">
               <itemPath>../src/config/sam_e54_xpro/peripheral/clock/plib_clock.h</itemPath>
@@ -112,12 +117,10 @@
           <itemPath>../src/config/sam_e54_xpro/definitions.h</itemPath>
           <itemPath>../src/config/sam_e54_xpro/user.h</itemPath>
           <itemPath>../src/config/sam_e54_xpro/configuration.h</itemPath>
+          <itemPath>../src/config/sam_e54_xpro/interrupts.h</itemPath>
+          <itemPath>../src/config/sam_e54_xpro/device_vectors.h</itemPath>
+          <itemPath>../src/config/sam_e54_xpro/device.h</itemPath>
         </logicalFolder>
-      </logicalFolder>
-      <logicalFolder name="f3" displayName="osal" projectFiles="true">
-        <itemPath>../src/config/sam_e54_xpro/osal/osal.h</itemPath>
-        <itemPath>../src/config/sam_e54_xpro/osal/osal_definitions.h</itemPath>
-        <itemPath>../src/config/sam_e54_xpro/osal/osal_impl_basic.h</itemPath>
       </logicalFolder>
       <logicalFolder name="f2" displayName="packs" projectFiles="true">
         <logicalFolder name="f1" displayName="ATSAME54P20A_DFP" projectFiles="true">
@@ -162,12 +165,71 @@
             <itemPath>../src/packs/ATSAME54P20A_DFP/component/usb.h</itemPath>
             <itemPath>../src/packs/ATSAME54P20A_DFP/component/wdt.h</itemPath>
           </logicalFolder>
+          <logicalFolder name="f3" displayName="instance" projectFiles="true">
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/ac.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/adc0.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/adc1.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/aes.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/can0.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/can1.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/ccl.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/cmcc.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/dac.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/dmac.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/dsu.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/eic.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/evsys.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/freqm.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/gclk.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/gmac.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/hmatrix.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/i2s.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/icm.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/mclk.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/nvmctrl.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/osc32kctrl.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/oscctrl.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/pac.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/pcc.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/pdec.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/pm.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/port.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/qspi.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/ramecc.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/rstc.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/rtc.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/sdhc0.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/sdhc1.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/sercom0.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/sercom1.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/sercom2.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/sercom3.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/sercom4.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/sercom5.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/sercom6.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/sercom7.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/supc.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/tc0.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/tc1.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/tc2.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/tc3.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/tc4.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/tc5.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/tc6.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/tc7.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/tcc0.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/tcc1.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/tcc2.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/tcc3.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/tcc4.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/trng.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/usb.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/wdt.h</itemPath>
+          </logicalFolder>
           <logicalFolder name="f2" displayName="pio" projectFiles="true">
             <itemPath>../src/packs/ATSAME54P20A_DFP/pio/same54p20a.h</itemPath>
           </logicalFolder>
-          <itemPath>../src/packs/ATSAME54P20A_DFP/device.h</itemPath>
-          <itemPath>../src/packs/ATSAME54P20A_DFP/atsame54p20a_compat.h</itemPath>
-          <itemPath>../src/packs/ATSAME54P20A_DFP/atsame54p20a.h</itemPath>
+          <itemPath>../src/packs/ATSAME54P20A_DFP/same54p20a.h</itemPath>
         </logicalFolder>
         <logicalFolder name="f2" displayName="CMSIS" projectFiles="true">
           <logicalFolder name="f1" displayName="CMSIS" projectFiles="true">
@@ -182,6 +244,7 @@
                 <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cmsis_armclang_ltm.h</itemPath>
                 <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/core_cm4.h</itemPath>
                 <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/mpu_armv7.h</itemPath>
+                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cachel1_armv7.h</itemPath>
               </logicalFolder>
             </logicalFolder>
           </logicalFolder>
@@ -192,6 +255,11 @@
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
                    projectFiles="true">
+      <logicalFolder name="f1" displayName="config" projectFiles="true">
+        <logicalFolder name="f1" displayName="sam_e54_xpro" projectFiles="true">
+          <itemPath>../src/config/sam_e54_xpro/ATSAME54P20A.ld</itemPath>
+        </logicalFolder>
+      </logicalFolder>
     </logicalFolder>
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
@@ -287,10 +355,27 @@
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
                    projectFiles="false">
+      <logicalFolder name="f1" displayName="sam_e54_xpro.mhc" projectFiles="true">
+        <itemPath>../src/config/sam_e54_xpro/sam_e54_xpro.mhc/BSP_SAM_E54_Xplained_Pro.yml</itemPath>
+        <itemPath>../src/config/sam_e54_xpro/sam_e54_xpro.mhc/cmsis.yml</itemPath>
+        <itemPath>../src/config/sam_e54_xpro/sam_e54_xpro.mhc/core.yml</itemPath>
+        <itemPath>../src/config/sam_e54_xpro/sam_e54_xpro.mhc/dfp.yml</itemPath>
+        <itemPath>../src/config/sam_e54_xpro/sam_e54_xpro.mhc/drv_usbfs_v1.yml</itemPath>
+        <itemPath>../src/config/sam_e54_xpro/sam_e54_xpro.mhc/evsys.yml</itemPath>
+        <itemPath>../src/config/sam_e54_xpro/sam_e54_xpro.mhc/file_system_bootloader.yml</itemPath>
+        <itemPath>../src/config/sam_e54_xpro/sam_e54_xpro.mhc/GraphSettings.yml</itemPath>
+        <itemPath>../src/config/sam_e54_xpro/sam_e54_xpro.mhc/HarmonyCore.yml</itemPath>
+        <itemPath>../src/config/sam_e54_xpro/sam_e54_xpro.mhc/nvmctrl.yml</itemPath>
+        <itemPath>../src/config/sam_e54_xpro/sam_e54_xpro.mhc/project.yml</itemPath>
+        <itemPath>../src/config/sam_e54_xpro/sam_e54_xpro.mhc/settings.yml</itemPath>
+        <itemPath>../src/config/sam_e54_xpro/sam_e54_xpro.mhc/sys_fs.yml</itemPath>
+        <itemPath>../src/config/sam_e54_xpro/sam_e54_xpro.mhc/sys_time.yml</itemPath>
+        <itemPath>../src/config/sam_e54_xpro/sam_e54_xpro.mhc/tc0.yml</itemPath>
+        <itemPath>../src/config/sam_e54_xpro/sam_e54_xpro.mhc/usb_host.yml</itemPath>
+        <itemPath>../src/config/sam_e54_xpro/sam_e54_xpro.mhc/usb_host_msd.yml</itemPath>
+      </logicalFolder>
       <itemPath>Makefile</itemPath>
-      <itemPath>../src/config/sam_e54_xpro/harmony.prj</itemPath>
-      <itemPath>../src/config/sam_e54_xpro/sam_e54_xpro.xml</itemPath>
-      <itemPath>../../../../../../mhc/../bootloader_apps_usb/apps/usb_host_msd_bootloader/bootloader/firmware/src/config/sam_e54_xpro/sam_e54_xpro.xml</itemPath>
+      <itemPath>../src/config/sam_e54_xpro/harmony-manifest-success.yml</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
@@ -332,6 +417,7 @@
       </compileType>
       <makeCustomizationType>
         <makeCustomizationPreStepEnabled>false</makeCustomizationPreStepEnabled>
+        <makeUseCleanTarget>false</makeUseCleanTarget>
         <makeCustomizationPreStep></makeCustomizationPreStep>
         <makeCustomizationPostStepEnabled>false</makeCustomizationPostStepEnabled>
         <makeCustomizationPostStep></makeCustomizationPostStep>
@@ -372,7 +458,7 @@
         <property key="enable-unroll-loops" value="false"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../src;../src/config/sam_e54_xpro;../src/packs/ATSAME54P20A_DFP;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/CMSIS/;../src/config/sam_e54_xpro/system/fs/fat_fs/file_system;../src/config/sam_e54_xpro/system/fs/fat_fs/hardware_access"/>
+                  value="../src;../src/config/sam_e54_xpro;../src/config/sam_e54_xpro/system/fs/fat_fs/file_system;../src/config/sam_e54_xpro/system/fs/fat_fs/hardware_access;../src/packs/ATSAME54P20A_DFP;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core/Include"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -447,7 +533,7 @@
         <property key="oXC32ld-extra-opts" value=""/>
         <property key="optimization-level" value=""/>
         <property key="preprocessor-macros"
-                  value="ROM_LENGTH=0xa000;RAM_ORIGIN=0x20000010;RAM_LENGTH=0x3fff0"/>
+                  value="RAM_LENGTH=0x3fff0;RAM_ORIGIN=0x20000010;ROM_LENGTH=0xa000"/>
         <property key="remove-unused-sections" value="true"/>
         <property key="report-memory-usage" value="false"/>
         <property key="serial-length" value=""/>
@@ -468,7 +554,8 @@
         <property key="enable-unroll-loops" value="false"/>
         <property key="exceptions" value="true"/>
         <property key="exclude-floating-point" value="false"/>
-        <property key="extra-include-directories" value=""/>
+        <property key="extra-include-directories"
+                  value="../src;../src/config/sam_e54_xpro;../src/config/sam_e54_xpro/system/fs/fat_fs/file_system;../src/config/sam_e54_xpro/system/fs/fat_fs/hardware_access;../src/packs/ATSAME54P20A_DFP;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core/Include"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
