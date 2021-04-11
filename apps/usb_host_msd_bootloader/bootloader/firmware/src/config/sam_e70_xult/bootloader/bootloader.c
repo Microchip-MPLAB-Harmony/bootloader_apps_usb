@@ -190,7 +190,10 @@ void bootloader_NvmAppErase( uint32_t appLength )
     {
         EFC_SectorErase(flashAddr);
 
-        while(EFC_IsBusy() == true);
+        while(EFC_IsBusy() == true)
+        {
+
+        }
 
         flashAddr += ERASE_BLOCK_SIZE;
         appLength -= ERASE_BLOCK_SIZE;
@@ -201,7 +204,10 @@ void bootloader_NVMPageWrite(uint8_t* data)
 {
     EFC_PageWrite((uint32_t *)data, btlData.progAddr);
 
-    while(EFC_IsBusy() == true);
+    while(EFC_IsBusy() == true)
+    {
+
+    }
 
     btlData.progAddr += PAGE_SIZE;
 }

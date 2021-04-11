@@ -140,7 +140,7 @@ typedef enum
 
 typedef enum
 {
-    /* Normal File */
+    /* Normal File. Should not be combined with other attributes */
     SYS_FS_ATTR_FILE    = 0x00,
     /* Read only */
     SYS_FS_ATTR_RDO     = 0x01,
@@ -234,20 +234,18 @@ Description:
 
     Note: The Values mentioned below should be aligned with values in ff.h
 */
-typedef enum
-{
-    SYS_FS_FORMAT_FAT      = 0x01,
-    SYS_FS_FORMAT_FAT32    = 0x02,
-    SYS_FS_FORMAT_EXFAT    = 0x04,
-    SYS_FS_FORMAT_ANY      = 0x07,
-    SYS_FS_FORMAT_SFD      = 0x08
-}SYS_FS_FORMAT;
+
+#define SYS_FS_FORMAT_FAT      0x01
+#define SYS_FS_FORMAT_FAT32    0x02
+#define SYS_FS_FORMAT_EXFAT    0x04
+#define SYS_FS_FORMAT_ANY      0x07
+#define SYS_FS_FORMAT_SFD      0x08
 
 // *****************************************************************************
 /* Format parameter structure */
 typedef struct {
     /* Format option */
-    SYS_FS_FORMAT  fmt;
+    uint8_t  fmt;
     /* Number of FATs */
     uint8_t  n_fat;
     /* Data area alignment (sector) */
@@ -425,11 +423,17 @@ typedef enum
 {
    /* Media has been mounted successfully. */
     SYS_FS_EVENT_MOUNT,
+
+   /* Media has been mounted successfully.
+    * Media has to be formatted as there is no filesystem present.
+    */
+    SYS_FS_EVENT_MOUNT_WITH_NO_FILESYSTEM,
+
     /* Media has been unmounted successfully. */
-    SYS_FS_EVENT_UNMOUNT,       
+    SYS_FS_EVENT_UNMOUNT,
+
     /* There was an error during the operation */
     SYS_FS_EVENT_ERROR
-
 } SYS_FS_EVENT;
 
 typedef int(*FORMAT_DISK)(uint8_t vol, const SYS_FS_FORMAT_PARAM* opt, void* work, uint32_t len);
@@ -624,7 +628,6 @@ typedef struct
     uint16_t    ftime;
     /* Attribute */
     uint8_t     fattrib;
-#if SYS_FS_USE_LFN
     /* Alternate file name */
     char        altname[13];
     /* Primary file name */
@@ -638,10 +641,6 @@ typedef struct
     char       *lfname;
     /* Size of LFN buffer */
     uint32_t    lfsize;
-#else
-    /* Short file name (8.3 format) */
-    char        fname[13];
-#endif
 } SYS_FS_FSTAT;
 
 
@@ -846,13 +845,19 @@ void SYS_FS_Tasks
       There is no mechanism available for the application to know if the
       specified volume (devName) is really attached or not. The only available
       possibility is to keep trying to mount the volume (with the devname),
-      until success is achieved.
+      until success is achieved or use the Automount feature.
       
       It is prudent that the application code implements a time-out mechanism
       while trying to mount a volume (by calling SYS_FS_Mount). The trial for
       mount should continue at least 10 times before before assuming that the
       mount will never succeed. This has to be done for every new volume to be
       mounted.
+
+      Once the mount is successful the application needs to use SYS_FS_Error()
+      API to know if the mount was successful with valid filesystem on media
+      or not. If SYS_FS_ERROR_NO_FILESYSTEM is returned application needs to
+      Format the media using the SYS_FS_DriveFormat() API before performing 
+      any operations.
 
       The standard names for volumes (devName) used in the MPLAB Harmony file
       system is as follows:
@@ -922,6 +927,13 @@ void SYS_FS_Tasks
                 else
                 {
                     // Mount was successful. Do further file operations
+
+                    if (SYS_FS_Error() == SYS_FS_ERROR_NO_FILESYSTEM)
+                    {
+                        //Perform Driver Format operation as there is no filesystem on media
+                        SYS_FS_DriveFormat(...);
+                    }
+
                     appState = DO_FURTHER_STUFFS;
                 }
             break;
@@ -3293,7 +3305,7 @@ SYS_FS_RESULT SYS_FS_DriveLabelSet
     opt           - Specifies the structure holding format options. If a null
                     pointer is given, fat code gives the function all options in default
                     value. The format option structure has five members described below:
-                    fmt     - Specifies combination of FAT type flags, SYS_FS_FORMAT.
+                    fmt     - Specifies combination of FAT type flags, SYS_FS_FORMAT_XXX.
                               These flags specify which FAT type to be created on the volume.
                               If two or more types are specified, one out of them will be
                               selected depends on the volume size and au_size.
@@ -3339,7 +3351,10 @@ SYS_FS_RESULT SYS_FS_DriveLabelSet
                 else
                 {
                     // Mount was successful. Format now.
-                    appState = FORMAT_DRIVE;
+                    if (SYS_FS_Error() == SYS_FS_ERROR_NO_FILESYSTEM)
+                    {
+                        appState = FORMAT_DRIVE;
+                    }
                 }
                 break;
 
