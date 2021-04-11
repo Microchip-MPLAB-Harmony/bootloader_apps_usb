@@ -142,6 +142,11 @@
             <itemPath>../src/config/pic32mx470_curiosity/driver/driver.h</itemPath>
             <itemPath>../src/config/pic32mx470_curiosity/driver/driver_common.h</itemPath>
           </logicalFolder>
+          <logicalFolder name="f7" displayName="osal" projectFiles="true">
+            <itemPath>../src/config/pic32mx470_curiosity/osal/osal.h</itemPath>
+            <itemPath>../src/config/pic32mx470_curiosity/osal/osal_definitions.h</itemPath>
+            <itemPath>../src/config/pic32mx470_curiosity/osal/osal_impl_basic.h</itemPath>
+          </logicalFolder>
           <logicalFolder name="f1" displayName="peripheral" projectFiles="true">
             <logicalFolder name="f2" displayName="clk" projectFiles="true">
               <itemPath>../src/config/pic32mx470_curiosity/peripheral/clk/plib_clk.h</itemPath>
@@ -216,16 +221,8 @@
           <itemPath>../src/config/pic32mx470_curiosity/definitions.h</itemPath>
           <itemPath>../src/config/pic32mx470_curiosity/user.h</itemPath>
           <itemPath>../src/config/pic32mx470_curiosity/configuration.h</itemPath>
-        </logicalFolder>
-      </logicalFolder>
-      <logicalFolder name="f3" displayName="osal" projectFiles="true">
-        <itemPath>../src/config/pic32mx470_curiosity/osal/osal.h</itemPath>
-        <itemPath>../src/config/pic32mx470_curiosity/osal/osal_definitions.h</itemPath>
-        <itemPath>../src/config/pic32mx470_curiosity/osal/osal_impl_basic.h</itemPath>
-      </logicalFolder>
-      <logicalFolder name="f2" displayName="packs" projectFiles="true">
-        <logicalFolder name="f1" displayName="PIC32MX470F512H_DFP" projectFiles="true">
-          <itemPath>../src/packs/PIC32MX470F512H_DFP/device.h</itemPath>
+          <itemPath>../src/config/pic32mx470_curiosity/device.h</itemPath>
+          <itemPath>../src/config/pic32mx470_curiosity/interrupts.h</itemPath>
         </logicalFolder>
       </logicalFolder>
       <itemPath>../src/app.h</itemPath>
@@ -318,10 +315,27 @@
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
                    projectFiles="false">
+      <logicalFolder name="f1"
+                     displayName="pic32mx470_curiosity.mhc"
+                     projectFiles="true">
+        <itemPath>../src/config/pic32mx470_curiosity/pic32mx470_curiosity.mhc/BSP_PIC32MX470_Curiosity_Development_Board.yml</itemPath>
+        <itemPath>../src/config/pic32mx470_curiosity/pic32mx470_curiosity.mhc/core.yml</itemPath>
+        <itemPath>../src/config/pic32mx470_curiosity/pic32mx470_curiosity.mhc/core_timer.yml</itemPath>
+        <itemPath>../src/config/pic32mx470_curiosity/pic32mx470_curiosity.mhc/dfp.yml</itemPath>
+        <itemPath>../src/config/pic32mx470_curiosity/pic32mx470_curiosity.mhc/drv_usbfs_v1.yml</itemPath>
+        <itemPath>../src/config/pic32mx470_curiosity/pic32mx470_curiosity.mhc/file_system_bootloader.yml</itemPath>
+        <itemPath>../src/config/pic32mx470_curiosity/pic32mx470_curiosity.mhc/GraphSettings.yml</itemPath>
+        <itemPath>../src/config/pic32mx470_curiosity/pic32mx470_curiosity.mhc/HarmonyCore.yml</itemPath>
+        <itemPath>../src/config/pic32mx470_curiosity/pic32mx470_curiosity.mhc/nvm.yml</itemPath>
+        <itemPath>../src/config/pic32mx470_curiosity/pic32mx470_curiosity.mhc/project.yml</itemPath>
+        <itemPath>../src/config/pic32mx470_curiosity/pic32mx470_curiosity.mhc/settings.yml</itemPath>
+        <itemPath>../src/config/pic32mx470_curiosity/pic32mx470_curiosity.mhc/sys_fs.yml</itemPath>
+        <itemPath>../src/config/pic32mx470_curiosity/pic32mx470_curiosity.mhc/sys_time.yml</itemPath>
+        <itemPath>../src/config/pic32mx470_curiosity/pic32mx470_curiosity.mhc/usb_host.yml</itemPath>
+        <itemPath>../src/config/pic32mx470_curiosity/pic32mx470_curiosity.mhc/usb_host_msd.yml</itemPath>
+      </logicalFolder>
       <itemPath>Makefile</itemPath>
-      <itemPath>../src/config/pic32mx470_curiosity/harmony.prj</itemPath>
-      <itemPath>../src/config/pic32mx470_curiosity/pic32mx470_curiosity.xml</itemPath>
-      <itemPath>../../../../../../mhc/../bootloader_apps_usb/apps/usb_host_msd_bootloader/bootloader/firmware/src/config/pic32mx470_curiosity/pic32mx470_curiosity.xml</itemPath>
+      <itemPath>../src/config/pic32mx470_curiosity/harmony-manifest-success.yml</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
@@ -362,6 +376,7 @@
       </compileType>
       <makeCustomizationType>
         <makeCustomizationPreStepEnabled>false</makeCustomizationPreStepEnabled>
+        <makeUseCleanTarget>false</makeUseCleanTarget>
         <makeCustomizationPreStep></makeCustomizationPreStep>
         <makeCustomizationPostStepEnabled>false</makeCustomizationPostStepEnabled>
         <makeCustomizationPostStep></makeCustomizationPostStep>
@@ -378,7 +393,7 @@
         <property key="enable-unroll-loops" value="false"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../src/config/pic32mx470_curiosity/system/fs/fat_fs/file_system;../src/config/pic32mx470_curiosity/system/fs/fat_fs/hardware_access;../src;../src/config/pic32mx470_curiosity;../src/packs/PIC32MX470F512H_DFP"/>
+                  value="../src;../src/config/pic32mx470_curiosity;../src/config/pic32mx470_curiosity/system/fs/fat_fs/file_system;../src/config/pic32mx470_curiosity/system/fs/fat_fs/hardware_access;../src/packs/PIC32MX470F512H_DFP"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -473,7 +488,8 @@
         <property key="enable-unroll-loops" value="false"/>
         <property key="exceptions" value="true"/>
         <property key="exclude-floating-point" value="false"/>
-        <property key="extra-include-directories" value=""/>
+        <property key="extra-include-directories"
+                  value="../src;../src/config/pic32mx470_curiosity;../src/config/pic32mx470_curiosity/system/fs/fat_fs/file_system;../src/config/pic32mx470_curiosity/system/fs/fat_fs/hardware_access;../src/packs/PIC32MX470F512H_DFP"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
