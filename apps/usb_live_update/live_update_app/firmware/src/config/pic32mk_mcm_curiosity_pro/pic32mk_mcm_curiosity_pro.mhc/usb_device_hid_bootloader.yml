@@ -1,0 +1,135 @@
+format_version: v1.0
+type: UniqueComponent
+attributes: {id: usb_device_hid_bootloader}
+children:
+- type: Symbols
+  children:
+  - type: File
+    attributes: {id: BOOTLOADER_LINKER_FILE}
+    children:
+    - type: Attributes
+      children:
+      - type: String
+        attributes: {id: name}
+        children:
+        - {type: Value, value: live_update.ld}
+      - type: String
+        attributes: {id: source}
+        children:
+        - {type: Value, value: ../bootloader/templates/mips/linkers/bootloader_linker_mk_DS60001519_live_update.ld.ftl}
+  - type: Boolean
+    attributes: {id: BTL_LIVE_UPDATE}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: 'true'}
+  - type: Comment
+    attributes: {id: BTL_LIVE_UPDATE_COMMENT}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: visible}
+        children:
+        - {type: Value, value: 'true'}
+  - type: Boolean
+    attributes: {id: BTL_LIVE_UPDATE_RESET}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: visible}
+        children:
+        - {type: Value, value: 'true'}
+  - type: String
+    attributes: {id: BTL_LIVE_UPDATE_SIZE}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: visible}
+        children:
+        - {type: Value, value: 'true'}
+  - type: String
+    attributes: {id: BTL_SIZE}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: readOnly}
+        children:
+        - {type: Value, value: 'true'}
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: usb_device_hid_bootloader, value: '32768'}
+  - type: String
+    attributes: {id: BTL_START}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: usb_device_hid_bootloader, value: '0x9D000000'}
+  - type: Boolean
+    attributes: {id: BTL_TRIGGER_ENABLE}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: visible}
+        children:
+        - {type: Value, value: 'false'}
+  - type: File
+    attributes: {id: INITIALIZATION_BOOTLOADER_C}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: enabled}
+        children:
+        - {type: Value, value: 'false'}
+  - type: String
+    attributes: {id: MEM_USED}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: usb_device_hid_bootloader, value: NVM}
+  - type: Integer
+    attributes: {id: USB_DEVICE_INDEX}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: usb_device_hid_bootloader, value: '0'}
+- type: Attachments
+  children:
+  - type: DirectDependency
+    attributes: {id: btl_MEMORY_dependency}
+    children:
+    - type: Attributes
+      children:
+      - type: String
+        attributes: {id: targetComponentID}
+        children:
+        - {type: Value, value: nvm}
+      - type: String
+        attributes: {id: targetAttachmentID}
+        children:
+        - {type: Value, value: NVM_MEMORY}
+  - type: DirectDependency
+    attributes: {id: btl_USB_DEVICE_HID_dependency}
+    children:
+    - type: Attributes
+      children:
+      - type: String
+        attributes: {id: targetComponentID}
+        children:
+        - {type: Value, value: usb_device_hid_0}
+      - type: String
+        attributes: {id: targetAttachmentID}
+        children:
+        - {type: Value, value: USB Device}
+- type: ElementPosition
+  attributes: {x: '543', y: '128', id: usb_device_hid_bootloader}
