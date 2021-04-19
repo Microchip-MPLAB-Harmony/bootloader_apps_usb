@@ -59,33 +59,33 @@ To build the application, refer to the following table and open the project usin
     - Flow Control : None
 
 8. Launch the Unified Host application from below path
-    - *\<harmony3_path\>\bootloader\tools\UnifiedHost-\*\UnifiedHost-\*.jar*
+    - \<harmony3_path\>/bootloader/tools/UnifiedHost-\*/UnifiedHost-\*.jar
 
 9. Configure the Unified host application
     - Select the **Device architecture** and **Protocol** as shown below
 
-        ![hostConfig](./images/btl_unified_host_config.png)
+        ![hostConfig](../../docs/images/unified_host_config.png)
 
     - Click on configure button and select the USB Device as **3C**
 
-        ![hostUSBSetting](./images/btl_unified_host_usb_setting.png)
+        ![hostUSBSetting](../../docs/images/unified_host_usb_setting.png)
 
     - Load the test application hex file to be programmed using below option
-        - *\<harmony3_path\>\bootloader_apps_usb\apps\usb_device_hid_bootloader\test_app\firmware\pic32mx_125_sk.X\dist\pic32mx_125_sk\production\pic32mx_125_sk.X.production.hex*
+        - *\<harmony3_path\>/bootloader_apps_usb/apps/usb_device_hid_bootloader/test_app/firmware/pic32mx_125_sk.X/dist/pic32mx_125_sk/production/pic32mx_125_sk.X.production.hex*
 
-        ![hostLoadHex](./images/btl_unified_host_load_hex.png)
+        ![hostLoadHex](../../docs/images/unified_host_load_hex.png)
 
     - Open the **Console** window of the host application to view application bootloading sequence
 
-        ![hostToolsConsole](./images/btl_unified_host_tools_console.png)
+        ![hostToolsConsole](../../docs/images/unified_host_tools_console.png)
 
 10. Click on **Program Device** button to program the loaded test application hex file on to the device
 
-    ![hostProgramDevice](./images/btl_unified_host_program_device.png)
+    ![hostProgramDevice](../../docs/images/unified_host_program_device.png)
 
 11. Following snapshot shows output of successfully programming the test application
 
-    ![hostSuccess](./images/btl_unified_host_success.png)
+    ![hostSuccess](../../docs/images/unified_host_success.png)
 
 12. If above step is successful then **LED3** should start blinking and you should see below output on the console
 
