@@ -41,6 +41,7 @@ The following applications are provided to demonstrate the USB bootloader
 | Name                                                                  | Description                                                       |
 | ---------                                                             | -----------                                                       |
 | [USB Device HID Bootloader](apps/usb_device_hid_bootloader/readme.md) | This example application shows how to use the Bootloader Library to bootload an application using USB Device HID protocol |
+| [USB Device HID Live Update](apps/usb_live_update/readme.md)          | This example application shows how to use the Bootloader Library as a Live Update application using USB Device HID protocol on devices with Dual Bank Support |
 | [USB Host MSD Bootloader](apps/usb_host_msd_bootloader/readme.md)     | This example application shows how to use the Bootloader Library to bootload an application using USB Host MSD protocol |
 
 

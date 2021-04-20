@@ -3,7 +3,7 @@ parent: USB Bootloader Applications
 title: USB Host MSD Bootloader
 has_children: false
 has_toc: false
-nav_order: 2
+nav_order: 3
 ---
 
 [![MCHP](https://www.microchip.com/ResourcePackages/Microchip/assets/dist/images/logo.png)](https://www.microchip.com)

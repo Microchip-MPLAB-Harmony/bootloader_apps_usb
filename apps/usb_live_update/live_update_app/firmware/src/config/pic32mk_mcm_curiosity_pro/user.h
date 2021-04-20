@@ -59,8 +59,8 @@ extern "C" {
 // Section: User Configuration macros
 // *****************************************************************************
 // *****************************************************************************
-#define LED_ON()        LED1_On()
-#define LED_OFF()       LED1_Off()
+#define LED_ON()        LED3_On()
+#define LED_OFF()       LED3_Off()
 #define LED_TOGGLE()    LED3_Toggle()
 
 #define SWITCH_GET()    SWITCH1_Get()
