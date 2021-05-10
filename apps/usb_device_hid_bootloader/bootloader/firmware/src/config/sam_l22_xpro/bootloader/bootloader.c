@@ -154,7 +154,7 @@ bool __WEAK bootloader_Trigger(void)
     return false;
 }
 
-static void bootloader_TriggerReset(void)
+void bootloader_TriggerReset(void)
 {
     NVIC_SystemReset();
 }
@@ -335,6 +335,7 @@ static void bootloader_ProcessBuffer( BOOTLOADER_DATA *handle )
             break;
     }
 }
+
 
 void bootloader_Tasks( void )
 {
