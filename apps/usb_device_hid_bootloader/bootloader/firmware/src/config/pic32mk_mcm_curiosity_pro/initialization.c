@@ -73,7 +73,7 @@
 /*** DEVCFG1 ***/
 #pragma config FNOSC =      SPLL
 #pragma config DMTINTV =    WIN_127_128
-#pragma config FSOSCEN =    ON
+#pragma config FSOSCEN =    OFF
 #pragma config IESO =       ON
 #pragma config POSCMOD =    EC
 #pragma config OSCIOFNC =   OFF
@@ -92,11 +92,6 @@
 #pragma config FPLLICLK =   PLL_POSC
 #pragma config FPLLMULT =   MUL_40
 #pragma config FPLLODIV =   DIV_4
-#pragma config DSBOREN =    ON
-#pragma config DSWDTPS =    DSPS32
-#pragma config DSWDTOSC =   LPRC
-#pragma config DSWDTEN =    OFF
-#pragma config FDSEN =      ON
 #pragma config BORSEL =     HIGH
 #pragma config UPLLEN =     ON
 
@@ -214,7 +209,7 @@ void SYS_Initialize ( void* data )
     __builtin_mtc0(16, 0,(__builtin_mfc0(16, 0) | 0x3));
 
     /* Configure Wait States and Prefetch */
-    CHECONbits.PFMWS = 3;
+    CHECONbits.PFMWS = 2;
     CHECONbits.PREFEN = 1;
 
 

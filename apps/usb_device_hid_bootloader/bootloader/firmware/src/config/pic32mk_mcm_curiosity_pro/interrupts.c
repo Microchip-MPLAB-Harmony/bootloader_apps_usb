@@ -50,7 +50,9 @@
 // *****************************************************************************
 
 #include "configuration.h"
+#include "interrupts.h"
 #include "definitions.h"
+
 
 // *****************************************************************************
 // *****************************************************************************
@@ -64,7 +66,7 @@ void DRV_USBFS_USB1_Handler( void );
 
 
 /* All the handlers are defined here.  Each will call its PLIB-specific function. */
-void __ISR(_USB_1_VECTOR, ipl1AUTO) USB_1_Handler (void)
+void __ISR(_USB_1_VECTOR, ipl1SRS) USB_1_Handler (void)
 {
     DRV_USBFS_USB1_Handler();
 }
