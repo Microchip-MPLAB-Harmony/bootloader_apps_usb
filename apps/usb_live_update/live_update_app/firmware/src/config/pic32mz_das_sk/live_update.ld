@@ -96,7 +96,7 @@ PROVIDE(_ebase_vector_offsets = 0x1000);
  * _CACHE_ERR_EXCPT_ADDR          -- Cache-error Exception Vector
  * _GEN_EXCPT_ADDR                -- General Exception Vector
  *************************************************************************/
-_RESET_ADDR                    = 0x9D000000;
+_RESET_ADDR                    = 0xBD000000;
 _SIMPLE_TLB_REFILL_EXCPT_ADDR  = _ebase_address + _ebase_vector_offsets + 0;
 _CACHE_ERR_EXCPT_ADDR          = _ebase_address + _ebase_vector_offsets + 0x100;
 _GEN_EXCPT_ADDR                = _ebase_address + _ebase_vector_offsets + 0x180;
@@ -122,8 +122,8 @@ MEMORY
      * run.
     */
     kseg0_program_mem     (rx)  : ORIGIN = 0x9D000000 + 0x1000, LENGTH = 1048576 - 0x1000 - 2048
-    kseg0_boot_mem              : ORIGIN = 0x9D000000, LENGTH = 0x480
-    kseg0_boot_mem_4B0          : ORIGIN = 0x9D0004B0, LENGTH = 0x1000 - 0x4B0
+    kseg1_boot_mem              : ORIGIN = 0xBD000000, LENGTH = 0x480
+    kseg1_boot_mem_4B0          : ORIGIN = 0xBD0004B0, LENGTH = 0x1000 - 0x4B0
 
     kseg0_data_mem       (w!x)  : ORIGIN = 0x80000000, LENGTH = 0xa0000
     sfrs                        : ORIGIN = 0xBF800000, LENGTH = 0x100000
@@ -144,13 +144,13 @@ SECTIONS
   {
     KEEP(*(.reset))
     KEEP(*(.reset.startup))
-  } > kseg0_boot_mem
+  } > kseg1_boot_mem
 
   .cache_init :
   {
     *(.cache_init)
     *(.cache_init.*)
-  } > kseg0_boot_mem_4B0
+  } > kseg1_boot_mem_4B0
 
   .simple_tlb_refill_excpt _SIMPLE_TLB_REFILL_EXCPT_ADDR :
   {
@@ -1466,6 +1466,6 @@ SECTIONS
     LONG(__pic32_tlb_7_entrylo1) ;
     __pic32_tlb_init_values_end = ABSOLUTE(.);
     __pic32_tlb_init_values_count = 8 ;
-  } > kseg0_boot_mem_4B0
+  } > kseg1_boot_mem_4B0
 }
 

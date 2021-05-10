@@ -3,19 +3,19 @@
 	"category": "com.microchip.ide.project",
 	"content": {
 		"metaDataVersion": "1.1.0",
-		"name": "com.microchip.mcu32.mplabx.project.bootloader_apps_usb_usb_live_update_pic32mz_das_sk",
+		"name": "com.microchip.mcu32.mplabx.project.bootloader_apps_usb_usb_device_hid_live_update_app_pic32mz_das_sk",
 		"version": "3.1.0",
 		"displayName": "USB Device HID Live Update Example for PIC32MZ DA Family",
-		"projectName": "usb_live_update_pic32mz_das_sk",
+		"projectName": "usb_device_hid_live_update_app_pic32mz_das_sk",
 		"shortDescription": "This example application shows how to use the Bootloader Library as a Live Update application using USB Device HID protocol on devices with Dual Bank Support.",
 		"ide": {
 			"name": "MPLABX",
-			"semverRange": ">=5.45.0"
+			"semverRange": ">=5.50.0"
 		},
 		"compiler": [
 			{
 				"name": "XC32",
-				"semverRange": ">=2.50.0"
+				"semverRange": ">=3.00.0"
 			}
 		],
 		"dfp": {
@@ -24,7 +24,7 @@
 		},
 		"configurator": {
 			"name": "MHC",
-			"semverRange": ">=3.7.1"
+			"semverRange": ">=3.7.2"
 		},
 		"device": {
 			"metaDataVersion": "1.0.0",
