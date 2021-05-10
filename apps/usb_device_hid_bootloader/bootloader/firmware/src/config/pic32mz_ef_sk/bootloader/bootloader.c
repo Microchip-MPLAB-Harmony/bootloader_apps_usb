@@ -154,7 +154,7 @@ bool __WEAK bootloader_Trigger(void)
     return false;
 }
 
-static void bootloader_TriggerReset(void)
+void bootloader_TriggerReset(void)
 {
     /* Perform system unlock sequence */
     SYSKEY = 0x00000000;
@@ -343,6 +343,7 @@ static void bootloader_ProcessBuffer( BOOTLOADER_DATA *handle )
             break;
     }
 }
+
 
 void bootloader_Tasks( void )
 {
