@@ -9,6 +9,16 @@
                        displayName="pic32mk_mcm_curiosity_pro"
                        projectFiles="true">
           <logicalFolder name="f2" displayName="bsp" projectFiles="true">
+            <logicalFolder name="f1" displayName="clk" projectFiles="true">
+            </logicalFolder>
+            <logicalFolder name="f2" displayName="coretimer" projectFiles="true">
+            </logicalFolder>
+            <logicalFolder name="f3" displayName="evic" projectFiles="true">
+            </logicalFolder>
+            <logicalFolder name="f4" displayName="gpio" projectFiles="true">
+            </logicalFolder>
+            <logicalFolder name="f5" displayName="uart" projectFiles="true">
+            </logicalFolder>
             <itemPath>../src/config/pic32mk_mcm_curiosity_pro/bsp/bsp.h</itemPath>
           </logicalFolder>
           <logicalFolder name="f1" displayName="peripheral" projectFiles="true">
@@ -33,6 +43,8 @@
           <itemPath>../src/config/pic32mk_mcm_curiosity_pro/definitions.h</itemPath>
           <itemPath>../src/config/pic32mk_mcm_curiosity_pro/user.h</itemPath>
           <itemPath>../src/config/pic32mk_mcm_curiosity_pro/configuration.h</itemPath>
+          <itemPath>../src/config/pic32mk_mcm_curiosity_pro/device.h</itemPath>
+          <itemPath>../src/config/pic32mk_mcm_curiosity_pro/interrupts.h</itemPath>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="f2" displayName="packs" projectFiles="true">
@@ -57,6 +69,16 @@
                        displayName="pic32mk_mcm_curiosity_pro"
                        projectFiles="true">
           <logicalFolder name="f2" displayName="bsp" projectFiles="true">
+            <logicalFolder name="f1" displayName="clk" projectFiles="true">
+            </logicalFolder>
+            <logicalFolder name="f2" displayName="coretimer" projectFiles="true">
+            </logicalFolder>
+            <logicalFolder name="f3" displayName="evic" projectFiles="true">
+            </logicalFolder>
+            <logicalFolder name="f4" displayName="gpio" projectFiles="true">
+            </logicalFolder>
+            <logicalFolder name="f5" displayName="uart" projectFiles="true">
+            </logicalFolder>
             <itemPath>../src/config/pic32mk_mcm_curiosity_pro/bsp/bsp.c</itemPath>
           </logicalFolder>
           <logicalFolder name="f1" displayName="peripheral" projectFiles="true">
@@ -92,9 +114,7 @@
                    displayName="Important Files"
                    projectFiles="false">
       <itemPath>Makefile</itemPath>
-      <itemPath>../src/config/pic32mk_mcm_curiosity_pro/harmony.prj</itemPath>
-      <itemPath>../src/config/pic32mk_mcm_curiosity_pro/pic32mk_mcm_curiosity_pro.xml</itemPath>
-      <itemPath>../../../../../../mhc/../bootloader_apps_usb/apps/usb_device_hid_bootloader/test_app/firmware/src/config/pic32mk_mcm_curiosity_pro/pic32mk_mcm_curiosity_pro.xml</itemPath>
+      <itemPath>../src/config/pic32mk_mcm_curiosity_pro/harmony-manifest-success.yml</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
@@ -110,11 +130,11 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>noID</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>2.41</languageToolchainVersion>
+        <languageToolchainVersion>3.00</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="PIC32MK-MC_DFP" vendor="Microchip" version="1.4.94"/>
+        <pack name="PIC32MK-MC_DFP" vendor="Microchip" version="1.5.115"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>
@@ -135,6 +155,7 @@
       </compileType>
       <makeCustomizationType>
         <makeCustomizationPreStepEnabled>false</makeCustomizationPreStepEnabled>
+        <makeUseCleanTarget>false</makeUseCleanTarget>
         <makeCustomizationPreStep></makeCustomizationPreStep>
         <makeCustomizationPostStepEnabled>false</makeCustomizationPostStepEnabled>
         <makeCustomizationPostStep></makeCustomizationPostStep>
@@ -246,7 +267,8 @@
         <property key="enable-unroll-loops" value="false"/>
         <property key="exceptions" value="true"/>
         <property key="exclude-floating-point" value="false"/>
-        <property key="extra-include-directories" value=""/>
+        <property key="extra-include-directories"
+                  value="../src;../src/config/pic32mk_mcm_curiosity_pro;../src/packs/PIC32MK1024MCM100_DFP"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
