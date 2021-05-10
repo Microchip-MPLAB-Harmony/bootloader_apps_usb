@@ -1,8 +1,8 @@
 /*--------------------------------------------------------------------------
  * MPLAB XC Compiler -  PIC32MX795F512L linker script
- * Build date : Feb 07 2020
+ * Build date : Jan 26 2021
  * 
- * Copyright (c) 2020, Microchip Technology Inc. and its subsidiaries ("Microchip")
+ * Copyright (c) 2021, Microchip Technology Inc. and its subsidiaries ("Microchip")
  * All rights reserved.
  * 
  * This software is developed by Microchip Technology Inc. and its
@@ -17,7 +17,8 @@
  * 2.      Redistributions in binary form must reproduce the above 
  *         copyright notice, this list of conditions and the following 
  *         disclaimer in the documentation and/or other materials provided 
- *         with the distribution.
+ *         with the distribution. Publication is not required when this file 
+ *         is used in an embedded application.
  * 3.      Microchip's name may not be used to endorse or promote products
  *         derived from this software without specific prior written 
  *         permission.
@@ -67,8 +68,9 @@ PROVIDE(_min_stack_size = 0x400) ;
  * .S file rather than this processor.o file for new projects. MPLAB XC32
  * v2.10 and later will automatically link the new .S file.
  *************************************************************************/
+#if defined(__XC32_VERSION__) && (__XC32_VERSION__ < 2100)
 OPTIONAL("processor.o")
-
+#endif
 /*************************************************************************
  * Processor-specific legacy peripheral libraries are optional.
  * These legacy plibs are available as a separate download from
@@ -97,7 +99,7 @@ PROVIDE(_ebase_address = 0x9D012000);
  * _DBG_CODE_SIZE                 -- In-circuit Debug Executive size
  * _GEN_EXCPT_ADDR                -- General Exception Vector
  *************************************************************************/
-_RESET_ADDR                    = 0x9D000000 + 0x11000; /* Size of Bootloader is 0x11000 */
+_RESET_ADDR                    = 0xBD000000 + 0x11000; /* Size of Bootloader is 0x11000 */
 _GEN_EXCPT_ADDR                = _ebase_address + 0x180;
 
 /*************************************************************************
@@ -118,7 +120,7 @@ MEMORY
 {
   /* Size of Bootloader is 0x11000 */
   kseg0_program_mem     (rx)  : ORIGIN = 0x9D012000, LENGTH = 0x80000 - 0x1000 - 0x11000
-  kseg1_boot_mem              : ORIGIN = 0x9D011000, LENGTH = 0x490
+  kseg1_boot_mem              : ORIGIN = 0xBD011000, LENGTH = 0x490
 
   /* Bootloader Trigger Pattern 16 Bytes */
   kseg1_data_mem       (w!x)  : ORIGIN = 0xA0000000 + 16, LENGTH = 0x20000 - 16
