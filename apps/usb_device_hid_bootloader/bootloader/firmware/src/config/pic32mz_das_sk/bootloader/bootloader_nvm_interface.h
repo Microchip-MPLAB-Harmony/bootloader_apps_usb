@@ -52,7 +52,10 @@
 #define ERASE_BLOCK_SIZE        (16384UL)
 #define PAGES_IN_ERASE_BLOCK    (ERASE_BLOCK_SIZE / PAGE_SIZE)
 
+#define FLASH_END_ADDRESS       (FLASH_START + FLASH_LENGTH)
+
 #define APP_START_ADDRESS       ((uint32_t)(PA_TO_KVA0(0x1d000000UL)))
+
 
 #define DATA_RECORD             0
 #define END_OF_FILE_RECORD      1
@@ -83,6 +86,7 @@ void bootloader_NvmAppErase(void);
 void bootloader_NvmPageWrite(uint32_t address, uint32_t* data);
 
 bool bootloader_NvmIsBusy(void);
+
 
 #ifdef  __cplusplus
 }

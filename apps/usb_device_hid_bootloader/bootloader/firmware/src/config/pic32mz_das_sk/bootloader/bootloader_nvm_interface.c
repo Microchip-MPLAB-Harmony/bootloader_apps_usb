@@ -75,37 +75,32 @@ bool bootloader_NvmIsBusy(void)
     return (NVM_IsBusy());
 }
 
+
 void bootloader_NvmAppErase( void )
 {
     uint32_t flashAddr = APP_START_ADDRESS;
 
-    bool interruptStatus;
-
-    interruptStatus = SYS_INT_Disable();
-
-    while (flashAddr < (FLASH_START + FLASH_LENGTH))
+    while (flashAddr < FLASH_END_ADDRESS)
     {
         NVM_PageErase(flashAddr);
 
-        while(bootloader_NvmIsBusy() == true);
+        while(bootloader_NvmIsBusy() == true)
+        {
+
+        }
 
         flashAddr += ERASE_BLOCK_SIZE;
     }
-
-    SYS_INT_Restore(interruptStatus);
 }
 
 void bootloader_NVMPageWrite(uint32_t address, uint8_t* data)
 {
-    bool interruptStatus;
-
-    interruptStatus = SYS_INT_Disable();
-
     NVM_RowWrite((uint32_t *)data, address);
 
-    while(bootloader_NvmIsBusy() == true);
+    while(bootloader_NvmIsBusy() == true)
+    {
 
-    SYS_INT_Restore(interruptStatus);
+    }
 }
 
 static void bootloader_AlignProgAddress(uint32_t curAddress)
@@ -173,8 +168,9 @@ HEX_RECORD_STATUS bootloader_NvmProgramHexRecord(uint8_t* HexRecord, uint32_t to
                     {
                         curAddress = (uint32_t)(PA_TO_KVA0(HexRecordSt.Address));
 
+
                         // Make sure we are writing in the desired application memory space.
-                        if(((curAddress >= APP_START_ADDRESS) && (curAddress <= (FLASH_START + FLASH_LENGTH))))
+                        if((curAddress >= APP_START_ADDRESS) && (curAddress <= FLASH_END_ADDRESS))
                         {
                             /* Initiate write and Align the program address to next page
                              * when we have received Page size of data
