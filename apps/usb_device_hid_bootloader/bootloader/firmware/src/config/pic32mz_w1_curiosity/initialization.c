@@ -233,7 +233,6 @@ void SYS_Initialize ( void* data )
     __builtin_disable_interrupts();
 
     CLK_Initialize();
-
 	SYS_PMU_MLDO_TRIM();
 
     /* Configure Wait States */

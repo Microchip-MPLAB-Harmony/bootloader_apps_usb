@@ -10,6 +10,12 @@
             <logicalFolder name="f1" displayName="datastream" projectFiles="true">
               <itemPath>../src/config/pic32mz_w1_curiosity/bootloader/datastream/datastream.h</itemPath>
             </logicalFolder>
+            <logicalFolder name="f2" displayName="evic" projectFiles="true">
+            </logicalFolder>
+            <logicalFolder name="f3" displayName="gpio" projectFiles="true">
+            </logicalFolder>
+            <logicalFolder name="f4" displayName="nvm" projectFiles="true">
+            </logicalFolder>
             <itemPath>../src/config/pic32mz_w1_curiosity/bootloader/bootloader.h</itemPath>
             <itemPath>../src/config/pic32mz_w1_curiosity/bootloader/bootloader_nvm_interface.h</itemPath>
           </logicalFolder>
@@ -147,12 +153,20 @@
             <itemPath>../src/config/pic32mz_w1_curiosity/driver/driver_common.h</itemPath>
           </logicalFolder>
           <logicalFolder name="f7" displayName="osal" projectFiles="true">
+            <logicalFolder name="f1" displayName="src" projectFiles="true">
+            </logicalFolder>
             <itemPath>../src/config/pic32mz_w1_curiosity/osal/osal.h</itemPath>
             <itemPath>../src/config/pic32mz_w1_curiosity/osal/osal_definitions.h</itemPath>
             <itemPath>../src/config/pic32mz_w1_curiosity/osal/osal_impl_basic.h</itemPath>
           </logicalFolder>
           <logicalFolder name="f3" displayName="peripheral" projectFiles="true">
             <logicalFolder name="f1" displayName="clk" projectFiles="true">
+              <logicalFolder name="f1" displayName="usbfs" projectFiles="true">
+                <logicalFolder name="f1" displayName="src" projectFiles="true">
+                  <logicalFolder name="f1" displayName="templates" projectFiles="true">
+                  </logicalFolder>
+                </logicalFolder>
+              </logicalFolder>
               <itemPath>../src/config/pic32mz_w1_curiosity/peripheral/clk/plib_clk.h</itemPath>
             </logicalFolder>
             <logicalFolder name="f3" displayName="evic" projectFiles="true">
@@ -250,6 +264,12 @@
             </logicalFolder>
           </logicalFolder>
           <logicalFolder name="f3" displayName="stdio" projectFiles="true">
+            <logicalFolder name="f1" displayName="usb" projectFiles="true">
+              <logicalFolder name="f1" displayName="usbfs" projectFiles="true">
+                <logicalFolder name="f1" displayName="src" projectFiles="true">
+                </logicalFolder>
+              </logicalFolder>
+            </logicalFolder>
             <itemPath>../src/config/pic32mz_w1_curiosity/stdio/xc32_monitor.c</itemPath>
           </logicalFolder>
           <logicalFolder name="f7" displayName="system" projectFiles="true">
@@ -310,7 +330,7 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>PKOBSKDEPlatformTool</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>2.50</languageToolchainVersion>
+        <languageToolchainVersion>3.00</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
@@ -357,7 +377,7 @@
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
         <property key="make-warnings-into-errors" value="true"/>
-        <property key="optimization-level" value="-O1"/>
+        <property key="optimization-level" value="-O2"/>
         <property key="place-data-into-section" value="false"/>
         <property key="post-instruction-scheduling" value="default"/>
         <property key="pre-instruction-scheduling" value="default"/>
@@ -561,7 +581,6 @@
         <property key="ToolFirmwareFilePath"
                   value="Press to browse for a specific firmware version"/>
         <property key="ToolFirmwareOption.UseLatestFirmware" value="true"/>
-        <property key="firmware.download.all" value="false"/>
         <property key="memories.configurationmemory" value="true"/>
         <property key="memories.dataflash" value="true"/>
         <property key="memories.eeprom" value="true"/>

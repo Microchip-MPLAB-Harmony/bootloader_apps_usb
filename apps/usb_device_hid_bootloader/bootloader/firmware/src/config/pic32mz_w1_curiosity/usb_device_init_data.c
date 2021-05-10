@@ -52,7 +52,7 @@
 	/****************************************************
  * Class specific descriptor - HID Report descriptor
  ****************************************************/
-uint8_t CACHE_ALIGN hid_rpt0[] =
+uint8_t USB_ALIGN hid_rpt0[] =
 {
 	0x06, 0x00, 0xFF,   // Usage Page = 0xFF00 (Vendor Defined Page 1)
     0x09, 0x01,             // Usage (Vendor Usage 1)
