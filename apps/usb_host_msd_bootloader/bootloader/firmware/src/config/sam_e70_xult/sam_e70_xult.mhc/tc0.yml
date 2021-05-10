@@ -319,6 +319,15 @@ children:
       children:
       - type: Dynamic
         attributes: {id: tc0, value: 'false'}
+  - type: Comment
+    attributes: {id: TC_QEI_PERIOD_COMMENT}
+    children:
+    - type: Attributes
+      children:
+      - type: String
+        attributes: {id: text}
+        children:
+        - {type: Value, value: '****Time Base is 100.1 uS****'}
   - type: String
     attributes: {id: TIMER_START_API_NAME}
     children:
