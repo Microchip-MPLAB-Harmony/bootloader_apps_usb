@@ -39,13 +39,17 @@
 		"author": "Microchip",
 		"subcategories": [
 			[
-				"Development Kit", "PIC32MX Ethernet Starter Kit II"
+				"Development Kit",
+				"PIC32MX Ethernet Starter Kit II"
 			],
 			[
-				"Harmony", "Bootloader", "USB"
+				"Harmony",
+				"Bootloader",
+				"USB"
 			],
 			[
-				"Bootloader", "USB"
+				"Bootloader",
+				"USB"
 			]
 		],
 		"peripherals": [

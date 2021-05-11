@@ -39,13 +39,17 @@
 		"author": "Microchip",
 		"subcategories": [
 			[
-				"Development Kit", "PIC32MX Curiosity Development Board"
+				"Development Kit",
+				"PIC32MX Curiosity Development Board"
 			],
 			[
-				"Harmony", "Bootloader", "USB"
+				"Harmony",
+				"Bootloader",
+				"USB"
 			],
 			[
-				"Bootloader", "USB"
+				"Bootloader",
+				"USB"
 			]
 		],
 		"peripherals": [

@@ -39,13 +39,17 @@
 		"author": "Microchip",
 		"subcategories": [
 			[
-				"Development Kit", "PIC32MZ Embedded Connectivity with FPU (EF) Starter Kit"
+				"Development Kit",
+				"PIC32MZ Embedded Connectivity with FPU (EF) Starter Kit"
 			],
 			[
-				"Harmony", "Bootloader", "USB"
+				"Harmony",
+				"Bootloader",
+				"USB"
 			],
 			[
-				"Bootloader", "USB"
+				"Bootloader",
+				"USB"
 			]
 		],
 		"peripherals": [

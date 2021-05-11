@@ -39,13 +39,17 @@
 		"author": "Microchip",
 		"subcategories": [
 			[
-				"Development Kit", "SAM L22 Xplained Pro Evaluation Kit"
+				"Development Kit",
+				"SAM L22 Xplained Pro Evaluation Kit"
 			],
 			[
-				"Harmony", "Bootloader", "USB"
+				"Harmony",
+				"Bootloader",
+				"USB"
 			],
 			[
-				"Bootloader", "USB"
+				"Bootloader",
+				"USB"
 			]
 		],
 		"peripherals": [
