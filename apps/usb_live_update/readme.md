@@ -16,9 +16,9 @@ This example application shows how to use the Bootloader Library as a Live Updat
 
 ### Memory Layout
 
-- For SAM devices refer to [SAM Memory Layout](../docs/readme_live_update_memory_layout_sam.md)
+- For CORTEX-M based MCUs refer to [Live Update Memory Layout For CORTEX-M Based MCUs](../docs/readme_live_update_memory_layout_sam.md)
 
-- For PIC32M devices refer to [PIC32M Memory Layout](../docs/readme_live_update_memory_layout_pic32m.md)
+- For MIPS Based MCUs refer to [Live Update Memory Layout For MIPS Based MCUs](../docs/readme_live_update_memory_layout_pic32m.md)
 
 ### Switcher Application (For PIC32MZ/PIC32MK Devices Only)
 
@@ -33,7 +33,7 @@ This example application shows how to use the Bootloader Library as a Live Updat
 
         - If Bank 2 serial number is **greater than** Bank 1 serial number it maps Bank 2 to lower region by setting the **Swap bit** and jumps to **(0x9D000000)** location. As Bank 2 is now mapped to lower region, application in Bank 2 starts running and this becomes **Active Bank**
 
-#### NOTE: The Switcher project does not have any programing capabilities. It just performs above mentioned operation at reset
+- **NOTE: The Switcher project does not have any programing capabilities. It just performs above mentioned operation at reset**
 
 
 ### Live Update Application

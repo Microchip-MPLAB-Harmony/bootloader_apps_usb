@@ -9,6 +9,6 @@ nav_order: 3
 
 # Live Update Memory Layout
 
-- To view Live Update memory layout for SAM devices refer to [SAM Memory Layout](./readme_live_update_memory_layout_sam.md)
+- To view Live Update memory layout for CORTEX-M Based MCUs refer to [Live Update Memory Layout For CORTEX-M Based MCUs](./readme_live_update_memory_layout_sam.md)
 
-- To view Live Update memory layout for PIC32M devices refer to [PIC32M Memory Layout](./readme_live_update_memory_layout_pic32m.md)
+- To view Live Update memory layout for MIPS Based MCUs refer to [Live Update Memory Layout For MIPS Based MCUs](./readme_live_update_memory_layout_pic32m.md)

@@ -21,17 +21,17 @@ To build the application, refer to the following table and open the project usin
 
 | Project Name      | Description                                    |
 | ----------------- | ---------------------------------------------- |
-| switcher/firmware/pic32mk_mcm_curiosity_pro.X    | MPLABX Project for PIC32MK MCM Curiosity Pro Development Board |
+| switcher/firmware/pic32mk_mcm_curiosity_pro.X    | MPLABX Project for [PIC32MK MCM Curiosity Pro Development Board](https://www.microchip.com/Developmenttools/ProductDetails/EV31E34A) |
 
 
 ### Live Update Application
 
 | Project Name      | Description                                    |
 | ----------------- | ---------------------------------------------- |
-| live_update_app/firmware/pic32mk_mcm_curiosity_pro.X    | MPLABX Project for PIC32MK MCM Curiosity Pro Development Board |
+| live_update_app/firmware/pic32mk_mcm_curiosity_pro.X    | MPLABX Project for [PIC32MK MCM Curiosity Pro Development Board](https://www.microchip.com/Developmenttools/ProductDetails/EV31E34A) |
 
 
-## Setting up PIC32MK MCM Curiosity Pro Development Board
+## Setting up [PIC32MK MCM Curiosity Pro Development Board](https://www.microchip.com/Developmenttools/ProductDetails/EV31E34A)
 
 - Connect a micro USB cable to the USB to UART port J400. This will enumerate as a COM port on the PC
 

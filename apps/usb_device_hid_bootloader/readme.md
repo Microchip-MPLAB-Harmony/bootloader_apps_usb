@@ -50,6 +50,7 @@ The following table provides links to documentation on how to build and run USB 
 |[PIC32MX Curiosity Development Board](docs/readme_pic32mx470_curiosity.md) |
 |[PIC32MZ Embedded Graphics with Stacked DRAM (DA) Starter Kit (Crypto)](docs/readme_pic32mz_das_sk.md) |
 |[PIC32MZ Embedded Connectivity with FPU (EF) Starter Kit](docs/readme_pic32mz_ef_sk.md) |
+|[PIC32 WFI32E Curiosity Board](docs/readme_pic32mz_w1_curiosity.md) |
 |[SAM D21 Xplained Pro Evaluation Kit](docs/readme_sam_d21_xpro.md) |
 |[SAM E54 Xplained Pro Evaluation Kit](docs/readme_sam_e54_xpro.md) |
 |[SAM E70 Xplained Ultra Evaluation Kit](docs/readme_sam_e70_xult.md) |
