@@ -6,7 +6,7 @@
                    projectFiles="true">
       <logicalFolder name="f1" displayName="config" projectFiles="true">
         <logicalFolder name="f1" displayName="sam_d21_xpro" projectFiles="true">
-          <logicalFolder name="f2" displayName="bsp" projectFiles="true">
+          <logicalFolder name="f1" displayName="bsp" projectFiles="true">
             <logicalFolder name="f1" displayName="clock" projectFiles="true">
             </logicalFolder>
             <logicalFolder name="f2" displayName="evsys" projectFiles="true">
@@ -25,23 +25,23 @@
             </logicalFolder>
             <itemPath>../src/config/sam_d21_xpro/bsp/bsp.h</itemPath>
           </logicalFolder>
-          <logicalFolder name="f1" displayName="peripheral" projectFiles="true">
-            <logicalFolder name="f5" displayName="clock" projectFiles="true">
+          <logicalFolder name="f2" displayName="peripheral" projectFiles="true">
+            <logicalFolder name="f1" displayName="clock" projectFiles="true">
               <itemPath>../src/config/sam_d21_xpro/peripheral/clock/plib_clock.h</itemPath>
             </logicalFolder>
-            <logicalFolder name="f3" displayName="evsys" projectFiles="true">
+            <logicalFolder name="f2" displayName="evsys" projectFiles="true">
               <itemPath>../src/config/sam_d21_xpro/peripheral/evsys/plib_evsys.h</itemPath>
             </logicalFolder>
-            <logicalFolder name="f6" displayName="nvic" projectFiles="true">
+            <logicalFolder name="f3" displayName="nvic" projectFiles="true">
               <itemPath>../src/config/sam_d21_xpro/peripheral/nvic/plib_nvic.h</itemPath>
             </logicalFolder>
-            <logicalFolder name="f2" displayName="nvmctrl" projectFiles="true">
+            <logicalFolder name="f4" displayName="nvmctrl" projectFiles="true">
               <itemPath>../src/config/sam_d21_xpro/peripheral/nvmctrl/plib_nvmctrl.h</itemPath>
             </logicalFolder>
-            <logicalFolder name="f4" displayName="port" projectFiles="true">
+            <logicalFolder name="f5" displayName="port" projectFiles="true">
               <itemPath>../src/config/sam_d21_xpro/peripheral/port/plib_port.h</itemPath>
             </logicalFolder>
-            <logicalFolder name="f1" displayName="sercom" projectFiles="true">
+            <logicalFolder name="f6" displayName="sercom" projectFiles="true">
               <logicalFolder name="f1" displayName="usart" projectFiles="true">
                 <itemPath>../src/config/sam_d21_xpro/peripheral/sercom/usart/plib_sercom3_usart.h</itemPath>
                 <itemPath>../src/config/sam_d21_xpro/peripheral/sercom/usart/plib_sercom_usart_common.h</itemPath>
@@ -87,8 +87,9 @@
             <itemPath>../src/packs/ATSAMD21J18A_DFP/component/tcc.h</itemPath>
             <itemPath>../src/packs/ATSAMD21J18A_DFP/component/usb.h</itemPath>
             <itemPath>../src/packs/ATSAMD21J18A_DFP/component/wdt.h</itemPath>
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/component/fuses.h</itemPath>
           </logicalFolder>
-          <logicalFolder name="f3" displayName="instance" projectFiles="true">
+          <logicalFolder name="f2" displayName="instance" projectFiles="true">
             <itemPath>../src/packs/ATSAMD21J18A_DFP/instance/ac.h</itemPath>
             <itemPath>../src/packs/ATSAMD21J18A_DFP/instance/adc.h</itemPath>
             <itemPath>../src/packs/ATSAMD21J18A_DFP/instance/dac.h</itemPath>
@@ -125,8 +126,9 @@
             <itemPath>../src/packs/ATSAMD21J18A_DFP/instance/tcc2.h</itemPath>
             <itemPath>../src/packs/ATSAMD21J18A_DFP/instance/usb.h</itemPath>
             <itemPath>../src/packs/ATSAMD21J18A_DFP/instance/wdt.h</itemPath>
+            <itemPath>../src/packs/ATSAMD21J18A_DFP/instance/fuses.h</itemPath>
           </logicalFolder>
-          <logicalFolder name="f2" displayName="pio" projectFiles="true">
+          <logicalFolder name="f3" displayName="pio" projectFiles="true">
             <itemPath>../src/packs/ATSAMD21J18A_DFP/pio/samd21j18a.h</itemPath>
           </logicalFolder>
           <itemPath>../src/packs/ATSAMD21J18A_DFP/device.h</itemPath>
@@ -155,6 +157,14 @@
       </logicalFolder>
       <itemPath>../src/app.h</itemPath>
     </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="true">
+      <itemPath>Makefile</itemPath>
+      <itemPath>../src/config/sam_d21_xpro/harmony-manifest-success.yml</itemPath>
+      <itemPath>../src/config/sam_d21_xpro/pin_configurations.csv</itemPath>
+      <itemPath>usb_host_msd_bootloader_test_app_sam_d21_xpro.mc3</itemPath>
+    </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
                    projectFiles="true">
@@ -169,7 +179,7 @@
                    projectFiles="true">
       <logicalFolder name="f1" displayName="config" projectFiles="true">
         <logicalFolder name="f1" displayName="sam_d21_xpro" projectFiles="true">
-          <logicalFolder name="f2" displayName="bsp" projectFiles="true">
+          <logicalFolder name="f1" displayName="bsp" projectFiles="true">
             <logicalFolder name="f1" displayName="clock" projectFiles="true">
             </logicalFolder>
             <logicalFolder name="f2" displayName="evsys" projectFiles="true">
@@ -188,23 +198,23 @@
             </logicalFolder>
             <itemPath>../src/config/sam_d21_xpro/bsp/bsp.c</itemPath>
           </logicalFolder>
-          <logicalFolder name="f1" displayName="peripheral" projectFiles="true">
-            <logicalFolder name="f5" displayName="clock" projectFiles="true">
+          <logicalFolder name="f2" displayName="peripheral" projectFiles="true">
+            <logicalFolder name="f1" displayName="clock" projectFiles="true">
               <itemPath>../src/config/sam_d21_xpro/peripheral/clock/plib_clock.c</itemPath>
             </logicalFolder>
-            <logicalFolder name="f3" displayName="evsys" projectFiles="true">
+            <logicalFolder name="f2" displayName="evsys" projectFiles="true">
               <itemPath>../src/config/sam_d21_xpro/peripheral/evsys/plib_evsys.c</itemPath>
             </logicalFolder>
-            <logicalFolder name="f6" displayName="nvic" projectFiles="true">
+            <logicalFolder name="f3" displayName="nvic" projectFiles="true">
               <itemPath>../src/config/sam_d21_xpro/peripheral/nvic/plib_nvic.c</itemPath>
             </logicalFolder>
-            <logicalFolder name="f2" displayName="nvmctrl" projectFiles="true">
+            <logicalFolder name="f4" displayName="nvmctrl" projectFiles="true">
               <itemPath>../src/config/sam_d21_xpro/peripheral/nvmctrl/plib_nvmctrl.c</itemPath>
             </logicalFolder>
-            <logicalFolder name="f4" displayName="port" projectFiles="true">
+            <logicalFolder name="f5" displayName="port" projectFiles="true">
               <itemPath>../src/config/sam_d21_xpro/peripheral/port/plib_port.c</itemPath>
             </logicalFolder>
-            <logicalFolder name="f1" displayName="sercom" projectFiles="true">
+            <logicalFolder name="f6" displayName="sercom" projectFiles="true">
               <logicalFolder name="f1" displayName="usart" projectFiles="true">
                 <itemPath>../src/config/sam_d21_xpro/peripheral/sercom/usart/plib_sercom3_usart.c</itemPath>
               </logicalFolder>
@@ -226,12 +236,6 @@
       </logicalFolder>
       <itemPath>../src/main.c</itemPath>
       <itemPath>../src/app.c</itemPath>
-    </logicalFolder>
-    <logicalFolder name="ExternalFiles"
-                   displayName="Important Files"
-                   projectFiles="false">
-      <itemPath>Makefile</itemPath>
-      <itemPath>../src/config/sam_d21_xpro/harmony-manifest-success.yml</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
@@ -308,6 +312,7 @@
       <C32>
         <property key="additional-warnings" value="true"/>
         <property key="addresss-attribute-use" value="false"/>
+        <property key="appendMe" value=""/>
         <property key="enable-app-io" value="false"/>
         <property key="enable-omit-frame-pointer" value="false"/>
         <property key="enable-symbols" value="true"/>
@@ -364,6 +369,7 @@
         <property key="additional-options-use-response-files" value="false"/>
         <property key="additional-options-write-sla" value="false"/>
         <property key="allocate-dinit" value="false"/>
+        <property key="appendMe" value="-DRAM_ORIGIN=0x20000010, -DRAM_LENGTH=0x7ff0"/>
         <property key="code-dinit" value="false"/>
         <property key="ebase-addr" value=""/>
         <property key="enable-check-sections" value="false"/>
@@ -405,6 +411,7 @@
       <C32CPP>
         <property key="additional-warnings" value="false"/>
         <property key="addresss-attribute-use" value="false"/>
+        <property key="appendMe" value=""/>
         <property key="check-new" value="false"/>
         <property key="eh-specs" value="true"/>
         <property key="enable-app-io" value="false"/>
@@ -985,6 +992,7 @@
         <property key="firmware.toolpack"
                   value="Press to select which tool pack to use"/>
         <property key="firmware.update.action" value="firmware.update.use.latest"/>
+        <property key="freeze.timers" value="false"/>
         <property key="memories.aux" value="false"/>
         <property key="memories.bootflash" value="true"/>
         <property key="memories.configurationmemory" value="true"/>
@@ -998,6 +1006,7 @@
                   value="${memories.instruction.ram.ranges}"/>
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="0-3ffff"/>
+        <property key="memories.rww" value="true"/>
         <property key="poweroptions.powerenable" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.preservedataflash" value="false"/>
