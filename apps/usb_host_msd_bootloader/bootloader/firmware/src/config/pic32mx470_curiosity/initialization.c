@@ -96,6 +96,7 @@
 
 
 
+
 // *****************************************************************************
 // *****************************************************************************
 // Section: Driver Initialization Data
@@ -168,13 +169,15 @@ const SYS_FS_FUNCTIONS FatFsFunctions =
 };
 
 
+
 const SYS_FS_REGISTRATION_TABLE sysFSInit [ SYS_FS_MAX_FILE_SYSTEM_TYPE ] =
 {
     {
         .nativeFileSystemType = FAT,
         .nativeFileSystemFunctions = &FatFsFunctions
-    }
+    },
 };
+
 
 // </editor-fold>
 
@@ -212,6 +215,7 @@ const DRV_USBFS_INIT drvUSBFSInit =
 
 	/* Interrupt Source for USB module */
 	.interruptSource = INT_SOURCE_USB,
+
 
     
 	/* USB Controller to operate as USB Host */
@@ -302,8 +306,8 @@ void SYS_Initialize ( void* data )
     CHECONbits.PFMWS = 2;
     CHECONbits.PREFEN = 3;
 
-    /* Set the SRAM wait states to zero */
-    BMXCONbits.BMXWSDRM = 0;
+    /* Set the SRAM wait states to One */
+    BMXCONbits.BMXWSDRM = 1;
 
 
 
@@ -314,7 +318,7 @@ void SYS_Initialize ( void* data )
 
     if (bootloader_Trigger() == false)
     {
-        run_Application();
+        run_Application(APP_JUMP_ADDRESS);
     }
 
     CORETIMER_Initialize();

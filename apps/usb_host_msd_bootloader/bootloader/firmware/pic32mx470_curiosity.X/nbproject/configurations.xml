@@ -6,10 +6,11 @@
                    projectFiles="true">
       <logicalFolder name="f1" displayName="config" projectFiles="true">
         <logicalFolder name="f1" displayName="pic32mx470_curiosity" projectFiles="true">
-          <logicalFolder name="f4" displayName="bootloader" projectFiles="true">
-            <itemPath>../src/config/pic32mx470_curiosity/bootloader/bootloader.h</itemPath>
+          <logicalFolder name="f7" displayName="bootloader" projectFiles="true">
+            <itemPath>../src/config/pic32mx470_curiosity/bootloader/bootloader_usb_host_msd.h</itemPath>
+            <itemPath>../src/config/pic32mx470_curiosity/bootloader/bootloader_common.h</itemPath>
           </logicalFolder>
-          <logicalFolder name="f3" displayName="bsp" projectFiles="true">
+          <logicalFolder name="f1" displayName="bsp" projectFiles="true">
             <logicalFolder name="f1" displayName="usb" projectFiles="true">
               <logicalFolder name="f1" displayName="usbfs" projectFiles="true">
                 <logicalFolder name="f1" displayName="src" projectFiles="true">
@@ -20,8 +21,8 @@
             </logicalFolder>
             <itemPath>../src/config/pic32mx470_curiosity/bsp/bsp.h</itemPath>
           </logicalFolder>
-          <logicalFolder name="f6" displayName="driver" projectFiles="true">
-            <logicalFolder name="f2" displayName="fs" projectFiles="true">
+          <logicalFolder name="f2" displayName="driver" projectFiles="true">
+            <logicalFolder name="f1" displayName="fs" projectFiles="true">
               <logicalFolder name="f1" displayName="fat_fs" projectFiles="true">
                 <logicalFolder name="f1" displayName="file_system" projectFiles="true">
                 </logicalFolder>
@@ -29,11 +30,11 @@
                 </logicalFolder>
               </logicalFolder>
             </logicalFolder>
-            <logicalFolder name="f3" displayName="int" projectFiles="true">
+            <logicalFolder name="f2" displayName="int" projectFiles="true">
             </logicalFolder>
-            <logicalFolder name="f4" displayName="time" projectFiles="true">
+            <logicalFolder name="f3" displayName="time" projectFiles="true">
             </logicalFolder>
-            <logicalFolder name="f1" displayName="usb" projectFiles="true">
+            <logicalFolder name="f4" displayName="usb" projectFiles="true">
               <logicalFolder name="f1" displayName="usbfs" projectFiles="true">
                 <logicalFolder name="f1" displayName="src" projectFiles="true">
                   <logicalFolder name="f1" displayName="templates" projectFiles="true">
@@ -162,24 +163,24 @@
             <itemPath>../src/config/pic32mx470_curiosity/driver/driver.h</itemPath>
             <itemPath>../src/config/pic32mx470_curiosity/driver/driver_common.h</itemPath>
           </logicalFolder>
-          <logicalFolder name="f7" displayName="osal" projectFiles="true">
+          <logicalFolder name="f3" displayName="osal" projectFiles="true">
             <logicalFolder name="f1" displayName="src" projectFiles="true">
             </logicalFolder>
             <itemPath>../src/config/pic32mx470_curiosity/osal/osal.h</itemPath>
             <itemPath>../src/config/pic32mx470_curiosity/osal/osal_definitions.h</itemPath>
             <itemPath>../src/config/pic32mx470_curiosity/osal/osal_impl_basic.h</itemPath>
           </logicalFolder>
-          <logicalFolder name="f1" displayName="peripheral" projectFiles="true">
-            <logicalFolder name="f2" displayName="clk" projectFiles="true">
+          <logicalFolder name="f4" displayName="peripheral" projectFiles="true">
+            <logicalFolder name="f1" displayName="clk" projectFiles="true">
               <itemPath>../src/config/pic32mx470_curiosity/peripheral/clk/plib_clk.h</itemPath>
             </logicalFolder>
-            <logicalFolder name="f1" displayName="coretimer" projectFiles="true">
+            <logicalFolder name="f2" displayName="coretimer" projectFiles="true">
               <itemPath>../src/config/pic32mx470_curiosity/peripheral/coretimer/plib_coretimer.h</itemPath>
             </logicalFolder>
-            <logicalFolder name="f4" displayName="evic" projectFiles="true">
+            <logicalFolder name="f3" displayName="evic" projectFiles="true">
               <itemPath>../src/config/pic32mx470_curiosity/peripheral/evic/plib_evic.h</itemPath>
             </logicalFolder>
-            <logicalFolder name="f3" displayName="gpio" projectFiles="true">
+            <logicalFolder name="f4" displayName="gpio" projectFiles="true">
               <itemPath>../src/config/pic32mx470_curiosity/peripheral/gpio/plib_gpio.h</itemPath>
             </logicalFolder>
             <logicalFolder name="f5" displayName="nvm" projectFiles="true">
@@ -187,10 +188,10 @@
             </logicalFolder>
           </logicalFolder>
           <logicalFolder name="f5" displayName="system" projectFiles="true">
-            <logicalFolder name="f3" displayName="debug" projectFiles="true">
+            <logicalFolder name="f1" displayName="debug" projectFiles="true">
               <itemPath>../src/config/pic32mx470_curiosity/system/debug/sys_debug.h</itemPath>
             </logicalFolder>
-            <logicalFolder name="f1" displayName="fs" projectFiles="true">
+            <logicalFolder name="f2" displayName="fs" projectFiles="true">
               <logicalFolder name="f1" displayName="fat_fs" projectFiles="true">
                 <logicalFolder name="f1" displayName="file_system" projectFiles="true">
                   <itemPath>../src/config/pic32mx470_curiosity/system/fs/fat_fs/file_system/ff.h</itemPath>
@@ -206,13 +207,13 @@
               <itemPath>../src/config/pic32mx470_curiosity/system/fs/src/sys_fs_media_manager_local.h</itemPath>
               <itemPath>../src/config/pic32mx470_curiosity/system/fs/sys_fs_fat_interface.h</itemPath>
             </logicalFolder>
-            <logicalFolder name="f2" displayName="int" projectFiles="true">
+            <logicalFolder name="f3" displayName="int" projectFiles="true">
               <itemPath>../src/config/pic32mx470_curiosity/system/int/sys_int.h</itemPath>
               <itemPath>../src/config/pic32mx470_curiosity/system/int/sys_int_mapping.h</itemPath>
             </logicalFolder>
-            <logicalFolder name="f5" displayName="nvm" projectFiles="true">
+            <logicalFolder name="f4" displayName="nvm" projectFiles="true">
             </logicalFolder>
-            <logicalFolder name="f4" displayName="time" projectFiles="true">
+            <logicalFolder name="f5" displayName="time" projectFiles="true">
               <itemPath>../src/config/pic32mx470_curiosity/system/time/sys_time.h</itemPath>
               <itemPath>../src/config/pic32mx470_curiosity/system/time/sys_time_definitions.h</itemPath>
               <itemPath>../src/config/pic32mx470_curiosity/system/time/src/sys_time_local.h</itemPath>
@@ -222,7 +223,7 @@
             <itemPath>../src/config/pic32mx470_curiosity/system/system_module.h</itemPath>
             <itemPath>../src/config/pic32mx470_curiosity/system/system_media.h</itemPath>
           </logicalFolder>
-          <logicalFolder name="f2" displayName="usb" projectFiles="true">
+          <logicalFolder name="f6" displayName="usb" projectFiles="true">
             <logicalFolder name="f1" displayName="src" projectFiles="true">
               <itemPath>../src/config/pic32mx470_curiosity/usb/src/usb_host_local.h</itemPath>
               <itemPath>../src/config/pic32mx470_curiosity/usb/src/usb_host_hub_mapping.h</itemPath>
@@ -251,122 +252,9 @@
       </logicalFolder>
       <itemPath>../src/app.h</itemPath>
     </logicalFolder>
-    <logicalFolder name="LinkerScript"
-                   displayName="Linker Files"
-                   projectFiles="true">
-      <itemPath>../src/config/pic32mx470_curiosity/btl.ld</itemPath>
-    </logicalFolder>
-    <logicalFolder name="SourceFiles"
-                   displayName="Source Files"
-                   projectFiles="true">
-      <logicalFolder name="f1" displayName="config" projectFiles="true">
-        <logicalFolder name="f1" displayName="pic32mx470_curiosity" projectFiles="true">
-          <logicalFolder name="f4" displayName="bootloader" projectFiles="true">
-            <logicalFolder name="f1" displayName="clk" projectFiles="true">
-            </logicalFolder>
-            <logicalFolder name="f2" displayName="coretimer" projectFiles="true">
-            </logicalFolder>
-            <logicalFolder name="f3" displayName="evic" projectFiles="true">
-            </logicalFolder>
-            <logicalFolder name="f4" displayName="gpio" projectFiles="true">
-            </logicalFolder>
-            <logicalFolder name="f5" displayName="nvm" projectFiles="true">
-            </logicalFolder>
-            <itemPath>../src/config/pic32mx470_curiosity/bootloader/bootloader.c</itemPath>
-          </logicalFolder>
-          <logicalFolder name="f3" displayName="bsp" projectFiles="true">
-            <logicalFolder name="f1" displayName="usb" projectFiles="true">
-              <logicalFolder name="f1" displayName="usbfs" projectFiles="true">
-                <logicalFolder name="f1" displayName="src" projectFiles="true">
-                </logicalFolder>
-              </logicalFolder>
-            </logicalFolder>
-            <itemPath>../src/config/pic32mx470_curiosity/bsp/bsp.c</itemPath>
-          </logicalFolder>
-          <logicalFolder name="f7" displayName="driver" projectFiles="true">
-            <logicalFolder name="f1" displayName="usb" projectFiles="true">
-              <logicalFolder name="f1" displayName="usbfs" projectFiles="true">
-                <logicalFolder name="f1" displayName="src" projectFiles="true">
-                  <itemPath>../src/config/pic32mx470_curiosity/driver/usb/usbfs/src/drv_usbfs.c</itemPath>
-                  <itemPath>../src/config/pic32mx470_curiosity/driver/usb/usbfs/src/drv_usbfs_host.c</itemPath>
-                </logicalFolder>
-              </logicalFolder>
-            </logicalFolder>
-          </logicalFolder>
-          <logicalFolder name="f1" displayName="peripheral" projectFiles="true">
-            <logicalFolder name="f2" displayName="clk" projectFiles="true">
-              <itemPath>../src/config/pic32mx470_curiosity/peripheral/clk/plib_clk.c</itemPath>
-            </logicalFolder>
-            <logicalFolder name="f1" displayName="coretimer" projectFiles="true">
-              <itemPath>../src/config/pic32mx470_curiosity/peripheral/coretimer/plib_coretimer.c</itemPath>
-            </logicalFolder>
-            <logicalFolder name="f4" displayName="evic" projectFiles="true">
-              <itemPath>../src/config/pic32mx470_curiosity/peripheral/evic/plib_evic.c</itemPath>
-            </logicalFolder>
-            <logicalFolder name="f3" displayName="gpio" projectFiles="true">
-              <itemPath>../src/config/pic32mx470_curiosity/peripheral/gpio/plib_gpio.c</itemPath>
-            </logicalFolder>
-            <logicalFolder name="f5" displayName="nvm" projectFiles="true">
-              <itemPath>../src/config/pic32mx470_curiosity/peripheral/nvm/plib_nvm.c</itemPath>
-            </logicalFolder>
-          </logicalFolder>
-          <logicalFolder name="f6" displayName="stdio" projectFiles="true">
-            <logicalFolder name="f1" displayName="fs" projectFiles="true">
-              <logicalFolder name="f1" displayName="fat_fs" projectFiles="true">
-                <logicalFolder name="f1" displayName="file_system" projectFiles="true">
-                </logicalFolder>
-                <logicalFolder name="f2" displayName="hardware_access" projectFiles="true">
-                </logicalFolder>
-              </logicalFolder>
-            </logicalFolder>
-            <logicalFolder name="f2" displayName="int" projectFiles="true">
-            </logicalFolder>
-            <logicalFolder name="f3" displayName="time" projectFiles="true">
-            </logicalFolder>
-            <itemPath>../src/config/pic32mx470_curiosity/stdio/xc32_monitor.c</itemPath>
-          </logicalFolder>
-          <logicalFolder name="f5" displayName="system" projectFiles="true">
-            <logicalFolder name="f1" displayName="fs" projectFiles="true">
-              <logicalFolder name="f1" displayName="fat_fs" projectFiles="true">
-                <logicalFolder name="f1" displayName="file_system" projectFiles="true">
-                  <itemPath>../src/config/pic32mx470_curiosity/system/fs/fat_fs/file_system/ff.c</itemPath>
-                  <itemPath>../src/config/pic32mx470_curiosity/system/fs/fat_fs/file_system/ffunicode.c</itemPath>
-                </logicalFolder>
-                <logicalFolder name="f2" displayName="hardware_access" projectFiles="true">
-                  <itemPath>../src/config/pic32mx470_curiosity/system/fs/fat_fs/hardware_access/diskio.c</itemPath>
-                </logicalFolder>
-              </logicalFolder>
-              <itemPath>../src/config/pic32mx470_curiosity/system/fs/src/sys_fs.c</itemPath>
-              <itemPath>../src/config/pic32mx470_curiosity/system/fs/src/sys_fs_media_manager.c</itemPath>
-              <itemPath>../src/config/pic32mx470_curiosity/system/fs/src/sys_fs_fat_interface.c</itemPath>
-            </logicalFolder>
-            <logicalFolder name="f2" displayName="int" projectFiles="true">
-              <itemPath>../src/config/pic32mx470_curiosity/system/int/src/sys_int.c</itemPath>
-            </logicalFolder>
-            <logicalFolder name="f3" displayName="time" projectFiles="true">
-              <itemPath>../src/config/pic32mx470_curiosity/system/time/src/sys_time.c</itemPath>
-            </logicalFolder>
-          </logicalFolder>
-          <logicalFolder name="f2" displayName="usb" projectFiles="true">
-            <logicalFolder name="f1" displayName="src" projectFiles="true">
-              <itemPath>../src/config/pic32mx470_curiosity/usb/src/usb_host.c</itemPath>
-              <itemPath>../src/config/pic32mx470_curiosity/usb/src/usb_host_msd.c</itemPath>
-              <itemPath>../src/config/pic32mx470_curiosity/usb/src/usb_host_scsi.c</itemPath>
-            </logicalFolder>
-          </logicalFolder>
-          <itemPath>../src/config/pic32mx470_curiosity/usb_host_init_data.c</itemPath>
-          <itemPath>../src/config/pic32mx470_curiosity/initialization.c</itemPath>
-          <itemPath>../src/config/pic32mx470_curiosity/interrupts.c</itemPath>
-          <itemPath>../src/config/pic32mx470_curiosity/exceptions.c</itemPath>
-          <itemPath>../src/config/pic32mx470_curiosity/tasks.c</itemPath>
-        </logicalFolder>
-      </logicalFolder>
-      <itemPath>../src/main.c</itemPath>
-      <itemPath>../src/app.c</itemPath>
-    </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
-                   projectFiles="false">
+                   projectFiles="true">
       <logicalFolder name="f1"
                      displayName="pic32mx470_curiosity.mhc"
                      projectFiles="true">
@@ -388,6 +276,121 @@
       </logicalFolder>
       <itemPath>Makefile</itemPath>
       <itemPath>../src/config/pic32mx470_curiosity/harmony-manifest-success.yml</itemPath>
+      <itemPath>usb_host_msd_bootloader_pic32mx470_curiosity.mc3</itemPath>
+    </logicalFolder>
+    <logicalFolder name="LinkerScript"
+                   displayName="Linker Files"
+                   projectFiles="true">
+      <itemPath>../src/config/pic32mx470_curiosity/btl.ld</itemPath>
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <logicalFolder name="f1" displayName="config" projectFiles="true">
+        <logicalFolder name="f1" displayName="pic32mx470_curiosity" projectFiles="true">
+          <logicalFolder name="f1" displayName="bootloader" projectFiles="true">
+            <logicalFolder name="f1" displayName="clk" projectFiles="true">
+            </logicalFolder>
+            <logicalFolder name="f2" displayName="coretimer" projectFiles="true">
+            </logicalFolder>
+            <logicalFolder name="f3" displayName="evic" projectFiles="true">
+            </logicalFolder>
+            <logicalFolder name="f4" displayName="gpio" projectFiles="true">
+            </logicalFolder>
+            <logicalFolder name="f5" displayName="nvm" projectFiles="true">
+            </logicalFolder>
+            <itemPath>../src/config/pic32mx470_curiosity/bootloader/bootloader_usb_host_msd.c</itemPath>
+            <itemPath>../src/config/pic32mx470_curiosity/bootloader/bootloader_common.c</itemPath>
+          </logicalFolder>
+          <logicalFolder name="f2" displayName="bsp" projectFiles="true">
+            <logicalFolder name="f1" displayName="usb" projectFiles="true">
+              <logicalFolder name="f1" displayName="usbfs" projectFiles="true">
+                <logicalFolder name="f1" displayName="src" projectFiles="true">
+                </logicalFolder>
+              </logicalFolder>
+            </logicalFolder>
+            <itemPath>../src/config/pic32mx470_curiosity/bsp/bsp.c</itemPath>
+          </logicalFolder>
+          <logicalFolder name="f3" displayName="driver" projectFiles="true">
+            <logicalFolder name="f1" displayName="usb" projectFiles="true">
+              <logicalFolder name="f1" displayName="usbfs" projectFiles="true">
+                <logicalFolder name="f1" displayName="src" projectFiles="true">
+                  <itemPath>../src/config/pic32mx470_curiosity/driver/usb/usbfs/src/drv_usbfs.c</itemPath>
+                  <itemPath>../src/config/pic32mx470_curiosity/driver/usb/usbfs/src/drv_usbfs_host.c</itemPath>
+                </logicalFolder>
+              </logicalFolder>
+            </logicalFolder>
+          </logicalFolder>
+          <logicalFolder name="f4" displayName="peripheral" projectFiles="true">
+            <logicalFolder name="f1" displayName="clk" projectFiles="true">
+              <itemPath>../src/config/pic32mx470_curiosity/peripheral/clk/plib_clk.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="f2" displayName="coretimer" projectFiles="true">
+              <itemPath>../src/config/pic32mx470_curiosity/peripheral/coretimer/plib_coretimer.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="f3" displayName="evic" projectFiles="true">
+              <itemPath>../src/config/pic32mx470_curiosity/peripheral/evic/plib_evic.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="f4" displayName="gpio" projectFiles="true">
+              <itemPath>../src/config/pic32mx470_curiosity/peripheral/gpio/plib_gpio.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="f5" displayName="nvm" projectFiles="true">
+              <itemPath>../src/config/pic32mx470_curiosity/peripheral/nvm/plib_nvm.c</itemPath>
+            </logicalFolder>
+          </logicalFolder>
+          <logicalFolder name="f5" displayName="stdio" projectFiles="true">
+            <logicalFolder name="f1" displayName="fs" projectFiles="true">
+              <logicalFolder name="f1" displayName="fat_fs" projectFiles="true">
+                <logicalFolder name="f1" displayName="file_system" projectFiles="true">
+                </logicalFolder>
+                <logicalFolder name="f2" displayName="hardware_access" projectFiles="true">
+                </logicalFolder>
+              </logicalFolder>
+            </logicalFolder>
+            <logicalFolder name="f2" displayName="int" projectFiles="true">
+            </logicalFolder>
+            <logicalFolder name="f3" displayName="time" projectFiles="true">
+            </logicalFolder>
+            <itemPath>../src/config/pic32mx470_curiosity/stdio/xc32_monitor.c</itemPath>
+          </logicalFolder>
+          <logicalFolder name="f6" displayName="system" projectFiles="true">
+            <logicalFolder name="f1" displayName="fs" projectFiles="true">
+              <logicalFolder name="f1" displayName="fat_fs" projectFiles="true">
+                <logicalFolder name="f1" displayName="file_system" projectFiles="true">
+                  <itemPath>../src/config/pic32mx470_curiosity/system/fs/fat_fs/file_system/ff.c</itemPath>
+                  <itemPath>../src/config/pic32mx470_curiosity/system/fs/fat_fs/file_system/ffunicode.c</itemPath>
+                </logicalFolder>
+                <logicalFolder name="f2" displayName="hardware_access" projectFiles="true">
+                  <itemPath>../src/config/pic32mx470_curiosity/system/fs/fat_fs/hardware_access/diskio.c</itemPath>
+                </logicalFolder>
+              </logicalFolder>
+              <itemPath>../src/config/pic32mx470_curiosity/system/fs/src/sys_fs.c</itemPath>
+              <itemPath>../src/config/pic32mx470_curiosity/system/fs/src/sys_fs_media_manager.c</itemPath>
+              <itemPath>../src/config/pic32mx470_curiosity/system/fs/src/sys_fs_fat_interface.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="f2" displayName="int" projectFiles="true">
+              <itemPath>../src/config/pic32mx470_curiosity/system/int/src/sys_int.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="f3" displayName="time" projectFiles="true">
+              <itemPath>../src/config/pic32mx470_curiosity/system/time/src/sys_time.c</itemPath>
+            </logicalFolder>
+          </logicalFolder>
+          <logicalFolder name="f7" displayName="usb" projectFiles="true">
+            <logicalFolder name="f1" displayName="src" projectFiles="true">
+              <itemPath>../src/config/pic32mx470_curiosity/usb/src/usb_host.c</itemPath>
+              <itemPath>../src/config/pic32mx470_curiosity/usb/src/usb_host_msd.c</itemPath>
+              <itemPath>../src/config/pic32mx470_curiosity/usb/src/usb_host_scsi.c</itemPath>
+            </logicalFolder>
+          </logicalFolder>
+          <itemPath>../src/config/pic32mx470_curiosity/usb_host_init_data.c</itemPath>
+          <itemPath>../src/config/pic32mx470_curiosity/initialization.c</itemPath>
+          <itemPath>../src/config/pic32mx470_curiosity/interrupts.c</itemPath>
+          <itemPath>../src/config/pic32mx470_curiosity/exceptions.c</itemPath>
+          <itemPath>../src/config/pic32mx470_curiosity/tasks.c</itemPath>
+        </logicalFolder>
+      </logicalFolder>
+      <itemPath>../src/main.c</itemPath>
+      <itemPath>../src/app.c</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
@@ -439,13 +442,14 @@
       <C32>
         <property key="additional-warnings" value="true"/>
         <property key="addresss-attribute-use" value="false"/>
+        <property key="appendMe" value=""/>
         <property key="enable-app-io" value="false"/>
         <property key="enable-omit-frame-pointer" value="false"/>
         <property key="enable-symbols" value="true"/>
         <property key="enable-unroll-loops" value="false"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../src;../src/config/pic32mx470_curiosity;../src/config/pic32mx470_curiosity/system/fs/fat_fs/file_system;../src/config/pic32mx470_curiosity/system/fs/fat_fs/hardware_access;../src/packs/PIC32MX470F512H_DFP"/>
+                  value="../src;../src/config/pic32mx470_curiosity;../src/config/pic32mx470_curiosity/system/fs/fat_fs/file_system;../src/config/pic32mx470_curiosity/system/fs/fat_fs/hardware_access"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -495,6 +499,7 @@
         <property key="additional-options-use-response-files" value="false"/>
         <property key="additional-options-write-sla" value="false"/>
         <property key="allocate-dinit" value="false"/>
+        <property key="appendMe" value=""/>
         <property key="code-dinit" value="false"/>
         <property key="ebase-addr" value=""/>
         <property key="enable-check-sections" value="false"/>
@@ -534,6 +539,7 @@
       <C32CPP>
         <property key="additional-warnings" value="false"/>
         <property key="addresss-attribute-use" value="false"/>
+        <property key="appendMe" value=""/>
         <property key="check-new" value="false"/>
         <property key="eh-specs" value="true"/>
         <property key="enable-app-io" value="false"/>
@@ -543,7 +549,7 @@
         <property key="exceptions" value="true"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../src;../src/config/pic32mx470_curiosity;../src/config/pic32mx470_curiosity/system/fs/fat_fs/file_system;../src/config/pic32mx470_curiosity/system/fs/fat_fs/hardware_access;../src/packs/PIC32MX470F512H_DFP"/>
+                  value="../src;../src/config/pic32mx470_curiosity;../src/config/pic32mx470_curiosity/system/fs/fat_fs/file_system;../src/config/pic32mx470_curiosity/system/fs/fat_fs/hardware_access"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
