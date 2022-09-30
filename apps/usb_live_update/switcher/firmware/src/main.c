@@ -60,7 +60,7 @@
 #define ERASE_BLOCK_SIZE                NVM_FLASH_PAGESIZE
 #define PAGES_IN_ERASE_BLOCK            (ERASE_BLOCK_SIZE / PAGE_SIZE)
 
-#define APP_START_ADDRESS               FLASH_START
+#define APP_START_ADDRESS               FLASH_START + 0x200
 
 #define MID_OF_FLASH                    (FLASH_LENGTH / 2)
 
