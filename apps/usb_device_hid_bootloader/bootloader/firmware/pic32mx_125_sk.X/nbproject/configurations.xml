@@ -10,8 +10,9 @@
             <logicalFolder name="f1" displayName="datastream" projectFiles="true">
               <itemPath>../src/config/pic32mx_125_sk/bootloader/datastream/datastream.h</itemPath>
             </logicalFolder>
-            <itemPath>../src/config/pic32mx_125_sk/bootloader/bootloader.h</itemPath>
             <itemPath>../src/config/pic32mx_125_sk/bootloader/bootloader_nvm_interface.h</itemPath>
+            <itemPath>../src/config/pic32mx_125_sk/bootloader/bootloader_usb_device_hid.h</itemPath>
+            <itemPath>../src/config/pic32mx_125_sk/bootloader/bootloader_common.h</itemPath>
           </logicalFolder>
           <logicalFolder name="f2" displayName="bsp" projectFiles="true">
             <itemPath>../src/config/pic32mx_125_sk/bsp/bsp.h</itemPath>
@@ -146,12 +147,12 @@
             <itemPath>../src/config/pic32mx_125_sk/driver/driver.h</itemPath>
             <itemPath>../src/config/pic32mx_125_sk/driver/driver_common.h</itemPath>
           </logicalFolder>
-          <logicalFolder name="f7" displayName="osal" projectFiles="true">
+          <logicalFolder name="f4" displayName="osal" projectFiles="true">
             <itemPath>../src/config/pic32mx_125_sk/osal/osal.h</itemPath>
             <itemPath>../src/config/pic32mx_125_sk/osal/osal_definitions.h</itemPath>
             <itemPath>../src/config/pic32mx_125_sk/osal/osal_impl_basic.h</itemPath>
           </logicalFolder>
-          <logicalFolder name="f4" displayName="peripheral" projectFiles="true">
+          <logicalFolder name="f5" displayName="peripheral" projectFiles="true">
             <logicalFolder name="f1" displayName="clk" projectFiles="true">
               <itemPath>../src/config/pic32mx_125_sk/peripheral/clk/plib_clk.h</itemPath>
             </logicalFolder>
@@ -165,7 +166,7 @@
               <itemPath>../src/config/pic32mx_125_sk/peripheral/nvm/plib_nvm.h</itemPath>
             </logicalFolder>
           </logicalFolder>
-          <logicalFolder name="f5" displayName="system" projectFiles="true">
+          <logicalFolder name="f6" displayName="system" projectFiles="true">
             <logicalFolder name="f1" displayName="debug" projectFiles="true">
               <itemPath>../src/config/pic32mx_125_sk/system/debug/sys_debug.h</itemPath>
             </logicalFolder>
@@ -177,7 +178,7 @@
             <itemPath>../src/config/pic32mx_125_sk/system/system_common.h</itemPath>
             <itemPath>../src/config/pic32mx_125_sk/system/system_module.h</itemPath>
           </logicalFolder>
-          <logicalFolder name="f6" displayName="usb" projectFiles="true">
+          <logicalFolder name="f7" displayName="usb" projectFiles="true">
             <logicalFolder name="f1" displayName="src" projectFiles="true">
               <itemPath>../src/config/pic32mx_125_sk/usb/src/usb_device_hid_local.h</itemPath>
               <itemPath>../src/config/pic32mx_125_sk/usb/src/usb_device_local.h</itemPath>
@@ -205,6 +206,13 @@
       </logicalFolder>
       <itemPath>../src/app.h</itemPath>
     </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="true">
+      <itemPath>Makefile</itemPath>
+      <itemPath>../src/config/pic32mx_125_sk/harmony-manifest-success.yml</itemPath>
+      <itemPath>usb_device_hid_bootloader_pic32mx_125_sk.mc3</itemPath>
+    </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
                    projectFiles="true">
@@ -219,8 +227,9 @@
             <logicalFolder name="f1" displayName="datastream" projectFiles="true">
               <itemPath>../src/config/pic32mx_125_sk/bootloader/datastream/datastream_usb_device_hid.c</itemPath>
             </logicalFolder>
-            <itemPath>../src/config/pic32mx_125_sk/bootloader/bootloader.c</itemPath>
             <itemPath>../src/config/pic32mx_125_sk/bootloader/bootloader_nvm_interface.c</itemPath>
+            <itemPath>../src/config/pic32mx_125_sk/bootloader/bootloader_usb_device_hid.c</itemPath>
+            <itemPath>../src/config/pic32mx_125_sk/bootloader/bootloader_common.c</itemPath>
           </logicalFolder>
           <logicalFolder name="f2" displayName="bsp" projectFiles="true">
             <itemPath>../src/config/pic32mx_125_sk/bsp/bsp.c</itemPath>
@@ -273,12 +282,6 @@
       <itemPath>../src/main.c</itemPath>
       <itemPath>../src/app.c</itemPath>
     </logicalFolder>
-    <logicalFolder name="ExternalFiles"
-                   displayName="Important Files"
-                   projectFiles="false">
-      <itemPath>Makefile</itemPath>
-      <itemPath>../src/config/pic32mx_125_sk/harmony-manifest-success.yml</itemPath>
-    </logicalFolder>
   </logicalFolder>
   <sourceRootList>
     <Elem>../src</Elem>
@@ -329,13 +332,14 @@
       <C32>
         <property key="additional-warnings" value="true"/>
         <property key="addresss-attribute-use" value="false"/>
+        <property key="appendMe" value=""/>
         <property key="enable-app-io" value="false"/>
         <property key="enable-omit-frame-pointer" value="false"/>
         <property key="enable-symbols" value="true"/>
         <property key="enable-unroll-loops" value="false"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../src;../src/config/pic32mx_125_sk;../src/packs/PIC32MX570F512L_DFP"/>
+                  value="../src;../src/config/pic32mx_125_sk"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -385,6 +389,7 @@
         <property key="additional-options-use-response-files" value="false"/>
         <property key="additional-options-write-sla" value="false"/>
         <property key="allocate-dinit" value="false"/>
+        <property key="appendMe" value=""/>
         <property key="code-dinit" value="false"/>
         <property key="ebase-addr" value=""/>
         <property key="enable-check-sections" value="false"/>
@@ -424,6 +429,7 @@
       <C32CPP>
         <property key="additional-warnings" value="false"/>
         <property key="addresss-attribute-use" value="false"/>
+        <property key="appendMe" value=""/>
         <property key="check-new" value="false"/>
         <property key="eh-specs" value="true"/>
         <property key="enable-app-io" value="false"/>
@@ -433,7 +439,7 @@
         <property key="exceptions" value="true"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../src;../src/config/pic32mx_125_sk;../src/packs/PIC32MX570F512L_DFP"/>
+                  value="../src;../src/config/pic32mx_125_sk"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>

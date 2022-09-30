@@ -95,6 +95,7 @@
 
 
 
+
 // *****************************************************************************
 // *****************************************************************************
 // Section: Driver Initialization Data
@@ -130,6 +131,7 @@ const DRV_USBFS_INIT drvUSBFSInit =
 
 	/* Interrupt Source for USB module */
 	.interruptSource = INT_SOURCE_USB,
+
 
     
     /* USB Controller to operate as USB Device */
@@ -189,8 +191,8 @@ void SYS_Initialize ( void* data )
 
     CLK_Initialize();
 
-    /* Set the SRAM wait states to zero */
-    BMXCONbits.BMXWSDRM = 0;
+    /* Set the SRAM wait states to One */
+    BMXCONbits.BMXWSDRM = 1;
 
 
 
@@ -201,7 +203,7 @@ void SYS_Initialize ( void* data )
 
     if (bootloader_Trigger() == false)
     {
-        run_Application();
+        run_Application(APP_JUMP_ADDRESS);
     }
 
     NVM_Initialize();
@@ -214,10 +216,9 @@ void SYS_Initialize ( void* data )
     sysObj.drvUSBFSObject = DRV_USBFS_Initialize(DRV_USBFS_INDEX_0, (SYS_MODULE_INIT *) &drvUSBFSInit);	
 
 
-	 /* Initialize the USB device layer */
+    /* Initialize the USB device layer */
     sysObj.usbDevObject0 = USB_DEVICE_Initialize (USB_DEVICE_INDEX_0 , ( SYS_MODULE_INIT* ) & usbDevInitData);
-	
-	
+
 
 
     APP_Initialize();
