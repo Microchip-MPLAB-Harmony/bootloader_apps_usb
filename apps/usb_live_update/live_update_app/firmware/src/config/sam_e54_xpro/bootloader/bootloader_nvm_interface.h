@@ -45,22 +45,6 @@
 #include <stdint.h>
 #include <stdbool.h>
 
-#define FLASH_START             (0UL)
-#define FLASH_LENGTH            (1048576UL)
-#define PAGE_SIZE               (512UL)
-#define ERASE_BLOCK_SIZE        (8192UL)
-#define PAGES_IN_ERASE_BLOCK    (ERASE_BLOCK_SIZE / PAGE_SIZE)
-
-/* Starting location of Bootloader in Inactive bank */
-#define INACTIVE_BANK_OFFSET    (FLASH_LENGTH / 2)
-
-#define INACTIVE_BANK_START     (FLASH_START + INACTIVE_BANK_OFFSET)
-
-#define APP_START_ADDRESS       INACTIVE_BANK_START
-
-#define FLASH_END_ADDRESS       (INACTIVE_BANK_START + INACTIVE_BANK_OFFSET)
-
-
 #define DATA_RECORD             0
 #define END_OF_FILE_RECORD      1
 #define EXT_SEG_ADRS_RECORD     2
@@ -90,8 +74,6 @@ void bootloader_NvmAppErase(void);
 void bootloader_NvmPageWrite(uint32_t address, uint32_t* data);
 
 bool bootloader_NvmIsBusy(void);
-
-void bootloader_NvmSwapAndReset( void );
 
 #ifdef  __cplusplus
 }
