@@ -62,13 +62,13 @@
 #define PAGES_IN_ERASE_BLOCK                    (ERASE_BLOCK_SIZE / PAGE_SIZE)
 
 
-#define BOOTLOADER_SIZE                         69632
+#define BOOTLOADER_SIZE                         65536
 
 #define FLASH_END_ADDRESS                       (FLASH_START + FLASH_LENGTH)
 
 
-#define APP_START_ADDRESS                       ((uint32_t)(PA_TO_KVA0(0x1d011000UL)))
-#define APP_JUMP_ADDRESS                        ((uint32_t)(PA_TO_KVA0(0x1d011200UL)))
+#define APP_START_ADDRESS                       ((uint32_t)(PA_TO_KVA0(0x1d010000UL)))
+#define APP_JUMP_ADDRESS                        ((uint32_t)(PA_TO_KVA0(0x1d010200UL)))
 
 
 #define BTL_TRIGGER_RAM_START                   KVA0_TO_KVA1(0x80000000)

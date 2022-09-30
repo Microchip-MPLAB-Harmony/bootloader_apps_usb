@@ -69,20 +69,20 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: 9E153A6D4F8E0EA1F6901BAED7DD80FD
-- generatedChecksum: 2CBC6382C309B28019130D1952599609
+- generatedChecksum: 85CC1F5DB8E440D9C336723DD7969833
   logicalPath: config/pic32mx_eth_sk2
   name: initialization.c
   physicalPath: ''
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 2CBC6382C309B28019130D1952599609
-- generatedChecksum: DF75E29945BC74B3153BC6716FCDB238
+  userChecksum: 85CC1F5DB8E440D9C336723DD7969833
+- generatedChecksum: 4717786CE63051FE18BACCFF6EE12F34
   logicalPath: config/pic32mx_eth_sk2
   name: interrupts.c
   physicalPath: ''
   security: NON_SECURE
   type: SOURCE
-  userChecksum: DF75E29945BC74B3153BC6716FCDB238
+  userChecksum: 4717786CE63051FE18BACCFF6EE12F34
 - generatedChecksum: null
   logicalPath: ''
   name: main.c
@@ -97,20 +97,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: 2F8D2F5AE2544E2AAB9FD3A1345E08B8
-- generatedChecksum: 2FEFEA0D4E94F5A5F3D76BAEC3D602E5
-  logicalPath: config/pic32mx_eth_sk2/peripheral/coretimer
-  name: plib_coretimer.c
-  physicalPath: peripheral/coretimer
-  security: NON_SECURE
-  type: SOURCE
-  userChecksum: 2FEFEA0D4E94F5A5F3D76BAEC3D602E5
-- generatedChecksum: 82FB9A8B93FF9387D05210F16B2BFA20
+- generatedChecksum: 899665C23DD1BEAFD931528D413F45F3
   logicalPath: config/pic32mx_eth_sk2/peripheral/evic
   name: plib_evic.c
   physicalPath: peripheral/evic
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 82FB9A8B93FF9387D05210F16B2BFA20
+  userChecksum: 899665C23DD1BEAFD931528D413F45F3
 - generatedChecksum: E7BA1B6FE798982B89D6D0786C192707
   logicalPath: config/pic32mx_eth_sk2/peripheral/gpio
   name: plib_gpio.c
@@ -125,6 +118,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: 8A10C7501DE9B70E344CF1DEB3BEE9BE
+- generatedChecksum: 52B19BFE6B370DB258762E4273B1053F
+  logicalPath: config/pic32mx_eth_sk2/peripheral/tmr1
+  name: plib_tmr1.c
+  physicalPath: peripheral/tmr1
+  security: NON_SECURE
+  type: SOURCE
+  userChecksum: 52B19BFE6B370DB258762E4273B1053F
 - generatedChecksum: 86A89FE2215C9B1F7F9258C7C8772EE5
   logicalPath: config/pic32mx_eth_sk2/system/fs
   name: sys_fs.c
@@ -153,13 +153,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: C95CE0ABB86E6B11CF77E8891D294510
-- generatedChecksum: B68110221BEC42FE6B718139BA64DA52
+- generatedChecksum: 29A61282EB9734CF5A0CE2B224245EAB
   logicalPath: config/pic32mx_eth_sk2/system/time
   name: sys_time.c
   physicalPath: system/time/src
   security: NON_SECURE
   type: SOURCE
-  userChecksum: B68110221BEC42FE6B718139BA64DA52
+  userChecksum: 29A61282EB9734CF5A0CE2B224245EAB
 - generatedChecksum: 2A0B54DF642DD7FD8C1B0E9EF76B3E76
   logicalPath: config/pic32mx_eth_sk2
   name: tasks.c
@@ -230,20 +230,20 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: F120A320A11E5EFF6523F5E55841CCAC
-- generatedChecksum: A8C39888461090AAD80060ED76D5EA49
+- generatedChecksum: 7D7DD29E573801A16D46B4F1FF8ACE33
   logicalPath: config/pic32mx_eth_sk2
   name: configuration.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: A8C39888461090AAD80060ED76D5EA49
-- generatedChecksum: 571B5E5B060E2C534307B5EEED4151DA
+  userChecksum: 7D7DD29E573801A16D46B4F1FF8ACE33
+- generatedChecksum: 8855BA27D0B11B6CB73CB76F37496C63
   logicalPath: config/pic32mx_eth_sk2
   name: definitions.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: 571B5E5B060E2C534307B5EEED4151DA
+  userChecksum: 8855BA27D0B11B6CB73CB76F37496C63
 - generatedChecksum: E189C26B2269F8DE46033CCD0621958D
   logicalPath: config/pic32mx_eth_sk2
   name: device.h
@@ -356,13 +356,6 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 7066CC390335CF75126E2A50C46E3BDD
-- generatedChecksum: 2712EE363EC8AC102002609F5B5F3DCF
-  logicalPath: config/pic32mx_eth_sk2/peripheral/coretimer
-  name: plib_coretimer.h
-  physicalPath: peripheral/coretimer
-  security: NON_SECURE
-  type: HEADER
-  userChecksum: 2712EE363EC8AC102002609F5B5F3DCF
 - generatedChecksum: 37436424B3DFA2A4948662880FFD2E29
   logicalPath: config/pic32mx_eth_sk2/peripheral/evic
   name: plib_evic.h
@@ -384,6 +377,20 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: CE550936E198D04B79F8225F848FFC42
+- generatedChecksum: 32D7539D9231F3C159ABECE91A0281EA
+  logicalPath: config/pic32mx_eth_sk2/peripheral/tmr1
+  name: plib_tmr1.h
+  physicalPath: peripheral/tmr1
+  security: NON_SECURE
+  type: HEADER
+  userChecksum: 32D7539D9231F3C159ABECE91A0281EA
+- generatedChecksum: 69E7C8CDAB1B32838331EE261170CEA4
+  logicalPath: config/pic32mx_eth_sk2/peripheral/tmr1
+  name: plib_tmr1_common.h
+  physicalPath: peripheral/tmr1
+  security: NON_SECURE
+  type: HEADER
+  userChecksum: 69E7C8CDAB1B32838331EE261170CEA4
 - generatedChecksum: 7AFFC4178335897ED9D5804CAB531BCF
   logicalPath: config/pic32mx_eth_sk2/driver/usb/usbfs/src
   name: plib_usbfs.h
@@ -468,20 +475,20 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 466D676839280C0E7FC2CC6F78BA6EE9
-- generatedChecksum: 9463F9BBF69C9593FF3B30F8BC587234
+- generatedChecksum: 8DC356D2CAE8EB275CC79AF20A6196FC
   logicalPath: config/pic32mx_eth_sk2/system/time
   name: sys_time_definitions.h
   physicalPath: system/time
   security: NON_SECURE
   type: HEADER
-  userChecksum: 9463F9BBF69C9593FF3B30F8BC587234
-- generatedChecksum: C7A6D8C5408A42EB1CD2CB277E6EFBF4
+  userChecksum: 8DC356D2CAE8EB275CC79AF20A6196FC
+- generatedChecksum: 0FC34EDBBAFEAAA773F779A64C80CBA2
   logicalPath: config/pic32mx_eth_sk2/system/time
   name: sys_time_local.h
   physicalPath: system/time/src
   security: NON_SECURE
   type: HEADER
-  userChecksum: C7A6D8C5408A42EB1CD2CB277E6EFBF4
+  userChecksum: 0FC34EDBBAFEAAA773F779A64C80CBA2
 - generatedChecksum: BE95B4F134C5C929787B9DA6FDBF3501
   logicalPath: config/pic32mx_eth_sk2/system
   name: system.h

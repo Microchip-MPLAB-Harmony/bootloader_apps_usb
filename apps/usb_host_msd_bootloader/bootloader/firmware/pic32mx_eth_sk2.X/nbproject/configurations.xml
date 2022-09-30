@@ -174,9 +174,6 @@
             <logicalFolder name="f1" displayName="clk" projectFiles="true">
               <itemPath>../src/config/pic32mx_eth_sk2/peripheral/clk/plib_clk.h</itemPath>
             </logicalFolder>
-            <logicalFolder name="f2" displayName="coretimer" projectFiles="true">
-              <itemPath>../src/config/pic32mx_eth_sk2/peripheral/coretimer/plib_coretimer.h</itemPath>
-            </logicalFolder>
             <logicalFolder name="f3" displayName="evic" projectFiles="true">
               <itemPath>../src/config/pic32mx_eth_sk2/peripheral/evic/plib_evic.h</itemPath>
             </logicalFolder>
@@ -185,6 +182,10 @@
             </logicalFolder>
             <logicalFolder name="f5" displayName="nvm" projectFiles="true">
               <itemPath>../src/config/pic32mx_eth_sk2/peripheral/nvm/plib_nvm.h</itemPath>
+            </logicalFolder>
+            <logicalFolder name="f2" displayName="tmr1" projectFiles="true">
+              <itemPath>../src/config/pic32mx_eth_sk2/peripheral/tmr1/plib_tmr1_common.h</itemPath>
+              <itemPath>../src/config/pic32mx_eth_sk2/peripheral/tmr1/plib_tmr1.h</itemPath>
             </logicalFolder>
           </logicalFolder>
           <logicalFolder name="f6" displayName="system" projectFiles="true">
@@ -258,7 +259,6 @@
       <logicalFolder name="f1" displayName="pic32mx_eth_sk2.mhc" projectFiles="true">
         <itemPath>../src/config/pic32mx_eth_sk2/pic32mx_eth_sk2.mhc/BSP_PIC32MX_Ethernet_Starter_Kit_II.yml</itemPath>
         <itemPath>../src/config/pic32mx_eth_sk2/pic32mx_eth_sk2.mhc/core.yml</itemPath>
-        <itemPath>../src/config/pic32mx_eth_sk2/pic32mx_eth_sk2.mhc/core_timer.yml</itemPath>
         <itemPath>../src/config/pic32mx_eth_sk2/pic32mx_eth_sk2.mhc/dfp.yml</itemPath>
         <itemPath>../src/config/pic32mx_eth_sk2/pic32mx_eth_sk2.mhc/drv_usbfs_v1.yml</itemPath>
         <itemPath>../src/config/pic32mx_eth_sk2/pic32mx_eth_sk2.mhc/file_system_bootloader.yml</itemPath>
@@ -269,6 +269,7 @@
         <itemPath>../src/config/pic32mx_eth_sk2/pic32mx_eth_sk2.mhc/settings.yml</itemPath>
         <itemPath>../src/config/pic32mx_eth_sk2/pic32mx_eth_sk2.mhc/sys_fs.yml</itemPath>
         <itemPath>../src/config/pic32mx_eth_sk2/pic32mx_eth_sk2.mhc/sys_time.yml</itemPath>
+        <itemPath>../src/config/pic32mx_eth_sk2/pic32mx_eth_sk2.mhc/tmr1.yml</itemPath>
         <itemPath>../src/config/pic32mx_eth_sk2/pic32mx_eth_sk2.mhc/usb_host.yml</itemPath>
         <itemPath>../src/config/pic32mx_eth_sk2/pic32mx_eth_sk2.mhc/usb_host_msd.yml</itemPath>
       </logicalFolder>
@@ -323,9 +324,6 @@
             <logicalFolder name="f1" displayName="clk" projectFiles="true">
               <itemPath>../src/config/pic32mx_eth_sk2/peripheral/clk/plib_clk.c</itemPath>
             </logicalFolder>
-            <logicalFolder name="f2" displayName="coretimer" projectFiles="true">
-              <itemPath>../src/config/pic32mx_eth_sk2/peripheral/coretimer/plib_coretimer.c</itemPath>
-            </logicalFolder>
             <logicalFolder name="f3" displayName="evic" projectFiles="true">
               <itemPath>../src/config/pic32mx_eth_sk2/peripheral/evic/plib_evic.c</itemPath>
             </logicalFolder>
@@ -334,6 +332,9 @@
             </logicalFolder>
             <logicalFolder name="f5" displayName="nvm" projectFiles="true">
               <itemPath>../src/config/pic32mx_eth_sk2/peripheral/nvm/plib_nvm.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="f2" displayName="tmr1" projectFiles="true">
+              <itemPath>../src/config/pic32mx_eth_sk2/peripheral/tmr1/plib_tmr1.c</itemPath>
             </logicalFolder>
           </logicalFolder>
           <logicalFolder name="f5" displayName="stdio" projectFiles="true">
@@ -404,7 +405,7 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>PKOBSKDEPlatformTool</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>3.00</languageToolchainVersion>
+        <languageToolchainVersion>4.10</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
@@ -645,6 +646,10 @@
         <property key="ToolFirmwareFilePath"
                   value="Press to browse for a specific firmware version"/>
         <property key="ToolFirmwareOption.UseLatestFirmware" value="true"/>
+        <property key="debugoptions.debug-startup" value="Use system settings"/>
+        <property key="debugoptions.reset-behaviour" value="Use system settings"/>
+        <property key="firmware.download.all" value="false"/>
+        <property key="lastid" value=""/>
         <property key="memories.configurationmemory" value="true"/>
         <property key="memories.dataflash" value="true"/>
         <property key="memories.eeprom" value="true"/>
@@ -670,6 +675,9 @@
         <property key="ToolFirmwareFilePath"
                   value="Press to browse for a specific firmware version"/>
         <property key="ToolFirmwareOption.UseLatestFirmware" value="true"/>
+        <property key="debugoptions.debug-startup" value="Use system settings"/>
+        <property key="debugoptions.reset-behaviour" value="Use system settings"/>
+        <property key="lastid" value=""/>
         <property key="memories.configurationmemory" value="true"/>
         <property key="memories.dataflash" value="true"/>
         <property key="memories.eeprom" value="true"/>
