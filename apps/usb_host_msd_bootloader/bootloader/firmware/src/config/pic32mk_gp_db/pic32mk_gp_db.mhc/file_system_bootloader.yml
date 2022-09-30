@@ -4,6 +4,31 @@ attributes: {id: file_system_bootloader}
 children:
 - type: Symbols
   children:
+  - type: File
+    attributes: {id: BOOTLOADER_HEADER}
+    children:
+    - type: Attributes
+      children:
+      - type: String
+        attributes: {id: name}
+        children:
+        - {type: Value, value: bootloader_usb_host_msd.h}
+  - type: File
+    attributes: {id: BOOTLOADER_SRC}
+    children:
+    - type: Attributes
+      children:
+      - type: String
+        attributes: {id: name}
+        children:
+        - {type: Value, value: bootloader_usb_host_msd.c}
+  - type: String
+    attributes: {id: BTL_APP_JUMP_ADDRESS}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: file_system_bootloader, value: 1d011200}
   - type: Comment
     attributes: {id: BTL_APP_START_ADDR_COMMENT}
     children:

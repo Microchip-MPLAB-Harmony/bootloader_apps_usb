@@ -6,13 +6,14 @@
                    projectFiles="true">
       <logicalFolder name="f1" displayName="config" projectFiles="true">
         <logicalFolder name="f1" displayName="pic32mk_gp_db" projectFiles="true">
-          <logicalFolder name="f1" displayName="bootloader" projectFiles="true">
-            <itemPath>../src/config/pic32mk_gp_db/bootloader/bootloader.h</itemPath>
+          <logicalFolder name="f7" displayName="bootloader" projectFiles="true">
+            <itemPath>../src/config/pic32mk_gp_db/bootloader/bootloader_usb_host_msd.h</itemPath>
+            <itemPath>../src/config/pic32mk_gp_db/bootloader/bootloader_common.h</itemPath>
           </logicalFolder>
-          <logicalFolder name="f2" displayName="bsp" projectFiles="true">
+          <logicalFolder name="f1" displayName="bsp" projectFiles="true">
             <itemPath>../src/config/pic32mk_gp_db/bsp/bsp.h</itemPath>
           </logicalFolder>
-          <logicalFolder name="f3" displayName="driver" projectFiles="true">
+          <logicalFolder name="f2" displayName="driver" projectFiles="true">
             <logicalFolder name="f1" displayName="usb" projectFiles="true">
               <logicalFolder name="f1" displayName="usbfs" projectFiles="true">
                 <logicalFolder name="f1" displayName="src" projectFiles="true">
@@ -141,12 +142,12 @@
             <itemPath>../src/config/pic32mk_gp_db/driver/driver.h</itemPath>
             <itemPath>../src/config/pic32mk_gp_db/driver/driver_common.h</itemPath>
           </logicalFolder>
-          <logicalFolder name="f4" displayName="osal" projectFiles="true">
+          <logicalFolder name="f3" displayName="osal" projectFiles="true">
             <itemPath>../src/config/pic32mk_gp_db/osal/osal.h</itemPath>
             <itemPath>../src/config/pic32mk_gp_db/osal/osal_definitions.h</itemPath>
             <itemPath>../src/config/pic32mk_gp_db/osal/osal_impl_basic.h</itemPath>
           </logicalFolder>
-          <logicalFolder name="f5" displayName="peripheral" projectFiles="true">
+          <logicalFolder name="f4" displayName="peripheral" projectFiles="true">
             <logicalFolder name="f1" displayName="clk" projectFiles="true">
               <itemPath>../src/config/pic32mk_gp_db/peripheral/clk/plib_clk.h</itemPath>
             </logicalFolder>
@@ -163,7 +164,7 @@
               <itemPath>../src/config/pic32mk_gp_db/peripheral/nvm/plib_nvm.h</itemPath>
             </logicalFolder>
           </logicalFolder>
-          <logicalFolder name="f6" displayName="system" projectFiles="true">
+          <logicalFolder name="f5" displayName="system" projectFiles="true">
             <logicalFolder name="f1" displayName="debug" projectFiles="true">
               <itemPath>../src/config/pic32mk_gp_db/system/debug/sys_debug.h</itemPath>
             </logicalFolder>
@@ -197,7 +198,7 @@
             <itemPath>../src/config/pic32mk_gp_db/system/system_module.h</itemPath>
             <itemPath>../src/config/pic32mk_gp_db/system/system_media.h</itemPath>
           </logicalFolder>
-          <logicalFolder name="f7" displayName="usb" projectFiles="true">
+          <logicalFolder name="f6" displayName="usb" projectFiles="true">
             <logicalFolder name="f1" displayName="src" projectFiles="true">
               <itemPath>../src/config/pic32mk_gp_db/usb/src/usb_host_msd_local.h</itemPath>
               <itemPath>../src/config/pic32mk_gp_db/usb/src/usb_host_scsi_local.h</itemPath>
@@ -248,6 +249,7 @@
         <itemPath>../src/config/pic32mk_gp_db/pic32mk_gp_db.mhc/usb_host_msd.yml</itemPath>
       </logicalFolder>
       <itemPath>../src/config/pic32mk_gp_db/harmony-manifest-success.yml</itemPath>
+      <itemPath>usb_host_msd_bootloader_pic32mk_gp_db.mc3</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -259,13 +261,14 @@
                    projectFiles="true">
       <logicalFolder name="f1" displayName="config" projectFiles="true">
         <logicalFolder name="f1" displayName="pic32mk_gp_db" projectFiles="true">
-          <logicalFolder name="f1" displayName="bootloader" projectFiles="true">
-            <itemPath>../src/config/pic32mk_gp_db/bootloader/bootloader.c</itemPath>
+          <logicalFolder name="f7" displayName="bootloader" projectFiles="true">
+            <itemPath>../src/config/pic32mk_gp_db/bootloader/bootloader_usb_host_msd.c</itemPath>
+            <itemPath>../src/config/pic32mk_gp_db/bootloader/bootloader_common.c</itemPath>
           </logicalFolder>
-          <logicalFolder name="f2" displayName="bsp" projectFiles="true">
+          <logicalFolder name="f1" displayName="bsp" projectFiles="true">
             <itemPath>../src/config/pic32mk_gp_db/bsp/bsp.c</itemPath>
           </logicalFolder>
-          <logicalFolder name="f3" displayName="driver" projectFiles="true">
+          <logicalFolder name="f2" displayName="driver" projectFiles="true">
             <logicalFolder name="f1" displayName="usb" projectFiles="true">
               <logicalFolder name="f1" displayName="usbfs" projectFiles="true">
                 <logicalFolder name="f1" displayName="src" projectFiles="true">
@@ -276,7 +279,7 @@
               </logicalFolder>
             </logicalFolder>
           </logicalFolder>
-          <logicalFolder name="f4" displayName="peripheral" projectFiles="true">
+          <logicalFolder name="f3" displayName="peripheral" projectFiles="true">
             <logicalFolder name="f1" displayName="clk" projectFiles="true">
               <itemPath>../src/config/pic32mk_gp_db/peripheral/clk/plib_clk.c</itemPath>
             </logicalFolder>
@@ -293,10 +296,10 @@
               <itemPath>../src/config/pic32mk_gp_db/peripheral/nvm/plib_nvm.c</itemPath>
             </logicalFolder>
           </logicalFolder>
-          <logicalFolder name="f5" displayName="stdio" projectFiles="true">
+          <logicalFolder name="f4" displayName="stdio" projectFiles="true">
             <itemPath>../src/config/pic32mk_gp_db/stdio/xc32_monitor.c</itemPath>
           </logicalFolder>
-          <logicalFolder name="f6" displayName="system" projectFiles="true">
+          <logicalFolder name="f5" displayName="system" projectFiles="true">
             <logicalFolder name="f1" displayName="fs" projectFiles="true">
               <logicalFolder name="f1" displayName="fat_fs" projectFiles="true">
                 <logicalFolder name="f1" displayName="file_system" projectFiles="true">
@@ -318,7 +321,7 @@
               <itemPath>../src/config/pic32mk_gp_db/system/time/src/sys_time.c</itemPath>
             </logicalFolder>
           </logicalFolder>
-          <logicalFolder name="f7" displayName="usb" projectFiles="true">
+          <logicalFolder name="f6" displayName="usb" projectFiles="true">
             <logicalFolder name="f1" displayName="src" projectFiles="true">
               <itemPath>../src/config/pic32mk_gp_db/usb/src/usb_host_msd.c</itemPath>
               <itemPath>../src/config/pic32mk_gp_db/usb/src/usb_host_scsi.c</itemPath>
@@ -385,13 +388,14 @@
       <C32>
         <property key="additional-warnings" value="true"/>
         <property key="addresss-attribute-use" value="false"/>
+        <property key="appendMe" value=""/>
         <property key="enable-app-io" value="false"/>
         <property key="enable-omit-frame-pointer" value="false"/>
         <property key="enable-symbols" value="true"/>
         <property key="enable-unroll-loops" value="false"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../src;../src/config/pic32mk_gp_db;../src/config/pic32mk_gp_db/system/fs/fat_fs/file_system;../src/config/pic32mk_gp_db/system/fs/fat_fs/hardware_access;../src/packs/PIC32MK1024GPE100_DFP"/>
+                  value="../src;../src/config/pic32mk_gp_db;../src/config/pic32mk_gp_db/system/fs/fat_fs/file_system;../src/config/pic32mk_gp_db/system/fs/fat_fs/hardware_access"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -441,6 +445,7 @@
         <property key="additional-options-use-response-files" value="false"/>
         <property key="additional-options-write-sla" value="false"/>
         <property key="allocate-dinit" value="false"/>
+        <property key="appendMe" value=""/>
         <property key="code-dinit" value="false"/>
         <property key="ebase-addr" value=""/>
         <property key="enable-check-sections" value="false"/>
@@ -480,6 +485,7 @@
       <C32CPP>
         <property key="additional-warnings" value="false"/>
         <property key="addresss-attribute-use" value="false"/>
+        <property key="appendMe" value=""/>
         <property key="check-new" value="false"/>
         <property key="eh-specs" value="true"/>
         <property key="enable-app-io" value="false"/>
@@ -489,7 +495,7 @@
         <property key="exceptions" value="true"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../src;../src/config/pic32mk_gp_db;../src/config/pic32mk_gp_db/system/fs/fat_fs/file_system;../src/config/pic32mk_gp_db/system/fs/fat_fs/hardware_access;../src/packs/PIC32MK1024GPE100_DFP"/>
+                  value="../src;../src/config/pic32mk_gp_db;../src/config/pic32mk_gp_db/system/fs/fat_fs/file_system;../src/config/pic32mk_gp_db/system/fs/fat_fs/hardware_access"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
