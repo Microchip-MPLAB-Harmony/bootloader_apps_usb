@@ -75,7 +75,7 @@ void SYS_Tasks ( void )
     
 
     /* Maintain Device Drivers */
-        bootloader_Tasks();
+        bootloader_USB_DEVICE_HID_Tasks();
 
 
 
@@ -83,7 +83,7 @@ void SYS_Tasks ( void )
         /* USBHS Driver Task Routine */ 
     DRV_USBHS_Tasks(sysObj.drvUSBHSObject);
 
-	/* USB Device layer tasks routine */ 
+    /* USB Device layer tasks routine */ 
     USB_DEVICE_Tasks(sysObj.usbDevObject0);
 
 
