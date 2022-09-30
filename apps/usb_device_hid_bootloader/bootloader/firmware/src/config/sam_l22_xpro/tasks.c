@@ -75,12 +75,12 @@ void SYS_Tasks ( void )
     
 
     /* Maintain Device Drivers */
-        bootloader_Tasks();
+        bootloader_USB_DEVICE_HID_Tasks();
 
 
 
     /* Maintain Middleware & Other Libraries */
-    	/* USB Device layer tasks routine */ 
+        /* USB Device layer tasks routine */ 
     USB_DEVICE_Tasks(sysObj.usbDevObject0);
 
     /* USB FS Driver Task Routine */ 

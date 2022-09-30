@@ -6,7 +6,7 @@
                    projectFiles="true">
       <logicalFolder name="f1" displayName="config" projectFiles="true">
         <logicalFolder name="f1" displayName="sam_l22_xpro" projectFiles="true">
-          <logicalFolder name="f3" displayName="bootloader" projectFiles="true">
+          <logicalFolder name="f1" displayName="bootloader" projectFiles="true">
             <logicalFolder name="f1" displayName="datastream" projectFiles="true">
               <logicalFolder name="f1" displayName="usbfsv1" projectFiles="true">
                 <logicalFolder name="f1" displayName="src" projectFiles="true">
@@ -14,28 +14,29 @@
               </logicalFolder>
               <itemPath>../src/config/sam_l22_xpro/bootloader/datastream/datastream.h</itemPath>
             </logicalFolder>
-            <itemPath>../src/config/sam_l22_xpro/bootloader/bootloader.h</itemPath>
             <itemPath>../src/config/sam_l22_xpro/bootloader/bootloader_nvm_interface.h</itemPath>
+            <itemPath>../src/config/sam_l22_xpro/bootloader/bootloader_usb_device_hid.h</itemPath>
+            <itemPath>../src/config/sam_l22_xpro/bootloader/bootloader_common.h</itemPath>
           </logicalFolder>
-          <logicalFolder name="f5" displayName="bsp" projectFiles="true">
+          <logicalFolder name="f2" displayName="bsp" projectFiles="true">
             <logicalFolder name="f1" displayName="debug" projectFiles="true">
             </logicalFolder>
             <logicalFolder name="f2" displayName="int" projectFiles="true">
             </logicalFolder>
             <itemPath>../src/config/sam_l22_xpro/bsp/bsp.h</itemPath>
           </logicalFolder>
-          <logicalFolder name="f4" displayName="driver" projectFiles="true">
-            <logicalFolder name="f2" displayName="evsys" projectFiles="true">
+          <logicalFolder name="f3" displayName="driver" projectFiles="true">
+            <logicalFolder name="f1" displayName="evsys" projectFiles="true">
             </logicalFolder>
-            <logicalFolder name="f3" displayName="nvic" projectFiles="true">
+            <logicalFolder name="f2" displayName="nvic" projectFiles="true">
             </logicalFolder>
-            <logicalFolder name="f4" displayName="nvmctrl" projectFiles="true">
+            <logicalFolder name="f3" displayName="nvmctrl" projectFiles="true">
             </logicalFolder>
-            <logicalFolder name="f5" displayName="pm" projectFiles="true">
+            <logicalFolder name="f4" displayName="pm" projectFiles="true">
             </logicalFolder>
-            <logicalFolder name="f6" displayName="port" projectFiles="true">
+            <logicalFolder name="f5" displayName="port" projectFiles="true">
             </logicalFolder>
-            <logicalFolder name="f1" displayName="usb" projectFiles="true">
+            <logicalFolder name="f6" displayName="usb" projectFiles="true">
               <logicalFolder name="f1" displayName="usbfsv1" projectFiles="true">
                 <logicalFolder name="f1" displayName="src" projectFiles="true">
                   <itemPath>../src/config/sam_l22_xpro/driver/usb/usbfsv1/src/drv_usbfsv1_variant_mapping.h</itemPath>
@@ -49,33 +50,36 @@
             <itemPath>../src/config/sam_l22_xpro/driver/driver.h</itemPath>
             <itemPath>../src/config/sam_l22_xpro/driver/driver_common.h</itemPath>
           </logicalFolder>
-          <logicalFolder name="f7" displayName="osal" projectFiles="true">
+          <logicalFolder name="f4" displayName="osal" projectFiles="true">
+            <itemPath>../src/config/sam_l22_xpro/osal/osal.h</itemPath>
+            <itemPath>../src/config/sam_l22_xpro/osal/osal_definitions.h</itemPath>
+            <itemPath>../src/config/sam_l22_xpro/osal/osal_impl_basic.h</itemPath>
           </logicalFolder>
-          <logicalFolder name="f1" displayName="peripheral" projectFiles="true">
-            <logicalFolder name="f4" displayName="clock" projectFiles="true">
+          <logicalFolder name="f5" displayName="peripheral" projectFiles="true">
+            <logicalFolder name="f1" displayName="clock" projectFiles="true">
               <itemPath>../src/config/sam_l22_xpro/peripheral/clock/plib_clock.h</itemPath>
             </logicalFolder>
             <logicalFolder name="f2" displayName="evsys" projectFiles="true">
               <itemPath>../src/config/sam_l22_xpro/peripheral/evsys/plib_evsys.h</itemPath>
             </logicalFolder>
-            <logicalFolder name="f5" displayName="nvic" projectFiles="true">
+            <logicalFolder name="f3" displayName="nvic" projectFiles="true">
               <itemPath>../src/config/sam_l22_xpro/peripheral/nvic/plib_nvic.h</itemPath>
             </logicalFolder>
-            <logicalFolder name="f1" displayName="nvmctrl" projectFiles="true">
+            <logicalFolder name="f4" displayName="nvmctrl" projectFiles="true">
               <itemPath>../src/config/sam_l22_xpro/peripheral/nvmctrl/plib_nvmctrl.h</itemPath>
             </logicalFolder>
-            <logicalFolder name="f6" displayName="pm" projectFiles="true">
+            <logicalFolder name="f5" displayName="pm" projectFiles="true">
               <itemPath>../src/config/sam_l22_xpro/peripheral/pm/plib_pm.h</itemPath>
             </logicalFolder>
-            <logicalFolder name="f3" displayName="port" projectFiles="true">
+            <logicalFolder name="f6" displayName="port" projectFiles="true">
               <itemPath>../src/config/sam_l22_xpro/peripheral/port/plib_port.h</itemPath>
             </logicalFolder>
           </logicalFolder>
           <logicalFolder name="f6" displayName="system" projectFiles="true">
-            <logicalFolder name="f2" displayName="debug" projectFiles="true">
+            <logicalFolder name="f1" displayName="debug" projectFiles="true">
               <itemPath>../src/config/sam_l22_xpro/system/debug/sys_debug.h</itemPath>
             </logicalFolder>
-            <logicalFolder name="f1" displayName="int" projectFiles="true">
+            <logicalFolder name="f2" displayName="int" projectFiles="true">
               <itemPath>../src/config/sam_l22_xpro/system/int/sys_int.h</itemPath>
               <itemPath>../src/config/sam_l22_xpro/system/int/sys_int_mapping.h</itemPath>
             </logicalFolder>
@@ -83,7 +87,7 @@
             <itemPath>../src/config/sam_l22_xpro/system/system_common.h</itemPath>
             <itemPath>../src/config/sam_l22_xpro/system/system_module.h</itemPath>
           </logicalFolder>
-          <logicalFolder name="f2" displayName="usb" projectFiles="true">
+          <logicalFolder name="f7" displayName="usb" projectFiles="true">
             <logicalFolder name="f1" displayName="src" projectFiles="true">
               <itemPath>../src/config/sam_l22_xpro/usb/src/usb_device_local.h</itemPath>
               <itemPath>../src/config/sam_l22_xpro/usb/src/usb_device_mapping.h</itemPath>
@@ -110,11 +114,6 @@
           <itemPath>../src/config/sam_l22_xpro/device_vectors.h</itemPath>
           <itemPath>../src/config/sam_l22_xpro/device.h</itemPath>
         </logicalFolder>
-      </logicalFolder>
-      <logicalFolder name="f3" displayName="osal" projectFiles="true">
-        <itemPath>../src/config/sam_l22_xpro/osal/osal.h</itemPath>
-        <itemPath>../src/config/sam_l22_xpro/osal/osal_definitions.h</itemPath>
-        <itemPath>../src/config/sam_l22_xpro/osal/osal_impl_basic.h</itemPath>
       </logicalFolder>
       <logicalFolder name="f2" displayName="packs" projectFiles="true">
         <logicalFolder name="f1" displayName="ATSAML22N18A_DFP" projectFiles="true">
@@ -148,8 +147,9 @@
             <itemPath>../src/packs/ATSAML22N18A_DFP/component/trng.h</itemPath>
             <itemPath>../src/packs/ATSAML22N18A_DFP/component/usb.h</itemPath>
             <itemPath>../src/packs/ATSAML22N18A_DFP/component/wdt.h</itemPath>
+            <itemPath>../src/packs/ATSAML22N18A_DFP/component/fuses.h</itemPath>
           </logicalFolder>
-          <logicalFolder name="f3" displayName="instance" projectFiles="true">
+          <logicalFolder name="f2" displayName="instance" projectFiles="true">
             <itemPath>../src/packs/ATSAML22N18A_DFP/instance/ac.h</itemPath>
             <itemPath>../src/packs/ATSAML22N18A_DFP/instance/adc.h</itemPath>
             <itemPath>../src/packs/ATSAML22N18A_DFP/instance/aes.h</itemPath>
@@ -187,8 +187,9 @@
             <itemPath>../src/packs/ATSAML22N18A_DFP/instance/trng.h</itemPath>
             <itemPath>../src/packs/ATSAML22N18A_DFP/instance/usb.h</itemPath>
             <itemPath>../src/packs/ATSAML22N18A_DFP/instance/wdt.h</itemPath>
+            <itemPath>../src/packs/ATSAML22N18A_DFP/instance/fuses.h</itemPath>
           </logicalFolder>
-          <logicalFolder name="f2" displayName="pio" projectFiles="true">
+          <logicalFolder name="f3" displayName="pio" projectFiles="true">
             <itemPath>../src/packs/ATSAML22N18A_DFP/pio/saml22n18a.h</itemPath>
           </logicalFolder>
           <itemPath>../src/packs/ATSAML22N18A_DFP/device.h</itemPath>
@@ -217,6 +218,14 @@
       </logicalFolder>
       <itemPath>../src/app.h</itemPath>
     </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="true">
+      <itemPath>Makefile</itemPath>
+      <itemPath>../src/config/sam_l22_xpro/harmony-manifest-success.yml</itemPath>
+      <itemPath>../src/config/sam_l22_xpro/pin_configurations.csv</itemPath>
+      <itemPath>usb_device_hid_bootloader_sam_l22_xpro.mc3</itemPath>
+    </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
                    projectFiles="true">
@@ -231,7 +240,7 @@
                    projectFiles="true">
       <logicalFolder name="f1" displayName="config" projectFiles="true">
         <logicalFolder name="f1" displayName="sam_l22_xpro" projectFiles="true">
-          <logicalFolder name="f4" displayName="bootloader" projectFiles="true">
+          <logicalFolder name="f1" displayName="bootloader" projectFiles="true">
             <logicalFolder name="f1" displayName="datastream" projectFiles="true">
               <itemPath>../src/config/sam_l22_xpro/bootloader/datastream/datastream_usb_device_hid.c</itemPath>
             </logicalFolder>
@@ -245,15 +254,16 @@
             </logicalFolder>
             <logicalFolder name="f6" displayName="port" projectFiles="true">
             </logicalFolder>
-            <itemPath>../src/config/sam_l22_xpro/bootloader/bootloader.c</itemPath>
             <itemPath>../src/config/sam_l22_xpro/bootloader/bootloader_nvm_interface.c</itemPath>
+            <itemPath>../src/config/sam_l22_xpro/bootloader/bootloader_usb_device_hid.c</itemPath>
+            <itemPath>../src/config/sam_l22_xpro/bootloader/bootloader_common.c</itemPath>
           </logicalFolder>
-          <logicalFolder name="f6" displayName="bsp" projectFiles="true">
+          <logicalFolder name="f2" displayName="bsp" projectFiles="true">
             <logicalFolder name="f1" displayName="int" projectFiles="true">
             </logicalFolder>
             <itemPath>../src/config/sam_l22_xpro/bsp/bsp.c</itemPath>
           </logicalFolder>
-          <logicalFolder name="f5" displayName="driver" projectFiles="true">
+          <logicalFolder name="f3" displayName="driver" projectFiles="true">
             <logicalFolder name="f1" displayName="usb" projectFiles="true">
               <logicalFolder name="f1" displayName="usbfsv1" projectFiles="true">
                 <logicalFolder name="f1" displayName="src" projectFiles="true">
@@ -263,35 +273,35 @@
               </logicalFolder>
             </logicalFolder>
           </logicalFolder>
-          <logicalFolder name="f1" displayName="peripheral" projectFiles="true">
-            <logicalFolder name="f4" displayName="clock" projectFiles="true">
+          <logicalFolder name="f4" displayName="peripheral" projectFiles="true">
+            <logicalFolder name="f1" displayName="clock" projectFiles="true">
               <itemPath>../src/config/sam_l22_xpro/peripheral/clock/plib_clock.c</itemPath>
             </logicalFolder>
             <logicalFolder name="f2" displayName="evsys" projectFiles="true">
               <itemPath>../src/config/sam_l22_xpro/peripheral/evsys/plib_evsys.c</itemPath>
             </logicalFolder>
-            <logicalFolder name="f5" displayName="nvic" projectFiles="true">
+            <logicalFolder name="f3" displayName="nvic" projectFiles="true">
               <itemPath>../src/config/sam_l22_xpro/peripheral/nvic/plib_nvic.c</itemPath>
             </logicalFolder>
-            <logicalFolder name="f1" displayName="nvmctrl" projectFiles="true">
+            <logicalFolder name="f4" displayName="nvmctrl" projectFiles="true">
               <itemPath>../src/config/sam_l22_xpro/peripheral/nvmctrl/plib_nvmctrl.c</itemPath>
             </logicalFolder>
-            <logicalFolder name="f6" displayName="pm" projectFiles="true">
+            <logicalFolder name="f5" displayName="pm" projectFiles="true">
               <itemPath>../src/config/sam_l22_xpro/peripheral/pm/plib_pm.c</itemPath>
             </logicalFolder>
-            <logicalFolder name="f3" displayName="port" projectFiles="true">
+            <logicalFolder name="f6" displayName="port" projectFiles="true">
               <itemPath>../src/config/sam_l22_xpro/peripheral/port/plib_port.c</itemPath>
             </logicalFolder>
           </logicalFolder>
-          <logicalFolder name="f2" displayName="stdio" projectFiles="true">
+          <logicalFolder name="f5" displayName="stdio" projectFiles="true">
             <itemPath>../src/config/sam_l22_xpro/stdio/xc32_monitor.c</itemPath>
           </logicalFolder>
-          <logicalFolder name="f7" displayName="system" projectFiles="true">
+          <logicalFolder name="f6" displayName="system" projectFiles="true">
             <logicalFolder name="f1" displayName="int" projectFiles="true">
               <itemPath>../src/config/sam_l22_xpro/system/int/src/sys_int.c</itemPath>
             </logicalFolder>
           </logicalFolder>
-          <logicalFolder name="f3" displayName="usb" projectFiles="true">
+          <logicalFolder name="f7" displayName="usb" projectFiles="true">
             <logicalFolder name="f1" displayName="src" projectFiles="true">
               <logicalFolder name="f1" displayName="usbfsv1" projectFiles="true">
                 <logicalFolder name="f1" displayName="src" projectFiles="true">
@@ -312,12 +322,6 @@
       </logicalFolder>
       <itemPath>../src/main.c</itemPath>
       <itemPath>../src/app.c</itemPath>
-    </logicalFolder>
-    <logicalFolder name="ExternalFiles"
-                   displayName="Important Files"
-                   projectFiles="false">
-      <itemPath>Makefile</itemPath>
-      <itemPath>../src/config/sam_l22_xpro/harmony-manifest-success.yml</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
@@ -394,6 +398,7 @@
       <C32>
         <property key="additional-warnings" value="true"/>
         <property key="addresss-attribute-use" value="false"/>
+        <property key="appendMe" value=""/>
         <property key="enable-app-io" value="false"/>
         <property key="enable-omit-frame-pointer" value="false"/>
         <property key="enable-symbols" value="true"/>
@@ -450,6 +455,7 @@
         <property key="additional-options-use-response-files" value="false"/>
         <property key="additional-options-write-sla" value="false"/>
         <property key="allocate-dinit" value="false"/>
+        <property key="appendMe" value=""/>
         <property key="code-dinit" value="false"/>
         <property key="ebase-addr" value=""/>
         <property key="enable-check-sections" value="false"/>
@@ -490,6 +496,7 @@
       <C32CPP>
         <property key="additional-warnings" value="false"/>
         <property key="addresss-attribute-use" value="false"/>
+        <property key="appendMe" value=""/>
         <property key="check-new" value="false"/>
         <property key="eh-specs" value="true"/>
         <property key="enable-app-io" value="false"/>

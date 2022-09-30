@@ -50,13 +50,13 @@
 #include <stdbool.h>
 #include "peripheral/nvmctrl/plib_nvmctrl.h"
 #include "peripheral/evsys/plib_evsys.h"
-#include "peripheral/pm/plib_pm.h"
 #include "peripheral/port/plib_port.h"
 #include "peripheral/clock/plib_clock.h"
 #include "peripheral/nvic/plib_nvic.h"
+#include "peripheral/pm/plib_pm.h"
 #include "usb/usb_chapter_9.h"
 #include "usb/usb_device.h"
-#include "bootloader/bootloader.h"
+#include "bootloader/bootloader_usb_device_hid.h"
 #include "usb/usb_device_hid.h"
 #include "usb/usb_hid.h"
 #include "driver/usb/usbfsv1/drv_usbfsv1.h"
@@ -189,7 +189,7 @@ Remarks:
 
 typedef struct
 {
-	SYS_MODULE_OBJ  usbDevObject0;
+    SYS_MODULE_OBJ  usbDevObject0;
 
 	SYS_MODULE_OBJ  drvUSBFSV1Object;
 
