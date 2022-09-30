@@ -6,16 +6,17 @@
                    projectFiles="true">
       <logicalFolder name="f1" displayName="config" projectFiles="true">
         <logicalFolder name="f1" displayName="sam_e54_xpro" projectFiles="true">
-          <logicalFolder name="f3" displayName="bootloader" projectFiles="true">
+          <logicalFolder name="f1" displayName="bootloader" projectFiles="true">
             <logicalFolder name="f1" displayName="usb" projectFiles="true">
               <logicalFolder name="f1" displayName="usbfsv1" projectFiles="true">
                 <logicalFolder name="f1" displayName="src" projectFiles="true">
                 </logicalFolder>
               </logicalFolder>
             </logicalFolder>
-            <itemPath>../src/config/sam_e54_xpro/bootloader/bootloader.h</itemPath>
+            <itemPath>../src/config/sam_e54_xpro/bootloader/bootloader_usb_host_msd.h</itemPath>
+            <itemPath>../src/config/sam_e54_xpro/bootloader/bootloader_common.h</itemPath>
           </logicalFolder>
-          <logicalFolder name="f5" displayName="bsp" projectFiles="true">
+          <logicalFolder name="f2" displayName="bsp" projectFiles="true">
             <logicalFolder name="f1" displayName="clock" projectFiles="true">
             </logicalFolder>
             <logicalFolder name="f2" displayName="cmcc" projectFiles="true">
@@ -32,10 +33,10 @@
             </logicalFolder>
             <itemPath>../src/config/sam_e54_xpro/bsp/bsp.h</itemPath>
           </logicalFolder>
-          <logicalFolder name="f6" displayName="driver" projectFiles="true">
-            <logicalFolder name="f2" displayName="debug" projectFiles="true">
+          <logicalFolder name="f3" displayName="driver" projectFiles="true">
+            <logicalFolder name="f1" displayName="debug" projectFiles="true">
             </logicalFolder>
-            <logicalFolder name="f3" displayName="fs" projectFiles="true">
+            <logicalFolder name="f2" displayName="fs" projectFiles="true">
               <logicalFolder name="f1" displayName="fat_fs" projectFiles="true">
                 <logicalFolder name="f1" displayName="file_system" projectFiles="true">
                 </logicalFolder>
@@ -43,11 +44,11 @@
                 </logicalFolder>
               </logicalFolder>
             </logicalFolder>
-            <logicalFolder name="f4" displayName="int" projectFiles="true">
+            <logicalFolder name="f3" displayName="int" projectFiles="true">
             </logicalFolder>
-            <logicalFolder name="f5" displayName="time" projectFiles="true">
+            <logicalFolder name="f4" displayName="time" projectFiles="true">
             </logicalFolder>
-            <logicalFolder name="f1" displayName="usb" projectFiles="true">
+            <logicalFolder name="f5" displayName="usb" projectFiles="true">
               <logicalFolder name="f1" displayName="usbfsv1" projectFiles="true">
                 <logicalFolder name="f1" displayName="src" projectFiles="true">
                   <itemPath>../src/config/sam_e54_xpro/driver/usb/usbfsv1/src/drv_usbfsv1_variant_mapping.h</itemPath>
@@ -61,30 +62,30 @@
             <itemPath>../src/config/sam_e54_xpro/driver/driver.h</itemPath>
             <itemPath>../src/config/sam_e54_xpro/driver/driver_common.h</itemPath>
           </logicalFolder>
-          <logicalFolder name="f7" displayName="osal" projectFiles="true">
+          <logicalFolder name="f4" displayName="osal" projectFiles="true">
             <logicalFolder name="f1" displayName="src" projectFiles="true">
             </logicalFolder>
             <itemPath>../src/config/sam_e54_xpro/osal/osal.h</itemPath>
             <itemPath>../src/config/sam_e54_xpro/osal/osal_definitions.h</itemPath>
             <itemPath>../src/config/sam_e54_xpro/osal/osal_impl_basic.h</itemPath>
           </logicalFolder>
-          <logicalFolder name="f1" displayName="peripheral" projectFiles="true">
-            <logicalFolder name="f4" displayName="clock" projectFiles="true">
+          <logicalFolder name="f5" displayName="peripheral" projectFiles="true">
+            <logicalFolder name="f1" displayName="clock" projectFiles="true">
               <itemPath>../src/config/sam_e54_xpro/peripheral/clock/plib_clock.h</itemPath>
             </logicalFolder>
-            <logicalFolder name="f6" displayName="cmcc" projectFiles="true">
+            <logicalFolder name="f2" displayName="cmcc" projectFiles="true">
               <itemPath>../src/config/sam_e54_xpro/peripheral/cmcc/plib_cmcc.h</itemPath>
             </logicalFolder>
-            <logicalFolder name="f2" displayName="evsys" projectFiles="true">
+            <logicalFolder name="f3" displayName="evsys" projectFiles="true">
               <itemPath>../src/config/sam_e54_xpro/peripheral/evsys/plib_evsys.h</itemPath>
             </logicalFolder>
-            <logicalFolder name="f5" displayName="nvic" projectFiles="true">
+            <logicalFolder name="f4" displayName="nvic" projectFiles="true">
               <itemPath>../src/config/sam_e54_xpro/peripheral/nvic/plib_nvic.h</itemPath>
             </logicalFolder>
-            <logicalFolder name="f1" displayName="nvmctrl" projectFiles="true">
+            <logicalFolder name="f5" displayName="nvmctrl" projectFiles="true">
               <itemPath>../src/config/sam_e54_xpro/peripheral/nvmctrl/plib_nvmctrl.h</itemPath>
             </logicalFolder>
-            <logicalFolder name="f3" displayName="port" projectFiles="true">
+            <logicalFolder name="f6" displayName="port" projectFiles="true">
               <itemPath>../src/config/sam_e54_xpro/peripheral/port/plib_port.h</itemPath>
             </logicalFolder>
             <logicalFolder name="f7" displayName="tc" projectFiles="true">
@@ -92,14 +93,14 @@
               <itemPath>../src/config/sam_e54_xpro/peripheral/tc/plib_tc0.h</itemPath>
             </logicalFolder>
           </logicalFolder>
-          <logicalFolder name="f4" displayName="system" projectFiles="true">
-            <logicalFolder name="f4" displayName="cache" projectFiles="true">
+          <logicalFolder name="f6" displayName="system" projectFiles="true">
+            <logicalFolder name="f1" displayName="cache" projectFiles="true">
               <itemPath>../src/config/sam_e54_xpro/system/cache/sys_cache.h</itemPath>
             </logicalFolder>
-            <logicalFolder name="f5" displayName="debug" projectFiles="true">
+            <logicalFolder name="f2" displayName="debug" projectFiles="true">
               <itemPath>../src/config/sam_e54_xpro/system/debug/sys_debug.h</itemPath>
             </logicalFolder>
-            <logicalFolder name="f2" displayName="fs" projectFiles="true">
+            <logicalFolder name="f3" displayName="fs" projectFiles="true">
               <logicalFolder name="f1" displayName="fat_fs" projectFiles="true">
                 <logicalFolder name="f1" displayName="file_system" projectFiles="true">
                   <itemPath>../src/config/sam_e54_xpro/system/fs/fat_fs/file_system/ff.h</itemPath>
@@ -115,11 +116,11 @@
               <itemPath>../src/config/sam_e54_xpro/system/fs/src/sys_fs_media_manager_local.h</itemPath>
               <itemPath>../src/config/sam_e54_xpro/system/fs/sys_fs_fat_interface.h</itemPath>
             </logicalFolder>
-            <logicalFolder name="f3" displayName="int" projectFiles="true">
+            <logicalFolder name="f4" displayName="int" projectFiles="true">
               <itemPath>../src/config/sam_e54_xpro/system/int/sys_int.h</itemPath>
               <itemPath>../src/config/sam_e54_xpro/system/int/sys_int_mapping.h</itemPath>
             </logicalFolder>
-            <logicalFolder name="f1" displayName="time" projectFiles="true">
+            <logicalFolder name="f5" displayName="time" projectFiles="true">
               <itemPath>../src/config/sam_e54_xpro/system/time/sys_time.h</itemPath>
               <itemPath>../src/config/sam_e54_xpro/system/time/sys_time_definitions.h</itemPath>
               <itemPath>../src/config/sam_e54_xpro/system/time/src/sys_time_local.h</itemPath>
@@ -129,7 +130,7 @@
             <itemPath>../src/config/sam_e54_xpro/system/system_module.h</itemPath>
             <itemPath>../src/config/sam_e54_xpro/system/system_media.h</itemPath>
           </logicalFolder>
-          <logicalFolder name="f2" displayName="usb" projectFiles="true">
+          <logicalFolder name="f7" displayName="usb" projectFiles="true">
             <logicalFolder name="f1" displayName="src" projectFiles="true">
               <itemPath>../src/config/sam_e54_xpro/usb/src/usb_host_msd_local.h</itemPath>
               <itemPath>../src/config/sam_e54_xpro/usb/src/usb_host_scsi_local.h</itemPath>
@@ -200,8 +201,9 @@
             <itemPath>../src/packs/ATSAME54P20A_DFP/component/trng.h</itemPath>
             <itemPath>../src/packs/ATSAME54P20A_DFP/component/usb.h</itemPath>
             <itemPath>../src/packs/ATSAME54P20A_DFP/component/wdt.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/component/fuses.h</itemPath>
           </logicalFolder>
-          <logicalFolder name="f3" displayName="instance" projectFiles="true">
+          <logicalFolder name="f2" displayName="instance" projectFiles="true">
             <itemPath>../src/packs/ATSAME54P20A_DFP/instance/ac.h</itemPath>
             <itemPath>../src/packs/ATSAME54P20A_DFP/instance/adc0.h</itemPath>
             <itemPath>../src/packs/ATSAME54P20A_DFP/instance/adc1.h</itemPath>
@@ -261,8 +263,9 @@
             <itemPath>../src/packs/ATSAME54P20A_DFP/instance/trng.h</itemPath>
             <itemPath>../src/packs/ATSAME54P20A_DFP/instance/usb.h</itemPath>
             <itemPath>../src/packs/ATSAME54P20A_DFP/instance/wdt.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/fuses.h</itemPath>
           </logicalFolder>
-          <logicalFolder name="f2" displayName="pio" projectFiles="true">
+          <logicalFolder name="f3" displayName="pio" projectFiles="true">
             <itemPath>../src/packs/ATSAME54P20A_DFP/pio/same54p20a.h</itemPath>
           </logicalFolder>
           <itemPath>../src/packs/ATSAME54P20A_DFP/same54p20a.h</itemPath>
@@ -288,143 +291,9 @@
       </logicalFolder>
       <itemPath>../src/app.h</itemPath>
     </logicalFolder>
-    <logicalFolder name="LinkerScript"
-                   displayName="Linker Files"
-                   projectFiles="true">
-      <logicalFolder name="f1" displayName="config" projectFiles="true">
-        <logicalFolder name="f1" displayName="sam_e54_xpro" projectFiles="true">
-          <itemPath>../src/config/sam_e54_xpro/ATSAME54P20A.ld</itemPath>
-        </logicalFolder>
-      </logicalFolder>
-    </logicalFolder>
-    <logicalFolder name="SourceFiles"
-                   displayName="Source Files"
-                   projectFiles="true">
-      <logicalFolder name="f1" displayName="config" projectFiles="true">
-        <logicalFolder name="f1" displayName="sam_e54_xpro" projectFiles="true">
-          <logicalFolder name="f3" displayName="bootloader" projectFiles="true">
-            <logicalFolder name="f1" displayName="usb" projectFiles="true">
-              <logicalFolder name="f1" displayName="usbfsv1" projectFiles="true">
-                <logicalFolder name="f1" displayName="src" projectFiles="true">
-                </logicalFolder>
-              </logicalFolder>
-            </logicalFolder>
-            <itemPath>../src/config/sam_e54_xpro/bootloader/bootloader.c</itemPath>
-          </logicalFolder>
-          <logicalFolder name="f6" displayName="bsp" projectFiles="true">
-            <logicalFolder name="f1" displayName="cache" projectFiles="true">
-            </logicalFolder>
-            <logicalFolder name="f2" displayName="fs" projectFiles="true">
-              <logicalFolder name="f1" displayName="fat_fs" projectFiles="true">
-                <logicalFolder name="f1" displayName="file_system" projectFiles="true">
-                </logicalFolder>
-                <logicalFolder name="f2" displayName="hardware_access" projectFiles="true">
-                </logicalFolder>
-              </logicalFolder>
-            </logicalFolder>
-            <logicalFolder name="f3" displayName="int" projectFiles="true">
-            </logicalFolder>
-            <logicalFolder name="f4" displayName="time" projectFiles="true">
-            </logicalFolder>
-            <itemPath>../src/config/sam_e54_xpro/bsp/bsp.c</itemPath>
-          </logicalFolder>
-          <logicalFolder name="f7" displayName="driver" projectFiles="true">
-            <logicalFolder name="f1" displayName="usb" projectFiles="true">
-              <logicalFolder name="f1" displayName="usbfsv1" projectFiles="true">
-                <logicalFolder name="f1" displayName="src" projectFiles="true">
-                  <itemPath>../src/config/sam_e54_xpro/driver/usb/usbfsv1/src/drv_usbfsv1.c</itemPath>
-                  <itemPath>../src/config/sam_e54_xpro/driver/usb/usbfsv1/src/drv_usbfsv1_host.c</itemPath>
-                </logicalFolder>
-              </logicalFolder>
-            </logicalFolder>
-          </logicalFolder>
-          <logicalFolder name="f1" displayName="peripheral" projectFiles="true">
-            <logicalFolder name="f4" displayName="clock" projectFiles="true">
-              <itemPath>../src/config/sam_e54_xpro/peripheral/clock/plib_clock.c</itemPath>
-            </logicalFolder>
-            <logicalFolder name="f6" displayName="cmcc" projectFiles="true">
-              <itemPath>../src/config/sam_e54_xpro/peripheral/cmcc/plib_cmcc.c</itemPath>
-            </logicalFolder>
-            <logicalFolder name="f2" displayName="evsys" projectFiles="true">
-              <itemPath>../src/config/sam_e54_xpro/peripheral/evsys/plib_evsys.c</itemPath>
-            </logicalFolder>
-            <logicalFolder name="f5" displayName="nvic" projectFiles="true">
-              <itemPath>../src/config/sam_e54_xpro/peripheral/nvic/plib_nvic.c</itemPath>
-            </logicalFolder>
-            <logicalFolder name="f1" displayName="nvmctrl" projectFiles="true">
-              <itemPath>../src/config/sam_e54_xpro/peripheral/nvmctrl/plib_nvmctrl.c</itemPath>
-            </logicalFolder>
-            <logicalFolder name="f3" displayName="port" projectFiles="true">
-              <itemPath>../src/config/sam_e54_xpro/peripheral/port/plib_port.c</itemPath>
-            </logicalFolder>
-            <logicalFolder name="f7" displayName="tc" projectFiles="true">
-              <itemPath>../src/config/sam_e54_xpro/peripheral/tc/plib_tc0.c</itemPath>
-            </logicalFolder>
-          </logicalFolder>
-          <logicalFolder name="f4" displayName="stdio" projectFiles="true">
-            <logicalFolder name="f1" displayName="clock" projectFiles="true">
-            </logicalFolder>
-            <logicalFolder name="f2" displayName="cmcc" projectFiles="true">
-            </logicalFolder>
-            <logicalFolder name="f3" displayName="evsys" projectFiles="true">
-            </logicalFolder>
-            <logicalFolder name="f4" displayName="nvic" projectFiles="true">
-            </logicalFolder>
-            <logicalFolder name="f5" displayName="nvmctrl" projectFiles="true">
-            </logicalFolder>
-            <logicalFolder name="f6" displayName="port" projectFiles="true">
-            </logicalFolder>
-            <logicalFolder name="f7" displayName="tc" projectFiles="true">
-            </logicalFolder>
-            <itemPath>../src/config/sam_e54_xpro/stdio/xc32_monitor.c</itemPath>
-          </logicalFolder>
-          <logicalFolder name="f5" displayName="system" projectFiles="true">
-            <logicalFolder name="f4" displayName="cache" projectFiles="true">
-              <itemPath>../src/config/sam_e54_xpro/system/cache/sys_cache.c</itemPath>
-            </logicalFolder>
-            <logicalFolder name="f2" displayName="fs" projectFiles="true">
-              <logicalFolder name="f1" displayName="fat_fs" projectFiles="true">
-                <logicalFolder name="f1" displayName="file_system" projectFiles="true">
-                  <itemPath>../src/config/sam_e54_xpro/system/fs/fat_fs/file_system/ff.c</itemPath>
-                  <itemPath>../src/config/sam_e54_xpro/system/fs/fat_fs/file_system/ffunicode.c</itemPath>
-                </logicalFolder>
-                <logicalFolder name="f2" displayName="hardware_access" projectFiles="true">
-                  <itemPath>../src/config/sam_e54_xpro/system/fs/fat_fs/hardware_access/diskio.c</itemPath>
-                </logicalFolder>
-              </logicalFolder>
-              <itemPath>../src/config/sam_e54_xpro/system/fs/src/sys_fs.c</itemPath>
-              <itemPath>../src/config/sam_e54_xpro/system/fs/src/sys_fs_media_manager.c</itemPath>
-              <itemPath>../src/config/sam_e54_xpro/system/fs/src/sys_fs_fat_interface.c</itemPath>
-            </logicalFolder>
-            <logicalFolder name="f3" displayName="int" projectFiles="true">
-              <itemPath>../src/config/sam_e54_xpro/system/int/src/sys_int.c</itemPath>
-            </logicalFolder>
-            <logicalFolder name="f1" displayName="time" projectFiles="true">
-              <itemPath>../src/config/sam_e54_xpro/system/time/src/sys_time.c</itemPath>
-            </logicalFolder>
-          </logicalFolder>
-          <logicalFolder name="f2" displayName="usb" projectFiles="true">
-            <logicalFolder name="f1" displayName="src" projectFiles="true">
-              <itemPath>../src/config/sam_e54_xpro/usb/src/usb_host_msd.c</itemPath>
-              <itemPath>../src/config/sam_e54_xpro/usb/src/usb_host_scsi.c</itemPath>
-              <itemPath>../src/config/sam_e54_xpro/usb/src/usb_host.c</itemPath>
-            </logicalFolder>
-          </logicalFolder>
-          <itemPath>../src/config/sam_e54_xpro/initialization.c</itemPath>
-          <itemPath>../src/config/sam_e54_xpro/interrupts.c</itemPath>
-          <itemPath>../src/config/sam_e54_xpro/exceptions.c</itemPath>
-          <itemPath>../src/config/sam_e54_xpro/startup_xc32.c</itemPath>
-          <itemPath>../src/config/sam_e54_xpro/libc_syscalls.c</itemPath>
-          <itemPath>../src/config/sam_e54_xpro/usb_host_init_data.c</itemPath>
-          <itemPath>../src/config/sam_e54_xpro/tasks.c</itemPath>
-        </logicalFolder>
-      </logicalFolder>
-      <itemPath>../src/main.c</itemPath>
-      <itemPath>../src/app.c</itemPath>
-    </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
-                   projectFiles="false">
+                   projectFiles="true">
       <logicalFolder name="f1" displayName="sam_e54_xpro.mhc" projectFiles="true">
         <itemPath>../src/config/sam_e54_xpro/sam_e54_xpro.mhc/BSP_SAM_E54_Xplained_Pro.yml</itemPath>
         <itemPath>../src/config/sam_e54_xpro/sam_e54_xpro.mhc/cmsis.yml</itemPath>
@@ -446,6 +315,143 @@
       </logicalFolder>
       <itemPath>Makefile</itemPath>
       <itemPath>../src/config/sam_e54_xpro/harmony-manifest-success.yml</itemPath>
+      <itemPath>../src/config/sam_e54_xpro/pin_configurations.csv</itemPath>
+      <itemPath>usb_host_msd_bootloader_sam_e54_xpro.mc3</itemPath>
+    </logicalFolder>
+    <logicalFolder name="LinkerScript"
+                   displayName="Linker Files"
+                   projectFiles="true">
+      <logicalFolder name="f1" displayName="config" projectFiles="true">
+        <logicalFolder name="f1" displayName="sam_e54_xpro" projectFiles="true">
+          <itemPath>../src/config/sam_e54_xpro/ATSAME54P20A.ld</itemPath>
+        </logicalFolder>
+      </logicalFolder>
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <logicalFolder name="f1" displayName="config" projectFiles="true">
+        <logicalFolder name="f1" displayName="sam_e54_xpro" projectFiles="true">
+          <logicalFolder name="f1" displayName="bootloader" projectFiles="true">
+            <logicalFolder name="f1" displayName="usb" projectFiles="true">
+              <logicalFolder name="f1" displayName="usbfsv1" projectFiles="true">
+                <logicalFolder name="f1" displayName="src" projectFiles="true">
+                </logicalFolder>
+              </logicalFolder>
+            </logicalFolder>
+            <itemPath>../src/config/sam_e54_xpro/bootloader/bootloader_usb_host_msd.c</itemPath>
+            <itemPath>../src/config/sam_e54_xpro/bootloader/bootloader_common.c</itemPath>
+          </logicalFolder>
+          <logicalFolder name="f2" displayName="bsp" projectFiles="true">
+            <logicalFolder name="f1" displayName="cache" projectFiles="true">
+            </logicalFolder>
+            <logicalFolder name="f2" displayName="fs" projectFiles="true">
+              <logicalFolder name="f1" displayName="fat_fs" projectFiles="true">
+                <logicalFolder name="f1" displayName="file_system" projectFiles="true">
+                </logicalFolder>
+                <logicalFolder name="f2" displayName="hardware_access" projectFiles="true">
+                </logicalFolder>
+              </logicalFolder>
+            </logicalFolder>
+            <logicalFolder name="f3" displayName="int" projectFiles="true">
+            </logicalFolder>
+            <logicalFolder name="f4" displayName="time" projectFiles="true">
+            </logicalFolder>
+            <itemPath>../src/config/sam_e54_xpro/bsp/bsp.c</itemPath>
+          </logicalFolder>
+          <logicalFolder name="f3" displayName="driver" projectFiles="true">
+            <logicalFolder name="f1" displayName="usb" projectFiles="true">
+              <logicalFolder name="f1" displayName="usbfsv1" projectFiles="true">
+                <logicalFolder name="f1" displayName="src" projectFiles="true">
+                  <itemPath>../src/config/sam_e54_xpro/driver/usb/usbfsv1/src/drv_usbfsv1.c</itemPath>
+                  <itemPath>../src/config/sam_e54_xpro/driver/usb/usbfsv1/src/drv_usbfsv1_host.c</itemPath>
+                </logicalFolder>
+              </logicalFolder>
+            </logicalFolder>
+          </logicalFolder>
+          <logicalFolder name="f4" displayName="peripheral" projectFiles="true">
+            <logicalFolder name="f1" displayName="clock" projectFiles="true">
+              <itemPath>../src/config/sam_e54_xpro/peripheral/clock/plib_clock.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="f2" displayName="cmcc" projectFiles="true">
+              <itemPath>../src/config/sam_e54_xpro/peripheral/cmcc/plib_cmcc.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="f3" displayName="evsys" projectFiles="true">
+              <itemPath>../src/config/sam_e54_xpro/peripheral/evsys/plib_evsys.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="f4" displayName="nvic" projectFiles="true">
+              <itemPath>../src/config/sam_e54_xpro/peripheral/nvic/plib_nvic.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="f5" displayName="nvmctrl" projectFiles="true">
+              <itemPath>../src/config/sam_e54_xpro/peripheral/nvmctrl/plib_nvmctrl.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="f6" displayName="port" projectFiles="true">
+              <itemPath>../src/config/sam_e54_xpro/peripheral/port/plib_port.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="f7" displayName="tc" projectFiles="true">
+              <itemPath>../src/config/sam_e54_xpro/peripheral/tc/plib_tc0.c</itemPath>
+            </logicalFolder>
+          </logicalFolder>
+          <logicalFolder name="f5" displayName="stdio" projectFiles="true">
+            <logicalFolder name="f1" displayName="clock" projectFiles="true">
+            </logicalFolder>
+            <logicalFolder name="f2" displayName="cmcc" projectFiles="true">
+            </logicalFolder>
+            <logicalFolder name="f3" displayName="evsys" projectFiles="true">
+            </logicalFolder>
+            <logicalFolder name="f4" displayName="nvic" projectFiles="true">
+            </logicalFolder>
+            <logicalFolder name="f5" displayName="nvmctrl" projectFiles="true">
+            </logicalFolder>
+            <logicalFolder name="f6" displayName="port" projectFiles="true">
+            </logicalFolder>
+            <logicalFolder name="f7" displayName="tc" projectFiles="true">
+            </logicalFolder>
+            <itemPath>../src/config/sam_e54_xpro/stdio/xc32_monitor.c</itemPath>
+          </logicalFolder>
+          <logicalFolder name="f6" displayName="system" projectFiles="true">
+            <logicalFolder name="f1" displayName="cache" projectFiles="true">
+              <itemPath>../src/config/sam_e54_xpro/system/cache/sys_cache.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="f2" displayName="fs" projectFiles="true">
+              <logicalFolder name="f1" displayName="fat_fs" projectFiles="true">
+                <logicalFolder name="f1" displayName="file_system" projectFiles="true">
+                  <itemPath>../src/config/sam_e54_xpro/system/fs/fat_fs/file_system/ff.c</itemPath>
+                  <itemPath>../src/config/sam_e54_xpro/system/fs/fat_fs/file_system/ffunicode.c</itemPath>
+                </logicalFolder>
+                <logicalFolder name="f2" displayName="hardware_access" projectFiles="true">
+                  <itemPath>../src/config/sam_e54_xpro/system/fs/fat_fs/hardware_access/diskio.c</itemPath>
+                </logicalFolder>
+              </logicalFolder>
+              <itemPath>../src/config/sam_e54_xpro/system/fs/src/sys_fs.c</itemPath>
+              <itemPath>../src/config/sam_e54_xpro/system/fs/src/sys_fs_media_manager.c</itemPath>
+              <itemPath>../src/config/sam_e54_xpro/system/fs/src/sys_fs_fat_interface.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="f3" displayName="int" projectFiles="true">
+              <itemPath>../src/config/sam_e54_xpro/system/int/src/sys_int.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="f4" displayName="time" projectFiles="true">
+              <itemPath>../src/config/sam_e54_xpro/system/time/src/sys_time.c</itemPath>
+            </logicalFolder>
+          </logicalFolder>
+          <logicalFolder name="f7" displayName="usb" projectFiles="true">
+            <logicalFolder name="f1" displayName="src" projectFiles="true">
+              <itemPath>../src/config/sam_e54_xpro/usb/src/usb_host_msd.c</itemPath>
+              <itemPath>../src/config/sam_e54_xpro/usb/src/usb_host_scsi.c</itemPath>
+              <itemPath>../src/config/sam_e54_xpro/usb/src/usb_host.c</itemPath>
+            </logicalFolder>
+          </logicalFolder>
+          <itemPath>../src/config/sam_e54_xpro/initialization.c</itemPath>
+          <itemPath>../src/config/sam_e54_xpro/interrupts.c</itemPath>
+          <itemPath>../src/config/sam_e54_xpro/exceptions.c</itemPath>
+          <itemPath>../src/config/sam_e54_xpro/startup_xc32.c</itemPath>
+          <itemPath>../src/config/sam_e54_xpro/libc_syscalls.c</itemPath>
+          <itemPath>../src/config/sam_e54_xpro/usb_host_init_data.c</itemPath>
+          <itemPath>../src/config/sam_e54_xpro/tasks.c</itemPath>
+        </logicalFolder>
+      </logicalFolder>
+      <itemPath>../src/main.c</itemPath>
+      <itemPath>../src/app.c</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
@@ -522,6 +528,7 @@
       <C32>
         <property key="additional-warnings" value="true"/>
         <property key="addresss-attribute-use" value="false"/>
+        <property key="appendMe" value=""/>
         <property key="enable-app-io" value="false"/>
         <property key="enable-omit-frame-pointer" value="false"/>
         <property key="enable-symbols" value="true"/>
@@ -578,6 +585,7 @@
         <property key="additional-options-use-response-files" value="false"/>
         <property key="additional-options-write-sla" value="false"/>
         <property key="allocate-dinit" value="false"/>
+        <property key="appendMe" value=""/>
         <property key="code-dinit" value="false"/>
         <property key="ebase-addr" value=""/>
         <property key="enable-check-sections" value="false"/>
@@ -618,6 +626,7 @@
       <C32CPP>
         <property key="additional-warnings" value="false"/>
         <property key="addresss-attribute-use" value="false"/>
+        <property key="appendMe" value=""/>
         <property key="check-new" value="false"/>
         <property key="eh-specs" value="true"/>
         <property key="enable-app-io" value="false"/>
@@ -646,6 +655,7 @@
         <property key="use-indirect-calls" value="false"/>
       </C32CPP>
       <C32Global>
+        <property key="appendMe" value=""/>
         <property key="common-include-directories" value=""/>
         <property key="gp-relative-option" value=""/>
         <property key="legacy-libc" value="false"/>
@@ -1252,6 +1262,8 @@
         <property key="memories.programmemory.ranges" value="0-fffff"/>
         <property key="memories.rww" value="true"/>
         <property key="poweroptions.powerenable" value="false"/>
+        <property key="programmerToGoFilePath"
+                  value="E:/projects/h3_bootloader/bootloader_apps_usb/apps/usb_host_msd_bootloader/bootloader/firmware/sam_e54_xpro.X/debug/sam_e54_xpro/sam_e54_xpro_ptg"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.preservedataflash" value="false"/>
         <property key="programoptions.preservedataflash.ranges"

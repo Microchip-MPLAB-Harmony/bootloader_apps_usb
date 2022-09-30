@@ -53,7 +53,7 @@
 #include "usb/usb_host_msd.h"
 #include "usb/usb_host_scsi.h"
 #include "peripheral/evsys/plib_evsys.h"
-#include "bootloader/bootloader.h"
+#include "bootloader/bootloader_usb_host_msd.h"
 #include "peripheral/port/plib_port.h"
 #include "peripheral/clock/plib_clock.h"
 #include "peripheral/nvic/plib_nvic.h"
