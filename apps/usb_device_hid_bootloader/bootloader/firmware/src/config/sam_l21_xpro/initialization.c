@@ -56,7 +56,7 @@
 // ****************************************************************************
 #pragma config NVMCTRL_BOOTPROT = 0x7
 #pragma config NVMCTRL_EEPROM_SIZE = 0x7
-#pragma config BOD33USERLEVEL = 0x6
+#pragma config BOD33USERLEVEL = 0x6U
 #pragma config BOD33_DIS = CLEAR
 #pragma config BOD33_ACTION = 0x0
 #pragma config WDT_ENABLE = CLEAR
@@ -66,7 +66,7 @@
 #pragma config WDT_EWOFFSET = 0xB
 #pragma config WDT_WEN = CLEAR
 #pragma config BOD33_HYST = CLEAR
-#pragma config NVMCTRL_REGION_LOCKS = 0xffff
+#pragma config NVMCTRL_REGION_LOCKS = 0xffffU
 
 
 
@@ -129,6 +129,8 @@ static DRV_USB_VBUS_LEVEL DRV_USBFSV1_VBUS_Comparator(void)
 
 const DRV_USBFSV1_INIT drvUSBInit =
 {
+    /* Interrupt Source for USB module */ 
+    .interruptSource = USB_IRQn,
 
     /* System module initialization */
     .moduleInit = {0},
@@ -191,7 +193,7 @@ void SYS_Initialize ( void* data )
 
     if (bootloader_Trigger() == false)
     {
-        run_Application();
+        run_Application(APP_START_ADDRESS);
     }
 
     PM_Initialize();
@@ -207,10 +209,9 @@ void SYS_Initialize ( void* data )
 
 
 
-	 /* Initialize the USB device layer */
+    /* Initialize the USB device layer */
     sysObj.usbDevObject0 = USB_DEVICE_Initialize (USB_DEVICE_INDEX_0 , ( SYS_MODULE_INIT* ) & usbDevInitData);
-	
-	
+
 
 	/* Initialize USB Driver */ 
     sysObj.drvUSBFSV1Object = DRV_USBFSV1_Initialize(DRV_USBFSV1_INDEX_0, (SYS_MODULE_INIT *) &drvUSBInit);	
