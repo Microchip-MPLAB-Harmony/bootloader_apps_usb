@@ -12,8 +12,9 @@
             <logicalFolder name="f1" displayName="datastream" projectFiles="true">
               <itemPath>../src/config/pic32mk_mcm_curiosity_pro/bootloader/datastream/datastream.h</itemPath>
             </logicalFolder>
-            <itemPath>../src/config/pic32mk_mcm_curiosity_pro/bootloader/bootloader.h</itemPath>
             <itemPath>../src/config/pic32mk_mcm_curiosity_pro/bootloader/bootloader_nvm_interface.h</itemPath>
+            <itemPath>../src/config/pic32mk_mcm_curiosity_pro/bootloader/bootloader_usb_device_hid.h</itemPath>
+            <itemPath>../src/config/pic32mk_mcm_curiosity_pro/bootloader/bootloader_common.h</itemPath>
           </logicalFolder>
           <logicalFolder name="f2" displayName="bsp" projectFiles="true">
             <itemPath>../src/config/pic32mk_mcm_curiosity_pro/bsp/bsp.h</itemPath>
@@ -244,6 +245,7 @@
       </logicalFolder>
       <itemPath>Makefile</itemPath>
       <itemPath>../src/config/pic32mk_mcm_curiosity_pro/harmony-manifest-success.yml</itemPath>
+      <itemPath>usb_device_hid_live_update_app_pic32mk_mcm_curiosity_pro.mc3</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -261,8 +263,9 @@
             <logicalFolder name="f1" displayName="datastream" projectFiles="true">
               <itemPath>../src/config/pic32mk_mcm_curiosity_pro/bootloader/datastream/datastream_usb_device_hid.c</itemPath>
             </logicalFolder>
-            <itemPath>../src/config/pic32mk_mcm_curiosity_pro/bootloader/bootloader.c</itemPath>
             <itemPath>../src/config/pic32mk_mcm_curiosity_pro/bootloader/bootloader_nvm_interface.c</itemPath>
+            <itemPath>../src/config/pic32mk_mcm_curiosity_pro/bootloader/bootloader_usb_device_hid.c</itemPath>
+            <itemPath>../src/config/pic32mk_mcm_curiosity_pro/bootloader/bootloader_common.c</itemPath>
           </logicalFolder>
           <logicalFolder name="f2" displayName="bsp" projectFiles="true">
             <itemPath>../src/config/pic32mk_mcm_curiosity_pro/bsp/bsp.c</itemPath>
@@ -375,13 +378,14 @@
       <C32>
         <property key="additional-warnings" value="true"/>
         <property key="addresss-attribute-use" value="false"/>
+        <property key="appendMe" value=""/>
         <property key="enable-app-io" value="false"/>
         <property key="enable-omit-frame-pointer" value="false"/>
         <property key="enable-symbols" value="true"/>
         <property key="enable-unroll-loops" value="false"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../src;../src/config/pic32mk_mcm_curiosity_pro;../src/packs/PIC32MK1024MCM100_DFP"/>
+                  value="../src;../src/config/pic32mk_mcm_curiosity_pro"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -431,6 +435,7 @@
         <property key="additional-options-use-response-files" value="false"/>
         <property key="additional-options-write-sla" value="false"/>
         <property key="allocate-dinit" value="false"/>
+        <property key="appendMe" value=""/>
         <property key="code-dinit" value="false"/>
         <property key="ebase-addr" value=""/>
         <property key="enable-check-sections" value="false"/>
@@ -470,6 +475,7 @@
       <C32CPP>
         <property key="additional-warnings" value="false"/>
         <property key="addresss-attribute-use" value="false"/>
+        <property key="appendMe" value=""/>
         <property key="check-new" value="false"/>
         <property key="eh-specs" value="true"/>
         <property key="enable-app-io" value="false"/>
@@ -479,7 +485,7 @@
         <property key="exceptions" value="true"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../src;../src/config/pic32mk_mcm_curiosity_pro;../src/packs/PIC32MK1024MCM100_DFP"/>
+                  value="../src;../src/config/pic32mk_mcm_curiosity_pro"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>

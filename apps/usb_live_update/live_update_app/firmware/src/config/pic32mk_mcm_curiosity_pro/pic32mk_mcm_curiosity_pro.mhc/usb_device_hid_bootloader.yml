@@ -16,7 +16,14 @@ children:
       - type: String
         attributes: {id: source}
         children:
-        - {type: Value, value: ../bootloader/templates/mips/linkers/bootloader_linker_mk_DS60001519_live_update.ld.ftl}
+        - {type: Value, value: ../bootloader/templates/mips/linkers/bootloader_linker_PIC32MK1519_live_update.ld.ftl}
+  - type: String
+    attributes: {id: BTL_APP_JUMP_ADDRESS}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: usb_device_hid_bootloader, value: 1d008200}
   - type: Boolean
     attributes: {id: BTL_LIVE_UPDATE}
     children:

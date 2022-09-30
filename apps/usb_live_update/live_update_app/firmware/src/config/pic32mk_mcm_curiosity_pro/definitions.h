@@ -55,7 +55,7 @@
 #include "usb/usb_chapter_9.h"
 #include "usb/usb_device.h"
 #include "driver/usb/usbfs/drv_usbfs.h"
-#include "bootloader/bootloader.h"
+#include "bootloader/bootloader_usb_device_hid.h"
 #include "peripheral/nvm/plib_nvm.h"
 #include "system/time/sys_time.h"
 #include "peripheral/uart/plib_uart6.h"
@@ -191,7 +191,7 @@ Remarks:
 
 typedef struct
 {
-	SYS_MODULE_OBJ  usbDevObject0;
+    SYS_MODULE_OBJ  usbDevObject0;
 
 
 	SYS_MODULE_OBJ  drvUSBFSObject0;

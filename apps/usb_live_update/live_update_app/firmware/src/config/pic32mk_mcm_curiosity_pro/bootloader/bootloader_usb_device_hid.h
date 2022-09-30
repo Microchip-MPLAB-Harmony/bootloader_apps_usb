@@ -1,8 +1,8 @@
 /*******************************************************************************
-  Bootloader Header File
+  USB_DEVICE_HID Bootloader Header File
 
   File Name:
-    bootloader.h
+    bootloader_usb_device_hid.h
 
   Summary:
     This file contains Interface definitions of bootloder
@@ -36,14 +36,14 @@
  *******************************************************************************/
 // DOM-IGNORE-END
 
-#ifndef BOOTLOADER_H
-#define BOOTLOADER_H
+#ifndef BOOTLOADER_USB_DEVICE_HID_H
+#define BOOTLOADER_USB_DEVICE_HID_H
 
 #include <stdint.h>
 #include <stdbool.h>
+#include "bootloader_common.h"
 
 #include "sys/kmem.h"
-
 
 
 // *****************************************************************************
@@ -78,9 +78,10 @@
 void bootloader_SwapAndReset( void );
 
 
+
 // *****************************************************************************
 /* Function:
-    void bootloader_Tasks( void );
+    void bootloader_USB_DEVICE_HID_Tasks( void )
 
  Summary:
     Starts bootloader execution.
@@ -115,10 +116,10 @@ void bootloader_SwapAndReset( void );
  Example:
     <code>
 
-        bootloader_Tasks();
+        bootloader_USB_DEVICE_HID_Tasks();
 
     </code>
 */
-void bootloader_Tasks( void );
+void bootloader_USB_DEVICE_HID_Tasks( void );
 
-#endif
+#endif  //BOOTLOADER_USB_DEVICE_HID_H
