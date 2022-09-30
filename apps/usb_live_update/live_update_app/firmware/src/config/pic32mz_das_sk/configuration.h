@@ -56,7 +56,7 @@
 */
 
 #include "user.h"
-#include "toolchain_specifics.h"
+#include "device.h"
 
 // DOM-IGNORE-BEGIN
 #ifdef __cplusplus  // Provide C++ Compatibility
@@ -115,10 +115,6 @@ extern "C" {
 #define USB_DEVICE_EP0_BUFFER_SIZE                          64
 
 
-
-
-
-
 /*** USB Driver Configuration ***/
 
 /* Maximum USB driver instances */
@@ -138,7 +134,7 @@ extern "C" {
 
 
 /* Alignment for buffers that are submitted to USB Driver*/ 
-#define USB_ALIGN  CACHE_ALIGN
+#define USB_ALIGN  CACHE_ALIGN  __ALIGNED(16)
 
 /* Maximum instances of HID function driver */
 #define USB_DEVICE_HID_INSTANCES_NUMBER     1 

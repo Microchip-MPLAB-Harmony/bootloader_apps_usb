@@ -6,20 +6,27 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: null
-- generatedChecksum: 03B5D7DFD3BA144E7FD8F53369C150F0
+- generatedChecksum: 5A8CC46E6F563F3FD297598803A400B6
   logicalPath: config/pic32mz_das_sk/bootloader
-  name: bootloader.c
+  name: bootloader_common.c
   physicalPath: bootloader
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 03B5D7DFD3BA144E7FD8F53369C150F0
-- generatedChecksum: 560F60CE88EED3EA9F5C385DF804D7AC
+  userChecksum: 5A8CC46E6F563F3FD297598803A400B6
+- generatedChecksum: 174FD52C8DD04AE2768DAFACE8C51BA0
   logicalPath: config/pic32mz_das_sk/bootloader
   name: bootloader_nvm_interface.c
   physicalPath: bootloader
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 560F60CE88EED3EA9F5C385DF804D7AC
+  userChecksum: 174FD52C8DD04AE2768DAFACE8C51BA0
+- generatedChecksum: A6A01F47697126A8B694A2900B6117E7
+  logicalPath: config/pic32mz_das_sk/bootloader
+  name: bootloader_usb_device_hid.c
+  physicalPath: bootloader
+  security: NON_SECURE
+  type: SOURCE
+  userChecksum: A6A01F47697126A8B694A2900B6117E7
 - generatedChecksum: 3BBD6EF8C254B1A1FEE1B18437A03203
   logicalPath: config/pic32mz_das_sk/bsp
   name: bsp.c
@@ -55,13 +62,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: D230A6B646D2E78CEAA6AA924E04FCA0
-- generatedChecksum: 26523D6438B11B9EFC70ED6AF913499E
+- generatedChecksum: DB11B018EC111DC220D2CFEB6E0D9159
   logicalPath: config/pic32mz_das_sk
   name: initialization.c
   physicalPath: ''
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 26523D6438B11B9EFC70ED6AF913499E
+  userChecksum: DB11B018EC111DC220D2CFEB6E0D9159
 - generatedChecksum: 6C0A4481A33A6ABCFDA1819A2679A307
   logicalPath: config/pic32mz_das_sk
   name: interrupts.c
@@ -90,20 +97,20 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: 2FEFEA0D4E94F5A5F3D76BAEC3D602E5
-- generatedChecksum: 5F15DEA8329424F376B881CF2D74F3CC
+- generatedChecksum: A497FEE1A47671252E29AA721F75BA56
   logicalPath: config/pic32mz_das_sk/peripheral/evic
   name: plib_evic.c
   physicalPath: peripheral/evic
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 5F15DEA8329424F376B881CF2D74F3CC
-- generatedChecksum: 6F511C6FDA45EE0CD624122289FEB152
+  userChecksum: A497FEE1A47671252E29AA721F75BA56
+- generatedChecksum: AEB2B8E28D764EF6B1B2E155E50B6E17
   logicalPath: config/pic32mz_das_sk/peripheral/gpio
   name: plib_gpio.c
   physicalPath: peripheral/gpio
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 6F511C6FDA45EE0CD624122289FEB152
+  userChecksum: AEB2B8E28D764EF6B1B2E155E50B6E17
 - generatedChecksum: CA41C0116AA86AA82F796A658ADFE1E7
   logicalPath: config/pic32mz_das_sk/peripheral/nvm
   name: plib_nvm.c
@@ -111,13 +118,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: CA41C0116AA86AA82F796A658ADFE1E7
-- generatedChecksum: D71E3D2674B82EDB91245FD382C63A7B
+- generatedChecksum: 6EEAD941F5979497535D0CA5CFA8B216
   logicalPath: config/pic32mz_das_sk/peripheral/uart
   name: plib_uart2.c
   physicalPath: peripheral/uart
   security: NON_SECURE
   type: SOURCE
-  userChecksum: D71E3D2674B82EDB91245FD382C63A7B
+  userChecksum: 6EEAD941F5979497535D0CA5CFA8B216
 - generatedChecksum: C95CE0ABB86E6B11CF77E8891D294510
   logicalPath: config/pic32mz_das_sk/system/int
   name: sys_int.c
@@ -125,20 +132,20 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: C95CE0ABB86E6B11CF77E8891D294510
-- generatedChecksum: 83BDE663A1AAB20C9E52263F22E2ED3C
+- generatedChecksum: B68110221BEC42FE6B718139BA64DA52
   logicalPath: config/pic32mz_das_sk/system/time
   name: sys_time.c
   physicalPath: system/time/src
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 83BDE663A1AAB20C9E52263F22E2ED3C
-- generatedChecksum: FEEB237C5E74881EC3EFF7483E9F2F47
+  userChecksum: B68110221BEC42FE6B718139BA64DA52
+- generatedChecksum: 3502BCE9B0C817645ED079778A525A63
   logicalPath: config/pic32mz_das_sk
   name: tasks.c
   physicalPath: ''
   security: NON_SECURE
   type: SOURCE
-  userChecksum: FEEB237C5E74881EC3EFF7483E9F2F47
+  userChecksum: 3502BCE9B0C817645ED079778A525A63
 - generatedChecksum: BCCEF5B801FFD0CF22D0B454D2F25F1F
   logicalPath: config/pic32mz_das_sk/usb/src
   name: usb_device.c
@@ -153,20 +160,20 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: B8D87B6533E2CE239E9EEB8486DF6996
-- generatedChecksum: B37CCD770B5F635A2C8DCAE3C8F42DC1
+- generatedChecksum: 25D92FF9FCEFF89B686FF97245084E97
   logicalPath: config/pic32mz_das_sk
   name: usb_device_init_data.c
   physicalPath: ''
   security: NON_SECURE
   type: SOURCE
-  userChecksum: B37CCD770B5F635A2C8DCAE3C8F42DC1
-- generatedChecksum: CD1794BE8A9148BA4C835E811CBD7164
+  userChecksum: 25D92FF9FCEFF89B686FF97245084E97
+- generatedChecksum: F8E5A602361062C584BFD545E44A2C6F
   logicalPath: config/pic32mz_das_sk/stdio
   name: xc32_monitor.c
   physicalPath: stdio
   security: NON_SECURE
   type: SOURCE
-  userChecksum: CD1794BE8A9148BA4C835E811CBD7164
+  userChecksum: F8E5A602361062C584BFD545E44A2C6F
 - generatedChecksum: null
   logicalPath: ''
   name: app_mips.h
@@ -174,34 +181,41 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: null
-- generatedChecksum: 7F57EF4C92946460995954679F082D19
+- generatedChecksum: 448E3BF6F709E7AB8F7DA131E199DD3B
   logicalPath: config/pic32mz_das_sk/bootloader
-  name: bootloader.h
+  name: bootloader_common.h
   physicalPath: bootloader
   security: NON_SECURE
   type: HEADER
-  userChecksum: 7F57EF4C92946460995954679F082D19
-- generatedChecksum: 2DE0FC7BEABD00EAC0870CF74526C2B5
+  userChecksum: 448E3BF6F709E7AB8F7DA131E199DD3B
+- generatedChecksum: 47DBC5803EDC20B5619567A563D99599
   logicalPath: config/pic32mz_das_sk/bootloader
   name: bootloader_nvm_interface.h
   physicalPath: bootloader
   security: NON_SECURE
   type: HEADER
-  userChecksum: 2DE0FC7BEABD00EAC0870CF74526C2B5
-- generatedChecksum: E440C64D7411EAEE7CAA3800EE9BBA18
+  userChecksum: 47DBC5803EDC20B5619567A563D99599
+- generatedChecksum: 505C8467689CC6B0767879DAE4A67CF8
+  logicalPath: config/pic32mz_das_sk/bootloader
+  name: bootloader_usb_device_hid.h
+  physicalPath: bootloader
+  security: NON_SECURE
+  type: HEADER
+  userChecksum: 505C8467689CC6B0767879DAE4A67CF8
+- generatedChecksum: A5AA916F4E5F86FBD753F270E78EA5B8
   logicalPath: config/pic32mz_das_sk/bsp
   name: bsp.h
   physicalPath: bsp
   security: NON_SECURE
   type: HEADER
-  userChecksum: E440C64D7411EAEE7CAA3800EE9BBA18
-- generatedChecksum: 8BE86B33AA5880153752041C967586D6
+  userChecksum: A5AA916F4E5F86FBD753F270E78EA5B8
+- generatedChecksum: 989917A7A0146C566799D96E57A72CD4
   logicalPath: config/pic32mz_das_sk
   name: configuration.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: 8BE86B33AA5880153752041C967586D6
+  userChecksum: 989917A7A0146C566799D96E57A72CD4
 - generatedChecksum: 9E5602A2533684B9E16192285CDEE1D4
   logicalPath: config/pic32mz_das_sk/bootloader/datastream
   name: datastream.h
@@ -209,13 +223,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 9E5602A2533684B9E16192285CDEE1D4
-- generatedChecksum: 0015776D0E34E4670E73FB0856A799E1
+- generatedChecksum: 7A9189BC1F740F548E74E746B2FD760A
   logicalPath: config/pic32mz_das_sk
   name: definitions.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: 0015776D0E34E4670E73FB0856A799E1
+  userChecksum: 7A9189BC1F740F548E74E746B2FD760A
 - generatedChecksum: E189C26B2269F8DE46033CCD0621958D
   logicalPath: config/pic32mz_das_sk
   name: device.h
@@ -321,13 +335,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 44A9EFA06536DE1713738D859242B11C
-- generatedChecksum: 4C6C4A7B7E33767128AA763FFAE2E394
+- generatedChecksum: FFF8E458FD7BB6E5CED45D1549F80253
   logicalPath: config/pic32mz_das_sk/peripheral/gpio
   name: plib_gpio.h
   physicalPath: peripheral/gpio
   security: NON_SECURE
   type: HEADER
-  userChecksum: 4C6C4A7B7E33767128AA763FFAE2E394
+  userChecksum: FFF8E458FD7BB6E5CED45D1549F80253
 - generatedChecksum: 42ECD2217FBCF58E950E691EEB8D7E11
   logicalPath: config/pic32mz_das_sk/peripheral/nvm
   name: plib_nvm.h
@@ -363,13 +377,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: A43EF80856E989F22BE33D4591A11A55
-- generatedChecksum: 6972608768DDBE6E37A2D81B83DF490B
+- generatedChecksum: FADDA086C6C4E8FD7EBCE117438767A6
   logicalPath: config/pic32mz_das_sk/system/debug
   name: sys_debug.h
   physicalPath: system/debug
   security: NON_SECURE
   type: HEADER
-  userChecksum: 6972608768DDBE6E37A2D81B83DF490B
+  userChecksum: FADDA086C6C4E8FD7EBCE117438767A6
 - generatedChecksum: 47330C2D8F204B2B69F8A86240A564B6
   logicalPath: config/pic32mz_das_sk/system/int
   name: sys_int.h
@@ -398,13 +412,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 9463F9BBF69C9593FF3B30F8BC587234
-- generatedChecksum: 62F39464265EC34979649F761FB4FE57
+- generatedChecksum: C7A6D8C5408A42EB1CD2CB277E6EFBF4
   logicalPath: config/pic32mz_das_sk/system/time
   name: sys_time_local.h
   physicalPath: system/time/src
   security: NON_SECURE
   type: HEADER
-  userChecksum: 62F39464265EC34979649F761FB4FE57
+  userChecksum: C7A6D8C5408A42EB1CD2CB277E6EFBF4
 - generatedChecksum: BE95B4F134C5C929787B9DA6FDBF3501
   logicalPath: config/pic32mz_das_sk/system
   name: system.h
@@ -426,13 +440,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 1C75A8A6B60598A2FD0D533F57839B72
-- generatedChecksum: FA212DEAE39D4E86EF4E6CB440610FE9
+- generatedChecksum: CAC44960D20AEC03CF4B325A1CD2877C
   logicalPath: config/pic32mz_das_sk
   name: toolchain_specifics.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: FA212DEAE39D4E86EF4E6CB440610FE9
+  userChecksum: CAC44960D20AEC03CF4B325A1CD2877C
 - generatedChecksum: 39659CDE2CC726544BD68544FB7EF4B2
   logicalPath: config/pic32mz_das_sk/usb
   name: usb_chapter_9.h
@@ -503,13 +517,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: F258661D72F9E844BF936D43BF859BE7
-- generatedChecksum: F127C67A3E33E5788C0F057F648EE57C
+- generatedChecksum: 6EB8F9F4A43B9BC2C7A58585AC679650
   logicalPath: config/pic32mz_das_sk/usb
   name: usb_host.h
   physicalPath: usb
   security: NON_SECURE
   type: HEADER
-  userChecksum: F127C67A3E33E5788C0F057F648EE57C
+  userChecksum: 6EB8F9F4A43B9BC2C7A58585AC679650
 - generatedChecksum: 6EBC5E4D06FC96A02ADF3B7416957DD6
   logicalPath: config/pic32mz_das_sk/usb
   name: usb_host_client_driver.h
@@ -706,13 +720,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: null
-- generatedChecksum: 44909EEA3949589FA58D582D7BDCD820
+- generatedChecksum: 1ECCEA9B9F4C9528F8038E0200FFD8A7
   logicalPath: ''
   name: live_update.ld
   physicalPath: ''
   security: NON_SECURE
   type: LINKER
-  userChecksum: 44909EEA3949589FA58D582D7BDCD820
+  userChecksum: 1ECCEA9B9F4C9528F8038E0200FFD8A7
 format_version: v1.0
 libraries: []
 settings:
@@ -721,7 +735,7 @@ settings:
   delimiter: ;
   key: extra-include-directories
   security: NON_SECURE
-  value: ../src;../src/config/pic32mz_das_sk;../src/packs/PIC32MZ2064DAS169_DFP;
+  value: ../src;../src/config/pic32mz_das_sk;
 - append: false
   category: C32
   delimiter: ''
@@ -751,7 +765,7 @@ settings:
   delimiter: ;
   key: extra-include-directories
   security: NON_SECURE
-  value: ../src;../src/config/pic32mz_das_sk;../src/packs/PIC32MZ2064DAS169_DFP;
+  value: ../src;../src/config/pic32mz_das_sk;
 - append: false
   category: C32CPP
   delimiter: ''

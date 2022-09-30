@@ -44,48 +44,6 @@
 
 #include <stdint.h>
 #include <stdbool.h>
-#include "sys/kmem.h"
-
-#define FLASH_START             (0x9d000000UL)
-#define FLASH_LENGTH            (0x200000UL)
-#define PAGE_SIZE               (2048UL)
-#define ERASE_BLOCK_SIZE        (16384UL)
-#define PAGES_IN_ERASE_BLOCK    (ERASE_BLOCK_SIZE / PAGE_SIZE)
-
-/* Starting location of Bootloader in Inactive bank */
-#define INACTIVE_BANK_OFFSET    (FLASH_LENGTH / 2)
-
-#define INACTIVE_BANK_START     (FLASH_START + INACTIVE_BANK_OFFSET)
-
-#define APP_START_ADDRESS       INACTIVE_BANK_START
-
-#define FLASH_END_ADDRESS       (INACTIVE_BANK_START + INACTIVE_BANK_OFFSET)
-
-#define LOWER_FLASH_START               (FLASH_START)
-#define LOWER_FLASH_SERIAL_START        (LOWER_FLASH_START + (FLASH_LENGTH / 2) - PAGE_SIZE)
-#define LOWER_FLASH_SERIAL_SECTOR       (LOWER_FLASH_START + (FLASH_LENGTH / 2) - ERASE_BLOCK_SIZE)
-
-#define UPPER_FLASH_START               INACTIVE_BANK_START
-#define UPPER_FLASH_SERIAL_START        (FLASH_END_ADDRESS - PAGE_SIZE)
-#define UPPER_FLASH_SERIAL_SECTOR       (FLASH_END_ADDRESS - ERASE_BLOCK_SIZE)
-
-#define FLASH_SERIAL_PROLOGUE           0xDEADBEEF
-#define FLASH_SERIAL_EPILOGUE           0xBEEFDEAD
-#define FLASH_SERIAL_CLEAR              0xFFFFFFFF
-
-#define LOWER_FLASH_SERIAL_READ         ((T_FLASH_SERIAL *)KVA0_TO_KVA1(LOWER_FLASH_SERIAL_START))
-#define UPPER_FLASH_SERIAL_READ         ((T_FLASH_SERIAL *)KVA0_TO_KVA1(UPPER_FLASH_SERIAL_START))
-
-/* Structure to validate the Flash serial and its checksum
- * Note: The order of the members should not be changed
- */
-typedef struct
-{
-    uint32_t prologue;
-    uint32_t serial;
-    uint32_t epilogue;
-    uint32_t dummy;
-} T_FLASH_SERIAL;
 
 #define DATA_RECORD             0
 #define END_OF_FILE_RECORD      1
@@ -116,8 +74,6 @@ void bootloader_NvmAppErase(void);
 void bootloader_NvmPageWrite(uint32_t address, uint32_t* data);
 
 bool bootloader_NvmIsBusy(void);
-
-void bootloader_NvmUpdateFlashSerial(uint32_t addr);
 
 #ifdef  __cplusplus
 }

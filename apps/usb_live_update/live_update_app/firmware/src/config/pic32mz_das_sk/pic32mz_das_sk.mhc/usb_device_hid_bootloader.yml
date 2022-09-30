@@ -16,7 +16,7 @@ children:
       - type: String
         attributes: {id: source}
         children:
-        - {type: Value, value: ../bootloader/templates/mips/linkers/bootloader_linker_mz_da_live_update.ld.ftl}
+        - {type: Value, value: ../bootloader/templates/mips/linkers/bootloader_linker_PIC32MZDA_live_update.ld.ftl}
   - type: Boolean
     attributes: {id: BTL_LIVE_UPDATE}
     children:

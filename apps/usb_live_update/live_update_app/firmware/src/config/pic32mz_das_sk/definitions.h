@@ -54,7 +54,7 @@
 #include "peripheral/evic/plib_evic.h"
 #include "usb/usb_chapter_9.h"
 #include "usb/usb_device.h"
-#include "bootloader/bootloader.h"
+#include "bootloader/bootloader_usb_device_hid.h"
 #include "peripheral/nvm/plib_nvm.h"
 #include "system/time/sys_time.h"
 #include "peripheral/coretimer/plib_coretimer.h"
@@ -191,7 +191,7 @@ Remarks:
 
 typedef struct
 {
-	SYS_MODULE_OBJ  usbDevObject0;
+    SYS_MODULE_OBJ  usbDevObject0;
 
     SYS_MODULE_OBJ  sysTime;
 	SYS_MODULE_OBJ  drvUSBHSObject;
