@@ -41,6 +41,7 @@
 
 #include <string.h>
 #include "configuration.h"
+#include "bootloader/bootloader_common.h"
 #include "bootloader/bootloader_nvm_interface.h"
 #include "peripheral/efc/plib_efc.h"
 #include "system/int/sys_int.h"
@@ -70,11 +71,12 @@ static T_NVM_DATA CACHE_ALIGN nvm_data =
     .prevAddr = APP_START_ADDRESS
 };
 
+static bool nvmDataInitDone = false;
+
 bool bootloader_NvmIsBusy(void)
 {
     return (EFC_IsBusy());
 }
-
 
 void bootloader_NvmAppErase( void )
 {
@@ -128,6 +130,14 @@ HEX_RECORD_STATUS bootloader_NvmProgramHexRecord(uint8_t* HexRecord, uint32_t to
     uint32_t curAddress = 0;
     uint32_t alignLength = 0;
     uint32_t nextRecStartPt = 0;
+
+    if (nvmDataInitDone == false)
+    {
+        /* Set the nvm buffer to 0xFF for first record data if less than PAGE_SIZE */
+        memset((void *)nvm_data.buff, 0xFF, PAGE_SIZE);
+
+        nvmDataInitDone = true;
+    }
 
     while(totalLen >= 5) // A hex record must be at-least 5 bytes. (1 Data Len byte + 1 rec type byte+ 2 address bytes + 1 crc)
     {
