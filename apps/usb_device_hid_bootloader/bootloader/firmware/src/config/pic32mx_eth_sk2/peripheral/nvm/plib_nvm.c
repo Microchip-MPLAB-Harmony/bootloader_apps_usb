@@ -98,6 +98,7 @@ typedef enum
 static void NVM_StartOperationAtAddress( uint32_t address,  NVM_OPERATION_MODE operation )
 {
     volatile uint32_t processorStatus;
+    unsigned long mTime;
 
     processorStatus = __builtin_disable_interrupts();
 
@@ -112,6 +113,13 @@ static void NVM_StartOperationAtAddress( uint32_t address,  NVM_OPERATION_MODE o
 
     // Set WREN to enable writes to the WR bit and to prevent NVMOP modification
     NVMCONSET = _NVMCON_WREN_MASK;
+
+    mTime = _CP0_GET_COUNT();
+    mTime += ((80000000 / 2 / 1000000) * 6);
+    while ((signed long)(mTime - _CP0_GET_COUNT()) > 0)
+    {
+        Nop();
+    }
 
     // Write the unlock key sequence
     NVMKEY = 0x0;
