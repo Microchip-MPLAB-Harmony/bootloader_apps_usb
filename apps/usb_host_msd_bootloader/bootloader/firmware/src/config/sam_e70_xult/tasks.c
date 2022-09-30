@@ -78,7 +78,7 @@ SYS_FS_Tasks();
 
 
     /* Maintain Device Drivers */
-        bootloader_Tasks();
+        bootloader_USB_HOST_MSD_Tasks();
 
 
 

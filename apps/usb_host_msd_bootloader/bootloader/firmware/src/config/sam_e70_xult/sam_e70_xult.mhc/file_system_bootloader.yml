@@ -4,6 +4,24 @@ attributes: {id: file_system_bootloader}
 children:
 - type: Symbols
   children:
+  - type: File
+    attributes: {id: BOOTLOADER_HEADER}
+    children:
+    - type: Attributes
+      children:
+      - type: String
+        attributes: {id: name}
+        children:
+        - {type: Value, value: bootloader_usb_host_msd.h}
+  - type: File
+    attributes: {id: BOOTLOADER_SRC}
+    children:
+    - type: Attributes
+      children:
+      - type: String
+        attributes: {id: name}
+        children:
+        - {type: Value, value: bootloader_usb_host_msd.c}
   - type: Setting
     attributes: {id: BOOTLOADER_XC32_LINKER_PREPROC_MARCOS}
     children:
