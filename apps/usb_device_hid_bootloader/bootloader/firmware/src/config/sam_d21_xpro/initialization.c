@@ -56,19 +56,19 @@
 // ****************************************************************************
 #pragma config NVMCTRL_BOOTPROT = SIZE_0BYTES
 #pragma config NVMCTRL_EEPROM_SIZE = SIZE_0BYTES
-#pragma config BOD33USERLEVEL = 0x7 // Enter Hexadecimal value
+#pragma config BOD33USERLEVEL = 0x7U // Enter Hexadecimal value
 #pragma config BOD33_EN = ENABLED
 #pragma config BOD33_ACTION = RESET
 
 #pragma config BOD33_HYST = DISABLED
-#pragma config NVMCTRL_REGION_LOCKS = 0xffff // Enter Hexadecimal value
+#pragma config NVMCTRL_REGION_LOCKS = 0xffffU // Enter Hexadecimal value
 
 #pragma config WDT_ENABLE = DISABLED
 #pragma config WDT_ALWAYSON = DISABLED
 #pragma config WDT_PER = CYC16384
 
 #pragma config WDT_WINDOW_0 = SET
-#pragma config WDT_WINDOW_1 = 0x4 // Enter Hexadecimal value
+#pragma config WDT_WINDOW_1 = 0x4U // Enter Hexadecimal value
 #pragma config WDT_EWOFFSET = CYC16384
 #pragma config WDT_WEN = DISABLED
 
@@ -133,7 +133,7 @@ static DRV_USB_VBUS_LEVEL DRV_USBFSV1_VBUS_Comparator(void)
 
 const DRV_USBFSV1_INIT drvUSBInit =
 {
-    /* Interrupt Source for USB module */
+    /* Interrupt Source for USB module */ 
     .interruptSource = USB_IRQn,
 
     /* System module initialization */
@@ -197,7 +197,7 @@ void SYS_Initialize ( void* data )
 
     if (bootloader_Trigger() == false)
     {
-        run_Application();
+        run_Application(APP_START_ADDRESS);
     }
 
 
@@ -206,7 +206,6 @@ void SYS_Initialize ( void* data )
 	BSP_Initialize();
     NVMCTRL_Initialize( );
 
-    EVSYS_Initialize();
 
 
 
@@ -215,10 +214,9 @@ void SYS_Initialize ( void* data )
     sysObj.drvUSBFSV1Object = DRV_USBFSV1_Initialize(DRV_USBFSV1_INDEX_0, (SYS_MODULE_INIT *) &drvUSBInit);	
 
 
-	 /* Initialize the USB device layer */
+    /* Initialize the USB device layer */
     sysObj.usbDevObject0 = USB_DEVICE_Initialize (USB_DEVICE_INDEX_0 , ( SYS_MODULE_INIT* ) & usbDevInitData);
-	
-	
+
 
 
     APP_Initialize();
