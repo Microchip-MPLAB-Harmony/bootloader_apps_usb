@@ -1,26 +1,19 @@
 /*******************************************************************************
-  System Configuration Header
+  Bootloader Common Source File
 
   File Name:
-    configuration.h
+    bootloader_common.c
 
   Summary:
-    Build-time configuration header for the system defined by this project.
+    This file contains common definitions and functions.
 
   Description:
-    An MPLAB Project may have multiple configurations.  This file defines the
-    build-time options for a single configuration.
-
-  Remarks:
-    This configuration header must not define any prototypes or data
-    definitions (or include any files that do).  It only provides macro
-    definitions for build-time configuration options
-
-*******************************************************************************/
+    This file contains common definitions and functions.
+ *******************************************************************************/
 
 // DOM-IGNORE-BEGIN
 /*******************************************************************************
-* Copyright (C) 2018 Microchip Technology Inc. and its subsidiaries.
+* Copyright (C) 2019 Microchip Technology Inc. and its subsidiaries.
 *
 * Subject to your compliance with these terms, you may use Microchip software
 * and any derivatives exclusively with Microchip products. It is your
@@ -40,109 +33,139 @@
 * FULLEST EXTENT ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN
 * ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
-*******************************************************************************/
-// DOM-IGNORE-END
-
-#ifndef CONFIGURATION_H
-#define CONFIGURATION_H
-
-// *****************************************************************************
-// *****************************************************************************
-// Section: Included Files
-// *****************************************************************************
-// *****************************************************************************
-/*  This section Includes other configuration headers necessary to completely
-    define this configuration.
-*/
-
-#include "user.h"
-#include "device.h"
-
-// DOM-IGNORE-BEGIN
-#ifdef __cplusplus  // Provide C++ Compatibility
-
-extern "C" {
-
-#endif
+ *******************************************************************************/
 // DOM-IGNORE-END
 
 // *****************************************************************************
 // *****************************************************************************
-// Section: System Configuration
+// Section: Include Files
+// *****************************************************************************
+// *****************************************************************************
+
+#include "bootloader_common.h"
+
+// *****************************************************************************
+// *****************************************************************************
+// Section: Type Definitions
+// *****************************************************************************
+// *****************************************************************************
+
+/* Bootloader Major and Minor version sent for a Read Version command (MAJOR.MINOR)*/
+#define BTL_MAJOR_VERSION       3
+#define BTL_MINOR_VERSION       6
+
+#define WORD_ALIGN_MASK         (~(sizeof(uint32_t) - 1))
+
+// *****************************************************************************
+// *****************************************************************************
+// Section: Global objects
 // *****************************************************************************
 // *****************************************************************************
 
 
-
 // *****************************************************************************
 // *****************************************************************************
-// Section: System Service Configuration
-// *****************************************************************************
-// *****************************************************************************
-
-
-// *****************************************************************************
-// *****************************************************************************
-// Section: Driver Configuration
+// Section: Bootloader Local Functions
 // *****************************************************************************
 // *****************************************************************************
 
 
 // *****************************************************************************
 // *****************************************************************************
-// Section: Middleware & Other Library Configuration
-// *****************************************************************************
-// *****************************************************************************
-#define USB_DEVICE_INSTANCES_NUMBER                         1
-
-/* EP0 size in bytes */
-#define USB_DEVICE_EP0_BUFFER_SIZE                          64
-
-/* The USB Device Layer will not initialize the USB Driver */
-#define USB_DEVICE_DRIVER_INITIALIZE_EXPLICIT
-
-
-/* Number Full Speed USB Driver instances */ 
-#define DRV_USBFS_INSTANCES_NUMBER                       1
-
-/* Interrupt mode enabled */
-#define DRV_USBFS_INTERRUPT_MODE                          true
-
-/* Enables Device Support */
-#define DRV_USBFS_DEVICE_SUPPORT                          true
-
-#define DRV_USBFS_ENDPOINTS_NUMBER                        2
-
-/* Disable Host Support */
-#define DRV_USBFS_HOST_SUPPORT                            false
-
-/* Alignment for buffers that are submitted to USB Driver*/ 
-#define USB_ALIGN  CACHE_ALIGN
-
-/* Maximum instances of HID function driver */
-#define USB_DEVICE_HID_INSTANCES_NUMBER     1 
-
-/* HID Transfer Queue Size for both read and
-   write. Applicable to all instances of the
-   function driver */
-#define USB_DEVICE_HID_QUEUE_DEPTH_COMBINED                 2
-
-
-
-// *****************************************************************************
-// *****************************************************************************
-// Section: Application Configuration
+// Section: Bootloader Global Functions
 // *****************************************************************************
 // *****************************************************************************
 
 
-//DOM-IGNORE-BEGIN
-#ifdef __cplusplus
+bool __WEAK bootloader_Trigger(void)
+{
+    /* Function can be overriden with custom implementation */
+    return false;
 }
-#endif
-//DOM-IGNORE-END
 
-#endif // CONFIGURATION_H
-/*******************************************************************************
- End of File
-*/
+void __WEAK SYS_DeInitialize( void *data )
+{
+    /* Function can be overriden with custom implementation */
+}
+
+uint16_t __WEAK bootloader_GetVersion( void )
+{
+    /* Function can be overriden with custom implementation */
+    uint16_t btlVersion = (((BTL_MAJOR_VERSION & 0xFF) << 8) | (BTL_MINOR_VERSION & 0xFF));
+
+    return btlVersion;
+}
+
+
+
+/* Function to Generate CRC by reading the firmware programmed into internal flash */
+uint32_t bootloader_CRCGenerate(uint32_t start_addr, uint32_t size)
+{
+    uint32_t   i, j, value;
+    uint32_t   crc_tab[256];
+    uint32_t   crc = 0xffffffff;
+    uint8_t    data;
+
+    for (i = 0; i < 256; i++)
+    {
+        value = i;
+
+        for (j = 0; j < 8; j++)
+        {
+            if (value & 1)
+            {
+                value = (value >> 1) ^ 0xEDB88320;
+            }
+            else
+            {
+                value >>= 1;
+            }
+        }
+        crc_tab[i] = value;
+    }
+
+    for (i = 0; i < size; i++)
+    {
+        data = *(uint8_t *)KVA0_TO_KVA1((start_addr + i));
+
+        crc = crc_tab[(crc ^ data) & 0xff] ^ (crc >> 8);
+    }
+
+    return crc;
+}
+
+
+/* Trigger a reset */
+void bootloader_TriggerReset(void)
+{
+    /* Perform system unlock sequence */
+    SYSKEY = 0x00000000;
+    SYSKEY = 0xAA996655;
+    SYSKEY = 0x556699AA;
+
+    RSWRSTSET = _RSWRST_SWRST_MASK;
+    (void)RSWRST;
+}
+
+void run_Application(uint32_t address)
+{
+    uint32_t jumpAddrVal = *(uint32_t *)(address & WORD_ALIGN_MASK);
+
+    void (*fptr)(void);
+
+    fptr = (void (*)(void))address;
+
+    if (jumpAddrVal == 0xffffffff)
+    {
+        return;
+    }
+
+    /* Call Deinitialize routine to free any resources acquired by Bootloader */
+    SYS_DeInitialize(NULL);
+
+    __builtin_disable_interrupts();
+
+    fptr();
+}
+
+

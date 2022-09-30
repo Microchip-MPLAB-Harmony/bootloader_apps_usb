@@ -45,14 +45,11 @@
 
 #include <string.h>
 #include "device.h"
-#include "bootloader/bootloader.h"
+#include "bootloader/bootloader_usb_device_hid.h"
 #include "bootloader/datastream/datastream.h"
 #include "bootloader/bootloader_nvm_interface.h"
 
 #define BOOTLOADER_BUFFER_SIZE  512
-
-#define MAJOR_VERSION           3  // Bootloader Major Version Shown From a Read Version on PC
-#define MINOR_VERSION           4  // Bootloader Minor Version Shown From a Read Version on PC
 
 #define SOH                     01 // Start Of Header
 #define EOT                     04 // End Of transmission
@@ -134,12 +131,6 @@ typedef struct
 
 } BOOTLOADER_DATA;
 
-static const uint8_t BootInfo[2] =
-{
-    MAJOR_VERSION,
-    MINOR_VERSION
-};
-
 BOOTLOADER_BUFFER CACHE_ALIGN dataBuff;
 
 BOOTLOADER_DATA btlData =
@@ -147,40 +138,6 @@ BOOTLOADER_DATA btlData =
     .currentState = BOOTLOADER_OPEN_DATASTREAM,
     .usrBufferEventComplete = false
 };
-
-bool __WEAK bootloader_Trigger(void)
-{
-    /* Function can be overriden with custom implementation */
-    return false;
-}
-
-void bootloader_TriggerReset(void)
-{
-    /* Perform system unlock sequence */
-    SYSKEY = 0x00000000;
-    SYSKEY = 0xAA996655;
-    SYSKEY = 0x556699AA;
-
-    RSWRSTSET = _RSWRST_SWRST_MASK;
-    (void)RSWRST;
-}
-
-void run_Application(void)
-{
-    uint32_t msp            = *(uint32_t *)(APP_START_ADDRESS);
-
-    void (*fptr)(void);
-
-    /* Set default to APP_RESET_ADDRESS */
-    fptr = (void (*)(void))APP_START_ADDRESS;
-
-    if (msp == 0xffffffff)
-    {
-        return;
-    }
-
-    fptr();
-}
 
 static const uint16_t crc_table[16] =
 {
@@ -281,6 +238,7 @@ static void bootloader_ProcessBuffer( BOOTLOADER_DATA *handle )
     uint32_t Address;
     uint32_t Length;
     uint16_t crc;
+    uint16_t btlVersion;
 
     /* First, check that we have a valid command. */
     Cmd = dataBuff.buffers.procBuff[0];
@@ -293,7 +251,14 @@ static void bootloader_ProcessBuffer( BOOTLOADER_DATA *handle )
     {
         case READ_BOOT_INFO:
         {
-            memcpy(&dataBuff.buffers.inputBuff[1], BootInfo, 2);
+            btlVersion = bootloader_GetVersion();
+
+            /* Major Number */
+            dataBuff.buffers.inputBuff[1] = (uint8_t)(btlVersion >> 8);
+
+            /* Minor Number */
+            dataBuff.buffers.inputBuff[2] = (uint8_t)(btlVersion & 0xFF);
+
             handle->buffSize = 2 + 1;
             handle->currentState = BOOTLOADER_SEND_RESPONSE;
             break;
@@ -344,8 +309,7 @@ static void bootloader_ProcessBuffer( BOOTLOADER_DATA *handle )
     }
 }
 
-
-void bootloader_Tasks( void )
+void bootloader_USB_DEVICE_HID_Tasks( void )
 {
     uint32_t BuffLen=0;
     uint32_t i;
