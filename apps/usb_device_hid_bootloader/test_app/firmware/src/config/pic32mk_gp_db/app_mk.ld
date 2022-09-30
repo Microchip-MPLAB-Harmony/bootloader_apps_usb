@@ -93,9 +93,9 @@ PROVIDE(_ebase_vector_offsets = 0x9000);
  * _SIMPLE_TLB_REFILL_EXCPT_ADDR  -- Simple TLB-Refill Exception Vector
  * _GEN_EXCPT_ADDR                -- General Exception Vector
  *************************************************************************/
-_RESET_ADDR                    = 0xBD008000;
-_SIMPLE_TLB_REFILL_EXCPT_ADDR  = _ebase_address + _ebase_vector_offsets + 0;
-_GEN_EXCPT_ADDR                = _ebase_address + _ebase_vector_offsets + 0x180;
+_RESET_ADDR                    = 0xBD008200;
+_SIMPLE_TLB_REFILL_EXCPT_ADDR  = _ebase_address + 0;
+_GEN_EXCPT_ADDR                = _ebase_address + 0x180;
 
 /*************************************************************************
  * Memory Regions
@@ -110,9 +110,12 @@ _GEN_EXCPT_ADDR                = _ebase_address + _ebase_vector_offsets + 0x180;
 
 MEMORY
 {
+    /* Place the exceptions starting from _ebase_address as required by device specification */
+    kseg0_exception_mem (rx) : ORIGIN = 0x9D000000, LENGTH = 0x200
+
     /* Size of Bootloader is 0x8000 */
     kseg0_program_mem  (rx) : ORIGIN = 0x9D009000, LENGTH = 0x100000 - 0x1000 - 0x8000
-    kseg1_boot_mem          : ORIGIN = 0xBD008000, LENGTH = 0x480
+    kseg1_boot_mem          : ORIGIN = 0xBD008200, LENGTH = 0x480 - 0x200
 
     /* Reserve 16 Bytes to Store Bootloader Trigger Pattern */
     kseg0_data_mem       (w!x)  : ORIGIN = 0x80000000 + 16, LENGTH = 0x40000 - 16
@@ -135,7 +138,7 @@ SECTIONS
   .app_excpt _GEN_EXCPT_ADDR :
   {
     KEEP(*(.gen_handler))
-  } > kseg0_program_mem
+  } > kseg0_exception_mem 
 
   /* Interrupt vector table with vector offsets */
   .vectors _ebase_address + _ebase_vector_offsets + 0x200 :
