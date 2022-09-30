@@ -102,6 +102,8 @@ void CLK_Initialize( void )
   
 
     /* Peripheral Module Disable Configuration */
+
+
     PMD1 = 0x100371;
     PMD2 = 0x17001f;
     PMD3 = 0xffffffff;
@@ -109,6 +111,7 @@ void CLK_Initialize( void )
     PMD5 = 0xfeffffff;
     PMD6 = 0xfffff0ff;
     PMD7 = 0xffffffef;
+
 
     /* Lock system since done with clock configuration */
     SYSKEY = 0x33333333;
