@@ -3,28 +3,28 @@
 	"category": "com.microchip.ide.project",
 	"content": {
 		"metaDataVersion": "1.1.0",
-		"name": "com.microchip.mcu32.mplabx.project.bootloader_apps_usb_usb_device_hid_bootloader_pic32mz_w1_curiosity",
+		"name": "com.microchip.mcu32.mplabx.project.bootloader_apps_usb_usb_device_hid_bootloader_pic32mm_usb_curiosity",
 		"version": "3.2.0",
-		"displayName": "USB Device HID Bootloader Example for PIC32MZ W1 Family",
-		"projectName": "usb_device_hid_bootloader_pic32mz_w1_curiosity",
+		"displayName": "USB Device HID Bootloader Example for PIC32MM Family",
+		"projectName": "usb_device_hid_bootloader_pic32mm_usb_curiosity",
 		"shortDescription": "This example application shows how to use the Bootloader Library to bootload an application using USB Device HID protocol.",
 		"ide": {
 			"name": "MPLABX",
-			"semverRange": ">=5.50.0"
+			"semverRange": ">=6.0.0"
 		},
 		"compiler": [
 			{
 				"name": "XC32",
-				"semverRange": ">=3.00.0"
+				"semverRange": ">=4.1.0"
 			}
 		],
 		"dfp": {
-			"name": "PIC32MZ-W_DFP",
-			"semverRange": "1.2.153"
+			"name": "PIC32MM_GPM_DFP",
+			"semverRange": "^1.3.50"
 		},
 		"configurator": {
 			"name": "MHC",
-			"semverRange": ">=3.7.2"
+			"semverRange": ">=3.8.5"
 		},
 		"device": {
 			"metaDataVersion": "1.0.0",
@@ -32,7 +32,7 @@
 			"content": {
 				"metaDataVersion": "1.0.0",
 				"category": "com.microchip.device",
-				"name": "PIC32MZ1025W104132",
+				"name": "PIC32MM0256GPM064",
 				"versionRange": "*"
 			}
 		},
@@ -40,7 +40,7 @@
 		"subcategories": [
 			[
 				"Development Kit",
-				"PIC32 WFI32E Curiosity Board"
+				"PIC32MM USB Curiosity Board"
 			],
 			[
 				"Harmony",
@@ -58,10 +58,10 @@
 		"keywords": [
 			"MHC",
 			"Harmony",
+			"PIC32MM0256GPM064",
+			"PIC32MM Family",
 			"Bootloader",
-			"USB",
-			"PIC32MZ1025W104132",
-			"PIC32MZ W1 Family"
+			"USB"
 		],
 		"additionalData": {
 			"longDescription": {
@@ -69,7 +69,7 @@
 				"category": "com.microchip.portal.fileRef",
 				"content": {
 					"metaDataVersion": "1.0.0",
-					"fileName": "./../../../readme.md",
+					"fileName": "./../../readme.md",
 					"mimeType": "text/markdown"
 				}
 			}

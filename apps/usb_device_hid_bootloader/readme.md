@@ -19,7 +19,7 @@ This example application shows how to use the Bootloader Library to bootload an 
 - This is a bootloader application which resides from
     - The starting location of the flash memory region for SAM devices
     - The starting location of the Boot flash memory region for PIC32MZ devices
-    - The starting location of Program Flash memory for PIC32MK and PIC32MX devices
+    - The starting location of Program Flash memory for PIC32MK, PIC32MX and PIC32MM devices
 - It uses the USB Device HID port with **Product ID 0x3C** to receive application hex from host PC using the Unified Bootloader Host Application
 - It calls the bootloader_Tasks() function which receives application to be programmed into flash memory over USB Device HID port
 - The application glows an LED once bootloader firmware is running
@@ -31,7 +31,7 @@ This example application shows how to use the Bootloader Library to bootload an 
 
 - This is a test application which resides from
     - The end of bootloader size in device flash memory for SAM devices
-    - The end of bootloader size in Program Flash memory for PIC32MK and PIC32MX devices
+    - The end of bootloader size in Program Flash memory for PIC32MK, PIC32MX and PIC32MM devices
     - The start of Program Flash memory for PIC32MZ devices
 - It will be loaded into flash memory by bootloader application
 - It blinks an LED and provides console output
@@ -45,6 +45,7 @@ The following table provides links to documentation on how to build and run USB 
 |:---------|
 |[PIC32MK GP Development Kit](docs/readme_pic32mk_gp_db.md) |
 |[PIC32MK MCM Curiosity Pro Development Board](docs/readme_pic32mk_mcm_curiosity_pro.md) |
+|[PIC32MM USB Curiosity board](docs/readme_pic32mm_usb_curiosity.md) |
 |[PIC32MX1/2/5 Starter Kit](docs/readme_pic32mx_125_sk.md) |
 |[PIC32MX Ethernet Starter Kit II](docs/readme_pic32mx_eth_sk2.md) |
 |[PIC32MX Curiosity Development Board](docs/readme_pic32mx470_curiosity.md) |
