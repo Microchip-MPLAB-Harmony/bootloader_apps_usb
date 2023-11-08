@@ -51,7 +51,6 @@
 #define EXT_LIN_ADRS_RECORD     4
 #define START_LIN_ADRS_RECORD   5
            
-
 typedef enum
 {
     // indicates that the CRC value between the calculated value and the
@@ -72,13 +71,15 @@ HEX_RECORD_STATUS bootloader_NvmProgramHexRecord(uint8_t* HexRecord, uint32_t to
 
 void bootloader_NvmAppErase(uint32_t endAddr);
 
+void bootloader_AppEraseSize(uint32_t curAddress);
+
+void bootloader_Block_init(void);
+
 void bootloader_NvmPageWrite(uint32_t address, uint32_t* data);
 
 bool bootloader_NvmIsBusy(void);
 
-void bootloader_AppEraseSize(uint32_t curAddress);
 
-void bootloader_Block_init(void);
 
 #ifdef  __cplusplus
 }

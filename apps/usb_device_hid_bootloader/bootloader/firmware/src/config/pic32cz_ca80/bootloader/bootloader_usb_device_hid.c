@@ -240,7 +240,6 @@ static void bootloader_ProcessBuffer( BOOTLOADER_DATA *handle )
     uint16_t crc;
     uint16_t btlVersion;
     
-
     /* First, check that we have a valid command. */
     Cmd = dataBuff.buffers.procBuff[0];
 
@@ -253,7 +252,9 @@ static void bootloader_ProcessBuffer( BOOTLOADER_DATA *handle )
         case READ_BOOT_INFO:
         {
             btlVersion = bootloader_GetVersion();
+			
             bootloader_Block_init();
+		
             /* Major Number */
             dataBuff.buffers.inputBuff[1] = (uint8_t)(btlVersion >> 8);
 

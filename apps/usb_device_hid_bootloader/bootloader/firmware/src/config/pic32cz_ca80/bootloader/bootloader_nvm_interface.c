@@ -48,6 +48,13 @@
 
 #define arraySize 4
 
+typedef struct {
+    uint32_t startAddr;
+    uint32_t endAddr;
+    bool blockEraseStatus;
+}ERASE_RECORD;
+
+ERASE_RECORD eraseBlocks[arraySize];
 
 typedef struct
 {
@@ -68,15 +75,6 @@ typedef struct {
     uint8_t CACHE_ALIGN buff[PAGE_SIZE];
 } T_NVM_DATA;
 
-typedef struct {
-    uint32_t startAddr;
-    uint32_t endAddr;
-    bool blockEraseStatus;
-    
-}ERASE_RECORD;
-
-ERASE_RECORD eraseBlocks[arraySize];
-
 static T_NVM_DATA CACHE_ALIGN nvm_data =
 {
     .progAddr = APP_START_ADDRESS,
@@ -89,7 +87,6 @@ bool bootloader_NvmIsBusy(void)
 {
     return (FCW_IsBusy());
 }
-
 void bootloader_Block_init(void)
 {
  
@@ -97,12 +94,12 @@ void bootloader_Block_init(void)
   
   for (int i = 0; i < arraySize; i++) {
         eraseBlocks[i].startAddr = APP_START_ADDRESS + (i * blockSize); 
-        eraseBlocks[i].endAddr = eraseBlocks[i].startAddr + blockSize; 
+        eraseBlocks[i].endAddr = eraseBlocks[i].startAddr + (blockSize-1); 
         eraseBlocks[i].blockEraseStatus = false; 
   }
     
 }
-////////////////////////////////////////////////////////////////
+
 void bootloader_AppEraseSize(uint32_t curAddress)
 {
   
@@ -116,14 +113,11 @@ void bootloader_AppEraseSize(uint32_t curAddress)
                 eraseBlocks[i].blockEraseStatus = true;
                 break;
             } 
-            
         }   
-        
     }
-  
 }
-////////////////////////////////////////////////////////////////
-void bootloader_NvmAppErase(uint32_t endAddr)
+  
+void bootloader_NvmAppErase( uint32_t endAddr )
 {
   uint32_t flashAddr = APP_START_ADDRESS;
   

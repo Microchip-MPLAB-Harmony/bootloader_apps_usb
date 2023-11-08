@@ -5897,7 +5897,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80\bootloader\bootloader_usb_device_hid.c</file>
-         <hash>01c09a40aa9b2d0691ee18cb8f6845ed79d8dc35062d85b5abce7a2637ca7401</hash>
+         <hash>b4a0202601aa46dcb3513f959a391df9b2eb0ee623747a032317fa6c4337e006</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CZ8110CA80208_DFP\instance\mcramc.h</file>
@@ -5949,7 +5949,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80\bootloader\bootloader_nvm_interface.c</file>
-         <hash>92a4ce2bedf52208456baf16486de8dfa7715a74b3459cd6ae6c85805f1576ce</hash>
+         <hash>e556a1145240748e0074bc68e25b778921e684d7dd5aa8ebbb300f3f5d58a0c7</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CZ8110CA80208_DFP\component\ac.h</file>
@@ -5957,7 +5957,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80\bootloader\bootloader_nvm_interface.h</file>
-         <hash>04906c33971c788f83f2d24ca9089b7d8cf5bb85cfe8786be328b272da37d6b7</hash>
+         <hash>3085a21a808ca485cdf4b166503e83b04c4679f7d2f6fc07584a56cccbf0fcad</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80\usb\src\usb_device_hid_local.h</file>
