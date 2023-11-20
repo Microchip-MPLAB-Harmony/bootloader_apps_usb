@@ -57,11 +57,11 @@
 #include "bootloader/bootloader_usb_device_hid.h"
 #include "peripheral/nvm/plib_nvm.h"
 #include "system/time/sys_time.h"
-#include "peripheral/coretimer/plib_coretimer.h"
 #include "driver/usb/usbhs/drv_usbhs.h"
+#include "peripheral/coretimer/plib_coretimer.h"
+#include "peripheral/uart/plib_uart2.h"
 #include "usb/usb_device_hid.h"
 #include "usb/usb_hid.h"
-#include "peripheral/uart/plib_uart2.h"
 #include "bsp/bsp.h"
 #include "system/int/sys_int.h"
 #include "osal/osal.h"
@@ -77,6 +77,12 @@ extern "C" {
 
 #endif
 // DOM-IGNORE-END
+
+/* Device Information */
+#define DEVICE_NAME			 "PIC32MZ2064DAS169"
+#define DEVICE_ARCH			 "MIPS"
+#define DEVICE_FAMILY		 "PIC32MZDA"
+#define DEVICE_SERIES		 "PIC32MZ"
 
 /* CPU clock frequency */
 #define CPU_CLOCK_FREQUENCY 200000000

@@ -1,4 +1,4 @@
-<config configName="pic32mz_das_sk" projectName="usb_device_hid_live_update_app_pic32mz_das_sk" configVersion="1.1" device="PIC32MZ2064DAS169" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.4.11">
+<config configName="pic32mz_das_sk" projectName="usb_device_hid_live_update_app_pic32mz_das_sk" configVersion="1.1" device="PIC32MZ2064DAS169" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.5.7">
    <usedPackages class="java.util.ArrayList"/>
    <usedClasses class="java.util.TreeMap">
       <entry>
@@ -4066,7 +4066,7 @@
    <generatedFileHashHistoryMap class="java.util.HashMap">
       <entry>
          <file>..\src\config\pic32mz_das_sk\peripheral\uart\plib_uart2.c</file>
-         <hash>120a04bd202e0a76c03d45b4833061e191efdff45826997229d64fbfde8b79ed</hash>
+         <hash>35d75a1a5693f8d8bc9184de84d56b5d98c477fc9cc3cd3a7d4e2df0ff928137</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_das_sk\driver\usb\usbhs\src\templates\usbhs_EndpointFIFO_Unsupported.h</file>
@@ -4078,7 +4078,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mz_das_sk\osal\osal_definitions.h</file>
-         <hash>0a5ca28c4812bb37babfebc1fe30a90b13583504d81910ad159feb746a5b002c</hash>
+         <hash>5f0a2513a093b6d228e2b50646b204923a82047335a47f3d35a2938309ab6f37</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_das_sk\peripheral\uart\plib_uart2.h</file>
@@ -4086,7 +4086,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mz_das_sk\initialization.c</file>
-         <hash>41509dad9f601bbd9ddd04a4d5438fc34fe0440581578ead9cbfaf643dcc3649</hash>
+         <hash>47608b7cc5935b9c4a12ac58fd00b22b214498e974affa7d3ce86892e1cf1828</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_das_sk\driver\usb\usbhs\src\templates\usbhs_RxEPStatus_Default.h</file>
@@ -4098,7 +4098,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mz_das_sk\system\system_common.h</file>
-         <hash>0dbf2f60b29c97426e70187bc59c652ab5a355f51cfbe3f195ff1c8c6c0b1602</hash>
+         <hash>c9f34bd226f8efab12f5766e77f8355996cd0430b50e0f6ee30258664c494984</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_das_sk\usb\usb_common.h</file>
@@ -4110,7 +4110,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mz_das_sk\peripheral\gpio\plib_gpio.c</file>
-         <hash>3645719b9ad17a6206087a221da309dde7c81bfae6e0aa191b8a2bb84e864aa9</hash>
+         <hash>2dc62f8402a4aa02a262e79b1f32151d1f6a18d25ef754af04dd4e2db22e4df1</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_das_sk\peripheral\gpio\plib_gpio.h</file>
@@ -4118,11 +4118,11 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mz_das_sk\peripheral\uart\plib_uart_common.h</file>
-         <hash>90d1791d0855caa86d5d529a0ba209330f20cd0da2436950a7e71b38ef8da02b</hash>
+         <hash>70213cd740b3ff9a591d93ad6aac9493335851db084dd862275effacdebf710d</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_das_sk\system\debug\sys_debug.h</file>
-         <hash>16fbc4bbf026e4713e9b835b1511411e053aaf92ab7d6a000638630576fe92b3</hash>
+         <hash>5c34d947b4d700829a89d9d7616d941fa9e17047c67adc6de4d365b0a8ce39f4</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_das_sk\driver\usb\usbhs\src\templates\usbhs_EndpointOperations_Default.h</file>
@@ -4138,7 +4138,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mz_das_sk\stdio\xc32_monitor.c</file>
-         <hash>02b7c5343c9797c6ffb7d442e0b10098bcfb84deb476c7ceacf79787713ebeca</hash>
+         <hash>ebf5bb594a90f0fa360e2a086014a3d15ce37ed290e46e94aa1e4bf9b5610146</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_das_sk\driver\usb\drv_usb_external_dependencies.h</file>
@@ -4158,7 +4158,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mz_das_sk\toolchain_specifics.h</file>
-         <hash>84276afca06869943bba17727ff4f41fea61e4f81329ee20a333cafe39562a73</hash>
+         <hash>fd2fc7bbe60706409cc0c0a525825c0194f6f71adc0a89e6310041f06dc2f645</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_das_sk\driver\usb\usbhs\src\templates\usbhs_SoftReset_Unsupported.h</file>
@@ -4186,7 +4186,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mz_das_sk\system\int\sys_int.h</file>
-         <hash>c6ec8fc3c7ad1fa570998b9f65cb37fba4364ab07c3869f2d6cb30612a8a91e8</hash>
+         <hash>2c878ab7ff41ae56b5c0c3c94929ad66eb87b8660bf9a439177d049e8ad8f8c8</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_das_sk\driver\usb\usbhs\src\templates\usbhs_EP0Status_Unsupported.h</file>
@@ -4233,12 +4233,16 @@
          <hash>e18a2f4f80fa2d0e0143071983ed16c291d7644fc8a2edbbe7c1bf624b5ab7c9</hash>
       </entry>
       <entry>
+         <file>..\src\config\pic32mz_das_sk\sys_tasks.h</file>
+         <hash>21f254f497a18a024cd00128d06c4776c2643f867a460c1ba9880a7dd41a8d56</hash>
+      </entry>
+      <entry>
          <file>..\src\config\pic32mz_das_sk\exceptions.c</file>
-         <hash>c7f83f167acb4cd93e430dd7eb6a3d13194218fdad1d75c129783ede94db1723</hash>
+         <hash>30b880390be9495d817d130a99612cbe4a21ce5f953a22bf77fc97872b770538</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_das_sk\system\time\sys_time_definitions.h</file>
-         <hash>904195d4340ba6b97cf19c25b9695d2a9f37ed67cf6abdf8ee1ee839506e2801</hash>
+         <hash>46537746b1d12ece6b682c9be1c8f3f219663c638c21a51a973762b7b393afe6</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_das_sk\driver\usb\usbhs\src\usbhs_registers.h</file>
@@ -4250,11 +4254,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mz_das_sk\bootloader\bootloader_common.c</file>
-         <hash>f302fc56212af6c4c130820bfd463a9622f8ce15339219bc7087521a9bb1b1b9</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32mz_das_sk\peripheral\coretimer\plib_coretimer.c</file>
-         <hash>fe067c1842e5d3843cd88f1aaa7f4931c3c4452f5ddfa79318404c6bea0cf3dc</hash>
+         <hash>40c9de678398fe9295f4e7db347302c380a4f06b4766c0c5e05524dc0c4cb26b</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_das_sk\driver\usb\usbhs\src\drv_usbhs_variant_mapping.h</file>
@@ -4263,6 +4263,10 @@
       <entry>
          <file>..\src\config\pic32mz_das_sk\driver\usb\usbhs\src\templates\usbhs_Interrupts_Default.h</file>
          <hash>0e3b55388e580e84e626fb3ca758ab5b0c8c311a75e42bde1299ee20ba9354e0</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mz_das_sk\peripheral\coretimer\plib_coretimer.c</file>
+         <hash>2f636a8a90403a73ce55b8397c9ea548bb1e4ef7c022796ec2b3dffe7f97e96c</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_das_sk\driver\usb\usbhs\src\templates\usbhs_HighSpeedSupport_Default.h</file>
@@ -4290,19 +4294,19 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mz_das_sk\bootloader\bootloader_common.h</file>
-         <hash>f828224fa1a822220b14d65a8bd79d4980925396a63f12404e3273b5b31147e7</hash>
+         <hash>9c1b838e35f1d61bb30d98913c1141b0e1362a5d47fb51fd62c32e52696993e3</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_das_sk\bootloader\bootloader_nvm_interface.h</file>
-         <hash>04906c33971c788f83f2d24ca9089b7d8cf5bb85cfe8786be328b272da37d6b7</hash>
+         <hash>3888b96f0c34a31d2471f84b5f971ed1f9dedf5c7b49ae5e3b019323ee27a463</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_das_sk\bootloader\bootloader_nvm_interface.c</file>
-         <hash>f4192e8cfc5ce4acfce95cb70d603b244490468a517eecf056070fda0e277cf6</hash>
+         <hash>24ee31f71e29a2524da085350e1d7a87eb366bfc772b6ce2ceb5cff43639bd07</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_das_sk\peripheral\nvm\plib_nvm.h</file>
-         <hash>d081c9a11abcb48eea2f438c8f5b1156eff355d1068631cf5474fcacbe8127cc</hash>
+         <hash>13d7fbaabb735790e7ab8f30b71e499aead17b1972c5fffbab0f9913c287d988</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_das_sk\live_update.ld</file>
@@ -4310,7 +4314,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mz_das_sk\system\int\src\sys_int.c</file>
-         <hash>ff706bb4bde7b62a65b603efea8bab8b5a7d9a1a2c1cb2a9e981d68bbf20f764</hash>
+         <hash>30ac5e334ca90204f545f1ab769ae26f421b910b3fb3be99354b364febceee64</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_das_sk\usb_device_init_data.c</file>
@@ -4322,7 +4326,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mz_das_sk\peripheral\coretimer\plib_coretimer.h</file>
-         <hash>3b518d0f3667efcff16c9f0972d35f38eb4b97d22eca4ca2e7a862eb61e7cd6d</hash>
+         <hash>d88929a1d7d6d0428c517cb789359c574c42d52c3c8a04bb267990255ad81706</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_das_sk\driver\usb\usbhs\src\drv_usbhs_device.c</file>
@@ -4330,11 +4334,11 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mz_das_sk\osal\osal.h</file>
-         <hash>d42702188d00d3e1d7219d7eef030485896bf8b5ebe55318656e82f0fbb89788</hash>
+         <hash>8404fbe44807fa0484ffb38843a72cb9af8e31c9c30bd1b2594e609b8ea317d9</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_das_sk\usb\usb_host_client_driver.h</file>
-         <hash>d11085e6a64f6b4551b1dc19aaee5b8a2555b7df649057bdb2ce8549c296a87d</hash>
+         <hash>999717236876c88cfbb582f50c8b6429396a0e6696aba8a74556c25862070e8d</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_das_sk\usb\usb_device.h</file>
@@ -4342,11 +4346,11 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mz_das_sk\bootloader\datastream\datastream_usb_device_hid.c</file>
-         <hash>bf3489250caaa0ff027d81982a96a1549e8b1f0eb783b7c7de0e4f90ea74806e</hash>
+         <hash>e91f82bb5db933b566066d300c7c066836fb7a7403999ba4abc59af910917b08</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_das_sk\interrupts.h</file>
-         <hash>91abdb8d191ae865fc6082f30783c3d6cca8aa8d5aca823a7fb2cc65e3a57d24</hash>
+         <hash>6a364c5d7902a31f8a75a4ee60878d3b7275318eb1c7891a0fa9d11193576fdc</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_das_sk\bootloader\bootloader_usb_device_hid.h</file>
@@ -4354,7 +4358,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mz_das_sk\system\time\src\sys_time_local.h</file>
-         <hash>d3ef06b59d9a89efe9e8eb54fcf3b75120d56156cc21f6847ca4f9e902eb7c9d</hash>
+         <hash>df56f970664902417d798760e44978cf4b84c108cf0761647a383e91db76980c</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_das_sk\driver\usb\usbhs\src\drv_usbhs.c</file>
@@ -4362,35 +4366,35 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mz_das_sk\configuration.h</file>
-         <hash>c9f5c65fac4351f471f53bec7e35ecfb66d3d70311fc07948b0108c87defb986</hash>
+         <hash>e7ca946dddb56247aa8e0451dcb04e434ad9b6646e755aa0a3c14f752a12f6cd</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_das_sk\bootloader\bootloader_usb_device_hid.c</file>
-         <hash>cf6bc47ce0b929ce680430376178760d2cf87c90d769d3fe92b40c7bee7292ed</hash>
+         <hash>aa97503dd9bad68926e9d65bc157a1bd7d56a83657e7687cf5cf596d1d4268a7</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_das_sk\interrupts.c</file>
-         <hash>5bd94e7640c33409d823cf40966b720bc95989c83d291b5c92a2a1d036ef2a26</hash>
+         <hash>6e587d49ca5de45f878f35808d537ab4f2147f97f4d5e22a41cdb979699f470e</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_das_sk\peripheral\nvm\plib_nvm.c</file>
-         <hash>d0283b141173b0577d7fe98e706b3f3cc83188d704b8dcffcbd22bc19fab64fb</hash>
+         <hash>f7f451d82e6bcb446221d4fec7abc2aba921a8475500ddb9642d2b813655ca1b</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_das_sk\usb\src\usb_device.c</file>
-         <hash>b530b020cfa777eed5e76731e125a07d285ad49f2014ccf93858db1581a40d96</hash>
+         <hash>e2299e7132aaf91acd6857a827520f8bd5ecdc40d8ba2e6c4018b8441064a6cb</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_das_sk\usb\src\usb_device_local.h</file>
-         <hash>7ef3cbc9e2060d1d2800fb7a5d6d5597bb008b3da58bf475fc09219dd40c2244</hash>
+         <hash>3dc9e27b535edb31aa97aae04a0ce9ac12e5092ed3bae7ef6fd203bc1520ef33</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_das_sk\peripheral\clk\plib_clk.h</file>
-         <hash>aeb73e24e5a518024b1c3f7dce953a5cbacead08f55e80ae465fc8d2e522e477</hash>
+         <hash>35384f2e13e59b7190bf77f6996baf3ea2377ec42df94979a6f793326def5255</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_das_sk\tasks.c</file>
-         <hash>443330abcd40fdb743f96d399e4a9930042b280c80f80e809d91714ecba69017</hash>
+         <hash>cda7716e2125f20542c534c040c057f0491857372c83d038aa2e40d1eafccbb4</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_das_sk\usb\usb_device_hid.h</file>
@@ -4398,11 +4402,11 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mz_das_sk\osal\osal_impl_basic.h</file>
-         <hash>0c388837ef1d4e207a028ed31bfe07f1aac7ea8b0505caff58f737667ccbeaee</hash>
+         <hash>67ce72d34fd1e4dee0b6937fa026ab2c7bd285f82a24da09742c68333adaf0fc</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_das_sk\peripheral\clk\plib_clk.c</file>
-         <hash>29094c00eb0926a8c37fcabc6981316c268386d5bbb6c806d8511f64cb322f15</hash>
+         <hash>6a7d89b80a15b97ac22410c5bc45a30f489f447b15584fac8fc70151f90af311</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_das_sk\bsp\bsp.c</file>
@@ -4414,15 +4418,15 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mz_das_sk\definitions.h</file>
-         <hash>163058af9c63ad7a208e124f0c15ca490c27c61b414c985e4665cdaab40840fc</hash>
+         <hash>fbc955fd235a8063aeee97b87bc0be8ea30d21e3367bf2ce841e730823059b6f</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_das_sk\peripheral\evic\plib_evic.h</file>
-         <hash>a7bfc8fbe9656b57d1ef8bebee0ee9a97bc035dc1fda6b9a2b42c347f494e57f</hash>
+         <hash>d66a7a9d178e558f3f01fd25408d8471a59db19601934cb10d0668a2db876079</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_das_sk\system\system_module.h</file>
-         <hash>981fac23277aa77f682e7a9a28d436f892006cd5b4c7f23f50941b6d9a30e740</hash>
+         <hash>96c74368801b0a7aaa25aec3ec2cb0d483250385f103ffc1ff64089b4ca2c6d9</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_das_sk\usb\src\usb_device_function_driver.h</file>
@@ -4434,11 +4438,11 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mz_das_sk\system\time\sys_time.h</file>
-         <hash>f21b100d8f0b8b79af9217315098d51df855d9015f05a7e25ad77414cd19b2c3</hash>
+         <hash>6357468f7670698b16bfb6439d9919ed38eba99d4f03277a8b43ac34586fa1b3</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_das_sk\system\int\sys_int_mapping.h</file>
-         <hash>771b853250bfb05ceac0f525749007ca1d4478e660c13f6a7b7e8fe28eefcf75</hash>
+         <hash>a2dcf05575becc98aa212af1d220eda07487bd645d82c4d7a980aa3a22384cf3</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_das_sk\driver\usb\usbhs\src\templates\usbhs_registers.h</file>
@@ -4462,11 +4466,11 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mz_das_sk\peripheral\evic\plib_evic.c</file>
-         <hash>57fd799e2ea1c1a5b7349374c85ddd171f295dbd5f85eaeb2645a615da7ae2ba</hash>
+         <hash>8f8fe173ede4a3b96a089c867097d211c03befa6e26ce6815bb1cc21f8c7eec0</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_das_sk\system\time\src\sys_time.c</file>
-         <hash>b722ac0c5d955d289bd906609ab6f302342166c5ba66f87b30cac17ac6bfdcd9</hash>
+         <hash>fa2d85ab967b80157caf8483f6e28a23b12b548844a1d80f2fef760cd9b99271</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_das_sk\driver\usb\usbhs\src\templates\usbhs_USBIDControl_Unsupported.h</file>
@@ -4478,7 +4482,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mz_das_sk\bsp\bsp.h</file>
-         <hash>b5fbb3d063cb539292b273d99ac81f7fa470acfde7f5f495f4cedb83006cad17</hash>
+         <hash>cf70c1b83b617a108cf9b49a86999ebaf491c7cbf49b74e64ed1d686b2ed3c90</hash>
       </entry>
    </generatedFileHashHistoryMap>
 </config>
