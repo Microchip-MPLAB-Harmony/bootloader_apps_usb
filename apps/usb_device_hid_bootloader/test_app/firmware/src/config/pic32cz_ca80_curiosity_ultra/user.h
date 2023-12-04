@@ -45,7 +45,6 @@
 #define USER_H
 
 #include "bsp/bsp.h"
-#include "sys/kmem.h"
 
 // DOM-IGNORE-BEGIN
 #ifdef __cplusplus  // Provide C++ Compatibility
@@ -64,25 +63,17 @@ extern "C" {
 #define LED_OFF()       LED1_Off()
 #define LED_TOGGLE()    LED1_Toggle()
 
-#define SWITCH_GET()    SWITCH1_Get()
-#define SWITCH_PRESSED  SWITCH1_STATE_PRESSED
+#define SWITCH_GET()    SWITCH0_Get()
+#define SWITCH_PRESSED  SWITCH0_STATE_PRESSED
     
-#define APP_TIMER_START     CORETIMER_Start
-#define APP_TIMER_DelayMs   CORETIMER_DelayMs
+#define APP_TIMER_START     SYSTICK_TimerStart
+#define APP_TIMER_DelayMs   SYSTICK_DelayMs
 
-#define BTL_TRIGGER_RAM_START   KVA0_TO_KVA1(0x80000000)
-
-#define DCACHE_CLEAN_BY_ADDR(start, sz)
+#define BTL_TRIGGER_RAM_START  0x20020000U
 
 static inline void APP_SystemReset( void )
 {
-    /* Perform system unlock sequence */ 
-    SYSKEY = 0x00000000U;
-    SYSKEY = 0xAA996655U;
-    SYSKEY = 0x556699AAU;
-
-    RSWRSTSET = _RSWRST_SWRST_MASK;
-    (void)RSWRST;
+    NVIC_SystemReset();
 }
 
 //DOM-IGNORE-BEGIN

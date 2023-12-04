@@ -5,52 +5,49 @@
                    displayName="Header Files"
                    projectFiles="true">
       <logicalFolder name="config" displayName="config" projectFiles="true">
-        <logicalFolder name="pic32cz_ca80"
-                       displayName="pic32cz_ca80"
+        <logicalFolder name="pic32cz_ca80_curiosity_ultra"
+                       displayName="pic32cz_ca80_curiosity_ultra"
                        projectFiles="true">
           <logicalFolder name="bsp" displayName="bsp" projectFiles="true">
-            <itemPath>../src/config/pic32cz_ca80/bsp/bsp.h</itemPath>
+            <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/bsp/bsp.h</itemPath>
           </logicalFolder>
           <logicalFolder name="peripheral" displayName="peripheral" projectFiles="true">
             <logicalFolder name="clock" displayName="clock" projectFiles="true">
-              <itemPath>../src/config/pic32cz_ca80/peripheral/clock/plib_clock.h</itemPath>
+              <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/peripheral/clock/plib_clock.h</itemPath>
             </logicalFolder>
             <logicalFolder name="evsys" displayName="evsys" projectFiles="true">
-              <itemPath>../src/config/pic32cz_ca80/peripheral/evsys/plib_evsys.h</itemPath>
-            </logicalFolder>
-            <logicalFolder name="fcw" displayName="fcw" projectFiles="true">
-              <itemPath>../src/config/pic32cz_ca80/peripheral/fcw/plib_fcw.h</itemPath>
+              <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/peripheral/evsys/plib_evsys.h</itemPath>
             </logicalFolder>
             <logicalFolder name="nvic" displayName="nvic" projectFiles="true">
-              <itemPath>../src/config/pic32cz_ca80/peripheral/nvic/plib_nvic.h</itemPath>
+              <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/peripheral/nvic/plib_nvic.h</itemPath>
             </logicalFolder>
             <logicalFolder name="port" displayName="port" projectFiles="true">
-              <itemPath>../src/config/pic32cz_ca80/peripheral/port/plib_port.h</itemPath>
+              <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/peripheral/port/plib_port.h</itemPath>
             </logicalFolder>
             <logicalFolder name="sercom" displayName="sercom" projectFiles="true">
               <logicalFolder name="usart" displayName="usart" projectFiles="true">
-                <itemPath>../src/config/pic32cz_ca80/peripheral/sercom/usart/plib_sercom1_usart.h</itemPath>
-                <itemPath>../src/config/pic32cz_ca80/peripheral/sercom/usart/plib_sercom_usart_common.h</itemPath>
+                <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/peripheral/sercom/usart/plib_sercom_usart_common.h</itemPath>
+                <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/peripheral/sercom/usart/plib_sercom1_usart.h</itemPath>
               </logicalFolder>
             </logicalFolder>
             <logicalFolder name="systick" displayName="systick" projectFiles="true">
-              <itemPath>../src/config/pic32cz_ca80/peripheral/systick/plib_systick.h</itemPath>
+              <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/peripheral/systick/plib_systick.h</itemPath>
             </logicalFolder>
           </logicalFolder>
           <logicalFolder name="system" displayName="system" projectFiles="true">
             <logicalFolder name="cache" displayName="cache" projectFiles="true">
-              <itemPath>../src/config/pic32cz_ca80/system/cache/sys_cache.h</itemPath>
+              <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/system/cache/sys_cache.h</itemPath>
             </logicalFolder>
           </logicalFolder>
-          <itemPath>../src/config/pic32cz_ca80/sys_tasks.h</itemPath>
-          <itemPath>../src/config/pic32cz_ca80/definitions.h</itemPath>
-          <itemPath>../src/config/pic32cz_ca80/toolchain_specifics.h</itemPath>
-          <itemPath>../src/config/pic32cz_ca80/user.h</itemPath>
-          <itemPath>../src/config/pic32cz_ca80/interrupts.h</itemPath>
-          <itemPath>../src/config/pic32cz_ca80/configuration.h</itemPath>
-          <itemPath>../src/config/pic32cz_ca80/device.h</itemPath>
-          <itemPath>../src/config/pic32cz_ca80/device_cache.h</itemPath>
-          <itemPath>../src/config/pic32cz_ca80/device_vectors.h</itemPath>
+          <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/device.h</itemPath>
+          <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/sys_tasks.h</itemPath>
+          <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/toolchain_specifics.h</itemPath>
+          <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/user.h</itemPath>
+          <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/interrupts.h</itemPath>
+          <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/device_vectors.h</itemPath>
+          <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/configuration.h</itemPath>
+          <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/definitions.h</itemPath>
+          <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/device_cache.h</itemPath>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="packs" displayName="packs" projectFiles="true">
@@ -192,10 +189,10 @@
                    displayName="Linker Files"
                    projectFiles="true">
       <logicalFolder name="config" displayName="config" projectFiles="true">
-        <logicalFolder name="pic32cz_ca80"
-                       displayName="pic32cz_ca80"
+        <logicalFolder name="pic32cz_ca80_curiosity_ultra"
+                       displayName="pic32cz_ca80_curiosity_ultra"
                        projectFiles="true">
-          <itemPath>../src/config/pic32cz_ca80/PIC32CZ8110CA80208.ld</itemPath>
+          <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/PIC32CZ8110CA80208.ld</itemPath>
         </logicalFolder>
       </logicalFolder>
     </logicalFolder>
@@ -203,55 +200,52 @@
                    displayName="Source Files"
                    projectFiles="true">
       <logicalFolder name="config" displayName="config" projectFiles="true">
-        <logicalFolder name="pic32cz_ca80"
-                       displayName="pic32cz_ca80"
+        <logicalFolder name="pic32cz_ca80_curiosity_ultra"
+                       displayName="pic32cz_ca80_curiosity_ultra"
                        projectFiles="true">
           <logicalFolder name="bsp" displayName="bsp" projectFiles="true">
-            <itemPath>../src/config/pic32cz_ca80/bsp/bsp.c</itemPath>
+            <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/bsp/bsp.c</itemPath>
           </logicalFolder>
           <logicalFolder name="peripheral" displayName="peripheral" projectFiles="true">
             <logicalFolder name="clock" displayName="clock" projectFiles="true">
-              <itemPath>../src/config/pic32cz_ca80/peripheral/clock/plib_clock.c</itemPath>
+              <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/peripheral/clock/plib_clock.c</itemPath>
             </logicalFolder>
             <logicalFolder name="evsys" displayName="evsys" projectFiles="true">
-              <itemPath>../src/config/pic32cz_ca80/peripheral/evsys/plib_evsys.c</itemPath>
-            </logicalFolder>
-            <logicalFolder name="fcw" displayName="fcw" projectFiles="true">
-              <itemPath>../src/config/pic32cz_ca80/peripheral/fcw/plib_fcw.c</itemPath>
+              <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/peripheral/evsys/plib_evsys.c</itemPath>
             </logicalFolder>
             <logicalFolder name="nvic" displayName="nvic" projectFiles="true">
-              <itemPath>../src/config/pic32cz_ca80/peripheral/nvic/plib_nvic.c</itemPath>
+              <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/peripheral/nvic/plib_nvic.c</itemPath>
             </logicalFolder>
             <logicalFolder name="port" displayName="port" projectFiles="true">
-              <itemPath>../src/config/pic32cz_ca80/peripheral/port/plib_port.c</itemPath>
+              <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/peripheral/port/plib_port.c</itemPath>
             </logicalFolder>
             <logicalFolder name="sercom" displayName="sercom" projectFiles="true">
               <logicalFolder name="usart" displayName="usart" projectFiles="true">
-                <itemPath>../src/config/pic32cz_ca80/peripheral/sercom/usart/plib_sercom1_usart.c</itemPath>
+                <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/peripheral/sercom/usart/plib_sercom1_usart.c</itemPath>
               </logicalFolder>
             </logicalFolder>
             <logicalFolder name="systick" displayName="systick" projectFiles="true">
-              <itemPath>../src/config/pic32cz_ca80/peripheral/systick/plib_systick.c</itemPath>
+              <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/peripheral/systick/plib_systick.c</itemPath>
             </logicalFolder>
           </logicalFolder>
           <logicalFolder name="stdio" displayName="stdio" projectFiles="true">
-            <itemPath>../src/config/pic32cz_ca80/stdio/xc32_monitor.c</itemPath>
+            <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/stdio/xc32_monitor.c</itemPath>
           </logicalFolder>
           <logicalFolder name="system" displayName="system" projectFiles="true">
             <logicalFolder name="cache" displayName="cache" projectFiles="true">
-              <itemPath>../src/config/pic32cz_ca80/system/cache/sys_cache.c</itemPath>
+              <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/system/cache/sys_cache.c</itemPath>
             </logicalFolder>
           </logicalFolder>
-          <itemPath>../src/config/pic32cz_ca80/libc_syscalls.c</itemPath>
-          <itemPath>../src/config/pic32cz_ca80/interrupts.c</itemPath>
-          <itemPath>../src/config/pic32cz_ca80/tasks.c</itemPath>
-          <itemPath>../src/config/pic32cz_ca80/startup_xc32.c</itemPath>
-          <itemPath>../src/config/pic32cz_ca80/exceptions.c</itemPath>
-          <itemPath>../src/config/pic32cz_ca80/initialization.c</itemPath>
+          <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/startup_xc32.c</itemPath>
+          <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/initialization.c</itemPath>
+          <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/tasks.c</itemPath>
+          <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/interrupts.c</itemPath>
+          <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/libc_syscalls.c</itemPath>
+          <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/exceptions.c</itemPath>
         </logicalFolder>
       </logicalFolder>
+      <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/pin_configurations.csv</itemPath>
       <itemPath>../src/app.c</itemPath>
-      <itemPath>../src/config/pic32cz_ca80/pin_configurations.csv</itemPath>
       <itemPath>../src/main.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
@@ -263,20 +257,20 @@
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
-    <conf name="pic32cz_ca80" type="2">
+    <conf name="pic32cz_ca80_curiosity_ultra" type="2">
       <toolsSet>
         <developmentServer>localhost</developmentServer>
         <targetDevice>PIC32CZ8110CA80208</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>pkob4hybrid</platformTool>
+        <platformTool>noID</platformTool>
         <languageToolchain>XC32</languageToolchain>
         <languageToolchainVersion>4.30</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="CMSIS" vendor="ARM" version="5.4.0"/>
         <pack name="PIC32CZ-CA80_DFP" vendor="Microchip" version="1.2.150"/>
+        <pack name="CMSIS" vendor="ARM" version="5.4.0"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>
@@ -308,14 +302,13 @@
       <C32>
         <property key="additional-warnings" value="true"/>
         <property key="addresss-attribute-use" value="false"/>
-        <property key="appendMe" value=""/>
         <property key="enable-app-io" value="false"/>
         <property key="enable-omit-frame-pointer" value="false"/>
         <property key="enable-symbols" value="true"/>
         <property key="enable-unroll-loops" value="false"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../src;../src/config/pic32cz_ca80;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/PIC32CZ8110CA80208_DFP"/>
+                  value="../src;../src/config/pic32cz_ca80_curiosity_ultra;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/PIC32CZ8110CA80208_DFP"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -365,7 +358,6 @@
         <property key="additional-options-use-response-files" value="false"/>
         <property key="additional-options-write-sla" value="false"/>
         <property key="allocate-dinit" value="false"/>
-        <property key="appendMe" value=""/>
         <property key="code-dinit" value="false"/>
         <property key="ebase-addr" value=""/>
         <property key="enable-check-sections" value="false"/>
@@ -393,7 +385,7 @@
         <property key="oXC32ld-extra-opts" value=""/>
         <property key="optimization-level" value=""/>
         <property key="preprocessor-macros"
-                  value="BOOT_ROM_LENGTH=0x20000;BOOT_ROM_ORIGIN=0xc000000;ROM_LENGTH=0x7ffc00;ROM_ORIGIN=0xc000400"/>
+                  value="ROM_LENGTH=0x800000;ROM_ORIGIN=0xc000000;VECTOR_REGION=rom"/>
         <property key="remove-unused-sections" value="true"/>
         <property key="report-memory-usage" value="false"/>
         <property key="serial-length" value=""/>
@@ -406,7 +398,6 @@
       <C32CPP>
         <property key="additional-warnings" value="false"/>
         <property key="addresss-attribute-use" value="false"/>
-        <property key="appendMe" value=""/>
         <property key="check-new" value="false"/>
         <property key="eh-specs" value="true"/>
         <property key="enable-app-io" value="false"/>
@@ -416,7 +407,7 @@
         <property key="exceptions" value="true"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../src;../src/config/pic32cz_ca80;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/PIC32CZ8110CA80208_DFP"/>
+                  value="../src;../src/config/pic32cz_ca80_curiosity_ultra;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/PIC32CZ8110CA80208_DFP"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -435,7 +426,6 @@
         <property key="use-indirect-calls" value="false"/>
       </C32CPP>
       <C32Global>
-        <property key="appendMe" value=""/>
         <property key="common-include-directories" value=""/>
         <property key="gp-relative-option" value=""/>
         <property key="legacy-libc" value="false"/>
@@ -448,114 +438,6 @@
         <property key="stack-smashing" value=""/>
         <property key="wpo-lto" value="false"/>
       </C32Global>
-      <Tool>
-        <property key="AutoSelectMemRanges" value="auto"/>
-        <property key="ToolFirmwareFilePath"
-                  value="Press to browse for a specific firmware version"/>
-        <property key="ToolFirmwareOption.UpdateOptions"
-                  value="ToolFirmwareOption.UseLatest"/>
-        <property key="ToolFirmwareToolPack"
-                  value="Press to select which tool pack to use"/>
-        <property key="communication.interface" value="swd"/>
-        <property key="communication.interface.jtag" value="2wire"/>
-        <property key="communication.speed" value="2.000"/>
-        <property key="debugoptions.debug-startup" value="Use system settings"/>
-        <property key="debugoptions.reset-behaviour" value="Use system settings"/>
-        <property key="debugoptions.simultaneous.debug" value="false"/>
-        <property key="debugoptions.useswbreakpoints" value="false"/>
-        <property key="event.recorder.enabled" value="false"/>
-        <property key="event.recorder.scvd.files" value=""/>
-        <property key="freeze.timers" value="false"/>
-        <property key="lastid" value=""/>
-        <property key="memories.aux" value="false"/>
-        <property key="memories.bootflash" value="true"/>
-        <property key="memories.configurationmemory" value="true"/>
-        <property key="memories.configurationmemory2" value="true"/>
-        <property key="memories.dataflash" value="true"/>
-        <property key="memories.eeprom" value="true"/>
-        <property key="memories.exclude.configurationmemory" value="true"/>
-        <property key="memories.flashdata" value="true"/>
-        <property key="memories.id" value="true"/>
-        <property key="memories.instruction.ram.ranges"
-                  value="${memories.instruction.ram.ranges}"/>
-        <property key="memories.programmemory" value="true"/>
-        <property key="memories.programmemory.ranges" value="0-9fffffff"/>
-        <property key="programoptions.donoteraseauxmem" value="false"/>
-        <property key="programoptions.eraseb4program" value="true"/>
-        <property key="programoptions.pgmentry.voltage" value="low"/>
-        <property key="programoptions.pgmspeed" value="Med"/>
-        <property key="programoptions.preservedataflash" value="false"/>
-        <property key="programoptions.preservedataflash.ranges"
-                  value="${memories.dataflash.default}"/>
-        <property key="programoptions.preserveeeprom" value="false"/>
-        <property key="programoptions.preserveeeprom.ranges" value=""/>
-        <property key="programoptions.preserveprogram.ranges" value=""/>
-        <property key="programoptions.preserveprogramrange" value="false"/>
-        <property key="programoptions.preserveuserid" value="false"/>
-        <property key="programoptions.program.otpconfig" value="false"/>
-        <property key="programoptions.programcalmem" value="false"/>
-        <property key="programoptions.programuserotp" value="false"/>
-        <property key="programoptions.testmodeentrymethod" value="VDDFirst"/>
-        <property key="toolpack.updateoptions"
-                  value="toolpack.updateoptions.uselatestoolpack"/>
-        <property key="toolpack.updateoptions.packversion"
-                  value="Press to select which tool pack to use"/>
-        <property key="x.erase.key" value="0xFFFFFFFF,0xFFFFFFFF,0xFFFFFFFF,0xFFFFFFFF"/>
-      </Tool>
-      <pkob4hybrid>
-        <property key="AutoSelectMemRanges" value="auto"/>
-        <property key="ToolFirmwareFilePath"
-                  value="Press to browse for a specific firmware version"/>
-        <property key="ToolFirmwareOption.UpdateOptions"
-                  value="ToolFirmwareOption.UseLatest"/>
-        <property key="ToolFirmwareToolPack"
-                  value="Press to select which tool pack to use"/>
-        <property key="communication.interface" value="swd"/>
-        <property key="communication.interface.jtag" value="2wire"/>
-        <property key="communication.speed" value="2.000"/>
-        <property key="debugoptions.debug-startup" value="Use system settings"/>
-        <property key="debugoptions.reset-behaviour" value="Use system settings"/>
-        <property key="debugoptions.simultaneous.debug" value="false"/>
-        <property key="debugoptions.useswbreakpoints" value="false"/>
-        <property key="event.recorder.enabled" value="false"/>
-        <property key="event.recorder.scvd.files" value=""/>
-        <property key="freeze.timers" value="false"/>
-        <property key="lastid" value=""/>
-        <property key="memories.aux" value="false"/>
-        <property key="memories.bootflash" value="true"/>
-        <property key="memories.configurationmemory" value="true"/>
-        <property key="memories.configurationmemory2" value="true"/>
-        <property key="memories.dataflash" value="true"/>
-        <property key="memories.eeprom" value="true"/>
-        <property key="memories.exclude.configurationmemory" value="true"/>
-        <property key="memories.flashdata" value="true"/>
-        <property key="memories.id" value="true"/>
-        <property key="memories.instruction.ram.ranges"
-                  value="${memories.instruction.ram.ranges}"/>
-        <property key="memories.programmemory" value="true"/>
-        <property key="memories.programmemory.ranges" value="0-9fffffff"/>
-        <property key="programoptions.donoteraseauxmem" value="false"/>
-        <property key="programoptions.eraseb4program" value="true"/>
-        <property key="programoptions.pgmentry.voltage" value="low"/>
-        <property key="programoptions.pgmspeed" value="Med"/>
-        <property key="programoptions.preservedataflash" value="false"/>
-        <property key="programoptions.preservedataflash.ranges"
-                  value="${memories.dataflash.default}"/>
-        <property key="programoptions.preserveeeprom" value="false"/>
-        <property key="programoptions.preserveeeprom.ranges" value=""/>
-        <property key="programoptions.preserveprogram.ranges" value=""/>
-        <property key="programoptions.preserveprogramrange" value="false"/>
-        <property key="programoptions.preserveuserid" value="false"/>
-        <property key="programoptions.program.otpconfig" value="false"/>
-        <property key="programoptions.programcalmem" value="false"/>
-        <property key="programoptions.programuserotp" value="false"/>
-        <property key="programoptions.testmodeentrymethod" value="VDDFirst"/>
-        <property key="toolpack.updateoptions"
-                  value="toolpack.updateoptions.uselatestoolpack"/>
-        <property key="toolpack.updateoptions.packversion"
-                  value="Press to select which tool pack to use"/>
-        <property key="x.erase.key" value="0xFFFFFFFF,0xFFFFFFFF,0xFFFFFFFF,0xFFFFFFFF"/>
-      </pkob4hybrid>
     </conf>
   </confs>
 </configurationDescriptor>

@@ -16,7 +16,6 @@
 
 *******************************************************************************/
 
-// DOM-IGNORE-BEGIN
 /*******************************************************************************
 * Copyright (C) 2020 Microchip Technology Inc. and its subsidiaries.
 *
@@ -38,14 +37,12 @@
 * FULLEST EXTENT ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN
 * ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
- *******************************************************************************/
-// DOM-IGNORE-END
+*******************************************************************************/
 
 #ifndef USER_H
 #define USER_H
 
 #include "bsp/bsp.h"
-#include "sys/kmem.h"
 
 // DOM-IGNORE-BEGIN
 #ifdef __cplusplus  // Provide C++ Compatibility
@@ -60,30 +57,13 @@ extern "C" {
 // Section: User Configuration macros
 // *****************************************************************************
 // *****************************************************************************
-#define LED_ON()        LED1_On()
-#define LED_OFF()       LED1_Off()
-#define LED_TOGGLE()    LED1_Toggle()
 
-#define SWITCH_GET()    SWITCH1_Get()
-#define SWITCH_PRESSED  SWITCH1_STATE_PRESSED
-    
-#define APP_TIMER_START     CORETIMER_Start
-#define APP_TIMER_DelayMs   CORETIMER_DelayMs
+#define LED_ON()        LED0_On()
+#define LED_OFF()       LED0_Off()
+#define LED_TOGGLE()    LED0_Toggle()
 
-#define BTL_TRIGGER_RAM_START   KVA0_TO_KVA1(0x80000000)
-
-#define DCACHE_CLEAN_BY_ADDR(start, sz)
-
-static inline void APP_SystemReset( void )
-{
-    /* Perform system unlock sequence */ 
-    SYSKEY = 0x00000000U;
-    SYSKEY = 0xAA996655U;
-    SYSKEY = 0x556699AAU;
-
-    RSWRSTSET = _RSWRST_SWRST_MASK;
-    (void)RSWRST;
-}
+#define SWITCH_GET()    SWITCH0_Get()
+#define SWITCH_PRESSED  SWITCH0_STATE_PRESSED
 
 //DOM-IGNORE-BEGIN
 #ifdef __cplusplus

@@ -4,14 +4,14 @@
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/make-project/1">
             <name>usb_device_hid_bootloader_test_app_pic32cz_ca80_curiosity_ultra</name>
-            <creation-uuid>f3b57238-6954-435e-a5d8-93697b71e7e7</creation-uuid>
+            <creation-uuid>47e33421-7369-486e-ab38-77c4d304a336</creation-uuid>
             <make-project-type>0</make-project-type>
             <sourceEncoding>ISO-8859-1</sourceEncoding>
             <make-dep-projects/>
             <sourceRootList/>
             <confList>
                 <confElem>
-                    <name>pic32cz_ca80</name>
+                    <name>pic32cz_ca80_curiosity_ultra</name>
                     <type>2</type>
                 </confElem>
             </confList>
