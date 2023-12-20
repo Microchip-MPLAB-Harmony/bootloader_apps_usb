@@ -65,7 +65,7 @@
 #define BOOTLOADER_SIZE                         32768
 
 /* Starting location of Bootloader in Inactive bank */
-#define INACTIVE_BANK_OFFSET                    (FLASH_LENGTH / 2)
+#define INACTIVE_BANK_OFFSET                    (FLASH_LENGTH / 2U)
 
 #define INACTIVE_BANK_START                     (FLASH_START + INACTIVE_BANK_OFFSET)
 
@@ -76,8 +76,8 @@
 
 
 #define LOWER_FLASH_START                       (FLASH_START)
-#define LOWER_FLASH_SERIAL_START                (LOWER_FLASH_START + (FLASH_LENGTH / 2) - PAGE_SIZE)
-#define LOWER_FLASH_SERIAL_SECTOR               (LOWER_FLASH_START + (FLASH_LENGTH / 2) - ERASE_BLOCK_SIZE)
+#define LOWER_FLASH_SERIAL_START                (LOWER_FLASH_START + (FLASH_LENGTH / 2U) - PAGE_SIZE)
+#define LOWER_FLASH_SERIAL_SECTOR               (LOWER_FLASH_START + (FLASH_LENGTH / 2U) - ERASE_BLOCK_SIZE)
 
 #define UPPER_FLASH_START                       INACTIVE_BANK_START
 #define UPPER_FLASH_SERIAL_START                (FLASH_END_ADDRESS - PAGE_SIZE)
@@ -109,6 +109,8 @@ typedef struct
 
 
 // *****************************************************************************
+/* MISRA C-2012 Rule 5.8 deviated below. Deviation record ID -
+   H3_MISRAC_2012_R_5_8_DR_1 */
 
 void SYS_DeInitialize( void *data );
 
@@ -144,8 +146,8 @@ Returns:
 Example:
     <code>
     
-    #define BTL_MAJOR_VERSION       3
-    #define BTL_MINOR_VERSION       6
+    #define BTL_MAJOR_VERSION       3U
+    #define BTL_MINOR_VERSION       7U
 
     uint16_t bootloader_GetVersion( void )
     {
@@ -158,8 +160,6 @@ Example:
 */
 uint16_t bootloader_GetVersion( void );
 
-/* MISRA C-2012 Rule 5.8 deviated below. Deviation record ID -
-   H3_MISRAC_2012_R_5_8_DR_1 */
 
 // *****************************************************************************
 /* Function:

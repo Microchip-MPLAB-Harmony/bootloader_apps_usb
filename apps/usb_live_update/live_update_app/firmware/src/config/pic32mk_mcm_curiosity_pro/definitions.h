@@ -56,8 +56,8 @@
 #include "usb/usb_device.h"
 #include "driver/usb/usbfs/drv_usbfs.h"
 #include "bootloader/bootloader_usb_device_hid.h"
-#include "peripheral/uart/plib_uart6.h"
 #include "system/time/sys_time.h"
+#include "peripheral/uart/plib_uart6.h"
 #include "peripheral/nvm/plib_nvm.h"
 #include "peripheral/coretimer/plib_coretimer.h"
 #include "bsp/bsp.h"
@@ -200,7 +200,7 @@ typedef struct
     SYS_MODULE_OBJ  usbDevObject0;
 
 
-	SYS_MODULE_OBJ  drvUSBFSObject0;
+    SYS_MODULE_OBJ  drvUSBFSObject0;
 
 
     SYS_MODULE_OBJ  sysTime;

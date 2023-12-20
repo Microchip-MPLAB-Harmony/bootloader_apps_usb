@@ -46,6 +46,7 @@
 #include "peripheral/nvm/plib_nvm.h"
 #include "system/int/sys_int.h"
 
+
 typedef struct
 {
     uint8_t RecDataLen;
@@ -79,11 +80,12 @@ bool bootloader_NvmIsBusy(void)
     return (NVM_IsBusy());
 }
 
-void bootloader_NvmAppErase( void )
-{
-    uint32_t flashAddr = APP_START_ADDRESS;
 
-    while (flashAddr < FLASH_END_ADDRESS)
+void bootloader_NvmAppErase( uint32_t startAddr, uint32_t endAddr )
+{
+    uint32_t flashAddr = startAddr;
+
+    while (flashAddr < endAddr)
     {
         (void)NVM_PageErase(flashAddr);
 
@@ -109,9 +111,10 @@ void bootloader_NVMPageWrite(uint32_t address, uint8_t* data)
 static void bootloader_AlignProgAddress(uint32_t curAddress)
 {
     /* Program the pending bytes if any in the buffer */
-    if (nvm_data.buffIndex != 0)
+    if (nvm_data.buffIndex != 0U)
     {
-        nvm_data.buffIndex = 0;
+        nvm_data.buffIndex = 0U;
+
 
         bootloader_NVMPageWrite(nvm_data.progAddr, nvm_data.buff);
 
@@ -140,7 +143,7 @@ HEX_RECORD_STATUS bootloader_NvmProgramHexRecord(uint8_t* HexRecord, uint32_t to
         nvmDataInitDone = true;
     }
 
-    while(totalLen >= 5) // A hex record must be at-least 5 bytes. (1 Data Len byte + 1 rec type byte+ 2 address bytes + 1 crc)
+    while(totalLen >= 5U) // A hex record must be at-least 5 bytes. (1 Data Len byte + 1 rec type byte+ 2 address bytes + 1 crc)
     {
         HexRecord = &HexRecord[nextRecStartPt];
         HexRecordSt.RecDataLen = HexRecord[0];
@@ -231,17 +234,17 @@ HEX_RECORD_STATUS bootloader_NvmProgramHexRecord(uint8_t* HexRecord, uint32_t to
                         else    // Out of boundaries. Adjust and move on.
                         {
                             // Increment the address.
-                            HexRecordSt.Address += 4;
+                            HexRecordSt.Address += 4U;
                             // Increment the data pointer.
-                            HexRecordSt.Data += 4;
+                            HexRecordSt.Data += 4U;
                             // Decrement data len.
-                            if(HexRecordSt.RecDataLen > 3)
+                            if(HexRecordSt.RecDataLen > 3U)
                             {
-                                HexRecordSt.RecDataLen -= 4;
+                                HexRecordSt.RecDataLen -= 4U;
                             }
                             else
                             {
-                                HexRecordSt.RecDataLen = 0;
+                                HexRecordSt.RecDataLen = 0U;
                             }
                         }
                     }
@@ -288,9 +291,9 @@ HEX_RECORD_STATUS bootloader_NvmProgramHexRecord(uint8_t* HexRecord, uint32_t to
         }
     }
 
-    if ( (HexRecordSt.RecType == DATA_RECORD) || (HexRecordSt.RecType == EXT_SEG_ADRS_RECORD)
-            || (HexRecordSt.RecType == EXT_LIN_ADRS_RECORD) || (HexRecordSt.RecType == START_LIN_ADRS_RECORD)
-            || (HexRecordSt.RecType == END_OF_FILE_RECORD))
+    if ( (HexRecordSt.RecType == (uint8_t)DATA_RECORD) || (HexRecordSt.RecType == (uint8_t)EXT_SEG_ADRS_RECORD)
+            || (HexRecordSt.RecType == (uint8_t)EXT_LIN_ADRS_RECORD) || (HexRecordSt.RecType == (uint8_t)START_LIN_ADRS_RECORD)
+            || (HexRecordSt.RecType == (uint8_t)END_OF_FILE_RECORD))
     {
         return HEX_REC_NORMAL;
     }
