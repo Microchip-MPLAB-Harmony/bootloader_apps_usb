@@ -1,22 +1,19 @@
 /*******************************************************************************
-  USB Host Hub Driver interface names mapping
-
-  Company:
-    Microchip Technology Inc.
+  Bootloader Interrupt Header File
 
   File Name:
-    usb_host_hub_mapping.h
+    bootloader_interrupt.h
 
   Summary:
-    USB Device Layer Interface names mapping
+    This file contains function prototype declarations.
 
   Description:
-    This file contain mapppings required for the hub driver.
-*******************************************************************************/
+    This file contains function prototype declarations.
+ *******************************************************************************/
 
-//DOM-IGNORE-BEGIN
+// DOM-IGNORE-BEGIN
 /*******************************************************************************
-* Copyright (C) 2018 Microchip Technology Inc. and its subsidiaries.
+* Copyright (C) 2023 Microchip Technology Inc. and its subsidiaries.
 *
 * Subject to your compliance with these terms, you may use Microchip software
 * and any derivatives exclusively with Microchip products. It is your
@@ -37,25 +34,16 @@
 * ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
  *******************************************************************************/
-//DOM-IGNORE-END
+// DOM-IGNORE-END
 
-#ifndef USB_HOST_HUB_MAPPING_H
-#define USB_HOST_HUB_MAPPING_H
+// *****************************************************************************
+// *****************************************************************************
+// Section: Include Files
+// *****************************************************************************
+// *****************************************************************************
 
-#include "usb/src/usb_external_dependencies.h"
-
-#ifdef USB_HOST_HUB_SUPPORT
-#if (USB_HOST_HUB_SUPPORT == true)
-    #include "usb/usb_host_hub_interface.h"
-    extern USB_HUB_INTERFACE externalHubInterface;
-    #define USB_HOST_HUB_INTERFACE_EXTRNL &externalHubInterface;
-#else
-    #define USB_HOST_HUB_INTERFACE_EXTRNL (NULL)
-#endif
-#else
-    #define USB_HOST_HUB_INTERFACE_EXTRNL (NULL)
-#endif
+#ifndef BOOTLOADER_INTERRUPT_H
+#define BOOTLOADER_INTERRUPT_H
 
 
-
-#endif
+#endif      //BOOTLOADER_INTERRUPT_H
