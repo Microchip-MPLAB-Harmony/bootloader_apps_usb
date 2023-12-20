@@ -59,9 +59,9 @@
 #include "peripheral/nvic/plib_nvic.h"
 #include "peripheral/tc/plib_tc3.h"
 #include "system/time/sys_time.h"
+#include "bsp/bsp.h"
 #include "usb/usb_chapter_9.h"
 #include "usb/usb_host.h"
-#include "bsp/bsp.h"
 #include "system/fs/sys_fs.h"
 #include "system/fs/sys_fs_media_manager.h"
 #include "system/fs/sys_fs_fat_interface.h"
@@ -83,6 +83,12 @@ extern "C" {
 
 #endif
 // DOM-IGNORE-END
+
+/* Device Information */
+#define DEVICE_NAME			 "ATSAMD21J18A"
+#define DEVICE_ARCH			 "CORTEX-M0PLUS"
+#define DEVICE_FAMILY		 "SAMD"
+#define DEVICE_SERIES		 "SAMD21"
 
 /* CPU clock frequency */
 #define CPU_CLOCK_FREQUENCY 48005120
@@ -198,9 +204,9 @@ Remarks:
 typedef struct
 {
     SYS_MODULE_OBJ  sysTime;
-	SYS_MODULE_OBJ  usbHostObject0;
+    SYS_MODULE_OBJ  usbHostObject0;
 
-	SYS_MODULE_OBJ  drvUSBFSV1Object;
+    SYS_MODULE_OBJ  drvUSBFSV1Object;
 
 
 } SYSTEM_OBJECTS;
