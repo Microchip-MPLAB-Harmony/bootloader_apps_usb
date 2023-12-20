@@ -97,29 +97,35 @@ typedef struct
 
 } BOOTLOADER_DATA;
 
-uint8_t CACHE_ALIGN fileBuffer[PAGE_SIZE];
+static uint8_t CACHE_ALIGN fileBuffer[PAGE_SIZE];
 
-BOOTLOADER_DATA btlData =
+/* MISRA C-2012 Rule 7.2 deviated:1 Deviation record ID -  H3_MISRAC_2012_R_5_2_DR_1 */
+
+static BOOTLOADER_DATA btlData =
 {
     .currentState   = BOOTLOADER_BUS_ENABLE,
     .deviceAttached = false,
     .progAddr       = APP_START_ADDRESS
 };
 
-USB_HOST_EVENT_RESPONSE bootloader_USBHostEventHandler (USB_HOST_EVENT event, void * eventData, uintptr_t context)
+
+/* MISRAC 2012 deviation block end */
+
+static USB_HOST_EVENT_RESPONSE bootloader_USBHostEventHandler (USB_HOST_EVENT event, void * eventData, uintptr_t context)
 {
     switch (event)
     {
         case USB_HOST_EVENT_DEVICE_UNSUPPORTED:
             break;
         default:
+            /* Do Nothing */
             break;
     }
 
     return(USB_HOST_EVENT_RESPONSE_NONE);
 }
 
-void bootloader_SysFsEventHandler(SYS_FS_EVENT event, void * eventData, uintptr_t context)
+static void bootloader_SysFsEventHandler(SYS_FS_EVENT event, void * eventData, uintptr_t context)
 {
     switch(event)
     {
@@ -139,12 +145,16 @@ void bootloader_SysFsEventHandler(SYS_FS_EVENT event, void * eventData, uintptr_
 
         default:
         {
+            /* Do Nothing */
             break;
         }
     }
 }
 
-void bootloader_NvmAppErase( uint32_t appLength )
+/* MISRA C-2012 Rule 11.3, 11.6 deviated below. Deviation record ID -  
+   H3_MISRAC_2012_R_11_3_DR_1 & H3_MISRAC_2012_R_11_6_DR_1*/
+
+static void bootloader_NvmAppErase( uint32_t appLength )
 {
     uint32_t flashAddr = APP_START_ADDRESS;
 
@@ -152,13 +162,13 @@ void bootloader_NvmAppErase( uint32_t appLength )
     appLength = appLength + (ERASE_BLOCK_SIZE - (appLength % ERASE_BLOCK_SIZE));
 
     while ((flashAddr < (FLASH_START + FLASH_LENGTH)) &&
-           (appLength != 0))
+           (appLength != 0U))
     {
-        NVM_PageErase(flashAddr);
+        (void) NVM_PageErase(flashAddr);
 
         while(NVM_IsBusy() == true)
         {
-
+              /* Do Nothing */
         }
 
         flashAddr += ERASE_BLOCK_SIZE;
@@ -166,17 +176,20 @@ void bootloader_NvmAppErase( uint32_t appLength )
     }
 }
 
-void bootloader_NVMPageWrite(uint8_t* data)
+static void bootloader_NVMPageWrite(uint8_t* data)
 {
-    NVM_RowWrite((uint32_t *)data, btlData.progAddr);
+    (void) NVM_RowWrite((uint32_t *)data, btlData.progAddr);
 
     while(NVM_IsBusy() == true)
     {
-
+       /* Do Nothing */
     }
 
     btlData.progAddr += PAGE_SIZE;
 }
+
+
+/* MISRAC 2012 deviation block end */
 
 void bootloader_USB_HOST_MSD_Tasks( void )
 {
@@ -186,7 +199,7 @@ void bootloader_USB_HOST_MSD_Tasks( void )
     {
         case BOOTLOADER_BUS_ENABLE:
         {
-            USB_HOST_BusEnable(0);
+            (void) USB_HOST_BusEnable(0);
 
             btlData.currentState = BOOTLOADER_WAIT_FOR_BUS_ENABLE;
 
@@ -195,11 +208,11 @@ void bootloader_USB_HOST_MSD_Tasks( void )
 
         case BOOTLOADER_WAIT_FOR_BUS_ENABLE:
         {
-            if(USB_HOST_BusIsEnabled(0) == USB_HOST_RESULT_TRUE)
+            if((uint32_t)USB_HOST_BusIsEnabled(0) == (uint32_t)USB_HOST_RESULT_TRUE)
             {
-                SYS_FS_EventHandlerSet(bootloader_SysFsEventHandler, (uintptr_t)NULL);
+                SYS_FS_EventHandlerSet(bootloader_SysFsEventHandler, 0U);
 
-                USB_HOST_EventHandlerSet(bootloader_USBHostEventHandler, 0);
+                (void) USB_HOST_EventHandlerSet(bootloader_USBHostEventHandler, 0);
 
                 btlData.currentState = BOOTLOADER_WAIT_FOR_DEVICE_ATTACH;
             }
@@ -220,7 +233,7 @@ void bootloader_USB_HOST_MSD_Tasks( void )
             if (SYS_FS_FileStat(APP_IMAGE_FILE_PATH, &btlData.fileStat) == SYS_FS_RES_SUCCESS)
             {
                 /* Check if the application binary file has any content */
-                if (btlData.fileStat.fsize <= 0)
+                if (btlData.fileStat.fsize <= 0U)
                 {
                     break;
                 }
@@ -243,7 +256,7 @@ void bootloader_USB_HOST_MSD_Tasks( void )
 
             btlData.currentState = BOOTLOADER_READ_FILE;
 
-            memset((void *)fileBuffer, 0xFF, PAGE_SIZE);
+            (void) memset((void *)fileBuffer, 0xFF, PAGE_SIZE);
 
             break;
         }
@@ -253,9 +266,9 @@ void bootloader_USB_HOST_MSD_Tasks( void )
             fileReadLength = SYS_FS_FileRead(btlData.fileHandle, (void *)fileBuffer, PAGE_SIZE);
 
             /* Reached End of File */
-            if (fileReadLength <= 0)
+            if (fileReadLength <= 0U)
             {
-                SYS_FS_FileClose(btlData.fileHandle);
+                (void) SYS_FS_FileClose(btlData.fileHandle);
 
                 bootloader_TriggerReset();
             }
@@ -271,7 +284,7 @@ void bootloader_USB_HOST_MSD_Tasks( void )
         {
             bootloader_NVMPageWrite(fileBuffer);
 
-            memset((void *)fileBuffer, 0xFF, PAGE_SIZE);
+            (void) memset((void *)fileBuffer, 0xFF, PAGE_SIZE);
 
             btlData.currentState = BOOTLOADER_READ_FILE;
 
@@ -280,7 +293,7 @@ void bootloader_USB_HOST_MSD_Tasks( void )
 
         case BOOTLOADER_DEVICE_DETACHED:
         {
-            SYS_FS_FileClose(btlData.fileHandle);
+            (void) SYS_FS_FileClose(btlData.fileHandle);
 
             btlData.currentState = BOOTLOADER_WAIT_FOR_DEVICE_ATTACH;
             break;
@@ -288,6 +301,7 @@ void bootloader_USB_HOST_MSD_Tasks( void )
 
         case BOOTLOADER_ERROR:
         default:
+            /* Do Nothing */
             break;
     }
 }
