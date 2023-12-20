@@ -57,11 +57,11 @@
 #include "usb/usb_chapter_9.h"
 #include "usb/usb_device.h"
 #include "bootloader/bootloader_usb_device_hid.h"
+#include "bsp/bsp.h"
 #include "system/int/sys_int.h"
 #include "osal/osal.h"
 #include "system/debug/sys_debug.h"
 #include "peripheral/nvm/plib_nvm.h"
-#include "bsp/bsp.h"
 #include "app.h"
 
 
@@ -73,6 +73,12 @@ extern "C" {
 
 #endif
 // DOM-IGNORE-END
+
+/* Device Information */
+#define DEVICE_NAME			 "PIC32MX570F512L"
+#define DEVICE_ARCH			 "MIPS"
+#define DEVICE_FAMILY		 "PIC32MX1290"
+#define DEVICE_SERIES		 "PIC32MX"
 
 /* CPU clock frequency */
 #define CPU_CLOCK_FREQUENCY 48000000
@@ -187,7 +193,7 @@ Remarks:
 
 typedef struct
 {
-	SYS_MODULE_OBJ  drvUSBFSObject;
+    SYS_MODULE_OBJ  drvUSBFSObject;
 
     SYS_MODULE_OBJ  usbDevObject0;
 
