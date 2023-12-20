@@ -46,7 +46,7 @@
 #include "peripheral/fcw/plib_fcw.h"
 #include "system/int/sys_int.h"
 
-#define arraySize 4
+#define NUM_ERASE_RECORDS  4U
 
 typedef struct {
     uint32_t startAddr;
@@ -54,7 +54,7 @@ typedef struct {
     bool blockEraseStatus;
 }ERASE_RECORD;
 
-ERASE_RECORD eraseBlocks[arraySize];
+static ERASE_RECORD eraseBlocks[NUM_ERASE_RECORDS];
 
 typedef struct
 {
@@ -88,29 +88,26 @@ bool bootloader_NvmIsBusy(void)
     return (FCW_IsBusy());
 }
 
-void bootloader_Block_init(void)
+void bootloader_EraseRecInit(void)
 {
+  uint32_t blockSize = FLASH_LENGTH / NUM_ERASE_RECORDS;
 
-  uint32_t blockSize = FLASH_LENGTH / arraySize;
-
-  for (int i = 0; i < arraySize; i++) {
+  for (uint32_t i = 0; i < NUM_ERASE_RECORDS; i++) {
         eraseBlocks[i].startAddr = APP_START_ADDRESS + (i * blockSize);
-        eraseBlocks[i].endAddr = eraseBlocks[i].startAddr + (blockSize-1);
+        eraseBlocks[i].endAddr = eraseBlocks[i].startAddr + (blockSize-1U);
         eraseBlocks[i].blockEraseStatus = false;
   }
-
 }
 
-void bootloader_AppEraseSize(uint32_t curAddress)
+void bootloader_BlockErase(uint32_t curAddress)
 {
-
-  for (int i = 0; i < arraySize; i++) {
-
+  for (uint32_t i = 0; i < NUM_ERASE_RECORDS; i++)
+    {
         if(curAddress >= eraseBlocks[i].startAddr && curAddress <= eraseBlocks[i].endAddr)
         {
             if(!eraseBlocks[i].blockEraseStatus)
             {
-                bootloader_NvmAppErase(eraseBlocks[i].endAddr);
+                bootloader_NvmAppErase(eraseBlocks[i].startAddr, eraseBlocks[i].endAddr);
                 eraseBlocks[i].blockEraseStatus = true;
                 break;
             }
@@ -118,9 +115,10 @@ void bootloader_AppEraseSize(uint32_t curAddress)
     }
 }
 
-void bootloader_NvmAppErase( uint32_t endAddr )
+
+void bootloader_NvmAppErase( uint32_t startAddr, uint32_t endAddr )
 {
-    uint32_t flashAddr = APP_START_ADDRESS;
+    uint32_t flashAddr = startAddr;
 
     while (flashAddr < endAddr)
     {
@@ -152,7 +150,7 @@ static void bootloader_AlignProgAddress(uint32_t curAddress)
     {
         nvm_data.buffIndex = 0U;
 
-bootloader_AppEraseSize(curAddress);
+bootloader_BlockErase(curAddress);
 
         bootloader_NVMPageWrite(nvm_data.progAddr, nvm_data.buff);
 
