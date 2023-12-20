@@ -76,6 +76,12 @@ extern "C" {
 #endif
 // DOM-IGNORE-END
 
+/* Device Information */
+#define DEVICE_NAME			 "ATSAML22N18A"
+#define DEVICE_ARCH			 "CORTEX-M0PLUS"
+#define DEVICE_FAMILY		 "SAML"
+#define DEVICE_SERIES		 "SAML22"
+
 /* CPU clock frequency */
 #define CPU_CLOCK_FREQUENCY 32000000
 
@@ -191,7 +197,7 @@ typedef struct
 {
     SYS_MODULE_OBJ  usbDevObject0;
 
-	SYS_MODULE_OBJ  drvUSBFSV1Object;
+    SYS_MODULE_OBJ  drvUSBFSV1Object;
 
 
 } SYSTEM_OBJECTS;
