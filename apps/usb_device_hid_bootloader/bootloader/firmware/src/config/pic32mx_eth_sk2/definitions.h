@@ -48,20 +48,20 @@
 #include <stdint.h>
 #include <stddef.h>
 #include <stdbool.h>
+#include "bsp/bsp.h"
 #include "usb/usb_device_hid.h"
 #include "usb/usb_hid.h"
-#include "bsp/bsp.h"
 #include "peripheral/clk/plib_clk.h"
 #include "peripheral/gpio/plib_gpio.h"
 #include "peripheral/evic/plib_evic.h"
-#include "driver/usb/usbfs/drv_usbfs.h"
 #include "usb/usb_chapter_9.h"
 #include "usb/usb_device.h"
+#include "driver/usb/usbfs/drv_usbfs.h"
 #include "bootloader/bootloader_usb_device_hid.h"
+#include "peripheral/nvm/plib_nvm.h"
 #include "system/int/sys_int.h"
 #include "osal/osal.h"
 #include "system/debug/sys_debug.h"
-#include "peripheral/nvm/plib_nvm.h"
 #include "app.h"
 
 
@@ -73,6 +73,12 @@ extern "C" {
 
 #endif
 // DOM-IGNORE-END
+
+/* Device Information */
+#define DEVICE_NAME			 "PIC32MX795F512L"
+#define DEVICE_ARCH			 "MIPS"
+#define DEVICE_FAMILY		 "PIC32MX1156"
+#define DEVICE_SERIES		 "PIC32MX"
 
 /* CPU clock frequency */
 #define CPU_CLOCK_FREQUENCY 80000000
@@ -187,9 +193,9 @@ Remarks:
 
 typedef struct
 {
-	SYS_MODULE_OBJ  drvUSBFSObject;
-
     SYS_MODULE_OBJ  usbDevObject0;
+
+    SYS_MODULE_OBJ  drvUSBFSObject;
 
 
 } SYSTEM_OBJECTS;
