@@ -91,6 +91,10 @@ static void GCLK0_Initialize(void)
     }
 }
 
+
+
+
+
 void CLOCK_Initialize (void)
 {
     /* Function to Initialize the Oscillators */
@@ -106,4 +110,6 @@ void CLOCK_Initialize (void)
 
     /*Disable RC oscillator*/
     SYSCTRL_REGS->SYSCTRL_OSC8M = 0x0U;
+
+
 }
