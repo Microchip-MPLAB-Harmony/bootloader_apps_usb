@@ -51,8 +51,9 @@
 // *****************************************************************************
 
 /* Bootloader Major and Minor version sent for a Read Version command (MAJOR.MINOR)*/
-#define BTL_MAJOR_VERSION       3
-#define BTL_MINOR_VERSION       6
+#define BTL_MAJOR_VERSION       3U
+#define BTL_MINOR_VERSION       7U
+#define ASM_VECTOR              asm("bx %0"::"r" (reset_vector))
 
 // *****************************************************************************
 // *****************************************************************************
@@ -60,13 +61,11 @@
 // *****************************************************************************
 // *****************************************************************************
 
-
 // *****************************************************************************
 // *****************************************************************************
 // Section: Bootloader Local Functions
 // *****************************************************************************
 // *****************************************************************************
-
 
 // *****************************************************************************
 // *****************************************************************************
@@ -74,7 +73,8 @@
 // *****************************************************************************
 // *****************************************************************************
 
-
+/* MISRA C-2012 Rule 8.6 and 5.8 deviated below. Deviation record ID -
+   H3_MISRAC_2012_R_8_6_DR_1, H3_MISRAC_2012_R_5_8_DR_1 */
 
 void __WEAK SYS_DeInitialize( void *data )
 {
@@ -84,11 +84,14 @@ void __WEAK SYS_DeInitialize( void *data )
 uint16_t __WEAK bootloader_GetVersion( void )
 {
     /* Function can be overriden with custom implementation */
-    uint16_t btlVersion = (((BTL_MAJOR_VERSION & 0xFF) << 8) | (BTL_MINOR_VERSION & 0xFF));
+    uint16_t btlVersion = (((BTL_MAJOR_VERSION & (uint16_t)0xFFU) << 8) | (BTL_MINOR_VERSION & (uint16_t)0xFFU));
 
     return btlVersion;
 }
 
+
+/* MISRA C-2012 Rule 10.1, 10.4, 11.1, 11.6 deviated below. Deviation record ID -
+   H3_MISRAC_2012_R_10_1_DR_1, H3_MISRAC_2012_R_10_4_DR_1, H3_MISRAC_2012_R_11_1_DR_1 & H3_MISRAC_2012_R_11_6_DR_1 */
 
 
 /* Function to Generate CRC by reading the firmware programmed into internal flash */
@@ -96,18 +99,18 @@ uint32_t bootloader_CRCGenerate(uint32_t start_addr, uint32_t size)
 {
     uint32_t   i, j, value;
     uint32_t   crc_tab[256];
-    uint32_t   crc = 0xffffffff;
+    uint32_t   crc = 0xffffffffU;
     uint8_t    data;
 
-    for (i = 0; i < 256; i++)
+    for (i = 0; i < 256U; i++)
     {
         value = i;
 
-        for (j = 0; j < 8; j++)
+        for (j = 0; j < 8U; j++)
         {
-            if (value & 1)
+            if ((value & 1U) != 0U)
             {
-                value = (value >> 1) ^ 0xEDB88320;
+                value = (value >> 1) ^ 0xEDB88320U;
             }
             else
             {
@@ -121,7 +124,7 @@ uint32_t bootloader_CRCGenerate(uint32_t start_addr, uint32_t size)
     {
         data = *(uint8_t *)(start_addr + i);
 
-        crc = crc_tab[(crc ^ data) & 0xff] ^ (crc >> 8);
+        crc = crc_tab[(crc ^ data) & 0xffU] ^ (crc >> 8);
     }
 
     return crc;
@@ -141,3 +144,5 @@ void bootloader_SwapAndReset( void )
     /* Swap bank and Reset */
     NVMCTRL_BankSwap();
 }
+
+/* MISRAC 2012 deviation block end */

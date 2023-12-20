@@ -1,22 +1,19 @@
 /*******************************************************************************
- Debug Console Source file
-
-  Company:
-    Microchip Technology Inc.
+  Bootloader Interrupt Header File
 
   File Name:
-    xc32_monitor.c
+    bootloader_interrupt.h
 
   Summary:
-    debug console Source File
+    This file contains function prototype declarations.
 
   Description:
-    None
+    This file contains function prototype declarations.
+ *******************************************************************************/
 
-*******************************************************************************/
-
+// DOM-IGNORE-BEGIN
 /*******************************************************************************
-* Copyright (C) 2018 Microchip Technology Inc. and its subsidiaries.
+* Copyright (C) 2023 Microchip Technology Inc. and its subsidiaries.
 *
 * Subject to your compliance with these terms, you may use Microchip software
 * and any derivatives exclusively with Microchip products. It is your
@@ -36,38 +33,17 @@
 * FULLEST EXTENT ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN
 * ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
-*******************************************************************************/
-#include <stddef.h>
-#include "definitions.h"
+ *******************************************************************************/
+// DOM-IGNORE-END
 
-extern int read(int handle, void *buffer, unsigned int len);
-extern int write(int handle, void * buffer, size_t count);
+// *****************************************************************************
+// *****************************************************************************
+// Section: Include Files
+// *****************************************************************************
+// *****************************************************************************
+
+#ifndef BOOTLOADER_INTERRUPT_H
+#define BOOTLOADER_INTERRUPT_H
 
 
-int read(int handle, void *buffer, unsigned int len)
-{
-    int nChars = 0;
-    bool success = false;
-    if ((handle == 0)  && (len > 0U))
-    {
-        do
-        {
-            success = SERCOM2_USART_Read(buffer, 1);
-        }while( !success);
-        nChars = 1;
-    }
-    return nChars;
-}
-
-int write(int handle, void * buffer, size_t count)
-{
-   bool success = false;
-   if (handle == 1)
-   {
-       do
-       {
-           success = SERCOM2_USART_Write(buffer, count);
-       }while( !success);
-   }
-   return (int)count;
-}
+#endif      //BOOTLOADER_INTERRUPT_H
