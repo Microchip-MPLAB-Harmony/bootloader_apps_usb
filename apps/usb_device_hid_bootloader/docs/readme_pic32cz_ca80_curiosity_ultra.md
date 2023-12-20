@@ -21,15 +21,15 @@ To build the application, refer to the following table and open the project usin
 
 | Project Name      | Description                                    |
 | ----------------- | ---------------------------------------------- |
-| bootloader/firmware/pic32cz_ca80_curiosity_ultra.X    | MPLABX Project for [PIC32CX-BZ2 and PIC32CZ CA80 Curiosity Ultra Development Board](https://www.microchip.com/en-us/development-tool/ea61x20a)|
+| bootloader/firmware/pic32cz_ca80_curiosity_ultra.X    | MPLABX Project for [PIC32CZ CA80 Curiosity Ultra Development Board](https://www.microchip.com/en-us/development-tool/ea61x20a)|
 
 ### Test Application
 
 | Project Name      | Description                                    |
 | ----------------- | ---------------------------------------------- |
-| test_app/firmware/pic32cz_ca80_curiosity_ultra.X    | MPLABX Project for [PIC32CX-BZ2 and PIC32CZ CA80 Curiosity Ultra Development Board](https://www.microchip.com/en-us/development-tool/ea61x20a)|
+| test_app/firmware/pic32cz_ca80_curiosity_ultra.X    | MPLABX Project for [PIC32CZ CA80 Curiosity Ultra Development Board](https://www.microchip.com/en-us/development-tool/ea61x20a)|
 
-## Setting up [PIC32CX-BZ2 and PIC32CZ CA80 Curiosity Ultra Development Board](https://www.microchip.com/en-us/development-tool/ea61x20a)
+## Setting up [PIC32CZ CA80 Curiosity Ultra Development Board](https://www.microchip.com/en-us/development-tool/ea61x20a)
 
 - Connect the Debug USB port on the board to the computer using a micro USB cable
 - Use TARGET USB connector on the board to connect the USB Device to the USB Host PC

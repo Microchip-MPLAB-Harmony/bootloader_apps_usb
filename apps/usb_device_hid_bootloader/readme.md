@@ -43,6 +43,7 @@ The following table provides links to documentation on how to build and run USB 
 
 | Development Kit |
 |:---------|
+|[PIC32CZ_CA80 Curiosity Ultra](docs/readme_pic32cz_ca80_curiosity_ultra.md) |
 |[PIC32MK GP Development Kit](docs/readme_pic32mk_gp_db.md) |
 |[PIC32MK MCM Curiosity Pro Development Board](docs/readme_pic32mk_mcm_curiosity_pro.md) |
 |[PIC32MM USB Curiosity board](docs/readme_pic32mm_usb_curiosity.md) |
