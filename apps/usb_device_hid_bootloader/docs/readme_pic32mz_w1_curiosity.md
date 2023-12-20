@@ -45,7 +45,7 @@ To build the application, refer to the following table and open the project usin
 4. Build and program the application using the IDE
 
 5. Once programming is completed and bootloader starts running
-    - **LED1** will be Turned On
+    - **LED_RED** will be Turned On
     -  HID Custom device with product ID **3C** will be enumerated on Host PC
 
 6. Open the Terminal application (Ex.:Tera Term) on the computer to get test application messages through UART once bootloaded
@@ -85,7 +85,7 @@ To build the application, refer to the following table and open the project usin
 
     ![hostSuccess](../../docs/images/unified_host_success.png)
 
-12. If above step is successful then **LED3** should start blinking and you should see below output on the console
+12. If above step is successful then **LED_RED** should start blinking and you should see below output on the console
 
     ![output](./images/btl_usb_device_hid_test_app_console_success.png)
 
