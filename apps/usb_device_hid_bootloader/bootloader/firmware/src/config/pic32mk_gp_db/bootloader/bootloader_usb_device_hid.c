@@ -163,7 +163,7 @@ static uint32_t bootloader_CalculateCrc(uint8_t *data, uint32_t len)
     return ((uint32_t)crc & 0xFFFFU);
 }
 
-/* MISRA C-2012 Rule 16.1, 16.3 deviated below. Deviation record ID -  
+/* MISRA C-2012 Rule 16.1, 16.3 deviated below. Deviation record ID -
    H3_MISRAC_2012_R_16_1_DR_1 & H3_MISRAC_2012_R_16_3_DR_1*/
 
 static void bootloader_BufferEventHandler
@@ -257,7 +257,8 @@ static void bootloader_ProcessBuffer( BOOTLOADER_DATA *handle )
     {
         case (uint8_t)READ_BOOT_INFO:
         {
-            btlVersion = bootloader_GetVersion();
+            btlVersion = bootloader_GetVersion(); 
+
 
             /* Major Number */
             dataBuff.buffers.inputBuff[1] = (uint8_t)(btlVersion >> 8);
@@ -272,7 +273,7 @@ static void bootloader_ProcessBuffer( BOOTLOADER_DATA *handle )
 
         case (uint8_t)ERASE_FLASH:
         {
-            bootloader_NvmAppErase();
+            bootloader_NvmAppErase(APP_START_ADDRESS, FLASH_END_ADDRESS);
             handle->currentState = BOOTLOADER_SEND_RESPONSE;
             handle->buffSize = 1;
             break;
@@ -400,7 +401,7 @@ void bootloader_USB_DEVICE_HID_Tasks( void )
                 crc = (uint16_t)bootloader_CalculateCrc(dataBuff.buffers.inputBuff, btlData.buffSize);
 
                 dataBuff.buffers.inputBuff[btlData.buffSize] = (uint8_t)crc;
-                btlData.buffSize++;                
+                btlData.buffSize++;
 
                 dataBuff.buffers.inputBuff[btlData.buffSize] = (uint8_t)(crc>>8);
                 btlData.buffSize++;
