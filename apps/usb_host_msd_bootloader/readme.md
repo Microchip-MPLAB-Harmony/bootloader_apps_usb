@@ -44,6 +44,7 @@ The following table provides links to documentation on how to build and run USB 
 | Development Kit |
 |:---------|
 |[PIC32MK GP Development Kit](docs/readme_pic32mk_gp_db.md) |
+|[PIC32MK MCM Curiosity Pro Development Board](docs/readme_pic32mk_mcm_curiosity_pro.md) 
 |[PIC32MX Ethernet Starter Kit II](docs/readme_pic32mx_eth_sk2.md) |
 |[PIC32MX Curiosity Development Board](docs/readme_pic32mx470_curiosity.md) |
 |[PIC32MZ Embedded Graphics with Stacked DRAM (DA) Starter Kit (Crypto)](docs/readme_pic32mz_das_sk.md) |
