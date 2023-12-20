@@ -69,11 +69,13 @@ typedef enum
 
 HEX_RECORD_STATUS bootloader_NvmProgramHexRecord(uint8_t* HexRecord, uint32_t totalLen);
 
-void bootloader_NvmAppErase(void);
+void bootloader_NvmAppErase(uint32_t startAddr, uint32_t endAddr);
 
 void bootloader_NVMPageWrite(uint32_t address, uint8_t* data);
 
 bool bootloader_NvmIsBusy(void);
+
+
 
 #ifdef  __cplusplus
 }
