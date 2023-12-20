@@ -46,6 +46,7 @@
 #include "peripheral/nvm/plib_nvm.h"
 #include "system/int/sys_int.h"
 
+
 typedef struct
 {
     uint8_t RecDataLen;
@@ -79,11 +80,12 @@ bool bootloader_NvmIsBusy(void)
     return (NVM_IsBusy());
 }
 
-void bootloader_NvmAppErase( void )
-{
-    uint32_t flashAddr = APP_START_ADDRESS;
 
-    while (flashAddr < FLASH_END_ADDRESS)
+void bootloader_NvmAppErase( uint32_t startAddr, uint32_t endAddr )
+{
+    uint32_t flashAddr = startAddr;
+
+    while (flashAddr < endAddr)
     {
         (void)NVM_PageErase(flashAddr);
 
@@ -112,6 +114,7 @@ static void bootloader_AlignProgAddress(uint32_t curAddress)
     if (nvm_data.buffIndex != 0U)
     {
         nvm_data.buffIndex = 0U;
+
 
         bootloader_NVMPageWrite(nvm_data.progAddr, nvm_data.buff);
 

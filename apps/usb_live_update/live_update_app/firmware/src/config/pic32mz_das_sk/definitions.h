@@ -55,13 +55,13 @@
 #include "usb/usb_chapter_9.h"
 #include "usb/usb_device.h"
 #include "bootloader/bootloader_usb_device_hid.h"
-#include "peripheral/nvm/plib_nvm.h"
 #include "system/time/sys_time.h"
-#include "driver/usb/usbhs/drv_usbhs.h"
+#include "peripheral/nvm/plib_nvm.h"
 #include "peripheral/coretimer/plib_coretimer.h"
-#include "peripheral/uart/plib_uart2.h"
+#include "driver/usb/usbhs/drv_usbhs.h"
 #include "usb/usb_device_hid.h"
 #include "usb/usb_hid.h"
+#include "peripheral/uart/plib_uart2.h"
 #include "bsp/bsp.h"
 #include "system/int/sys_int.h"
 #include "osal/osal.h"
@@ -200,7 +200,7 @@ typedef struct
     SYS_MODULE_OBJ  usbDevObject0;
 
     SYS_MODULE_OBJ  sysTime;
-	SYS_MODULE_OBJ  drvUSBHSObject;
+    SYS_MODULE_OBJ  drvUSBHSObject;
 
 
 } SYSTEM_OBJECTS;

@@ -125,7 +125,7 @@ MEMORY
      * serial number used by switcher in boot flash memory to decide which program flash bank to
      * run.
     */
-    kseg0_program_mem     (rx)  : ORIGIN = 0x9D000000 + 0x1200, LENGTH = 1048576 - 0x1200 - 2048
+    kseg0_program_mem     (rx)  : ORIGIN = 0x9D000000 + 0x1200, LENGTH = 1048576 - 0x1200 - (16384)
 
     kseg0_data_mem       (w!x)  : ORIGIN = 0x80000000, LENGTH = 0xa0000
     sfrs                        : ORIGIN = 0xBF800000, LENGTH = 0x100000
