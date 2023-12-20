@@ -59,11 +59,11 @@
 #include "usb/usb_device.h"
 #include "bsp/bsp.h"
 #include "bootloader/bootloader_usb_device_hid.h"
+#include "peripheral/nvm/plib_nvm.h"
+#include "system/time/sys_time.h"
 #include "system/int/sys_int.h"
 #include "osal/osal.h"
 #include "system/debug/sys_debug.h"
-#include "peripheral/nvm/plib_nvm.h"
-#include "system/time/sys_time.h"
 #include "app.h"
 
 
@@ -75,6 +75,12 @@ extern "C" {
 
 #endif
 // DOM-IGNORE-END
+
+/* Device Information */
+#define DEVICE_NAME			 "PIC32MZ2048EFH144"
+#define DEVICE_ARCH			 "MIPS"
+#define DEVICE_FAMILY		 "PIC32MZEF"
+#define DEVICE_SERIES		 "PIC32MZ"
 
 /* CPU clock frequency */
 #define CPU_CLOCK_FREQUENCY 200000000
@@ -189,7 +195,7 @@ Remarks:
 
 typedef struct
 {
-	SYS_MODULE_OBJ  drvUSBHSObject;
+    SYS_MODULE_OBJ  drvUSBHSObject;
 
     SYS_MODULE_OBJ  usbDevObject0;
 
