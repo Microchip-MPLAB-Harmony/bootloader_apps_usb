@@ -48,7 +48,6 @@
 #include "device.h"
 
 
-
 // ****************************************************************************
 // ****************************************************************************
 // Section: Configuration Bits
@@ -66,6 +65,11 @@
 // Section: Driver Initialization Data
 // *****************************************************************************
 // *****************************************************************************
+/* Following MISRA-C rules are deviated in the below code block */
+/* MISRA C-2012 Rule 7.2 */
+/* MISRA C-2012 Rule 11.1 */
+/* MISRA C-2012 Rule 11.3 */
+/* MISRA C-2012 Rule 11.8 */
 
 
 // *****************************************************************************
@@ -87,38 +91,38 @@ SYSTEM_OBJECTS sysObj;
  
 /*  When designing a Self-powered USB Device, the application should make sure
     that USB_DEVICE_Attach() function is called only when VBUS is actively powered.
-	Therefore, the firmware needs some means to detect when the Host is powering 
-	the VBUS. A 5V tolerant I/O pin can be connected to VBUS (through a resistor)
-	and can be used to detect when VBUS is high or low. The application can specify
-	a VBUS Detect function through the USB Driver Initialize data structure. 
-	The USB device stack will periodically call this function. If the VBUS is 
-	detected, the USB_DEVICE_EVENT_POWER_DETECTED event is generated. If the VBUS 
-	is removed (i.e., the device is physically detached from Host), the USB stack 
-	will generate the event USB_DEVICE_EVENT_POWER_REMOVED. The application should 
-	call USB_DEVICE_Detach() when VBUS is removed. 
+    Therefore, the firmware needs some means to detect when the Host is powering 
+    the VBUS. A 5V tolerant I/O pin can be connected to VBUS (through a resistor)
+    and can be used to detect when VBUS is high or low. The application can specify
+    a VBUS Detect function through the USB Driver Initialize data structure. 
+    The USB device stack will periodically call this function. If the VBUS is 
+    detected, the USB_DEVICE_EVENT_POWER_DETECTED event is generated. If the VBUS 
+    is removed (i.e., the device is physically detached from Host), the USB stack 
+    will generate the event USB_DEVICE_EVENT_POWER_REMOVED. The application should 
+    call USB_DEVICE_Detach() when VBUS is removed. 
     
     The following are the steps to generate the VBUS_SENSE Function through MHC     
         1) Navigate to MHC->Tools->Pin Configuration and Configure the pin used 
-		   as VBUS_SENSE. Set this pin Function as "GPIO" and set as "Input". 
-		   Provide a custom name to the pin.
+           as VBUS_SENSE. Set this pin Function as "GPIO" and set as "Input". 
+           Provide a custom name to the pin.
         2) Select the USB Driver Component in MHC Project Graph and enable the  
-		   "Enable VBUS Sense" Check-box.     
+           "Enable VBUS Sense" Check-box.     
         3) Specify the custom name of the VBUS SENSE pin in the "VBUS SENSE Pin Name" box.  
 */
-	  
-	
+      
+    
 static DRV_USB_VBUS_LEVEL DRV_USBHSV1_VBUS_Comparator(void)
 {
     DRV_USB_VBUS_LEVEL retVal = DRV_USB_VBUS_LEVEL_INVALID;
-    if(true == USB_VBUS_SENSE_Get())
+    if(1U == USB_VBUS_SENSE_Get())
     {
         retVal = DRV_USB_VBUS_LEVEL_VALID;
     }
-	return (retVal);
+    return (retVal);
 
 }
 
-const DRV_USBHSV1_INIT drvUSBInit =
+static const DRV_USBHSV1_INIT drvUSBInit =
 {
     /* Interrupt Source for USB module */
     .interruptSource = USBHS_IRQn,
@@ -134,7 +138,7 @@ const DRV_USBHSV1_INIT drvUSBInit =
 
     /* Identifies peripheral (PLIB-level) ID */
     .usbID = USBHS_REGS,
-	
+    
     /* Function to check for VBUS */
     .vbusComparator = DRV_USBHSV1_VBUS_Comparator
 };
@@ -156,7 +160,7 @@ const DRV_USBHSV1_INIT drvUSBInit =
 // *****************************************************************************
 // *****************************************************************************
 
-
+/* MISRAC 2012 deviation block end */
 
 /*******************************************************************************
   Function:
@@ -170,6 +174,8 @@ const DRV_USBHSV1_INIT drvUSBInit =
 
 void SYS_Initialize ( void* data )
 {
+    /* MISRAC 2012 deviation block start */
+    /* MISRA C-2012 Rule 2.2 deviated in this file.  Deviation record ID -  H3_MISRAC_2012_R_2_2_DR_1 */
     EFC_Initialize();
 
     CLOCK_Initialize();
@@ -189,10 +195,14 @@ void SYS_Initialize ( void* data )
 	WDT_REGS->WDT_MR = WDT_MR_WDDIS_Msk; 		// Disable WDT 
 
 
+    /* MISRAC 2012 deviation block start */
+    /* Following MISRA-C rules deviated in this block  */
+    /* MISRA C-2012 Rule 11.3 - Deviation record ID - H3_MISRAC_2012_R_11_3_DR_1 */
+    /* MISRA C-2012 Rule 11.8 - Deviation record ID - H3_MISRAC_2012_R_11_8_DR_1 */
 
 
-	/* Initialize USB Driver */ 
-    sysObj.drvUSBHSV1Object = DRV_USBHSV1_Initialize(DRV_USBHSV1_INDEX_0, (SYS_MODULE_INIT *) &drvUSBInit);	
+    /* Initialize USB Driver */ 
+    sysObj.drvUSBHSV1Object = DRV_USBHSV1_Initialize(DRV_USBHSV1_INDEX_0, (SYS_MODULE_INIT *) &drvUSBInit);    
 
 
     /* Initialize the USB device layer */
@@ -200,9 +210,11 @@ void SYS_Initialize ( void* data )
 
 
 
+    /* MISRAC 2012 deviation block end */
     APP_Initialize();
 
 
     NVIC_Initialize();
 
+    /* MISRAC 2012 deviation block end */
 }
