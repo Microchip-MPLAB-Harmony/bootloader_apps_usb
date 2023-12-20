@@ -91,24 +91,25 @@ extern "C" {
 
 /* File System Service Configuration */
 
-#define SYS_FS_MEDIA_NUMBER               1
-#define SYS_FS_VOLUME_NUMBER              1
+#define SYS_FS_MEDIA_NUMBER               (1U)
+#define SYS_FS_VOLUME_NUMBER              (1U)
 
 #define SYS_FS_AUTOMOUNT_ENABLE           true
-#define SYS_FS_CLIENT_NUMBER              1
-#define SYS_FS_MAX_FILES                  1
-#define SYS_FS_MAX_FILE_SYSTEM_TYPE       1
-#define SYS_FS_MEDIA_MAX_BLOCK_SIZE       512
-#define SYS_FS_MEDIA_MANAGER_BUFFER_SIZE  2048
-#define SYS_FS_USE_LFN                    1
-#define SYS_FS_FILE_NAME_LEN              255
-#define SYS_FS_CWD_STRING_LEN             1024
+#define SYS_FS_CLIENT_NUMBER              1U
+#define SYS_FS_MAX_FILES                  (1U)
+#define SYS_FS_MAX_FILE_SYSTEM_TYPE       (1U)
+#define SYS_FS_MEDIA_MAX_BLOCK_SIZE       (512U)
+#define SYS_FS_MEDIA_MANAGER_BUFFER_SIZE  (2048U)
+#define SYS_FS_USE_LFN                    (1)
+#define SYS_FS_FILE_NAME_LEN              (255U)
+#define SYS_FS_CWD_STRING_LEN             (1024)
 
 
-#define SYS_FS_FAT_VERSION                "v0.14b"
+#define SYS_FS_FAT_VERSION                "v0.15"
 #define SYS_FS_FAT_READONLY               true
 #define SYS_FS_FAT_CODE_PAGE              437
 #define SYS_FS_FAT_MAX_SS                 SYS_FS_MEDIA_MAX_BLOCK_SIZE
+
 
 
 
@@ -143,7 +144,7 @@ extern "C" {
 
 
 /* Number Full Speed USB Driver instances */ 
-#define DRV_USBFS_INSTANCES_NUMBER                       1
+#define DRV_USBFS_INSTANCES_NUMBER                       1U
 
 /* Interrupt mode enabled */
 #define DRV_USBFS_INTERRUPT_MODE                          true
@@ -151,7 +152,7 @@ extern "C" {
 /* Disable Device Support */
 #define DRV_USBFS_DEVICE_SUPPORT                          false
 
-#define DRV_USBFS_ENDPOINTS_NUMBER                        1
+#define DRV_USBFS_ENDPOINTS_NUMBER                        1U
 
 /* Enable Host Support */
 #define DRV_USBFS_HOST_SUPPORT                            true
@@ -163,10 +164,10 @@ extern "C" {
 #define DRV_USBFS_HOST_PIPES_NUMBER                       10  
 
 /* Attach Debounce duration in milli Seconds */ 
-#define DRV_USBFS_HOST_ATTACH_DEBOUNCE_DURATION           500
+#define DRV_USBFS_HOST_ATTACH_DEBOUNCE_DURATION           500U
 
 /* Reset duration in milli Seconds */ 
-#define DRV_USBFS_HOST_RESET_DURATION                     100
+#define DRV_USBFS_HOST_RESET_DURATION                     100U
 
 /* Alignment for buffers that are submitted to USB Driver*/ 
 #define USB_ALIGN  CACHE_ALIGN
@@ -177,31 +178,23 @@ extern "C" {
 // *****************************************************************************
 // **************************************************************************
 
-
-
 /* Total number of devices to be supported */
 #define USB_HOST_DEVICES_NUMBER                             1 
 
-/* Size of Endpoint 0 buffer */
-#define USB_DEVICE_EP0_BUFFER_SIZE                          64
-
-/* Target peripheral list entries */
+/* Number of Target peripheral list (TPL) entries. */
 #define  USB_HOST_TPL_ENTRIES                               1 
 
-/* Maximum number of configurations supported per device */
+/* Maximum number of interfaces per device. */
 #define USB_HOST_DEVICE_INTERFACES_NUMBER                   5  
 
-#define USB_HOST_CONTROLLERS_NUMBER            				1  
+/* Number of USB Controllers. */
+#define USB_HOST_CONTROLLERS_NUMBER                         1  
 
-
-
+/* The maximum number of simultaneous transfers that can be submitted. */ 
 #define USB_HOST_TRANSFERS_NUMBER                           10
 
-/* Provides Host pipes number */
+/* The maximum number of pipes that the USB Host layer can utilize. */
 #define USB_HOST_PIPES_NUMBER                               10
-
-/* Number of Host Layer Clients */
-#define USB_HOST_CLIENTS_NUMBER                             1   
 
 
 
