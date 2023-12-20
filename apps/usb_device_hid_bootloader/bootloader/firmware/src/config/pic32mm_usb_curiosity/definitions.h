@@ -53,15 +53,15 @@
 #include "peripheral/clk/plib_clk.h"
 #include "peripheral/gpio/plib_gpio.h"
 #include "peripheral/evic/plib_evic.h"
-#include "driver/usb/usbfs/drv_usbfs.h"
 #include "usb/usb_chapter_9.h"
 #include "usb/usb_device.h"
+#include "driver/usb/usbfs/drv_usbfs.h"
 #include "bsp/bsp.h"
 #include "bootloader/bootloader_usb_device_hid.h"
-#include "peripheral/nvm/plib_nvm.h"
 #include "system/int/sys_int.h"
 #include "osal/osal.h"
 #include "system/debug/sys_debug.h"
+#include "peripheral/nvm/plib_nvm.h"
 #include "app.h"
 
 
@@ -73,6 +73,12 @@ extern "C" {
 
 #endif
 // DOM-IGNORE-END
+
+/* Device Information */
+#define DEVICE_NAME			 "PIC32MM0256GPM064"
+#define DEVICE_ARCH			 "MIPS"
+#define DEVICE_FAMILY		 "PIC32MM1387"
+#define DEVICE_SERIES		 "PIC32MM"
 
 /* CPU clock frequency */
 #define CPU_CLOCK_FREQUENCY 24000000
@@ -187,9 +193,9 @@ Remarks:
 
 typedef struct
 {
-	SYS_MODULE_OBJ  drvUSBFSObject;
-
     SYS_MODULE_OBJ  usbDevObject0;
+
+    SYS_MODULE_OBJ  drvUSBFSObject;
 
 
 } SYSTEM_OBJECTS;
