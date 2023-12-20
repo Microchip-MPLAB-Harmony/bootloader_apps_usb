@@ -35,8 +35,8 @@
 *******************************************************************************/
 // DOM-IGNORE-END
 
-#ifndef _BOOTLOADER_NVM_INTERFACE_H
-#define _BOOTLOADER_NVM_INTERFACE_H
+#ifndef BOOTLOADER_NVM_INTERFACE_H
+#define BOOTLOADER_NVM_INTERFACE_H
 
 #ifdef __cplusplus
     extern "C" {
@@ -69,14 +69,16 @@ typedef enum
 
 HEX_RECORD_STATUS bootloader_NvmProgramHexRecord(uint8_t* HexRecord, uint32_t totalLen);
 
-void bootloader_NvmAppErase(void);
+void bootloader_NvmAppErase(uint32_t startAddr, uint32_t endAddr);
 
-void bootloader_NvmPageWrite(uint32_t address, uint32_t* data);
+void bootloader_NVMPageWrite(uint32_t address, uint8_t* data);
 
 bool bootloader_NvmIsBusy(void);
+
+
 
 #ifdef  __cplusplus
 }
 #endif
 
-#endif //_BOOTLOADER_NVM_INTERFACE_H
+#endif //BOOTLOADER_NVM_INTERFACE_H
