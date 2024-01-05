@@ -2,12 +2,12 @@
 
 manifest_file_version: 1.0.0
 project: usb_device_hid_bootloader_test_app_pic32mm_usb_curiosity
-creation_date: 2023-12-22T10:48:26.210+05:30[Asia/Calcutta]
+creation_date: 2024-01-05T18:38:33.727+05:30[Asia/Calcutta]
 operating_system: Windows 10
 mcc_mode: IDE
 mcc_mode_version: v6.15
 device_name: PIC32MM0256GPM064
-compiler: XC32 4.30
+compiler: XC32 4.35
 mcc_version: 5.4.1
 mcc_core_version: 5.6.1
 content_manager_version: 4.3.1
@@ -15,6 +15,9 @@ is_mcc_offline: false
 is_using_prerelease_versions: false
 mcc_content_registries: https://registry.npmjs.org/
 device_library: {library_class: com.microchip.mcc.harmony.Harmony3Library, name: Harmony
-    V3, version: 1.1.0}
+    V3, version: 1.4.1}
 packs: {name: PIC32MM-GPM-0XX_DFP, version: 1.3.50}
-modules: []
+modules:
+- {name: bsp, type: HARMONY, version: v3.17.0}
+- {name: csp, type: HARMONY, version: v3.18.2}
+- {name: core, type: HARMONY, version: v3.13.2}
