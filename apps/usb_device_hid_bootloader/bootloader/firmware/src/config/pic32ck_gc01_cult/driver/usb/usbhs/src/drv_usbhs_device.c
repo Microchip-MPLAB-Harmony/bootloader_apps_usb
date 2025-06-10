@@ -348,7 +348,7 @@ uint16_t F_DRV_USBHS_ProcessIRPFIFO
     DRV_USBHS_DEVICE_ENDPOINT_OBJ * endpointObj,
     uint8_t endpoint,
     uint8_t direction,
-    USB_DEVICE_IRP_LOCAL * irp,
+    DRV_USBHS_DEVICE_IRP_LOCAL * irp,
     bool * pisDMAUsed,
     bool tryDma
 )
@@ -472,7 +472,7 @@ uint16_t F_DRV_USBHS_ProcessIRPFIFO
     return (uint16_t)(count);
 }
 
-/* MISRA C-2012 Rule 11.7 deviated:10 Deviation record ID -  H3_MISRAC_2012_R_11_7_DR_1 */
+
 
 
 void F_DRV_USBHS_DEVICE_Initialize
@@ -636,7 +636,7 @@ USB_SPEED DRV_USBHS_DEVICE_CurrentSpeedGet
 }
 
 // *****************************************************************************
-/* MISRA C-2012 Rule 5.1 deviated:2 Deviation record ID -  H3_MISRAC_2012_R_5_1_DR_1 */
+/* MISRA C-2012 Rule 5.1 deviated:2 Deviation record ID -  H3_USB_MISRAC_2012_R_5_1_DR_1 */
 /* Function:
       void DRV_USBHS_DEVICE_RemoteWakeupStart(DRV_HANDLE handle)
 
@@ -804,7 +804,6 @@ void F_DRV_USBHS_DEVICE_AttachStateMachine
 } 
 
 
-/* MISRAC 2012 deviation block end */
 // *****************************************************************************
 /* Function:
     void DRV_USBHS_DEVICE_Detach(DRV_HANDLE handle);
@@ -1022,7 +1021,7 @@ uint16_t DRV_USBHS_DEVICE_SOFNumberGet
 }
 
 // ****************************************************************************
-/* MISRA C-2012 Rule 10.4 False Positive:14 Deviation record ID -  H3_MISRAC_2012_R_10_4_DR_1 */
+/* MISRA C-2012 Rule 10.4 False Positive:14 Deviation record ID -  H3_USB_MISRAC_2012_R_10_4_DR_1 */
 /* Function:
     USB_ERROR DRV_USBHS_DEVICE_EndpointEnable
     (
@@ -1567,7 +1566,7 @@ bool DRV_USBHS_DEVICE_EndpointIsStalled
 }
 
 // ***********************************************************************************
-/* MISRA C-2012 Rule 11.3 deviated:23 Deviation record ID -  H3_MISRAC_2012_R_11_3_DR_1 */
+/* MISRA C-2012 Rule 11.3 deviated:23 Deviation record ID -  H3_USB_MISRAC_2012_R_11_3_DR_1 */
 
 /* Function:
     USB_ERROR DRV_USBHS_DEVICE_IRPSubmit
@@ -1647,7 +1646,7 @@ USB_ERROR DRV_USBHS_DEVICE_IRPSubmit
     int32_t direction;
     USBHS_MODULE_ID usbID = USBHS_NUMBER_OF_MODULES;
     DRV_USBHS_OBJ * hDriver =  NULL;
-    USB_DEVICE_IRP_LOCAL * irp_t = (USB_DEVICE_IRP_LOCAL *)irp;
+    DRV_USBHS_DEVICE_IRP_LOCAL * irp_t = (DRV_USBHS_DEVICE_IRP_LOCAL *)irp;
     DRV_USBHS_DEVICE_ENDPOINT_OBJ * endpointObj = NULL;
     bool interruptWasEnabled = false;
     bool interruptWasEnabledUSBDMA = false;
@@ -2008,7 +2007,7 @@ USB_ERROR DRV_USBHS_DEVICE_IRPSubmit
                         {
                             /* This means we should surf the linked list to get to the last
                              * entry . */
-                            USB_DEVICE_IRP_LOCAL * iterator;
+                            DRV_USBHS_DEVICE_IRP_LOCAL * iterator;
                             iterator = endpointObj->irpQueue;
                             while(iterator->next != NULL)
                             {
@@ -2082,7 +2081,7 @@ void F_DRV_USBHS_DEVICE_IRPQueueFlush
 
 )
 {
-    USB_DEVICE_IRP_LOCAL * iterator;
+    DRV_USBHS_DEVICE_IRP_LOCAL * iterator;
     
     /* Check if any IRPs are assigned on this endpoint and 
      * abort them */
@@ -2281,7 +2280,7 @@ USB_ERROR DRV_USBHS_DEVICE_IRPCancel
 {
     USB_ERROR returnValue = USB_ERROR_PARAMETER_INVALID;
     DRV_USBHS_OBJ * hDriver = NULL;
-    USB_DEVICE_IRP_LOCAL * irpToCancel = (USB_DEVICE_IRP_LOCAL *)irp;
+    DRV_USBHS_DEVICE_IRP_LOCAL * irpToCancel = (DRV_USBHS_DEVICE_IRP_LOCAL *)irp;
     bool interruptWasEnabled = false;
     bool interruptWasEnabledUSBDMA = false;
     bool mutexLock = false;
@@ -2772,7 +2771,7 @@ void F_DRV_USBHS_DEVICE_Tasks_ISR
     DRV_USBHS_DEVICE_ENDPOINT_OBJ * endpointObjReceive = NULL;
     DRV_USBHS_DEVICE_ENDPOINT_OBJ * endpointObjTransmit = NULL;
     USBHS_MODULE_ID usbID = USBHS_NUMBER_OF_MODULES;
-    USB_DEVICE_IRP_LOCAL * irp = NULL;
+    DRV_USBHS_DEVICE_IRP_LOCAL * irp = NULL;
     uint32_t endpoint0DataStageDirection = 0;
     DRV_USBHS_CLIENT_OBJ * deviceModeClient = NULL;
     uint32_t temp_32;
@@ -3733,7 +3732,7 @@ void F_DRV_USBHS_DEVICE_Tasks_ISR_USBDMA
     bool endpointDir = false;
     DRV_USBHS_DEVICE_ENDPOINT_OBJ * endpointObjReceive = NULL;
     DRV_USBHS_DEVICE_ENDPOINT_OBJ * endpointObjTransmit = NULL;
-    USB_DEVICE_IRP_LOCAL * irp = NULL;
+    DRV_USBHS_DEVICE_IRP_LOCAL * irp = NULL;
 
     usbID = hDriver->usbDrvCommonObj.usbID;
 
