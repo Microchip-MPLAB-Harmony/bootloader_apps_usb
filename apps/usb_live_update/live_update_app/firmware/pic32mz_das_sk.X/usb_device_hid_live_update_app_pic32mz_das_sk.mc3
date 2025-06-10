@@ -59,7 +59,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.3"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.5"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -4121,7 +4121,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mz_das_sk\definitions.h</file>
-         <hash>31c04978a63ac379444c98581e07f718a06488033e0fb1045576037be77df1a4</hash>
+         <hash>eec62ec0e3952eb5912ad4ae38510b29ded851eb5a2cf76cd18c53a07a176b0e</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_das_sk\device.h</file>
