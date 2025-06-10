@@ -62,13 +62,13 @@
 #define PAGES_IN_ERASE_BLOCK                    (ERASE_BLOCK_SIZE / PAGE_SIZE)
 
 
-#define BOOTLOADER_SIZE                         65536
+#define BOOTLOADER_SIZE                         69632
 
 #define FLASH_END_ADDRESS                       (FLASH_START + FLASH_LENGTH)
 
 
-#define APP_START_ADDRESS                       ((uint32_t)(PA_TO_KVA0(0x1d010000U)))
-#define APP_JUMP_ADDRESS                        ((uint32_t)(PA_TO_KVA0(0x1d010200U)))
+#define APP_START_ADDRESS                       ((uint32_t)(PA_TO_KVA0(0x1d011000U)))
+#define APP_JUMP_ADDRESS                        ((uint32_t)(PA_TO_KVA0(0x1d011200U)))
 
 
 #define BTL_TRIGGER_RAM_START                   KVA0_TO_KVA1(0x80000000)
@@ -112,7 +112,7 @@ Returns:
 
 Example:
     <code>
-    
+
     #define BTL_MAJOR_VERSION       3U
     #define BTL_MINOR_VERSION       7U
 
@@ -259,15 +259,15 @@ Example:
 
         appImageStartAddr = 0x00002000;
         appImageSize = 0x8000;
-        
+
 
         if (bootloader_CRCGenerate(appImageStartAddr, appImageSize) != receivedCRC)
         {
-            
+
         }
         else
         {
-            
+
         }
 
     </code>
@@ -296,7 +296,7 @@ Returns:
     None
 
 Example:
-    <code>        
+    <code>
 
         bootloader_TriggerReset();
 
