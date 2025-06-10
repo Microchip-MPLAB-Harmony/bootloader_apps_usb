@@ -257,7 +257,7 @@ static void bootloader_ProcessBuffer( BOOTLOADER_DATA *handle )
     {
         case (uint8_t)READ_BOOT_INFO:
         {
-            btlVersion = bootloader_GetVersion(); 
+            btlVersion = bootloader_GetVersion();
 
             bootloader_EraseRecInit();
 

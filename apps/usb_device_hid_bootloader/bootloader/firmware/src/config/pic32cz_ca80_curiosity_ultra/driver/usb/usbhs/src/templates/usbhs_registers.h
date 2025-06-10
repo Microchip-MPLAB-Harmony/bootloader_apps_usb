@@ -1,5 +1,20 @@
 /*******************************************************************************
-* Copyright (C) 2024 Microchip Technology Inc. and its subsidiaries.
+  USBHS Peripheral Library Register Defintions 
+
+  File Name:
+    usbhs_registers.h
+
+  Summary:
+    USBHS PLIB Register Defintions
+
+  Description:
+    This file contains the constants and defintions which are required by the
+    the USBHS library.
+*******************************************************************************/
+
+// DOM-IGNORE-BEGIN
+/*******************************************************************************
+* Copyright (C) 2022 Microchip Technology Inc. and its subsidiaries.
 *
 * Subject to your compliance with these terms, you may use Microchip software
 * and any derivatives exclusively with Microchip products. It is your
@@ -20,20 +35,7 @@
 * ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
 *******************************************************************************/
-
-/*******************************************************************************
-  USBHS Peripheral Library Register Defintions 
-
-  File Name:
-    usbhs_registers.h
-
-  Summary:
-    USBHS PLIB Register Defintions
-
-  Description:
-    This file contains the constants and defintions which are required by the
-    the USBHS library.
-*******************************************************************************/
+// DOM-IGNORE-END
 
 #ifndef USBHS_REGISTERS_H__
 #define USBHS_REGISTERS_H__
@@ -42,26 +44,26 @@
 #include <stdint.h>
 
 /* MISRA C-2012 Rule 5.5, Rule 6.1, Rule 21.1 and Rule 21.2 Deviation record ID -  
-    H3_MISRAC_2012_R_6_1_DR_1, H3_MISRAC_2012_R_21_1_DR_1 
-    H3_MISRAC_2012_R_21_2_DR_1 and H3_MISRAC_2012_R_5_5_DR_1,
-    H3_MISRAC_2012_R_21_1_DR_1, H3_MISRAC_2012_R_21_2_DR_1,*/
+    H3_USB_MISRAC_2012_R_6_1_DR_1, H3_USB_MISRAC_2012_R_21_1_DR_1 
+    H3_USB_MISRAC_2012_R_21_2_DR_1 and H3_USB_MISRAC_2012_R_5_5_DR_1,
+    H3_USB_MISRAC_2012_R_21_1_DR_1, H3_USB_MISRAC_2012_R_21_2_DR_1,*/
 
 
 /*****************************************
  * Module Register Offsets.
  *****************************************/
 
-#define USBHS_REG_FADDR         0x000
-#define USBHS_REG_POWER         0x001
-#define USBHS_REG_INTRTX        0x002
-#define USBHS_REG_INTRRX        0x004
-#define USBHS_REG_INTRTXE       0x006
-#define USBHS_REG_INTRRXE       0x008
-#define USBHS_REG_INTRUSB       0x00A 
-#define USBHS_REG_INTRUSBE      0x00B 
-#define USBHS_REG_FRAME         0x00C
-#define USBHS_REG_INDEX         0x00E
-#define USBHS_REG_TESTMODE      0x00F
+#define USBHS_REG_FADDR         0x000U
+#define USBHS_REG_POWER         0x001U
+#define USBHS_REG_INTRTX        0x002U
+#define USBHS_REG_INTRRX        0x004U
+#define USBHS_REG_INTRTXE       0x006U
+#define USBHS_REG_INTRRXE       0x008U
+#define USBHS_REG_INTRUSB       0x00AU
+#define USBHS_REG_INTRUSBE      0x00BU
+#define USBHS_REG_FRAME         0x00CU
+#define USBHS_REG_INDEX         0x00EU
+#define USBHS_REG_TESTMODE      0x00FU
 
 /*******************************************************
  * Endpoint Control Status Registers (CSR). These values 
@@ -70,40 +72,40 @@
  * CSR, see ahead in this header file.
  ******************************************************/
 
-#define USBHS_REG_EP_TXMAXP     0x000
-#define USBHS_REG_EP_CSR0L      0x002
-#define USBHS_REG_EP_CSR0H      0x003
-#define USBHS_REG_EP_TXCSRL     0x002
-#define USBHS_REG_EP_TXCSRH     0x003
-#define USBHS_REG_EP_RXMAXP     0x004
-#define USBHS_REG_EP_RXCSRL     0x006
-#define USBHS_REG_EP_RXCSRH     0x007
-#define USBHS_REG_EP_COUNT0     0x008
-#define USBHS_REG_EP_RXCOUNT    0x008
-#define USBHS_REG_EP_TYPE0      0x01A
-#define USBHS_REG_EP_TXTYPE     0x01A
-#define USBHS_REG_EP_NAKLIMIT0  0x01B
-#define USBHS_REG_EP_TXINTERVAL 0x01B
-#define USBHS_REG_EP_RXTYPE     0x01C
-#define USBHS_REG_EP_RXINTERVAL 0x01D
-#define USBHS_REG_EP_CONFIGDATA 0x01F
-#define USBHS_REG_EP_FIFOSIZE   0x01F
+#define USBHS_REG_EP_TXMAXP     0x000U
+#define USBHS_REG_EP_CSR0L      0x002U
+#define USBHS_REG_EP_CSR0H      0x003U
+#define USBHS_REG_EP_TXCSRL     0x002U
+#define USBHS_REG_EP_TXCSRH     0x003U
+#define USBHS_REG_EP_RXMAXP     0x004U
+#define USBHS_REG_EP_RXCSRL     0x006U
+#define USBHS_REG_EP_RXCSRH     0x007U
+#define USBHS_REG_EP_COUNT0     0x008U
+#define USBHS_REG_EP_RXCOUNT    0x008U
+#define USBHS_REG_EP_TYPE0      0x01AU
+#define USBHS_REG_EP_TXTYPE     0x01AU
+#define USBHS_REG_EP_NAKLIMIT0  0x01BU
+#define USBHS_REG_EP_TXINTERVAL 0x01BU
+#define USBHS_REG_EP_RXTYPE     0x01CU
+#define USBHS_REG_EP_RXINTERVAL 0x01DU
+#define USBHS_REG_EP_CONFIGDATA 0x01FU
+#define USBHS_REG_EP_FIFOSIZE   0x01FU
 
-#define USBHS_HOST_EP0_SETUPKT_SET 0x8
-#define USBHS_HOST_EP0_TXPKTRDY_SET 0x2
-#define USBHS_SOFT_RST_NRST_SET 0x1
-#define USBHS_SOFT_RST_NRSTX_SET 0x2
-#define USBHS_EP0_DEVICE_SERVICED_RXPKTRDY 0x40
-#define USBHS_EP0_DEVICE_DATAEND 0x08
-#define USBHS_EP0_DEVICE_TXPKTRDY 0x02
-#define USBHS_EP0_HOST_STATUS_STAGE_START 0x40
-#define USBHS_EP0_HOST_REQPKT 0x20
-#define USBHS_EP0_HOST_TXPKTRDY 0x02
-#define USBHS_EP0_HOST_RXPKTRDY 0x01
-#define USBHS_EP_DEVICE_TX_SENT_STALL 0x20
-#define USBHS_EP_DEVICE_TX_SEND_STALL 0x10
-#define USBHS_EP_DEVICE_RX_SENT_STALL 0x40
-#define USBHS_EP_DEVICE_RX_SEND_STALL 0x20
+#define USBHS_HOST_EP0_SETUPKT_SET 0x8U
+#define USBHS_HOST_EP0_TXPKTRDY_SET 0x2U
+#define USBHS_SOFT_RST_NRST_SET 0x1U
+#define USBHS_SOFT_RST_NRSTX_SET 0x2U
+#define USBHS_EP0_DEVICE_SERVICED_RXPKTRDY 0x40U
+#define USBHS_EP0_DEVICE_DATAEND 0x08U
+#define USBHS_EP0_DEVICE_TXPKTRDY 0x02U
+#define USBHS_EP0_HOST_STATUS_STAGE_START 0x40U
+#define USBHS_EP0_HOST_REQPKT 0x20U
+#define USBHS_EP0_HOST_TXPKTRDY 0x02U
+#define USBHS_EP0_HOST_RXPKTRDY 0x01U
+#define USBHS_EP_DEVICE_TX_SENT_STALL 0x20U
+#define USBHS_EP_DEVICE_TX_SEND_STALL 0x10U
+#define USBHS_EP_DEVICE_RX_SENT_STALL 0x40U
+#define USBHS_EP_DEVICE_RX_SEND_STALL 0x20U
 
 /* FADDR - Device Function Address */
 typedef union 
