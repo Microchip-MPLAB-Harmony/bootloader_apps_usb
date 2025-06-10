@@ -59,7 +59,7 @@
 #include "osal/osal.h"
 
 /* MISRA C-2012 Rule 5.1, 5.2, 5.4 and 8.6 deviated below. Deviation record ID -  
-    H3_MISRAC_2012_R_5_2_DR_1, H3_MISRAC_2012_R_5_4_DR_1 and H3_MISRAC_2012_R_8_6_DR_1*/
+    H3_USB_MISRAC_2012_R_5_2_DR_1, H3_USB_MISRAC_2012_R_5_4_DR_1 and H3_USB_MISRAC_2012_R_8_6_DR_1*/
 
 
 #define COMPILER_WORD_ALIGNED                               __attribute__((__aligned__(4)))
@@ -147,7 +147,7 @@
  * This object is used by the driver as IRP place
  * holder along with queuing feature.
  ***************************************************/
-typedef struct S_USB_DEVICE_IRP_LOCAL
+typedef struct S_DRV_USBFSV1_DEVICE_IRP_LOCAL
 {
     /* Pointer to the data buffer */
     void * data;
@@ -169,16 +169,16 @@ typedef struct S_USB_DEVICE_IRP_LOCAL
     uintptr_t userData;
 
     /* This points to the next IRP in the queue */
-    struct S_USB_DEVICE_IRP_LOCAL * next;
+    struct S_DRV_USBFSV1_DEVICE_IRP_LOCAL * next;
 
     /* This points to the previous IRP in the queue */
-    struct S_USB_DEVICE_IRP_LOCAL * previous;
+    struct S_DRV_USBFSV1_DEVICE_IRP_LOCAL * previous;
 
     /* Pending bytes in the IRP */
     uint32_t nPendingBytes;
 
 }
-USB_DEVICE_IRP_LOCAL;
+DRV_USBFSV1_DEVICE_IRP_LOCAL;
 
 /************************************************
  * Endpoint state enumeration.
@@ -201,7 +201,7 @@ typedef struct
 {
     /* This is the IRP queue for
      * the endpoint */
-    USB_DEVICE_IRP_LOCAL * irpQueue;
+    DRV_USBFSV1_DEVICE_IRP_LOCAL * irpQueue;
 
     /* Max packet size for the endpoint */
     uint16_t maxPacketSize;
@@ -237,7 +237,7 @@ DRV_USBFSV1_HOST_IRP_STATE;
 /*********************************************
  * This is the local USB Host IRP object
  ********************************************/
-typedef struct S_USB_HOST_IRP_LOCAL
+typedef struct S_DRV_USBFSV1_HOST_IRP_LOCAL
 {
     /* Points to the 8 byte setup command
      * packet in case this is a IRP is
@@ -275,11 +275,11 @@ typedef struct S_USB_HOST_IRP_LOCAL
     DRV_USBFSV1_HOST_IRP_STATE tempState;
     uint32_t completedBytes;
     uint32_t completedBytesInThisFrame;
-    struct S_USB_HOST_IRP_LOCAL * next;
+    struct S_DRV_USBFSV1_HOST_IRP_LOCAL * next;
     DRV_USB_HOST_PIPE_HANDLE  pipe;
 
 }
-USB_HOST_IRP_LOCAL;
+DRV_USBFSV1_HOST_IRP_LOCAL;
 
 /************************************************
  * This is the Host Pipe Object.
@@ -299,7 +299,7 @@ typedef struct S_DRV_USBFSV1_HOST_PIPE_OBJ
     USB_TRANSFER_TYPE pipeType;
 
     /* The IRP queue on this pipe */
-    USB_HOST_IRP_LOCAL * irpQueueHead;
+    DRV_USBFSV1_HOST_IRP_LOCAL * irpQueueHead;
 
     /* The data toggle for this pipe*/
     bool dataToggle;
@@ -358,7 +358,7 @@ typedef struct
     int hardwarePipeType;
 
     /* The pointer to the IRP to be processed */
-    USB_HOST_IRP_LOCAL * pIRP;
+    DRV_USBFSV1_HOST_IRP_LOCAL * pIRP;
 
 } DRV_USBFSV1_HOST_FRAME_IRP;
 
@@ -681,15 +681,14 @@ void F_DRV_USBFSV1_HOST_NonControlTransferDataSend(DRV_USBFSV1_OBJ * hDriver);
 
 void F_DRV_USBFSV1_HOST_ControlTransferBW(DRV_USBFSV1_OBJ * hDriver);
 
-USB_HOST_IRP_LOCAL * F_DRV_USBFSV1_HOST_PipeGroupGetNextIRP(DRV_USBFSV1_HOST_PIPE_GROUP * pipeGroup);
+DRV_USBFSV1_HOST_IRP_LOCAL * F_DRV_USBFSV1_HOST_PipeGroupGetNextIRP(DRV_USBFSV1_HOST_PIPE_GROUP * pipeGroup);
 
-bool F_DRV_USBFSV1_HOST_NonControlTransferBW(DRV_USBFSV1_OBJ * hDriver, USB_HOST_IRP_LOCAL * irp);
+bool F_DRV_USBFSV1_HOST_NonControlTransferBW(DRV_USBFSV1_OBJ * hDriver, DRV_USBFSV1_HOST_IRP_LOCAL * irp);
 
 USB_SPEED DRV_USBFSV1_HOST_DeviceCurrentSpeedGet(DRV_HANDLE client);
 
 void DRV_USBFSV1_HOST_StartOfFrameControl(DRV_HANDLE client, bool control);
 
-void DRV_USBFSV1_Deinitialize ( const SYS_MODULE_OBJ  object );
 
 /* MISRAC 2012 deviation block end */
 

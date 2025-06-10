@@ -118,10 +118,10 @@ static const uint32_t gDrvUSBLSTableBW[2][4] =
 // ****************************************************************************
 // ****************************************************************************
 
-/* MISRA C-2012 Rule 10.4 False Positive:20 Deviation record ID -  H3_MISRAC_2012_R_10_4_DR_1 */
+/* MISRA C-2012 Rule 10.4 False Positive:20 Deviation record ID -  H3_USB_MISRAC_2012_R_10_4_DR_1 */
 
 /* MISRA C-2012 Rule 10.4(False Positive), and 20.7 deviated below. Deviation record ID -  
-    H3_MISRAC_2012_R_10_4_DR_1, H3_MISRAC_2012_R_20_7_DR_1 */
+    H3_USB_MISRAC_2012_R_10_4_DR_1, H3_USB_MISRAC_2012_R_20_7_DR_1 */
 
 
 void F_DRV_USBFSV1_HOST_AttachDetachStateMachine (DRV_USBFSV1_OBJ * hDriver)
@@ -147,7 +147,7 @@ void F_DRV_USBFSV1_HOST_AttachDetachStateMachine (DRV_USBFSV1_OBJ * hDriver)
             /* In this state we start the debouncing timer */
             
             hDriver->timerHandle = SYS_TIME_HANDLE_INVALID;
-            if(SYS_TIME_ERROR != SYS_TIME_DelayMS(500, &(hDriver->timerHandle)))
+            if(SYS_TIME_ERROR != SYS_TIME_DelayMS(DRV_USBFSV1_HOST_ATTACH_DEBOUNCE_DURATION, &(hDriver->timerHandle)))
             {
                 hDriver->attachState = DRV_USBFSV1_HOST_ATTACH_STATE_DEBOUNCING_WAIT;
             } 
@@ -221,6 +221,8 @@ void F_DRV_USBFSV1_HOST_AttachDetachStateMachine (DRV_USBFSV1_OBJ * hDriver)
             if(!hDriver->deviceAttached)
             {
                 hDriver->attachState = DRV_USBFSV1_HOST_ATTACH_STATE_CHECK_FOR_DEVICE_ATTACH;
+                /* Get ready for next attach */
+                HOST->USB_INTENSET = USB_HOST_INTENSET_DCONN_Msk;
             }
             
             break;
@@ -233,7 +235,7 @@ void F_DRV_USBFSV1_HOST_AttachDetachStateMachine (DRV_USBFSV1_OBJ * hDriver)
 
 // *****************************************************************************
 /* MISRA C-2012 Rule 11.3, 11.6 and 11.8 deviated below. Deviation record ID -  
-    H3_MISRAC_2012_R_11_3_DR_1, H3_MISRAC_2012_R_11_6_DR_1 and H3_MISRAC_2012_R_11_8_DR_1*/
+    H3_USB_MISRAC_2012_R_11_3_DR_1, H3_USB_MISRAC_2012_R_11_6_DR_1 and H3_USB_MISRAC_2012_R_11_8_DR_1*/
 
 /* Function:
     void F_DRV_USBFSV1_HOST_Initialize
@@ -328,9 +330,9 @@ USB_ERROR DRV_USBFSV1_HOST_IRPSubmit
     USB_HOST_IRP * pInputIRP
 )
 {
-    USB_HOST_IRP_LOCAL * pIRPIterator = (USB_HOST_IRP_LOCAL *)NULL;
+    DRV_USBFSV1_HOST_IRP_LOCAL * pIRPIterator = (DRV_USBFSV1_HOST_IRP_LOCAL *)NULL;
     M_DRV_USBFSV1_DECLARE_BOOL_VARIABLE(interruptState);
-    USB_HOST_IRP_LOCAL * pIRP = (USB_HOST_IRP_LOCAL *)pInputIRP;
+    DRV_USBFSV1_HOST_IRP_LOCAL * pIRP = (DRV_USBFSV1_HOST_IRP_LOCAL *)pInputIRP;
     DRV_USBFSV1_HOST_PIPE_OBJ * pPipe = (DRV_USBFSV1_HOST_PIPE_OBJ *)hPipe;
     DRV_USBFSV1_OBJ * pUSBDrvObj = (DRV_USBFSV1_OBJ *)NULL;
     USB_ERROR returnValue = USB_ERROR_NONE;
@@ -463,8 +465,8 @@ void DRV_USBFSV1_HOST_IRPCancel
 {
     /* This function cancels an IRP */
 
-    USB_HOST_IRP_LOCAL * irp = (USB_HOST_IRP_LOCAL *) inputIRP;
-    USB_HOST_IRP_LOCAL * pIteratorIRP = NULL;
+    DRV_USBFSV1_HOST_IRP_LOCAL * irp = (DRV_USBFSV1_HOST_IRP_LOCAL *) inputIRP;
+    DRV_USBFSV1_HOST_IRP_LOCAL * pIteratorIRP = NULL;
     M_DRV_USBFSV1_DECLARE_BOOL_VARIABLE(interruptState);
     DRV_USBFSV1_OBJ * hDriver;
     DRV_USBFSV1_HOST_PIPE_OBJ * pipe;
@@ -610,7 +612,7 @@ void DRV_USBFSV1_HOST_PipeClose
     M_DRV_USBFSV1_DECLARE_BOOL_VARIABLE(interruptState);
 
     DRV_USBFSV1_OBJ * hDriver = NULL;
-    USB_HOST_IRP_LOCAL * irp = NULL;
+    DRV_USBFSV1_HOST_IRP_LOCAL * irp = NULL;
     DRV_USBFSV1_HOST_PIPE_OBJ * pipe = NULL;
     DRV_USBFSV1_HOST_PIPE_OBJ * pIteratorPipe = NULL;
     DRV_USBFSV1_HOST_PIPE_GROUP * pipeGroup = NULL;
@@ -757,7 +759,7 @@ void DRV_USBFSV1_HOST_PipeClose
 
 // *****************************************************************************
 /* MISRA C-2012 Rule 16.1, and 16.3 deviated below. Deviation record ID -  
-    H3_MISRAC_2012_R_16_1_DR_1, H3_MISRAC_2012_R_16_3_DR_1 */
+    H3_USB_MISRAC_2012_R_16_1_DR_1, H3_USB_MISRAC_2012_R_16_3_DR_1 */
 /* Function:
     DRV_USBFSV1_HOST_PIPE_HANDLE DRV_USBFSV1_HOST_PipeSetup
     (
@@ -1021,8 +1023,8 @@ DRV_USBFSV1_HOST_PIPE_HANDLE DRV_USBFSV1_HOST_PipeSetup
 }
 
 // *****************************************************************************
-/* MISRA C-2012 Rule 5.1, 5.2 and 21.15 deviated below. Deviation record ID -  
-    H3_MISRAC_2012_R_5_1_DR_1, H3_MISRAC_2012_R_5_2_DR_1 and H3_MISRAC_2012_R_21_15_DR_1*/
+/* MISRA C-2012 Rule 5.1 and 5.2  deviated below. Deviation record ID -  
+    H3_USB_MISRAC_2012_R_5_1_DR_1 and H3_USB_MISRAC_2012_R_5_2_DR_1 */
 
 /* Function:
     void F_DRV_USBFSV1_HOST_ControlTransferDataStageSend(DRV_USBFSV1_OBJ * hDriver)
@@ -1046,7 +1048,7 @@ void F_DRV_USBFSV1_HOST_ControlTransferDataStageSend(DRV_USBFSV1_OBJ * hDriver)
 {
     DRV_USBFSV1_HOST_PIPE_GROUP * pipeGroup = &hDriver->pipeGroup[DRV_USBFSV1_HOST_HW_PIPE_CONTROL];
     DRV_USBFSV1_HOST_PIPE_OBJ * pipe = pipeGroup->currentPipe;
-    USB_HOST_IRP_LOCAL * pIRP = pipeGroup->currentIRP;
+    DRV_USBFSV1_HOST_IRP_LOCAL * pIRP = pipeGroup->currentIRP;
     int32_t size = 0;
     usb_host_registers_t * HOST = &hDriver->usbID->HOST;
     usb_host_desc_bank_registers_t * controlPipeDesc = &hDriver->hostPipeDescTable[DRV_USBFSV1_HOST_HW_PIPE_CONTROL].HOST_DESC_BANK[0];
@@ -1101,7 +1103,7 @@ void F_DRV_USBFSV1_HOST_ControlTransferDataStageSend(DRV_USBFSV1_OBJ * hDriver)
     {
         /* Bank 0 contains the data. User data must be copied to the host
          * control transfer data buffer. */
-        (void) memcpy(hDriver->hostTransactionBuffer, ( ( uint8_t * )pIRP->data + pIRP->completedBytes), (uint32_t)size);
+        (void) memcpy(( uint8_t * )hDriver->hostTransactionBuffer, ( ( uint8_t * )pIRP->data + pIRP->completedBytes), (uint32_t)size);
         controlPipe->USB_PSTATUSSET = USB_HOST_PSTATUSSET_BK0RDY_Msk;
         controlPipe->USB_PCFG |= (uint8_t)DRV_USBFSV1_HOST_PIPE_TOKEN_OUT;
     }
@@ -1135,7 +1137,7 @@ bool F_DRV_USBFSV1_HOST_ControlTransferProcess(DRV_USBFSV1_OBJ * hDriver)
      * function exits. Get the pointer to the control transfer. This is always 
      * at index 0 in the frame IRP list */
     
-    USB_HOST_IRP_LOCAL * pIRP = hDriver->frameIRPList[0].pIRP;
+    DRV_USBFSV1_HOST_IRP_LOCAL * pIRP = hDriver->frameIRPList[0].pIRP;
     DRV_USBFSV1_HOST_PIPE_GROUP * pipeGroup = &hDriver->pipeGroup[DRV_USBFSV1_HOST_HW_PIPE_CONTROL];
     DRV_USBFSV1_HOST_PIPE_OBJ * pipe = pipeGroup->currentPipe;
     bool tokenSent = false;
@@ -1220,7 +1222,7 @@ bool F_DRV_USBFSV1_HOST_ControlTransferProcess(DRV_USBFSV1_OBJ * hDriver)
                 controlPipe->USB_PCFG &= (~USB_HOST_PCFG_PTOKEN_Msk);
                 controlPipeDesc->USB_CTRL_PIPE &= ~(USB_HOST_CTRL_PIPE_PDADDR_Msk);
                 controlPipeDesc->USB_CTRL_PIPE |= (((uint16_t)pipe->deviceAddress) << USB_HOST_CTRL_PIPE_PDADDR_Pos);
-                (void) memcpy(hDriver->hostTransactionBuffer, pIRP->setup, 8);
+                (void) memcpy(( uint8_t * )hDriver->hostTransactionBuffer, ( uint8_t * )pIRP->setup, 8);
                 controlPipeDesc->USB_ADDR = (uint32_t)hDriver->hostTransactionBuffer;
                 controlPipeDesc->USB_PCKSIZE = 0;
                 controlPipeDesc->USB_PCKSIZE = (USB_HOST_PCKSIZE_MULTI_PACKET_SIZE(0)|USB_HOST_PCKSIZE_BYTE_COUNT(8)
@@ -1353,7 +1355,7 @@ bool F_DRV_USBFSV1_HOST_ControlTransferProcess(DRV_USBFSV1_OBJ * hDriver)
                              * that the USB DMA will write a minimum of 4 bytes. This can prove dangerous at
                              * the client level. */
 
-                            (void) memcpy(( ( uint8_t * )pIRP->data + pIRP->completedBytes), hDriver->hostTransactionBuffer, byteCount);
+                            (void) memcpy(( ( uint8_t * )pIRP->data + pIRP->completedBytes),( uint8_t * ) hDriver->hostTransactionBuffer, byteCount);
                             pIRP->completedBytes += byteCount;
                             pIRP->completedBytesInThisFrame += byteCount;
 
@@ -1660,7 +1662,7 @@ void F_DRV_USBFSV1_HOST_NonControlTransferDataSend(DRV_USBFSV1_OBJ * hDriver)
     /* Get the pipe and IRP to be processed. The currentFrameIRPIndex will point
      * to the IRP that needs to be processed */
     DRV_USBFSV1_HOST_FRAME_IRP * frameIRP = &hDriver->frameIRPList[hDriver->currentFrameIRPIndex];
-    USB_HOST_IRP_LOCAL * pIRP = frameIRP->pIRP;
+    DRV_USBFSV1_HOST_IRP_LOCAL * pIRP = frameIRP->pIRP;
     DRV_USBFSV1_HOST_PIPE_OBJ * pipe = (DRV_USBFSV1_HOST_PIPE_OBJ *)pIRP->pipe;
     int32_t hardwarePipeIndex = frameIRP->hardwarePipeType;
     int32_t size = 0;
@@ -1736,7 +1738,7 @@ void F_DRV_USBFSV1_HOST_NonControlTransferDataSend(DRV_USBFSV1_OBJ * hDriver)
         
         if(pipe->pipeType != USB_TRANSFER_TYPE_ISOCHRONOUS)
         {
-            (void) memcpy(hDriver->hostTransactionBuffer, ( ( uint8_t * )pIRP->data + pIRP->completedBytes), (uint32_t)size);
+            (void) memcpy(( uint8_t * )hDriver->hostTransactionBuffer, ( ( uint8_t * )pIRP->data + pIRP->completedBytes), (uint32_t)size);
         }
 
         hardwarePipe->USB_PSTATUSSET = USB_HOST_PSTATUSSET_BK0RDY_Msk;
@@ -1779,7 +1781,7 @@ static bool F_DRV_USBFSV1_HOST_NonControlTransferProcess
     * transfer and to proceed the transfer. */
 
     DRV_USBFSV1_HOST_FRAME_IRP * frameIRP = &hDriver->frameIRPList[hDriver->currentFrameIRPIndex];
-    USB_HOST_IRP_LOCAL * pIRP = frameIRP->pIRP;
+    DRV_USBFSV1_HOST_IRP_LOCAL * pIRP = frameIRP->pIRP;
     DRV_USBFSV1_HOST_PIPE_OBJ * pipe = (DRV_USBFSV1_HOST_PIPE_OBJ *)pIRP->pipe;
     bool tokenSent = false;
     bool endIRP = false;
@@ -1862,7 +1864,7 @@ static bool F_DRV_USBFSV1_HOST_NonControlTransferProcess
                         if((pipe->endpointAndDirection & 0x80U) != 0U)
                         {
                             /* Data has been received from the device */
-                            (void) memcpy(( ( uint8_t * )pIRP->data + pIRP->completedBytes), hDriver->hostTransactionBuffer, byteCount);
+                            (void) memcpy(( ( uint8_t * )pIRP->data + pIRP->completedBytes), ( uint8_t * )hDriver->hostTransactionBuffer, byteCount);
                         }
 
                         /* Now update the byte counters */
@@ -1927,7 +1929,7 @@ static bool F_DRV_USBFSV1_HOST_NonControlTransferProcess
             if(endIRP == true)
             {
                 /* Move the pipe queue head to next IRP in the queue */
-                pipe->irpQueueHead = (USB_HOST_IRP_LOCAL *)pIRP->next;
+                pipe->irpQueueHead = (DRV_USBFSV1_HOST_IRP_LOCAL *)pIRP->next;
 
                 /* Update the size field with actual size received\transmitted */
                 pIRP->size = pIRP->completedBytes;
@@ -1971,7 +1973,7 @@ void F_DRV_USBFSV1_HOST_ControlTransferBW(DRV_USBFSV1_OBJ * hDriver)
     uint32_t nTransactions = 0;
     uint32_t nPossibleTransactions = 0;
     DRV_USBFSV1_HOST_PIPE_OBJ * currentPipe = hDriver->pipeGroup[DRV_USBFSV1_HOST_HW_PIPE_CONTROL].currentPipe;
-    USB_HOST_IRP_LOCAL * currentIRP = hDriver->pipeGroup[DRV_USBFSV1_HOST_HW_PIPE_CONTROL].currentIRP;
+    DRV_USBFSV1_HOST_IRP_LOCAL * currentIRP = hDriver->pipeGroup[DRV_USBFSV1_HOST_HW_PIPE_CONTROL].currentIRP;
 
     /* Check the speed of this pipe and then figure out what is the maximum
      * bandwidth to be allocated for control transfers. The maximum bandwidth
@@ -2034,7 +2036,7 @@ void F_DRV_USBFSV1_HOST_ControlTransferBW(DRV_USBFSV1_OBJ * hDriver)
 
 // *****************************************************************************
 /* Function:
-    USB_HOST_IRP_LOCAL * F_DRV_USBFSV1_HOST_PipeGroupGetNextIRP
+    DRV_USBFSV1_HOST_IRP_LOCAL * F_DRV_USBFSV1_HOST_PipeGroupGetNextIRP
     (
         DRV_USBFSV1_HOST_PIPE_GROUP * pipeGroup
     )
@@ -2054,9 +2056,9 @@ void F_DRV_USBFSV1_HOST_ControlTransferBW(DRV_USBFSV1_OBJ * hDriver)
     application.
 */
 
-USB_HOST_IRP_LOCAL * F_DRV_USBFSV1_HOST_PipeGroupGetNextIRP(DRV_USBFSV1_HOST_PIPE_GROUP * pipeGroup)
+DRV_USBFSV1_HOST_IRP_LOCAL * F_DRV_USBFSV1_HOST_PipeGroupGetNextIRP(DRV_USBFSV1_HOST_PIPE_GROUP * pipeGroup)
 {
-    USB_HOST_IRP_LOCAL * returnValue = NULL;
+    DRV_USBFSV1_HOST_IRP_LOCAL * returnValue = NULL;
     uint32_t iterator = 0;
 
     for (iterator = 0; iterator < pipeGroup->nPipes; iterator ++)
@@ -2085,7 +2087,7 @@ USB_HOST_IRP_LOCAL * F_DRV_USBFSV1_HOST_PipeGroupGetNextIRP(DRV_USBFSV1_HOST_PIP
 /* Function:
     bool F_DRV_USBFSV1_HOST_NonControlTransferBW
     (
-        DRV_USBFSV1_OBJ * hDriver, USB_HOST_IRP_LOCAL * irp
+        DRV_USBFSV1_OBJ * hDriver, DRV_USBFSV1_HOST_IRP_LOCAL * irp
     )
   
   Summary:
@@ -2103,7 +2105,7 @@ USB_HOST_IRP_LOCAL * F_DRV_USBFSV1_HOST_PipeGroupGetNextIRP(DRV_USBFSV1_HOST_PIP
     application.
 */
 
-bool F_DRV_USBFSV1_HOST_NonControlTransferBW(DRV_USBFSV1_OBJ * hDriver, USB_HOST_IRP_LOCAL * irp)
+bool F_DRV_USBFSV1_HOST_NonControlTransferBW(DRV_USBFSV1_OBJ * hDriver, DRV_USBFSV1_HOST_IRP_LOCAL * irp)
 {
     DRV_USBFSV1_HOST_PIPE_OBJ * pipe = (DRV_USBFSV1_HOST_PIPE_OBJ *)irp->pipe;
     bool returnValue = false;
@@ -2787,10 +2789,8 @@ void F_DRV_USBFSV1_HOST_Tasks_ISR(DRV_USBFSV1_OBJ * hDriver)
         }
 
         hDriver->attachedDeviceObjHandle = USB_HOST_DEVICE_OBJ_HANDLE_INVALID;        
-        
-        /* Clean up is complete. Get ready for next attach */
+        /* Clean up is complete */
         HOST->USB_INTFLAG  = USB_HOST_INTFLAG_DCONN_Msk;
-        HOST->USB_INTENSET = USB_HOST_INTENSET_DCONN_Msk;
     }
 
     /* Handle the reset done interrupt */
