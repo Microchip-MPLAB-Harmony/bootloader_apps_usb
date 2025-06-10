@@ -1,9 +1,13 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <configurationDescriptor version="65">
   <logicalFolder name="root" displayName="root" projectFiles="true">
-    <logicalFolder name="HeaderFiles" displayName="Header Files" projectFiles="true">
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
       <logicalFolder name="config" displayName="config" projectFiles="true">
-        <logicalFolder name="pic32mk_mcm_curiosity_pro" displayName="pic32mk_mcm_curiosity_pro" projectFiles="true">
+        <logicalFolder name="pic32mk_mcm_curiosity_pro"
+                       displayName="pic32mk_mcm_curiosity_pro"
+                       projectFiles="true">
           <logicalFolder name="bootloader" displayName="bootloader" projectFiles="true">
             <itemPath>../src/config/pic32mk_mcm_curiosity_pro/bootloader/bootloader_common.h</itemPath>
             <itemPath>../src/config/pic32mk_mcm_curiosity_pro/bootloader/bootloader_usb_host_msd.h</itemPath>
@@ -173,7 +177,9 @@
                   <itemPath>../src/config/pic32mk_mcm_curiosity_pro/system/fs/fat_fs/file_system/ff.h</itemPath>
                   <itemPath>../src/config/pic32mk_mcm_curiosity_pro/system/fs/fat_fs/file_system/ffconf.h</itemPath>
                 </logicalFolder>
-                <logicalFolder name="hardware_access" displayName="hardware_access" projectFiles="true">
+                <logicalFolder name="hardware_access"
+                               displayName="hardware_access"
+                               projectFiles="true">
                   <itemPath>../src/config/pic32mk_mcm_curiosity_pro/system/fs/fat_fs/hardware_access/diskio.h</itemPath>
                 </logicalFolder>
               </logicalFolder>
@@ -227,12 +233,24 @@
       </logicalFolder>
       <itemPath>../src/app.h</itemPath>
     </logicalFolder>
-    <logicalFolder name="LinkerScript" displayName="Linker Files" projectFiles="true">
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="true">
+      <itemPath>Makefile</itemPath>
+      <itemPath>usb_device_msd_bootloader_pic32mk_mcm_curiosity_pro.mc3</itemPath>
+    </logicalFolder>
+    <logicalFolder name="LinkerScript"
+                   displayName="Linker Files"
+                   projectFiles="true">
       <itemPath>../src/config/pic32mk_mcm_curiosity_pro/btl.ld</itemPath>
     </logicalFolder>
-    <logicalFolder name="SourceFiles" displayName="Source Files" projectFiles="true">
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
       <logicalFolder name="config" displayName="config" projectFiles="true">
-        <logicalFolder name="pic32mk_mcm_curiosity_pro" displayName="pic32mk_mcm_curiosity_pro" projectFiles="true">
+        <logicalFolder name="pic32mk_mcm_curiosity_pro"
+                       displayName="pic32mk_mcm_curiosity_pro"
+                       projectFiles="true">
           <logicalFolder name="bootloader" displayName="bootloader" projectFiles="true">
             <itemPath>../src/config/pic32mk_mcm_curiosity_pro/bootloader/bootloader_common.c</itemPath>
             <itemPath>../src/config/pic32mk_mcm_curiosity_pro/bootloader/bootloader_usb_host_msd.c</itemPath>
@@ -277,7 +295,9 @@
                   <itemPath>../src/config/pic32mk_mcm_curiosity_pro/system/fs/fat_fs/file_system/ff.c</itemPath>
                   <itemPath>../src/config/pic32mk_mcm_curiosity_pro/system/fs/fat_fs/file_system/ffunicode.c</itemPath>
                 </logicalFolder>
-                <logicalFolder name="hardware_access" displayName="hardware_access" projectFiles="true">
+                <logicalFolder name="hardware_access"
+                               displayName="hardware_access"
+                               projectFiles="true">
                   <itemPath>../src/config/pic32mk_mcm_curiosity_pro/system/fs/fat_fs/hardware_access/diskio.c</itemPath>
                 </logicalFolder>
               </logicalFolder>
@@ -309,10 +329,6 @@
       <itemPath>../src/main.c</itemPath>
       <itemPath>../src/app.c</itemPath>
     </logicalFolder>
-    <logicalFolder name="ExternalFiles" displayName="Important Files" projectFiles="false">
-      <itemPath>Makefile</itemPath>
-      <itemPath>usb_device_msd_bootloader_pic32mk_mcm_curiosity_pro.mc3</itemPath>
-    </logicalFolder>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
@@ -320,11 +336,11 @@
       <toolsSet>
         <developmentServer>localhost</developmentServer>
         <targetDevice>PIC32MK1024MCM100</targetDevice>
-        <targetHeader/>
-        <targetPluginBoard/>
+        <targetHeader></targetHeader>
+        <targetPluginBoard></targetPluginBoard>
         <platformTool>pkob4hybrid</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>4.35</languageToolchainVersion>
+        <languageToolchainVersion>4.60</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
@@ -342,7 +358,7 @@
         <loading>
           <useAlternateLoadableFile>false</useAlternateLoadableFile>
           <parseOnProdLoad>false</parseOnProdLoad>
-          <alternateLoadableFile/>
+          <alternateLoadableFile></alternateLoadableFile>
         </loading>
         <subordinates>
         </subordinates>
@@ -350,9 +366,9 @@
       <makeCustomizationType>
         <makeCustomizationPreStepEnabled>false</makeCustomizationPreStepEnabled>
         <makeUseCleanTarget>false</makeUseCleanTarget>
-        <makeCustomizationPreStep/>
+        <makeCustomizationPreStep></makeCustomizationPreStep>
         <makeCustomizationPostStepEnabled>false</makeCustomizationPostStepEnabled>
-        <makeCustomizationPostStep/>
+        <makeCustomizationPostStep></makeCustomizationPostStep>
         <makeCustomizationPutChecksumInUserID>false</makeCustomizationPutChecksumInUserID>
         <makeCustomizationEnableLongLines>false</makeCustomizationEnableLongLines>
         <makeCustomizationNormalizeHexFile>false</makeCustomizationNormalizeHexFile>
@@ -366,7 +382,8 @@
         <property key="enable-symbols" value="true"/>
         <property key="enable-unroll-loops" value="false"/>
         <property key="exclude-floating-point" value="false"/>
-        <property key="extra-include-directories" value="../src;../src/config/pic32mk_mcm_curiosity_pro;../src/config/pic32mk_mcm_curiosity_pro/system/fs/fat_fs/file_system;../src/config/pic32mk_mcm_curiosity_pro/system/fs/fat_fs/hardware_access"/>
+        <property key="extra-include-directories"
+                  value="../src;../src/config/pic32mk_mcm_curiosity_pro;../src/config/pic32mk_mcm_curiosity_pro/system/fs/fat_fs/file_system;../src/config/pic32mk_mcm_curiosity_pro/system/fs/fat_fs/hardware_access"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -465,7 +482,8 @@
         <property key="enable-unroll-loops" value="false"/>
         <property key="exceptions" value="true"/>
         <property key="exclude-floating-point" value="false"/>
-        <property key="extra-include-directories" value="../src;../src/config/pic32mk_mcm_curiosity_pro;../src/config/pic32mk_mcm_curiosity_pro/system/fs/fat_fs/file_system;../src/config/pic32mk_mcm_curiosity_pro/system/fs/fat_fs/hardware_access"/>
+        <property key="extra-include-directories"
+                  value="../src;../src/config/pic32mk_mcm_curiosity_pro;../src/config/pic32mk_mcm_curiosity_pro/system/fs/fat_fs/file_system;../src/config/pic32mk_mcm_curiosity_pro/system/fs/fat_fs/hardware_access"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
