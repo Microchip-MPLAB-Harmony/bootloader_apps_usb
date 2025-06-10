@@ -64,6 +64,7 @@
 
 /*** Macros for USB_VBUS_SENSE pin ***/
 #define USB_VBUS_SENSE_Get()               ((PORTB >> 5) & 0x1)
+#define USB_VBUS_SENSE_GetLatch()          ((LATB >> 5) & 0x1)
 #define USB_VBUS_SENSE_PIN                  GPIO_PIN_RB5
 
 
