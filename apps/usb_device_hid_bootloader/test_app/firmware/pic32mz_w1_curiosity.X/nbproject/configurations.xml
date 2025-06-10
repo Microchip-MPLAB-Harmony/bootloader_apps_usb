@@ -89,7 +89,6 @@
       </logicalFolder>
       <itemPath>Makefile</itemPath>
       <itemPath>../src/config/pic32mz_w1_curiosity/harmony-manifest-success.yml</itemPath>
-      <itemPath>uart_bootloader_test_app_pic32mz_w1_curiosity.mc3</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
@@ -105,11 +104,11 @@
         <targetPluginBoard/>
         <platformTool>noID</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>4.35</languageToolchainVersion>
+        <languageToolchainVersion>4.60</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="PIC32MZ-W_DFP" vendor="Microchip" version="1.8.326"/>
+        <pack name="PIC32MZ-W_DFP" vendor="Microchip" version="1.9.330"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>
