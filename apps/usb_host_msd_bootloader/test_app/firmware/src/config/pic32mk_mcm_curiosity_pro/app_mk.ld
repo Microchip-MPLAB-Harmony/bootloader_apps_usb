@@ -80,7 +80,7 @@ OPTIONAL("vector_offset_init.o")
  *   xc32-gcc src.c -Wl,--defsym=_ebase_address=0x9D001000
  *************************************************************************/
 PROVIDE(_vector_spacing = 0x0001);
-PROVIDE(_ebase_address = 0x9D010000);
+PROVIDE(_ebase_address = 0x9D011000);
 
 /* Place the vector table and other exceptions after the device reset code. */
 PROVIDE(_ebase_vector_offsets = 0x1000);
@@ -93,7 +93,7 @@ PROVIDE(_ebase_vector_offsets = 0x1000);
  * _SIMPLE_TLB_REFILL_EXCPT_ADDR  -- Simple TLB-Refill Exception Vector
  * _GEN_EXCPT_ADDR                -- General Exception Vector
  *************************************************************************/
-_RESET_ADDR                    = 0xBD000200 + 0x10000; /* Size of Bootloader is 0x10000 */
+_RESET_ADDR                    = 0xBD000200 + 0x11000; /* Size of Bootloader is 0x10000 */
 _GEN_EXCPT_ADDR                = _ebase_address + 0x180;
 
 /*************************************************************************
@@ -110,9 +110,9 @@ _GEN_EXCPT_ADDR                = _ebase_address + 0x180;
 MEMORY
 {
     /* Place the exceptions starting from _ebase_address as required by device specification */
-    kseg0_exception_mem (rx) : ORIGIN = 0x9D010000, LENGTH = 0x200
+    kseg0_exception_mem (rx) : ORIGIN = 0x9D011000, LENGTH = 0x200
     /* Size of Bootloader is 0x11000 */
-    kseg0_program_mem  (rx) : ORIGIN = 0x9D011000, LENGTH = 0x100000 - 0x1000 - 0x10000
+    kseg0_program_mem  (rx) : ORIGIN = 0x9D012000, LENGTH = 0x100000 - 0x1000 - 0x11000
     kseg1_boot_mem          : ORIGIN = 0xBD010200, LENGTH = 0x480
 
     /* Reserve 16 Bytes to Store Bootloader Trigger Pattern */
