@@ -278,7 +278,7 @@ void DRV_USBFSV1_DEVICE_RemoteWakeupStart
 }
 
 // *****************************************************************************
-/* MISRA C-2012 Rule 5.1 deviated:2 Deviation record ID -  H3_MISRAC_2012_R_5_2_DR_1 */
+/* MISRA C-2012 Rule 5.1 deviated:2 Deviation record ID -  H3_USB_MISRAC_2012_R_5_2_DR_1 */
 /* Function:
     void DRV_USBFSV1_DEVICE_RemoteWakeupStop(DRV_HANDLE handle)
 
@@ -368,7 +368,7 @@ void DRV_USBFSV1_DEVICE_Attach
 
 // *****************************************************************************
 /* MISRA C-2012 Rule 10.4, and 20.7 deviated below. Deviation record ID -  
-    H3_MISRAC_2012_R_10_4_DR_1, H3_MISRAC_2012_R_20_7_DR_1 */
+    H3_USB_MISRAC_2012_R_10_4_DR_1, H3_USB_MISRAC_2012_R_20_7_DR_1 */
 /* Function:
       void DRV_USBFSV1_DEVICE_Detach(DRV_HANDLE handle)
 
@@ -507,7 +507,7 @@ uint16_t DRV_USBFSV1_DEVICE_SOFNumberGet
 
 // *****************************************************************************
 /* MISRA C-2012 Rule 11.3, and 11.6 deviated below. Deviation record ID -  
-    H3_MISRAC_2012_R_11_3_DR_1, H3_MISRAC_2012_R_11_6_DR_1 */
+    H3_USB_MISRAC_2012_R_11_3_DR_1, H3_USB_MISRAC_2012_R_11_6_DR_1 */
 /* Function:
     void F_DRV_USBFSV1_DEVICE_IRPQueueFlush
     (
@@ -534,7 +534,7 @@ void F_DRV_USBFSV1_DEVICE_IRPQueueFlush
     USB_DEVICE_IRP_STATUS status
 )
 {
-    USB_DEVICE_IRP_LOCAL * iterator = NULL;
+    DRV_USBFSV1_DEVICE_IRP_LOCAL * iterator = NULL;
 
     if(endpointObject != NULL)
     {
@@ -1457,21 +1457,21 @@ USB_ERROR DRV_USBFSV1_DEVICE_IRPSubmit
     DRV_USBFSV1_DEVICE_ENDPOINT_OBJ * endpointObj;
     DRV_USBFSV1_OBJ * hDriver;
     usb_registers_t * usbID;    
-    USB_DEVICE_IRP_LOCAL * irp;
+    DRV_USBFSV1_DEVICE_IRP_LOCAL * irp;
     uint16_t byteCount = 0;                 /* To hold received byte count */
     uint16_t endpoint0DataStageSize;
     uint8_t endpoint0DataStageDirection;
     uint8_t direction;
     uint8_t endpoint;
     USB_ERROR retVal = USB_ERROR_NONE;
-    USB_DEVICE_IRP_LOCAL * iterator;
+    DRV_USBFSV1_DEVICE_IRP_LOCAL * iterator;
     M_DRV_USBFSV1_DECLARE_BOOL_VARIABLE(interruptWasEnabled);
 
 
     /* Check for a valid endpoint */
     endpoint = endpointAndDirection & DRV_USBFSV1_ENDPOINT_NUMBER_MASK;
     direction = (uint8_t)((endpointAndDirection & DRV_USBFSV1_ENDPOINT_DIRECTION_MASK) != 0U);
-    irp = (USB_DEVICE_IRP_LOCAL *) inputIRP;
+    irp = (DRV_USBFSV1_DEVICE_IRP_LOCAL *) inputIRP;
 
     /* Check if the client handle is valid */
     if((DRV_HANDLE_INVALID == handle) || ((DRV_HANDLE)(NULL) == handle))
@@ -2096,7 +2096,7 @@ USB_ERROR DRV_USBFSV1_DEVICE_IRPCancel
 
 {
     DRV_USBFSV1_OBJ * hDriver;
-    USB_DEVICE_IRP_LOCAL * irpToCancel;
+    DRV_USBFSV1_DEVICE_IRP_LOCAL * irpToCancel;
     USB_ERROR retVal = USB_ERROR_NONE;
     M_DRV_USBFSV1_DECLARE_BOOL_VARIABLE(interruptWasEnabled);
 
@@ -2119,7 +2119,7 @@ USB_ERROR DRV_USBFSV1_DEVICE_IRPCancel
     {
         hDriver = ((DRV_USBFSV1_OBJ *)handle);
 
-        irpToCancel = (USB_DEVICE_IRP_LOCAL *) irp;
+        irpToCancel = (DRV_USBFSV1_DEVICE_IRP_LOCAL *) irp;
 
         if(irpToCancel->status <= USB_DEVICE_IRP_STATUS_COMPLETED_SHORT)
         {
@@ -2230,7 +2230,7 @@ USB_ERROR DRV_USBFSV1_DEVICE_IRPCancel
 void F_DRV_USBFSV1_DEVICE_Tasks_ISR(DRV_USBFSV1_OBJ * hDriver)
 {
     DRV_USBFSV1_DEVICE_ENDPOINT_OBJ * endpointObj;
-    USB_DEVICE_IRP_LOCAL * irp;
+    DRV_USBFSV1_DEVICE_IRP_LOCAL * irp;
     usb_registers_t * usbID;
     USB_SETUP_PACKET * setupPkt;
     volatile uint32_t regIntEnSet;
