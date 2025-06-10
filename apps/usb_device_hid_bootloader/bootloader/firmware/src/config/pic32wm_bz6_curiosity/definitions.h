@@ -55,9 +55,9 @@
 #include "peripheral/gpio/plib_gpio.h"
 #include "peripheral/nvic/plib_nvic.h"
 #include "peripheral/cmcc/plib_cmcc.h"
+#include "driver/usb/usbfs/drv_usbfs.h"
 #include "usb/usb_chapter_9.h"
 #include "usb/usb_device.h"
-#include "driver/usb/usbfs/drv_usbfs.h"
 #include "bsp/bsp.h"
 #include "bootloader/bootloader_usb_device_hid.h"
 #include "peripheral/nvm/plib_nvm.h"
@@ -196,9 +196,9 @@ Remarks:
 
 typedef struct
 {
-    SYS_MODULE_OBJ  usbDevObject0;
-
     SYS_MODULE_OBJ  drvUSBFSObject;
+
+    SYS_MODULE_OBJ  usbDevObject0;
 
 
 } SYSTEM_OBJECTS;

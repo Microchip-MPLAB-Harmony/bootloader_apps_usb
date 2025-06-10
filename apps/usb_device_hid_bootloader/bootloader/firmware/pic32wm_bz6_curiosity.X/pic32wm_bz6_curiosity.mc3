@@ -11802,7 +11802,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32wm_bz6_curiosity\bootloader\bootloader_common.h</file>
-         <hash>b5370d41b14d69ee1ea74b446dcc82fd6aa65cc8fcb8419b081ba0349df32e14</hash>
+         <hash>39ba6fb25618b0469ae280e9cbc6b8a93967b22f50ce98887b83cdab56375517</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32wm_bz6_curiosity\bootloader\bootloader_interrupt.h</file>
@@ -11842,11 +11842,11 @@
       </entry>
       <entry>
          <file>..\src\config\pic32wm_bz6_curiosity\configuration.h</file>
-         <hash>47705f45d12205210d98164ae58fb0dd4c6a3914ebf521e77018f7b82a375058</hash>
+         <hash>0dc80507d94a00b143b53d7aced387c120ebc9165a53e91caa1bd518c3fafd7b</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32wm_bz6_curiosity\definitions.h</file>
-         <hash>824aa3c76533b020eefd9f26c39d70a8a3ce55e045f1ed518d4010c3cde6adbf</hash>
+         <hash>035d0043817a9d1451c0e41ce86c4262c2152b93b488aac2130ef871087e1b87</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32wm_bz6_curiosity\device.h</file>
@@ -11902,11 +11902,11 @@
       </entry>
       <entry>
          <file>..\src\config\pic32wm_bz6_curiosity\initialization.c</file>
-         <hash>3a3e79ea9abf0318f688a3774f21363f50ef37de65ce3aa0ba23aeb32bfe256c</hash>
+         <hash>2501184469e3ff99292b50c3360135a759f04c78f02141a91d9a21866623623f</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32wm_bz6_curiosity\interrupts.c</file>
-         <hash>74483d06d9db591f5f1d8a264591a540eec9c19d6dc77b78fd94c0571002f332</hash>
+         <hash>059a3c1f4f39d424e8324957d2459d141d4343c239117acd5a07bf4dcdadb9ee</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32wm_bz6_curiosity\interrupts.h</file>
@@ -11930,7 +11930,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32wm_bz6_curiosity\peripheral\clk\plib_clk.c</file>
-         <hash>3d9113c011619a95a2174cad6e2df6a6c6a06f586f9b7779f9db88cf20ea9b01</hash>
+         <hash>18cc438e1abc97948f7e460792ab2a73fcf2d8c39a154f6a202338e1d8f0465c</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32wm_bz6_curiosity\peripheral\clk\plib_clk.h</file>
@@ -12026,7 +12026,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32wm_bz6_curiosity\tasks.c</file>
-         <hash>7d8175327e0a0117b475233cd1fba033f94043111275b9246a64c466ab78999c</hash>
+         <hash>7ea0303aa4887faf7c90b4e83224df621fa755cb3f3673ceb4fddd68d74b734d</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32wm_bz6_curiosity\toolchain_specifics.h</file>
@@ -12138,7 +12138,7 @@
       </entry>
       <entry>
          <file>..\src\packs\CMSIS\CMSIS\Core\Include\cmsis_version.h</file>
-         <hash>8cda7ac3ff6f0eb5e83c4fe613dd195151b24da54167f5c3c007e599a03f1edc</hash>
+         <hash>2de01ae2556a38eb82c389de23c701805ec63308cfbcf3f84cb12141589b0858</hash>
       </entry>
       <entry>
          <file>..\src\packs\CMSIS\CMSIS\Core\Include\core_cm4.h</file>
