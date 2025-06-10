@@ -142,7 +142,7 @@ void __NO_RETURN bootloader_TriggerReset(void)
 void bootloader_SwapAndReset( void )
 {
     /* Swap bank and Reset */
-    NVMCTRL_BankSwap();
+                     NVMCTRL_BankSwap();
 }
 
 /* MISRAC 2012 deviation block end */

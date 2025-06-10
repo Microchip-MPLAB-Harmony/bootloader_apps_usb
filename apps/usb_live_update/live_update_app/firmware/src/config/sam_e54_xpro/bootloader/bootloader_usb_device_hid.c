@@ -257,7 +257,7 @@ static void bootloader_ProcessBuffer( BOOTLOADER_DATA *handle )
     {
         case (uint8_t)READ_BOOT_INFO:
         {
-            btlVersion = bootloader_GetVersion(); 
+            btlVersion = bootloader_GetVersion();
 
 
             /* Major Number */
@@ -273,7 +273,10 @@ static void bootloader_ProcessBuffer( BOOTLOADER_DATA *handle )
 
         case (uint8_t)ERASE_FLASH:
         {
+            /* Following MISRA-C rules are deviated in the below code block */
+            /* MISRA C-2012 Rule 11.6 */
             bootloader_NvmAppErase(APP_START_ADDRESS, FLASH_END_ADDRESS);
+            /* MISRAC 2012 deviation block end */
             handle->currentState = BOOTLOADER_SEND_RESPONSE;
             handle->buffSize = 1;
             break;
