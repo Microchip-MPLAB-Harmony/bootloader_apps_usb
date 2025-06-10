@@ -344,7 +344,8 @@ void F_USB_HOST_UpdateInterfaceStatus
     USB_INTERFACE_ASSOCIATION_DESCRIPTOR * interfaceAssociation;
     uint8_t iterator;
     int32_t iadIterator;
-
+    USB_HOST_EVENT  hostEvent = USB_HOST_EVENT_DEVICE_UNSUPPORTED ;
+    
     busObj = &(gUSBHostBusList[busIndex]);
 
     /* This redundant statement is added to avoid warning in a case where the
@@ -543,8 +544,29 @@ void F_USB_HOST_UpdateInterfaceStatus
             deviceObj->hcdInterface->hostPipeClose(deviceObj->controlPipeHandle);
             if(gUSBHostObj.hostEventHandler != NULL)
             {
+                /* Search for a device class */
+                if(deviceObj->deviceDescriptor.bDeviceClass == 0x9U)
+                {
+                    hostEvent = USB_HOST_EVENT_HUB_TIER_LEVEL_EXCEEDED;
+                }
+                else
+                {
+                    /* Search for a Interface class */
+                    for(iterator = 0; iterator < deviceObj->nInterfaces ; iterator ++)
+                    {
+                    
+                        interfaceInfo = &deviceObj->configDescriptorInfo.interfaceInfo[iterator];
+                        interfaceDescriptor = (USB_INTERFACE_DESCRIPTOR *)(interfaceInfo->interfaceDescriptor);
+                        if(interfaceDescriptor->bInterfaceClass == 0x9U)
+                        {
+                            hostEvent = USB_HOST_EVENT_HUB_TIER_LEVEL_EXCEEDED;
+                        }
+                    }
+                }
+                
                 /* Send an event to the application */
-                (void) gUSBHostObj.hostEventHandler(USB_HOST_EVENT_DEVICE_UNSUPPORTED, NULL, gUSBHostObj.context);
+                (void) gUSBHostObj.hostEventHandler(hostEvent, NULL, gUSBHostObj.context);
+                
             }
         }
     }
@@ -828,8 +850,8 @@ int F_USB_HOST_FindClassSubClassProtocolDriver
 
 // *****************************************************************************
 /* MISRA C-2012 Rule 4.12 deviated:2, 11.3 deviated:24, 21.3 deviated:9 and 20.7 deviated:7.
-   Deviation record ID - H3_MISRAC_2012_R_4_12_DR_1, H3_MISRAC_2012_R_11_3_DR_1 ,
-   H3_MISRAC_2012_R_21_3_DR_1 & H3_MISRAC_2012_R_20_7_DR_1 */
+   Deviation record ID - H3_USB_MISRAC_2012_R_4_12_DR_1, H3_USB_MISRAC_2012_R_11_3_DR_1 ,
+   H3_USB_MISRAC_2012_R_21_3_DR_1 & H3_USB_MISRAC_2012_R_20_7_DR_1 */
 
 
 /* Function:
@@ -1242,7 +1264,7 @@ void F_USB_HOST_UpdateConfigurationState
 }
 
 // *****************************************************************************
-/* MISRA C-2012 Rule 10.4 False Positive:11 Deviation record ID -  H3_MISRAC_2012_R_10_4_DR_1 */
+/* MISRA C-2012 Rule 10.4 False Positive:11 Deviation record ID -  H3_USB_MISRAC_2012_R_10_4_DR_1 */
 /* Function:
     void F_USB_HOST_UpdateDeviceOwnership
     (
@@ -1480,7 +1502,7 @@ void F_USB_HOST_UpdateDeviceOwnership
   Remarks:
     Refer to usb_host_client_driver.h for usage details.
 */
-/* MISRA C-2012 Rule 11.1 deviated:5 Deviation record ID -  H3_MISRAC_2012_R_11_1_DR_1 */
+/* MISRA C-2012 Rule 11.1 deviated:5 Deviation record ID -  H3_USB_MISRAC_2012_R_11_1_DR_1 */
 
 USB_HOST_RESULT USB_HOST_DeviceControlTransfer
 (
@@ -3118,7 +3140,7 @@ void  F_USB_HOST_DeviceControlTransferCallback( USB_HOST_IRP * irp )
 // *****************************************************************************
 
 // *****************************************************************************
-/* MISRA C-2012 Rule 11.8 deviated:1 Deviation record ID -  H3_MISRAC_2012_R_11_8_DR_1 */
+/* MISRA C-2012 Rule 11.8 deviated:1 Deviation record ID -  H3_USB_MISRAC_2012_R_11_8_DR_1 */
 /* Function:
     SYS_MODULE_OBJ USB_HOST_Initialize
     (
@@ -4320,6 +4342,11 @@ void USB_HOST_DeviceDenumerate( USB_HOST_DEVICE_OBJ_HANDLE deviceObjHandle )
             busIndex = USB_HOST_BUS_NUMBER(deviceObjHandle);
             busObj = &gUSBHostBusList[busIndex];
             deleteDeviceObj = deviceObj;
+            
+            if( deviceObj->deviceState == USB_HOST_DEVICE_STATE_ERROR_HOLDING ) 
+            {
+                (void) gUSBHostObj.hostEventHandler(USB_HOST_EVENT_DEVICE_DETACHED, NULL, gUSBHostObj.context);
+            }  
 
             /* If there is device level client driver, then release the client driver */
             if(deviceObj->deviceClientDriver != NULL )
@@ -4766,7 +4793,7 @@ USB_ENDPOINT_DESCRIPTOR * USB_HOST_DeviceEndpointDescriptorQuery
 }
 
 // *****************************************************************************
-/* MISRA C-2012 Rule 18.3 deviated:1 Deviation record ID -  H3_MISRAC_2012_R_18_3_DR_1 */
+/* MISRA C-2012 Rule 18.3 deviated:1 Deviation record ID -  H3_USB_MISRAC_2012_R_18_3_DR_1 */
 /* Function:
     USB_INTERFACE_DESCRIPTOR * USB_HOST_DeviceInterfaceDescriptorQuery
     (
