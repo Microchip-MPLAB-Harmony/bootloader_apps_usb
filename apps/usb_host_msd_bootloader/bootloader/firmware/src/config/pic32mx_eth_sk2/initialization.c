@@ -213,11 +213,8 @@ static const DRV_USBFS_INIT drvUSBFSInit =
      /* Assign the endpoint table */
     .endpointTable= endPointTable1,
 
-
     /* Interrupt Source for USB module */
     .interruptSource = INT_SOURCE_USB,
-
-
     
     /* USB Controller to operate as USB Host */
     .operationMode = DRV_USBFS_OPMODE_HOST,
@@ -227,7 +224,7 @@ static const DRV_USBFS_INIT drvUSBFSInit =
     /* Stop in idle */
     .stopInIdle = false,
     
-        /* Suspend in sleep */
+    /* Suspend in sleep */
     .suspendInSleep = false,
  
     /* Identifies peripheral (PLIB-level) ID */

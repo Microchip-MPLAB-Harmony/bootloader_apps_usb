@@ -20,7 +20,7 @@
 
 // DOM-IGNORE-BEGIN
 /*******************************************************************************
-* Copyright (C) 2018 Microchip Technology Inc. and its subsidiaries.
+* Copyright (C) 2025 Microchip Technology Inc. and its subsidiaries.
 *
 * Subject to your compliance with these terms, you may use Microchip software
 * and any derivatives exclusively with Microchip products. It is your
@@ -76,12 +76,12 @@ void USB_1_Handler (void);
 // Section: System Interrupt Vector definitions
 // *****************************************************************************
 // *****************************************************************************
-void __ISR(_TIMER_1_VECTOR, ipl1SOFT) TIMER_1_Handler (void)
+void __attribute__((used)) __ISR(_TIMER_1_VECTOR, ipl1SOFT) TIMER_1_Handler (void)
 {
     TIMER_1_InterruptHandler();
 }
 
-void __ISR(_USB_1_VECTOR, ipl1SOFT) USB_1_Handler (void)
+void __attribute__((used)) __ISR(_USB_1_VECTOR, ipl1SOFT) USB_1_Handler (void)
 {
     DRV_USBFS_USB_Handler();
 }

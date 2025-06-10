@@ -14,7 +14,7 @@
 
 //DOM-IGNORE-BEGIN
 /*******************************************************************************
-* Copyright (C) 2018 Microchip Technology Inc. and its subsidiaries.
+* Copyright (C) 2025 Microchip Technology Inc. and its subsidiaries.
 *
 * Subject to your compliance with these terms, you may use Microchip software
 * and any derivatives exclusively with Microchip products. It is your
@@ -66,11 +66,11 @@
 #include "peripheral/evic/plib_evic.h"
 #include "driver/usb/usbfs/drv_usbfs.h"
 #include "peripheral/tmr1/plib_tmr1.h"
-#include "peripheral/nvm/plib_nvm.h"
-#include "system/time/sys_time.h"
 #include "system/int/sys_int.h"
 #include "osal/osal.h"
 #include "system/debug/sys_debug.h"
+#include "system/time/sys_time.h"
+#include "peripheral/nvm/plib_nvm.h"
 #include "app.h"
 
 
@@ -84,13 +84,13 @@ extern "C" {
 // DOM-IGNORE-END
 
 /* Device Information */
-#define DEVICE_NAME			 "PIC32MX795F512L"
-#define DEVICE_ARCH			 "MIPS"
-#define DEVICE_FAMILY		 "PIC32MX1156"
-#define DEVICE_SERIES		 "PIC32MX"
+#define DEVICE_NAME          "PIC32MX795F512L"
+#define DEVICE_ARCH          "MIPS"
+#define DEVICE_FAMILY        "PIC32MX1156"
+#define DEVICE_SERIES        "PIC32MX"
 
 /* CPU clock frequency */
-#define CPU_CLOCK_FREQUENCY 80000000
+#define CPU_CLOCK_FREQUENCY 80000000U
 
 // *****************************************************************************
 // *****************************************************************************
