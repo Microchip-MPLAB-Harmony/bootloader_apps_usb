@@ -1,6 +1,0 @@
-format_version: v1.0
-type: UniqueComponent
-attributes: {id: BSP_PIC32MX_Ethernet_Starter_Kit_II, bsp: 'true'}
-children:
-- type: ElementPosition
-  attributes: {x: '1', y: '52', id: BSP_PIC32MX_Ethernet_Starter_Kit_II}
