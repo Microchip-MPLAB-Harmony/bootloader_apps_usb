@@ -127,11 +127,4 @@ void CLOCK_Initialize (void)
 
 
 
-
-    /* Disable DFLL */
-    OSCCTRL_REGS->OSCCTRL_DFLLCTRLA &= ~(OSCCTRL_DFLLCTRLA_ENABLE_Msk);
-    while((OSCCTRL_REGS->OSCCTRL_SYNCBUSY & OSCCTRL_SYNCBUSY_DFLLENABLE_Msk) == OSCCTRL_SYNCBUSY_DFLLENABLE_Msk)
-    {
-        /* Waiting for the DFLL48M enable synchronization */
-    }
 }
