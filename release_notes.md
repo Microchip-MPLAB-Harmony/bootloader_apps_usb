@@ -3,6 +3,19 @@
 
 # Microchip MPLAB® Harmony 3 Release Notes
 
+## USB Bootloader Applications Release v3.4.1
+
+### New Features
+
+- None
+
+### Bug fixes and Improvements
+
+- Regenerated and tested PIC32CZ CA80 Curiosity Ultra USB Device HID Bootloader Applications 
+
+### Development Tools
+- Same as v3.4.0
+
 ## USB Bootloader Applications Release v3.4.0
 
 ### New Features
