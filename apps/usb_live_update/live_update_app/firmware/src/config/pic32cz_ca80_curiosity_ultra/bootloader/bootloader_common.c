@@ -138,22 +138,49 @@ void __NO_RETURN bootloader_TriggerReset(void)
 }
 
 
-void FCW_BankSwap(void)
+static T_FLASH_SERIAL CACHE_ALIGN  update_flash_serial;
+
+/* Function to read the Serial number from Flash bank mapped to lower region */
+uint32_t bootloader_GetLowerFlashSerial(void)
 {
-    PROGRAM_FLASH_BANK currentBank;
+    T_FLASH_SERIAL *lower_flash_serial = LOWER_FLASH_SERIAL_READ;
 
-    // Read the actual active bank using PC
-    currentBank = FCW_ProgramFlashBankGet();
-
-    if (currentBank == PROGRAM_FLASH_BANK_1)
-    {
-        FCW_ProgramFlashBankSelect(PROGRAM_FLASH_BANK_2);
-    }
-    else
-    {
-        FCW_ProgramFlashBankSelect(PROGRAM_FLASH_BANK_1);
-    }
+    return (lower_flash_serial->serial);
 }
 
+void bootloader_UpdateFlashSerial(uint32_t serial, uint32_t addr)
+{
+    update_flash_serial.serial    = serial;
+    update_flash_serial.prologue  = FLASH_SERIAL_PROLOGUE;
+    update_flash_serial.epilogue  = FLASH_SERIAL_EPILOGUE;
+
+    while (FCW_IsBusy()) { /* Nothing to do */ }
+    
+    FCW_PageErase( addr );
+
+    (void)FCW_RowWrite((uint32_t *)&update_flash_serial, addr);
+
+    while (FCW_IsBusy()) { /* Nothing to do */ }
+}
+/* Function to update the serial number in upper flash panel (Inactive Panel) */
+void bootloader_UpdateUpperFlashSerial(void)
+{
+    uint32_t upper_flash_serial;
+
+    /* Increment Upper Mapped Flash panel serial by 1 to be ahead of the
+     * current running Lower Mapped Flash panel serial
+     */
+    upper_flash_serial = bootloader_GetLowerFlashSerial() + 1;
+
+    bootloader_UpdateFlashSerial(upper_flash_serial, UPPER_FLASH_SERIAL_START);
+}
+
+void bootloader_SwapAndReset( void )
+{
+    /* Update Serial number of Inactive bank */
+    bootloader_UpdateUpperFlashSerial();
+
+    bootloader_TriggerReset();
+}
 
 /* MISRAC 2012 deviation block end */

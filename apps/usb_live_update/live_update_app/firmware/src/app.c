@@ -52,6 +52,7 @@
 
 #include "app.h"
 #include "definitions.h"
+#include <string.h>
 
 // *****************************************************************************
 // *****************************************************************************
@@ -204,8 +205,7 @@ void APP_Tasks ( void )
                     
                 }
 
-                FCW_BankSwap();
-                bootloader_TriggerReset();
+                bootloader_SwapAndReset();                
             }
 
             break;

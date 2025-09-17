@@ -419,6 +419,8 @@ void SYS_Initialize ( void* data )
     RTC_Initialize();
 
 	BSP_Initialize();
+    FCR_Initialize();
+
 
     /* MISRAC 2012 deviation block start */
     /* Following MISRA-C rules deviated in this block  */

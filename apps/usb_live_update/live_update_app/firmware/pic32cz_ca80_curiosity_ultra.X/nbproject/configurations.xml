@@ -75,6 +75,9 @@
             <logicalFolder name="evsys" displayName="evsys" projectFiles="true">
               <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/peripheral/evsys/plib_evsys.h</itemPath>
             </logicalFolder>
+            <logicalFolder name="fcr" displayName="fcr" projectFiles="true">
+              <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/peripheral/fcr/plib_fcr.h</itemPath>
+            </logicalFolder>
             <logicalFolder name="fcw" displayName="fcw" projectFiles="true">
               <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/peripheral/fcw/plib_fcw.h</itemPath>
             </logicalFolder>
@@ -330,6 +333,9 @@
             <logicalFolder name="evsys" displayName="evsys" projectFiles="true">
               <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/peripheral/evsys/plib_evsys.c</itemPath>
             </logicalFolder>
+            <logicalFolder name="fcr" displayName="fcr" projectFiles="true">
+              <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/peripheral/fcr/plib_fcr.c</itemPath>
+            </logicalFolder>
             <logicalFolder name="fcw" displayName="fcw" projectFiles="true">
               <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/peripheral/fcw/plib_fcw.c</itemPath>
             </logicalFolder>
@@ -399,8 +405,8 @@
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="CMSIS" vendor="ARM" version="5.4.0"/>
         <pack name="PIC32CZ-CA80_DFP" vendor="Microchip" version="1.4.158"/>
+        <pack name="CMSIS" vendor="ARM" version="5.4.0"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>
@@ -543,7 +549,7 @@
         <property key="oXC32ld-extra-opts" value=""/>
         <property key="optimization-level" value=""/>
         <property key="preprocessor-macros"
-                  value="RAM_LENGTH=0xffff0;RAM_ORIGIN=0x20020010;ROM_LENGTH=0x400000"/>
+                  value="RAM_LENGTH=0xffff0;RAM_ORIGIN=0x20020010;ROM_LENGTH=0x400000;VECTOR_REGION=rom"/>
         <property key="remove-unused-sections" value="true"/>
         <property key="report-memory-usage" value="false"/>
         <property key="serial-length" value=""/>
@@ -615,7 +621,7 @@
         <property key="communication.activationmode" value="nohv"/>
         <property key="communication.interface" value="swd"/>
         <property key="communication.interface.jtag" value="2wire"/>
-        <property key="communication.speed" value="2.000"/>
+        <property key="communication.speed" value="4"/>
         <property key="debugoptions.debug-startup" value="Use system settings"/>
         <property key="debugoptions.reset-behaviour" value="Use system settings"/>
         <property key="debugoptions.simultaneous.debug" value="false"/>
@@ -635,9 +641,9 @@
         <property key="memories.flashdata" value="true"/>
         <property key="memories.id" value="true"/>
         <property key="memories.instruction.ram.ranges"
-                  value="${memories.instruction.ram.ranges}"/>
+                  value="${memories.instruction.ram.ranges.default}"/>
         <property key="memories.programmemory" value="true"/>
-        <property key="memories.programmemory.ranges" value="8000000-c7fffff"/>
+        <property key="memories.programmemory.ranges" value="0x0-0x2011ffff"/>
         <property key="poweroptions.powerenable" value="false"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>

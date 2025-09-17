@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://www.netbeans.org/ns/project/1">
+    <type>com.microchip.mplab.nbide.embedded.makeproject</type>
+    <configuration>
+        <data xmlns="http://www.netbeans.org/ns/make-project/1">
+            <name>usb_live_update_switcher_pic32cz_ca80_curiosity_ultra</name>
+            <creation-uuid>8916817f-172b-4cbc-a680-5f2c904fc2a2</creation-uuid>
+            <make-project-type>0</make-project-type>
+            <sourceEncoding>ISO-8859-1</sourceEncoding>
+            <make-dep-projects>
+                <make-dep-project>../../../live_update_app/firmware/pic32cz_ca80_curiosity_ultra.X</make-dep-project>
+            </make-dep-projects>
+            <sourceRootList>
+                <sourceRootElem>../../../../../../../bootloader_apps_ethernet/apps/udp_live_update/switcher/firmware/src/config/pic32cz_ca80_curiosity_ultra</sourceRootElem>
+                <sourceRootElem>../src/config/pic32cz_ca80_curiosity_ultra</sourceRootElem>
+            </sourceRootList>
+            <confList>
+                <confElem>
+                    <name>pic32cz_ca80_curiosity_ultra</name>
+                    <type>2</type>
+                </confElem>
+            </confList>
+            <formatting>
+                <project-formatting-style>false</project-formatting-style>
+            </formatting>
+        </data>
+    </configuration>
+</project>
