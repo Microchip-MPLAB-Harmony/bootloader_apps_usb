@@ -1,0 +1,94 @@
+configVersion: 1.0.0
+componentName: usb_device_hid_bootloader
+coreVersion: 5.8.3
+device: SAM9X75D2G
+library: []
+dependency:
+- dependencyPackage: class com.microchip.mcc.harmony.HarmonyModule
+  name: usb_device_hid_bootloader
+  type: module
+  version: ''
+- dependencyPackage: ''
+  name: bootloader
+  type: package
+  version: v3.8.0
+customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
+data:
+  attachments:
+    children:
+    - children:
+      - attributes:
+          id: btl_MEMORY_dependency
+        children:
+        - children:
+          - attributes:
+              id: targetComponentID
+            children:
+            - type: Value
+              value: drv_nand_flash
+            type: String
+          - attributes:
+              id: targetAttachmentID
+            children:
+            - type: Value
+              value: memory
+            type: String
+          type: Attributes
+        type: DirectDependency
+      - attributes:
+          id: btl_SYS_FS_dependency
+        children:
+        - children:
+          - attributes:
+              id: enabled
+            children:
+            - type: Value
+              value: 'false'
+            type: Boolean
+          type: Attributes
+        type: GenericDependency
+      - attributes:
+          id: btl_USB_DEVICE_HID_dependency
+        children:
+        - children:
+          - attributes:
+              id: targetComponentID
+            children:
+            - type: Value
+              value: usb_device_hid_0
+            type: String
+          - attributes:
+              id: targetAttachmentID
+            children:
+            - type: Value
+              value: USB Device
+            type: String
+          type: Attributes
+        type: DirectDependency
+      type: Attachments
+    type: usb_device_hid_bootloader
+  elementPosition:
+    attributes:
+      id: __ROOTVIEW
+    children:
+    - children:
+      - attributes:
+          id: usb_device_hid_bootloader
+          x: '611'
+          y: '233'
+        type: ElementPosition
+      type: ElementPositions
+    type: ComponentGraph
+  symbols:
+    USB_DEVICE_INDEX:
+      attributes:
+        id: USB_DEVICE_INDEX
+      children:
+      - children:
+        - attributes:
+            id: usb_device_hid_bootloader
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Integer
+  userData: {}
