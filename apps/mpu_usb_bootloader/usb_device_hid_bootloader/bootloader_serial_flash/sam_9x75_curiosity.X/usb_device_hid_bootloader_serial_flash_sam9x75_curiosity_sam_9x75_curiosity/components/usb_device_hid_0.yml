@@ -1,0 +1,86 @@
+configVersion: 1.0.0
+componentName: usb_device_hid_0
+coreVersion: 5.8.3
+device: SAM9X75D2G
+library: []
+dependency:
+- dependencyPackage: class com.microchip.mcc.harmony.HarmonyModule
+  name: usb_device_hid_0
+  type: module
+  version: ''
+- dependencyPackage: ''
+  name: usb
+  type: package
+  version: v3.16.0
+customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
+data:
+  attachments:
+    children:
+    - children:
+      - attributes:
+          id: USB Device
+        children:
+        - children:
+          - attributes:
+              id: targetComponentID
+            children:
+            - type: Value
+              value: usb_device_hid_bootloader
+            type: String
+          - attributes:
+              id: targetAttachmentID
+            children:
+            - type: Value
+              value: btl_USB_DEVICE_HID_dependency
+            type: String
+          type: Attributes
+        type: DirectCapability
+      type: Attachments
+    type: usb_device_hid_0
+  elementPosition: {}
+  symbols:
+    CONFIG_USB_DEVICE_FUNCTION_INTERFACE_NUMBER:
+      attributes:
+        id: CONFIG_USB_DEVICE_FUNCTION_INTERFACE_NUMBER
+      children:
+      - children:
+        - attributes:
+            id: usb_device_hid_0
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Integer
+    CONFIG_USB_DEVICE_FUNCTION_INT_IN_ENDPOINT_NUMBER:
+      attributes:
+        id: CONFIG_USB_DEVICE_FUNCTION_INT_IN_ENDPOINT_NUMBER
+      children:
+      - children:
+        - attributes:
+            id: usb_device_hid_0
+            value: '1'
+          type: Dynamic
+        type: Values
+      type: Integer
+    CONFIG_USB_DEVICE_FUNCTION_INT_OUT_ENDPOINT_NUMBER:
+      attributes:
+        id: CONFIG_USB_DEVICE_FUNCTION_INT_OUT_ENDPOINT_NUMBER
+      children:
+      - children:
+        - attributes:
+            id: usb_device_hid_0
+            value: '2'
+          type: Dynamic
+        type: Values
+      type: Integer
+    CONFIG_USB_DEVICE_HID_REPORT_DESCRIPTOR_TYPE:
+      attributes:
+        id: CONFIG_USB_DEVICE_HID_REPORT_DESCRIPTOR_TYPE
+      children:
+      - children:
+        - attributes:
+            id: usb_device_hid_bootloader
+            value: Custom
+          type: Dynamic
+        type: Values
+      type: Combo
+  userData: {}
