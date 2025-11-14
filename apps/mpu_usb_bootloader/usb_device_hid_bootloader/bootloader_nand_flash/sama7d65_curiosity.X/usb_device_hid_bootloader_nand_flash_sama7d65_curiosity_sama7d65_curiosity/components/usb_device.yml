@@ -1,0 +1,118 @@
+configVersion: 1.0.0
+componentName: usb_device
+coreVersion: 5.8.3
+device: SAMA7D65
+library: []
+dependency:
+- dependencyPackage: class com.microchip.mcc.harmony.HarmonyModule
+  name: usb_device
+  type: module
+  version: ''
+- dependencyPackage: ''
+  name: usb
+  type: package
+  version: v3.16.0
+customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
+data:
+  attachments: {}
+  elementPosition:
+    attributes:
+      id: __ROOTVIEW
+    children:
+    - children:
+      - attributes:
+          id: usb_device
+          x: '193'
+          y: '247'
+        type: ElementPosition
+      type: ElementPositions
+    type: ComponentGraph
+  symbols:
+    CONFIG_USB_DEVICE_CONFIG_DESCRPTR_SIZE:
+      attributes:
+        id: CONFIG_USB_DEVICE_CONFIG_DESCRPTR_SIZE
+      children:
+      - children:
+        - attributes:
+            id: usb_device
+            value: '41'
+          type: Dynamic
+        type: Values
+      type: Integer
+    CONFIG_USB_DEVICE_ENDPOINTS_NUMBER:
+      attributes:
+        id: CONFIG_USB_DEVICE_ENDPOINTS_NUMBER
+      children:
+      - children:
+        - attributes:
+            id: usb_device
+            value: '2'
+          type: Dynamic
+        type: Values
+      type: Integer
+    CONFIG_USB_DEVICE_FUNCTIONS_NUMBER:
+      attributes:
+        id: CONFIG_USB_DEVICE_FUNCTIONS_NUMBER
+      children:
+      - children:
+        - attributes:
+            id: usb_device
+            value: '1'
+          type: Dynamic
+        type: Values
+      type: Integer
+    CONFIG_USB_DEVICE_INTERFACES_NUMBER:
+      attributes:
+        id: CONFIG_USB_DEVICE_INTERFACES_NUMBER
+      children:
+      - children:
+        - attributes:
+            id: usb_device
+            value: '1'
+          type: Dynamic
+        type: Values
+      type: Integer
+    CONFIG_USB_DEVICE_MSD_DISK_IMAGE:
+      attributes:
+        id: CONFIG_USB_DEVICE_MSD_DISK_IMAGE
+      children:
+      - children:
+        - attributes:
+            id: usb_device
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    CONFIG_USB_DEVICE_PRODUCT_STRING_DESCRIPTOR:
+      attributes:
+        id: CONFIG_USB_DEVICE_PRODUCT_STRING_DESCRIPTOR
+      children:
+      - children:
+        - attributes:
+            id: usb_device
+            value: USB HID Bootloader
+          type: Dynamic
+        type: Values
+      type: String
+    CONFIG_USB_DEVICE_PRODUCT_ID_IDX0:
+      attributes:
+        id: CONFIG_USB_DEVICE_PRODUCT_ID_IDX0
+      children:
+      - children:
+        - attributes:
+            id: usb_device
+            value: '0x003C'
+          type: Dynamic
+        type: Values
+      type: String
+    CONFIG_USB_DEVICE_PRODUCT_ID_SELECTION_IDX0:
+      attributes:
+        id: CONFIG_USB_DEVICE_PRODUCT_ID_SELECTION_IDX0
+      children:
+      - children:
+        - attributes:
+            value: usb_device_hid_bootloader
+          type: User
+        type: Values
+      type: Combo
+  userData: {}
