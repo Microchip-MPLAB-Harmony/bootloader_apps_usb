@@ -43,6 +43,9 @@
           <itemPath>../src/config/sam_9x75_curiosity/toolchain_specifics.h</itemPath>
           <itemPath>../src/config/sam_9x75_curiosity/definitions.h</itemPath>
           <itemPath>../src/config/sam_9x75_curiosity/interrupts.h</itemPath>
+          <itemPath>../src/config/sam_9x75_curiosity/user.h</itemPath>
+          <itemPath>../src/config/sam_9x75_curiosity/configuration.h</itemPath>
+          <itemPath>../src/config/sam_9x75_curiosity/sys_tasks.h</itemPath>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="packs" displayName="packs" projectFiles="true">
@@ -179,6 +182,7 @@
           <itemPath>../src/packs/SAM9X75D2G_DFP/sam9x75d2g.h</itemPath>
         </logicalFolder>
       </logicalFolder>
+      <itemPath>../src/app.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -187,13 +191,13 @@
                      displayName="usb_device_hid_bootloader_test_app_sam9x75_curiosity_sam_9x75_curiosity"
                      projectFiles="true">
         <logicalFolder name="components" displayName="components" projectFiles="true">
+          <itemPath>usb_device_hid_bootloader_test_app_sam9x75_curiosity_sam_9x75_curiosity/components/HarmonyCore.yml</itemPath>
           <itemPath>usb_device_hid_bootloader_test_app_sam9x75_curiosity_sam_9x75_curiosity/components/dbgu.yml</itemPath>
           <itemPath>usb_device_hid_bootloader_test_app_sam9x75_curiosity_sam_9x75_curiosity/components/core.yml</itemPath>
-          <itemPath>usb_device_hid_bootloader_test_app_sam9x75_curiosity_sam_9x75_curiosity/components/dfp.yml</itemPath>
-          <itemPath>usb_device_hid_bootloader_test_app_sam9x75_curiosity_sam_9x75_curiosity/components/pit.yml</itemPath>
           <itemPath>usb_device_hid_bootloader_test_app_sam9x75_curiosity_sam_9x75_curiosity/components/BSP_SAM_9X75_Curiosity.yml</itemPath>
+          <itemPath>usb_device_hid_bootloader_test_app_sam9x75_curiosity_sam_9x75_curiosity/components/dfp.yml</itemPath>
           <itemPath>usb_device_hid_bootloader_test_app_sam9x75_curiosity_sam_9x75_curiosity/components/stdio.yml</itemPath>
-          <itemPath>usb_device_hid_bootloader_test_app_sam9x75_curiosity_sam_9x75_curiosity/components/HarmonyCore.yml</itemPath>
+          <itemPath>usb_device_hid_bootloader_test_app_sam9x75_curiosity_sam_9x75_curiosity/components/pit.yml</itemPath>
         </logicalFolder>
         <itemPath>usb_device_hid_bootloader_test_app_sam9x75_curiosity_sam_9x75_curiosity/mcc-config.mc4</itemPath>
       </logicalFolder>
@@ -257,9 +261,11 @@
           <itemPath>../src/config/sam_9x75_curiosity/interrupts.c</itemPath>
           <itemPath>../src/config/sam_9x75_curiosity/cstartup.S</itemPath>
           <itemPath>../src/config/sam_9x75_curiosity/fault_handlers.c</itemPath>
+          <itemPath>../src/config/sam_9x75_curiosity/tasks.c</itemPath>
         </logicalFolder>
       </logicalFolder>
       <itemPath>../src/main.c</itemPath>
+      <itemPath>../src/app.c</itemPath>
     </logicalFolder>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>
@@ -272,11 +278,11 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>noID</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>4.60</languageToolchainVersion>
+        <languageToolchainVersion>5.00</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="SAM9X7_DFP" vendor="Microchip" version="1.10.202"/>
+        <pack name="SAM9X7_DFP" vendor="Microchip" version="1.9.170"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>
