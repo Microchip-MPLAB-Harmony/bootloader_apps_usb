@@ -252,19 +252,19 @@
                      displayName="usb_device_hid_bootloader_serial_flash_sam9x75_curiosity_sam_9x75_curiosity"
                      projectFiles="true">
         <logicalFolder name="components" displayName="components" projectFiles="true">
-          <itemPath>usb_device_hid_bootloader_serial_flash_sam9x75_curiosity_sam_9x75_curiosity/components/usb_device_hid.yml</itemPath>
-          <itemPath>usb_device_hid_bootloader_serial_flash_sam9x75_curiosity_sam_9x75_curiosity/components/usb_device_hid_0.yml</itemPath>
-          <itemPath>usb_device_hid_bootloader_serial_flash_sam9x75_curiosity_sam_9x75_curiosity/components/HarmonyCore.yml</itemPath>
-          <itemPath>usb_device_hid_bootloader_serial_flash_sam9x75_curiosity_sam_9x75_curiosity/components/drv_usb_udphs.yml</itemPath>
-          <itemPath>usb_device_hid_bootloader_serial_flash_sam9x75_curiosity_sam_9x75_curiosity/components/stdio.yml</itemPath>
           <itemPath>usb_device_hid_bootloader_serial_flash_sam9x75_curiosity_sam_9x75_curiosity/components/BSP_SAM_9X75_Curiosity.yml</itemPath>
-          <itemPath>usb_device_hid_bootloader_serial_flash_sam9x75_curiosity_sam_9x75_curiosity/components/usb_device_hid_bootloader.yml</itemPath>
+          <itemPath>usb_device_hid_bootloader_serial_flash_sam9x75_curiosity_sam_9x75_curiosity/components/core.yml</itemPath>
+          <itemPath>usb_device_hid_bootloader_serial_flash_sam9x75_curiosity_sam_9x75_curiosity/components/dbgu.yml</itemPath>
           <itemPath>usb_device_hid_bootloader_serial_flash_sam9x75_curiosity_sam_9x75_curiosity/components/dfp.yml</itemPath>
           <itemPath>usb_device_hid_bootloader_serial_flash_sam9x75_curiosity_sam_9x75_curiosity/components/drv_sst26.yml</itemPath>
-          <itemPath>usb_device_hid_bootloader_serial_flash_sam9x75_curiosity_sam_9x75_curiosity/components/core.yml</itemPath>
-          <itemPath>usb_device_hid_bootloader_serial_flash_sam9x75_curiosity_sam_9x75_curiosity/components/usb_device.yml</itemPath>
-          <itemPath>usb_device_hid_bootloader_serial_flash_sam9x75_curiosity_sam_9x75_curiosity/components/dbgu.yml</itemPath>
+          <itemPath>usb_device_hid_bootloader_serial_flash_sam9x75_curiosity_sam_9x75_curiosity/components/drv_usb_udphs.yml</itemPath>
+          <itemPath>usb_device_hid_bootloader_serial_flash_sam9x75_curiosity_sam_9x75_curiosity/components/HarmonyCore.yml</itemPath>
           <itemPath>usb_device_hid_bootloader_serial_flash_sam9x75_curiosity_sam_9x75_curiosity/components/qspi.yml</itemPath>
+          <itemPath>usb_device_hid_bootloader_serial_flash_sam9x75_curiosity_sam_9x75_curiosity/components/stdio.yml</itemPath>
+          <itemPath>usb_device_hid_bootloader_serial_flash_sam9x75_curiosity_sam_9x75_curiosity/components/usb_device.yml</itemPath>
+          <itemPath>usb_device_hid_bootloader_serial_flash_sam9x75_curiosity_sam_9x75_curiosity/components/usb_device_hid.yml</itemPath>
+          <itemPath>usb_device_hid_bootloader_serial_flash_sam9x75_curiosity_sam_9x75_curiosity/components/usb_device_hid_0.yml</itemPath>
+          <itemPath>usb_device_hid_bootloader_serial_flash_sam9x75_curiosity_sam_9x75_curiosity/components/usb_device_hid_bootloader.yml</itemPath>
         </logicalFolder>
         <itemPath>usb_device_hid_bootloader_serial_flash_sam9x75_curiosity_sam_9x75_curiosity/mcc-config.mc4</itemPath>
       </logicalFolder>
@@ -379,18 +379,18 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>j32</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>4.60</languageToolchainVersion>
+        <languageToolchainVersion>5.00</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="SAM9X7_DFP" vendor="Microchip" version="1.10.202"/>
+        <pack name="SAM9X7_DFP" vendor="Microchip" version="1.9.170"/>
       </packs>
       <ScriptingSettings>
         <ScriptingSetting key="boot.load_adr" value=""/>
         <ScriptingSetting key="boot.use" value="true"/>
         <ScriptingSetting key="boot.entry_adr" value=""/>
         <ScriptingSetting key="boot.path"
-                          value="${ProjectDir}\..\..\..\..\..\..\deps\at91bootstrap_binaries_sam_9x75_curiosity\at91bootstrap.elf"/>
+                          value="${ProjectDir}\..\..\..\..\..\deps\at91bootstrap_binaries_sam_9x75_curiosity\at91bootstrap.elf"/>
         <ScriptingSetting key="boot.prj" value=""/>
       </ScriptingSettings>
       <compileType>
@@ -421,7 +421,6 @@
       <C32>
         <property key="additional-warnings" value="true"/>
         <property key="addresss-attribute-use" value="false"/>
-        <property key="appendMe" value="-marm"/>
         <property key="cast-align" value="false"/>
         <property key="code-model" value="default"/>
         <property key="const-model" value="default"/>
@@ -501,7 +500,6 @@
         <property key="additional-options-use-response-files" value="false"/>
         <property key="additional-options-write-sla" value="false"/>
         <property key="allocate-dinit" value="false"/>
-        <property key="appendMe" value=""/>
         <property key="code-dinit" value="false"/>
         <property key="ebase-addr" value=""/>
         <property key="enable-check-sections" value="false"/>
@@ -547,7 +545,6 @@
       <C32CPP>
         <property key="additional-warnings" value="false"/>
         <property key="addresss-attribute-use" value="false"/>
-        <property key="appendMe" value=""/>
         <property key="check-new" value="false"/>
         <property key="eh-specs" value="true"/>
         <property key="enable-app-io" value="false"/>
