@@ -50,10 +50,8 @@
 
 #define APP_PARTITION_SIZE                      (0x100000) /* (1024 * 1024) */
 
-/*
- * Magic value used to validate the metadata content
- */
-#define METADATA_MAGIC_VALUE    0x424F4F54u  /*"BOOT"*/
+// Magic value used to validate the metadata content "BOOT"
+#define METADATA_MAGIC_VALUE    0x424F4F54u
 
 /* metadata used to identify a valid application image */
 typedef struct
@@ -102,7 +100,8 @@ typedef struct
 
 } BOOTLOADER_DATA;
 
-static uint8_t CACHE_ALIGN fileBuffer[PAGE_SIZE];
+#define SPARE_SIZE    224U
+static uint8_t CACHE_ALIGN fileBuffer[PAGE_SIZE + SPARE_SIZE];
 static uint32_t memoryAddr;
 static uint8_t eof_processed = 0u;
 
@@ -139,6 +138,7 @@ void bootloader_ImageSizeSet(uint32_t size)
     btlData.extMemoryImageSize = size;
 }
 
+
 void bootloader_Storage_Read(void)
 {
     uint32_t pageNum;
@@ -165,7 +165,7 @@ void bootloader_Storage_Read(void)
 
         do
         {
-            status = DRV_NAND_FLASH_SkipBlock_PageRead(btlData.handle, (uint16_t)blockNum, (uint16_t)pageNum, fileBuffer, NULL, false);
+            (void)DRV_NAND_FLASH_SkipBlock_PageRead(btlData.handle, (uint16_t)blockNum, (uint16_t)pageNum, fileBuffer, NULL, false);
 
             (void)memcpy((uint8_t *)btlData.progAddr, fileBuffer, btlData.geometry.pageSize);
 
@@ -180,6 +180,7 @@ void bootloader_Storage_Read(void)
             }
 
         } while(readLen < meta_data.img_size);
+        status = true;
     }
     if (status == true)
     {
@@ -202,7 +203,7 @@ static bool bootloader_Storage_Write(uint32_t addr, void *buffer, size_t size)
     {
         (void)DRV_NAND_FLASH_SkipBlock_BlockErase(btlData.handle, (uint16_t)blockNum, false);
     }
-    
+
     status = DRV_NAND_FLASH_SkipBlock_PageWrite(btlData.handle, (uint16_t)blockNum, (uint16_t)pageNum, buffer, NULL, false);
 
     memoryAddr += btlData.geometry.pageSize;
