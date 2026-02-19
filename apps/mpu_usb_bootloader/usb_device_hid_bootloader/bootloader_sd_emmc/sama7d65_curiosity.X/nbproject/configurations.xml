@@ -1,13 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <configurationDescriptor version="65">
   <logicalFolder name="root" displayName="root" projectFiles="true">
-    <logicalFolder name="HeaderFiles"
-                   displayName="Header Files"
-                   projectFiles="true">
+    <logicalFolder name="HeaderFiles" displayName="Header Files" projectFiles="true">
       <logicalFolder name="config" displayName="config" projectFiles="true">
-        <logicalFolder name="sama7d65_curiosity"
-                       displayName="sama7d65_curiosity"
-                       projectFiles="true">
+        <logicalFolder name="sama7d65_curiosity" displayName="sama7d65_curiosity" projectFiles="true">
           <logicalFolder name="bootloader" displayName="bootloader" projectFiles="true">
             <logicalFolder name="datastream" displayName="datastream" projectFiles="true">
               <itemPath>../src/config/sama7d65_curiosity/bootloader/datastream/datastream.h</itemPath>
@@ -82,9 +78,7 @@
                   <itemPath>../src/config/sama7d65_curiosity/system/fs/fat_fs/file_system/ff.h</itemPath>
                   <itemPath>../src/config/sama7d65_curiosity/system/fs/fat_fs/file_system/ffconf.h</itemPath>
                 </logicalFolder>
-                <logicalFolder name="hardware_access"
-                               displayName="hardware_access"
-                               projectFiles="true">
+                <logicalFolder name="hardware_access" displayName="hardware_access" projectFiles="true">
                   <itemPath>../src/config/sama7d65_curiosity/system/fs/fat_fs/hardware_access/diskio.h</itemPath>
                 </logicalFolder>
               </logicalFolder>
@@ -150,9 +144,7 @@
             </logicalFolder>
           </logicalFolder>
         </logicalFolder>
-        <logicalFolder name="SAMA7D65_DFP"
-                       displayName="SAMA7D65_DFP"
-                       projectFiles="true">
+        <logicalFolder name="SAMA7D65_DFP" displayName="SAMA7D65_DFP" projectFiles="true">
           <logicalFolder name="component" displayName="component" projectFiles="true">
             <itemPath>../src/packs/SAMA7D65_DFP/component/acc.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/component/adc.h</itemPath>
@@ -321,57 +313,43 @@
       </logicalFolder>
       <itemPath>../src/app.h</itemPath>
     </logicalFolder>
-    <logicalFolder name="ExternalFiles"
-                   displayName="Important Files"
-                   projectFiles="true">
-      <logicalFolder name="usb_device_hid_bootloader_sd_emmc_sama7d65_curiosity_sama7d65_curiosity"
-                     displayName="usb_device_hid_bootloader_sd_emmc_sama7d65_curiosity_sama7d65_curiosity"
-                     projectFiles="true">
+    <logicalFolder name="ExternalFiles" displayName="Important Files" projectFiles="true">
+      <logicalFolder name="usb_device_hid_bootloader_sd_emmc_sama7d65_curiosity_sama7d65_curiosity" displayName="usb_device_hid_bootloader_sd_emmc_sama7d65_curiosity_sama7d65_curiosity" projectFiles="true">
+        <itemPath>usb_device_hid_bootloader_sd_emmc_sama7d65_curiosity_sama7d65_curiosity/mcc-config.mc4</itemPath>
         <logicalFolder name="components" displayName="components" projectFiles="true">
-          <itemPath>usb_device_hid_bootloader_sd_emmc_sama7d65_curiosity_sama7d65_curiosity/components/sdmmc1.yml</itemPath>
-          <itemPath>usb_device_hid_bootloader_sd_emmc_sama7d65_curiosity_sama7d65_curiosity/components/drv_sdmmc.yml</itemPath>
-          <itemPath>usb_device_hid_bootloader_sd_emmc_sama7d65_curiosity_sama7d65_curiosity/components/tc0.yml</itemPath>
-          <itemPath>usb_device_hid_bootloader_sd_emmc_sama7d65_curiosity_sama7d65_curiosity/components/drv_usb_udphs.yml</itemPath>
-          <itemPath>usb_device_hid_bootloader_sd_emmc_sama7d65_curiosity_sama7d65_curiosity/components/usb_device_hid_0.yml</itemPath>
-          <itemPath>usb_device_hid_bootloader_sd_emmc_sama7d65_curiosity_sama7d65_curiosity/components/HarmonyCore.yml</itemPath>
-          <itemPath>usb_device_hid_bootloader_sd_emmc_sama7d65_curiosity_sama7d65_curiosity/components/cmsis.yml</itemPath>
-          <itemPath>usb_device_hid_bootloader_sd_emmc_sama7d65_curiosity_sama7d65_curiosity/components/sys_time.yml</itemPath>
-          <itemPath>usb_device_hid_bootloader_sd_emmc_sama7d65_curiosity_sama7d65_curiosity/components/dfp.yml</itemPath>
-          <itemPath>usb_device_hid_bootloader_sd_emmc_sama7d65_curiosity_sama7d65_curiosity/components/drv_sdmmc_0.yml</itemPath>
-          <itemPath>usb_device_hid_bootloader_sd_emmc_sama7d65_curiosity_sama7d65_curiosity/components/usb_device_hid_bootloader.yml</itemPath>
-          <itemPath>usb_device_hid_bootloader_sd_emmc_sama7d65_curiosity_sama7d65_curiosity/components/core.yml</itemPath>
-          <itemPath>usb_device_hid_bootloader_sd_emmc_sama7d65_curiosity_sama7d65_curiosity/components/sys_fs.yml</itemPath>
           <itemPath>usb_device_hid_bootloader_sd_emmc_sama7d65_curiosity_sama7d65_curiosity/components/BSP_SAM_A7D65_Curiosity.yml</itemPath>
+          <itemPath>usb_device_hid_bootloader_sd_emmc_sama7d65_curiosity_sama7d65_curiosity/components/cmsis.yml</itemPath>
+          <itemPath>usb_device_hid_bootloader_sd_emmc_sama7d65_curiosity_sama7d65_curiosity/components/core.yml</itemPath>
+          <itemPath>usb_device_hid_bootloader_sd_emmc_sama7d65_curiosity_sama7d65_curiosity/components/dfp.yml</itemPath>
+          <itemPath>usb_device_hid_bootloader_sd_emmc_sama7d65_curiosity_sama7d65_curiosity/components/drv_sdmmc.yml</itemPath>
+          <itemPath>usb_device_hid_bootloader_sd_emmc_sama7d65_curiosity_sama7d65_curiosity/components/drv_sdmmc_0.yml</itemPath>
+          <itemPath>usb_device_hid_bootloader_sd_emmc_sama7d65_curiosity_sama7d65_curiosity/components/drv_usb_udphs.yml</itemPath>
+          <itemPath>usb_device_hid_bootloader_sd_emmc_sama7d65_curiosity_sama7d65_curiosity/components/HarmonyCore.yml</itemPath>
+          <itemPath>usb_device_hid_bootloader_sd_emmc_sama7d65_curiosity_sama7d65_curiosity/components/sdmmc1.yml</itemPath>
+          <itemPath>usb_device_hid_bootloader_sd_emmc_sama7d65_curiosity_sama7d65_curiosity/components/sys_fs.yml</itemPath>
+          <itemPath>usb_device_hid_bootloader_sd_emmc_sama7d65_curiosity_sama7d65_curiosity/components/sys_time.yml</itemPath>
+          <itemPath>usb_device_hid_bootloader_sd_emmc_sama7d65_curiosity_sama7d65_curiosity/components/tc0.yml</itemPath>
           <itemPath>usb_device_hid_bootloader_sd_emmc_sama7d65_curiosity_sama7d65_curiosity/components/usb_device.yml</itemPath>
           <itemPath>usb_device_hid_bootloader_sd_emmc_sama7d65_curiosity_sama7d65_curiosity/components/usb_device_hid.yml</itemPath>
+          <itemPath>usb_device_hid_bootloader_sd_emmc_sama7d65_curiosity_sama7d65_curiosity/components/usb_device_hid_0.yml</itemPath>
+          <itemPath>usb_device_hid_bootloader_sd_emmc_sama7d65_curiosity_sama7d65_curiosity/components/usb_device_hid_bootloader.yml</itemPath>
         </logicalFolder>
-        <itemPath>usb_device_hid_bootloader_sd_emmc_sama7d65_curiosity_sama7d65_curiosity/mcc-config.mc4</itemPath>
       </logicalFolder>
       <itemPath>Makefile</itemPath>
       <itemPath>../src/config/sama7d65_curiosity/pin_configurations.csv</itemPath>
     </logicalFolder>
-    <logicalFolder name="LibraryFiles"
-                   displayName="LibraryFiles"
-                   projectFiles="true">
+    <logicalFolder name="LibraryFiles" displayName="LibraryFiles" projectFiles="true">
     </logicalFolder>
-    <logicalFolder name="LinkerScript"
-                   displayName="Linker Files"
-                   projectFiles="true">
+    <logicalFolder name="LinkerScript" displayName="Linker Files" projectFiles="true">
       <logicalFolder name="config" displayName="config" projectFiles="true">
-        <logicalFolder name="sama7d65_curiosity"
-                       displayName="sama7d65_curiosity"
-                       projectFiles="true">
+        <logicalFolder name="sama7d65_curiosity" displayName="sama7d65_curiosity" projectFiles="true">
           <itemPath>../src/config/sama7d65_curiosity/ddr.ld</itemPath>
         </logicalFolder>
       </logicalFolder>
     </logicalFolder>
-    <logicalFolder name="SourceFiles"
-                   displayName="Source Files"
-                   projectFiles="true">
+    <logicalFolder name="SourceFiles" displayName="Source Files" projectFiles="true">
       <logicalFolder name="config" displayName="config" projectFiles="true">
-        <logicalFolder name="sama7d65_curiosity"
-                       displayName="sama7d65_curiosity"
-                       projectFiles="true">
+        <logicalFolder name="sama7d65_curiosity" displayName="sama7d65_curiosity" projectFiles="true">
           <logicalFolder name="bootloader" displayName="bootloader" projectFiles="true">
             <logicalFolder name="datastream" displayName="datastream" projectFiles="true">
               <itemPath>../src/config/sama7d65_curiosity/bootloader/datastream/datastream_usb_device_hid.c</itemPath>
@@ -433,9 +411,7 @@
                   <itemPath>../src/config/sama7d65_curiosity/system/fs/fat_fs/file_system/ff.c</itemPath>
                   <itemPath>../src/config/sama7d65_curiosity/system/fs/fat_fs/file_system/ffunicode.c</itemPath>
                 </logicalFolder>
-                <logicalFolder name="hardware_access"
-                               displayName="hardware_access"
-                               projectFiles="true">
+                <logicalFolder name="hardware_access" displayName="hardware_access" projectFiles="true">
                   <itemPath>../src/config/sama7d65_curiosity/system/fs/fat_fs/hardware_access/diskio.c</itemPath>
                 </logicalFolder>
               </logicalFolder>
@@ -474,11 +450,11 @@
       <toolsSet>
         <developmentServer>localhost</developmentServer>
         <targetDevice>SAMA7D65</targetDevice>
-        <targetHeader></targetHeader>
-        <targetPluginBoard></targetPluginBoard>
+        <targetHeader/>
+        <targetPluginBoard/>
         <platformTool>j32</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>4.60</languageToolchainVersion>
+        <languageToolchainVersion>5.00</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
@@ -488,8 +464,7 @@
         <ScriptingSetting key="boot.load_adr" value=""/>
         <ScriptingSetting key="boot.use" value="true"/>
         <ScriptingSetting key="boot.entry_adr" value=""/>
-        <ScriptingSetting key="boot.path"
-                          value="${ProjectDir}\..\..\..\..\..\deps\at91bootstrap_binaries_sam_a7d65_curiosity\at91bootstrap.elf"/>
+        <ScriptingSetting key="boot.path" value="${ProjectDir}\..\..\..\..\..\deps\at91bootstrap_binaries_sam_a7d65_curiosity\at91bootstrap.elf"/>
         <ScriptingSetting key="boot.prj" value=""/>
       </ScriptingSettings>
       <compileType>
@@ -502,7 +477,7 @@
         <loading>
           <useAlternateLoadableFile>false</useAlternateLoadableFile>
           <parseOnProdLoad>false</parseOnProdLoad>
-          <alternateLoadableFile></alternateLoadableFile>
+          <alternateLoadableFile/>
         </loading>
         <subordinates>
         </subordinates>
@@ -510,7 +485,7 @@
       <makeCustomizationType>
         <makeCustomizationPreStepEnabled>false</makeCustomizationPreStepEnabled>
         <makeUseCleanTarget>false</makeUseCleanTarget>
-        <makeCustomizationPreStep></makeCustomizationPreStep>
+        <makeCustomizationPreStep/>
         <makeCustomizationPostStepEnabled>true</makeCustomizationPostStepEnabled>
         <makeCustomizationPostStep>${MP_CC_DIR}/xc32-objcopy -O binary ${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.elf ${DISTDIR}/harmony_bootloader.bin</makeCustomizationPostStep>
         <makeCustomizationPutChecksumInUserID>false</makeCustomizationPutChecksumInUserID>
@@ -534,8 +509,7 @@
         <property key="enable-unroll-loops" value="false"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="expand-pragma-config" value="false"/>
-        <property key="extra-include-directories"
-                  value="../src;../src/config/sama7d65_curiosity;../src/config/sama7d65_curiosity/system/fs/fat_fs/file_system;../src/config/sama7d65_curiosity/system/fs/fat_fs/hardware_access;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core_A/Include;../src/packs/SAMA7D65_DFP"/>
+        <property key="extra-include-directories" value="../src;../src/config/sama7d65_curiosity;../src/config/sama7d65_curiosity/system/fs/fat_fs/file_system;../src/config/sama7d65_curiosity/system/fs/fat_fs/hardware_access;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core_A/Include;../src/packs/SAMA7D65_DFP"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -655,8 +629,7 @@
         <property key="enable-unroll-loops" value="false"/>
         <property key="exceptions" value="true"/>
         <property key="exclude-floating-point" value="false"/>
-        <property key="extra-include-directories"
-                  value="../src;../src/config/sama7d65_curiosity;../src/config/sama7d65_curiosity/system/fs/fat_fs/file_system;../src/config/sama7d65_curiosity/system/fs/fat_fs/hardware_access;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core_A/Include;../src/packs/SAMA7D65_DFP"/>
+        <property key="extra-include-directories" value="../src;../src/config/sama7d65_curiosity;../src/config/sama7d65_curiosity/system/fs/fat_fs/file_system;../src/config/sama7d65_curiosity/system/fs/fat_fs/hardware_access;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core_A/Include;../src/packs/SAMA7D65_DFP"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -713,15 +686,13 @@
         <property key="memories.eeprom" value="true"/>
         <property key="memories.id" value="true"/>
         <property key="memories.instruction.ram" value="true"/>
-        <property key="memories.instruction.ram.ranges"
-                  value="${memories.instruction.ram.ranges.default}"/>
+        <property key="memories.instruction.ram.ranges" value="${memories.instruction.ram.ranges.default}"/>
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="0x51000-0xe9000fff"/>
         <property key="programoptions.eraseb4program" value="false"/>
         <property key="programoptions.preservebootflash" value="false"/>
         <property key="programoptions.preserveprogrammemory" value="false"/>
-        <property key="programoptions.preserveprogrammemory.ranges"
-                  value="0x51000-0xe9000fff"/>
+        <property key="programoptions.preserveprogrammemory.ranges" value="0x51000-0xe9000fff"/>
         <property key="programoptions.resetafterprogram" value="true"/>
         <property key="script.has_reset" value="true"/>
         <property key="script.log_level" value="1"/>
@@ -748,15 +719,13 @@
         <property key="memories.eeprom" value="true"/>
         <property key="memories.id" value="true"/>
         <property key="memories.instruction.ram" value="true"/>
-        <property key="memories.instruction.ram.ranges"
-                  value="${memories.instruction.ram.ranges.default}"/>
+        <property key="memories.instruction.ram.ranges" value="${memories.instruction.ram.ranges.default}"/>
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="0x51000-0xe9000fff"/>
         <property key="programoptions.eraseb4program" value="false"/>
         <property key="programoptions.preservebootflash" value="false"/>
         <property key="programoptions.preserveprogrammemory" value="false"/>
-        <property key="programoptions.preserveprogrammemory.ranges"
-                  value="0x51000-0xe9000fff"/>
+        <property key="programoptions.preserveprogrammemory.ranges" value="0x51000-0xe9000fff"/>
         <property key="programoptions.resetafterprogram" value="true"/>
         <property key="script.has_reset" value="true"/>
         <property key="script.log_level" value="1"/>

@@ -1,6 +1,6 @@
 configVersion: 1.0.0
 componentName: usb_device_hid_0
-coreVersion: 5.8.3
+coreVersion: 5.8.4
 device: SAMA7D65
 library: []
 dependency:

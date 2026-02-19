@@ -1,6 +1,6 @@
 configVersion: 1.0.0
 componentName: drv_usb_udphs
-coreVersion: 5.8.3
+coreVersion: 5.8.4
 device: SAMA7D65
 library: []
 dependency:
