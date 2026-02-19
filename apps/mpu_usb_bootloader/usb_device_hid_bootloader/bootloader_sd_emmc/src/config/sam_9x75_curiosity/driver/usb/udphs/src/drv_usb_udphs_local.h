@@ -87,9 +87,12 @@
 #ifdef __CORTEX_A 
     #if __CORTEX_A == 7
     /* This device features a Cortex A7 core. */     
-        #if defined(__SAMA7D65__) || defined(__SAMA7D65D1G__) || defined(__SAMA7D65D1GN2__) || defined(__SAMA7D65D2G__) || defined(__SAMA7D65D2GN8__)
+        #ifdef SFR_UTMIHSTRIM_Msk
             /* Configure the UTMI High-Speed Trimming Register.  */  
-            #define M_DRV_USB_UDPHS_InitUTMI() 
+            #define M_DRV_USB_UDPHS_InitUTMI() \
+            {\
+                SFR_REGS->SFR_UTMIHSTRIM |= SFR_UTMIHSTRIM_SLOPE0(4); \
+            }\
            
         #else
             /* The following code enables the UTMI PLL.  */  

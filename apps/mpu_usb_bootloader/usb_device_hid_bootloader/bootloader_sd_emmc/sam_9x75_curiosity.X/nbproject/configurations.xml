@@ -46,7 +46,18 @@
           </logicalFolder>
           <logicalFolder name="peripheral" displayName="peripheral" projectFiles="true">
             <logicalFolder name="aic" displayName="aic" projectFiles="true">
+              <logicalFolder name="config" displayName="config" projectFiles="true">
+                <logicalFolder name="sam_9x75_curiosity"
+                               displayName="sam_9x75_curiosity"
+                               projectFiles="true">
+                  <itemPath>../src/config/sam_9x75_curiosity/pin_configurations.csv</itemPath>
+                </logicalFolder>
+              </logicalFolder>
               <itemPath>../src/config/sam_9x75_curiosity/peripheral/aic/plib_aic.h</itemPath>
+              <itemPath>../src/config/sam_9x75_curiosity/pin_configurations.csv
+                  
+                
+              </itemPath>
             </logicalFolder>
             <logicalFolder name="clk" displayName="clk" projectFiles="true">
               <itemPath>../src/config/sam_9x75_curiosity/peripheral/clk/plib_clk.h</itemPath>
@@ -277,37 +288,31 @@
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
                    projectFiles="true">
-      <logicalFolder name="sam_9x75_curiosity_default"
-                     displayName="sam_9x75_curiosity_default"
-                     projectFiles="true">
-        <itemPath>sam_9x75_curiosity_default/mcc-config.mc4</itemPath>
-      </logicalFolder>
       <logicalFolder name="usb_device_hid_bootloader_sd_emmc_sam9x75_curiosity_sam_9x75_curiosity"
                      displayName="usb_device_hid_bootloader_sd_emmc_sam9x75_curiosity_sam_9x75_curiosity"
                      projectFiles="true">
         <logicalFolder name="components" displayName="components" projectFiles="true">
-          <itemPath>usb_device_hid_bootloader_sd_emmc_sam9x75_curiosity_sam_9x75_curiosity/components/sys_time.yml</itemPath>
-          <itemPath>usb_device_hid_bootloader_sd_emmc_sam9x75_curiosity_sam_9x75_curiosity/components/HarmonyCore.yml</itemPath>
           <itemPath>usb_device_hid_bootloader_sd_emmc_sam9x75_curiosity_sam_9x75_curiosity/components/tc0.yml</itemPath>
-          <itemPath>usb_device_hid_bootloader_sd_emmc_sam9x75_curiosity_sam_9x75_curiosity/components/drv_usb_udphs.yml</itemPath>
-          <itemPath>usb_device_hid_bootloader_sd_emmc_sam9x75_curiosity_sam_9x75_curiosity/components/sys_fs.yml</itemPath>
-          <itemPath>usb_device_hid_bootloader_sd_emmc_sam9x75_curiosity_sam_9x75_curiosity/components/sdmmc0.yml</itemPath>
-          <itemPath>usb_device_hid_bootloader_sd_emmc_sam9x75_curiosity_sam_9x75_curiosity/components/stdio.yml</itemPath>
-          <itemPath>usb_device_hid_bootloader_sd_emmc_sam9x75_curiosity_sam_9x75_curiosity/components/usb_device_hid_0.yml</itemPath>
-          <itemPath>usb_device_hid_bootloader_sd_emmc_sam9x75_curiosity_sam_9x75_curiosity/components/dbgu.yml</itemPath>
-          <itemPath>usb_device_hid_bootloader_sd_emmc_sam9x75_curiosity_sam_9x75_curiosity/components/dfp.yml</itemPath>
-          <itemPath>usb_device_hid_bootloader_sd_emmc_sam9x75_curiosity_sam_9x75_curiosity/components/drv_sdmmc.yml</itemPath>
-          <itemPath>usb_device_hid_bootloader_sd_emmc_sam9x75_curiosity_sam_9x75_curiosity/components/usb_device.yml</itemPath>
-          <itemPath>usb_device_hid_bootloader_sd_emmc_sam9x75_curiosity_sam_9x75_curiosity/components/usb_device_hid.yml</itemPath>
           <itemPath>usb_device_hid_bootloader_sd_emmc_sam9x75_curiosity_sam_9x75_curiosity/components/usb_device_hid_bootloader.yml</itemPath>
+          <itemPath>usb_device_hid_bootloader_sd_emmc_sam9x75_curiosity_sam_9x75_curiosity/components/usb_device.yml</itemPath>
+          <itemPath>usb_device_hid_bootloader_sd_emmc_sam9x75_curiosity_sam_9x75_curiosity/components/sys_time.yml</itemPath>
           <itemPath>usb_device_hid_bootloader_sd_emmc_sam9x75_curiosity_sam_9x75_curiosity/components/BSP_SAM_9X75_Curiosity.yml</itemPath>
+          <itemPath>usb_device_hid_bootloader_sd_emmc_sam9x75_curiosity_sam_9x75_curiosity/components/drv_usb_udphs.yml</itemPath>
           <itemPath>usb_device_hid_bootloader_sd_emmc_sam9x75_curiosity_sam_9x75_curiosity/components/core.yml</itemPath>
+          <itemPath>usb_device_hid_bootloader_sd_emmc_sam9x75_curiosity_sam_9x75_curiosity/components/sys_fs.yml</itemPath>
+          <itemPath>usb_device_hid_bootloader_sd_emmc_sam9x75_curiosity_sam_9x75_curiosity/components/drv_sdmmc.yml</itemPath>
+          <itemPath>usb_device_hid_bootloader_sd_emmc_sam9x75_curiosity_sam_9x75_curiosity/components/dfp.yml</itemPath>
+          <itemPath>usb_device_hid_bootloader_sd_emmc_sam9x75_curiosity_sam_9x75_curiosity/components/usb_device_hid_0.yml</itemPath>
+          <itemPath>usb_device_hid_bootloader_sd_emmc_sam9x75_curiosity_sam_9x75_curiosity/components/HarmonyCore.yml</itemPath>
+          <itemPath>usb_device_hid_bootloader_sd_emmc_sam9x75_curiosity_sam_9x75_curiosity/components/dbgu.yml</itemPath>
+          <itemPath>usb_device_hid_bootloader_sd_emmc_sam9x75_curiosity_sam_9x75_curiosity/components/stdio.yml</itemPath>
+          <itemPath>usb_device_hid_bootloader_sd_emmc_sam9x75_curiosity_sam_9x75_curiosity/components/sdmmc0.yml</itemPath>
+          <itemPath>usb_device_hid_bootloader_sd_emmc_sam9x75_curiosity_sam_9x75_curiosity/components/usb_device_hid.yml</itemPath>
           <itemPath>usb_device_hid_bootloader_sd_emmc_sam9x75_curiosity_sam_9x75_curiosity/components/drv_sdmmc_0.yml</itemPath>
         </logicalFolder>
         <itemPath>usb_device_hid_bootloader_sd_emmc_sam9x75_curiosity_sam_9x75_curiosity/mcc-config.mc4</itemPath>
       </logicalFolder>
       <itemPath>Makefile</itemPath>
-      <itemPath>../src/config/sam_9x75_curiosity/pin_configurations.csv</itemPath>
     </logicalFolder>
     <logicalFolder name="LibraryFiles"
                    displayName="LibraryFiles"
@@ -427,6 +432,9 @@
       <itemPath>../src/app.c</itemPath>
     </logicalFolder>
   </logicalFolder>
+  <sourceRootList>
+    <Elem>../src/config/sam_9x75_curiosity/bootloader</Elem>
+  </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
     <conf name="sam_9x75_curiosity" type="2">
@@ -437,11 +445,11 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>noID</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>4.60</languageToolchainVersion>
+        <languageToolchainVersion>5.00</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="SAM9X7_DFP" vendor="Microchip" version="1.10.202"/>
+        <pack name="SAM9X7_DFP" vendor="Microchip" version="1.9.170"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>

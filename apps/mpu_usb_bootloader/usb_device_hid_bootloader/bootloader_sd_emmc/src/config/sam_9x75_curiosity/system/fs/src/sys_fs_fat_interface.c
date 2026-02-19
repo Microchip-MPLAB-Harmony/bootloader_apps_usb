@@ -167,7 +167,7 @@ int FATFS_unmount ( uint8_t vol )
     return ((int)res);
 }
 
-/* MISRA C-2012 Rule 2.1 deviated:1 Deviation record ID -  H3_MISRAC_2012_R_2_1_DR_1 */
+/* MISRA C-2023 Rule 2.1 deviated:1 Deviation record ID -  H3_MISRAC_2023_R_2_1_DR_1 */
 
 int FATFS_open (
     uintptr_t handle,   /* Pointer to the blank file object */
@@ -232,7 +232,7 @@ int FATFS_open (
 
 /* MISRAC 2012 deviation block end */
 
-/* MISRA C-2012 Rule 11.3 deviated:1 Deviation record ID -  H3_MISRAC_2012_R_11_3_DR_1 */
+/* MISRA C-2023 Rule 11.3 deviated:1 Deviation record ID -  H3_MISRAC_2023_R_11_3_DR_1 */
 
 int FATFS_read (
     uintptr_t handle, /* Pointer to the file object */
@@ -460,7 +460,7 @@ int FATFS_chdrive (
     return ((int)res);
 }
 
-/* MISRA C-2012 Rule 11.3 deviated:1 Deviation record ID -  H3_MISRAC_2012_R_11_3_DR_1 */
+/* MISRA C-2023 Rule 11.3 deviated:1 Deviation record ID -  H3_MISRAC_2023_R_11_3_DR_1 */
 int FATFS_write (
     uintptr_t handle,   /* Pointer to the file object */
     const void *buff,   /* Pointer to the data to be written */
@@ -623,7 +623,7 @@ int FATFS_puts (
     return (f_puts((const TCHAR *)str, fp));
 }
 
-/* MISRA C-2012 Rule 17.1 deviated:1 Deviation record ID -  H3_MISRAC_2012_R_17_1_DR_1 */
+/* MISRA C-2023 Rule 17.1 deviated:1 Deviation record ID -  H3_MISRAC_2023_R_17_1_DR_1 */
 int FATFS_printf (
     uintptr_t handle,           /* Pointer to the file object */
     const char* fmt,   /* Pointer to the format string */

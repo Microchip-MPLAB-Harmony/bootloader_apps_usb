@@ -300,7 +300,7 @@ bool bootloader_Storage_Write(bool imageStartFlag, void *buffer, size_t size)
 
         if(btlData.fileHandle != SYS_FS_HANDLE_INVALID)
         {
-            if( HEX_REC_NORMAL == bootloader_SdProgramHexRecord(buffer, size, (FILE*)btlData.fileHandle) )
+            if(HEX_REC_NORMAL == bootloader_SdProgramHexRecord(buffer, size, (FILE*)btlData.fileHandle))
             {
                 (void)SYS_FS_FileClose(btlData.fileHandle);
                 status = true;

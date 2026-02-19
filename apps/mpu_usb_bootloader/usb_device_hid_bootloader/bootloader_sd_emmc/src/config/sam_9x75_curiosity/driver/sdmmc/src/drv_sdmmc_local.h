@@ -158,7 +158,7 @@
 
 #define DRV_SDMMC_GET_CSD_VERSION(csdPtr)   (((csdPtr[14]) >> 6U) & (3U))
 
-/* MISRA C-2012 Rule 5.4 deviated:2 Deviation record ID -  H3_MISRAC_2012_R_5_4_DR_1 */
+/* MISRA C-2023 Rule 5.4 deviated:2 Deviation record ID -  H3_MISRAC_2023_R_5_4_DR_1 */
 
 
 #define DRV_SDMMC_EXT_CSD_CMD_SET_NORMAL            (1UL<<0UL)

@@ -78,7 +78,7 @@ File System Service Media Manager Interface Declarations and Types
     Refer to sys_media.h for actual definition..
 */
 
-/* MISRA C-2012 Rule 5.5 deviated:3 Deviation record ID -  H3_MISRAC_2012_R_5_5_DR_1 */
+/* MISRA C-2023 Rule 5.5 deviated:3 Deviation record ID -  H3_MISRAC_2023_R_5_5_DR_1 */
 
 typedef SYS_MEDIA_BLOCK_COMMAND_HANDLE  SYS_FS_MEDIA_BLOCK_COMMAND_HANDLE;
 
@@ -131,7 +131,7 @@ typedef uintptr_t SYS_FS_MEDIA_HANDLE;
 #define SYS_FS_MEDIA_BLOCK_COMMAND_HANDLE_INVALID SYS_MEDIA_BLOCK_COMMAND_HANDLE_INVALID
 
 // *****************************************************************************
-/* MISRA C-2012 Rule 5.2 deviated:2 Deviation record ID -  H3_MISRAC_2012_R_5_2_DR_1 */
+/* MISRA C-2023 Rule 5.2 deviated:2 Deviation record ID -  H3_MISRAC_2023_R_5_2_DR_1 */
 /* SYS FS Media Events
 
    Summary
@@ -848,8 +848,8 @@ uintptr_t SYS_FS_MEDIA_MANAGER_AddressGet
 
     See sys_fs.h for usage information.
 */
-/* MISRA C-2012 Rule 5.1, 8.6 deviated below. Deviation record ID -
-   H3_MISRAC_2012_R_5_1_DR_1 & H3_MISRAC_2012_R_8_6_DR_1*/
+/* MISRA C-2023 Rule 5.1, 8.6 deviated below. Deviation record ID -
+   H3_MISRAC_2023_R_5_1_DR_1 & H3_MISRAC_2023_R_8_6_DR_1*/
 
 void SYS_FS_MEDIA_MANAGER_EventHandlerSet
 (

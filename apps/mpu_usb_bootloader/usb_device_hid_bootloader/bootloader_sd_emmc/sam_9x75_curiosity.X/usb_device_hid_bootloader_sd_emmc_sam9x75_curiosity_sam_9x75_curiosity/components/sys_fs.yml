@@ -1,6 +1,6 @@
 configVersion: 1.0.0
 componentName: sys_fs
-coreVersion: 5.8.3
+coreVersion: 5.8.4
 device: SAM9X75D2G
 library: []
 dependency:
@@ -11,12 +11,14 @@ dependency:
 - dependencyPackage: ''
   name: core
   type: package
-  version: v3.15.5
+  version: v3.16.0
 - dependencyPackage: ''
+  devMode: true
   name: filex
   type: package
   version: v6.4.0_rel
 - dependencyPackage: ''
+  devMode: true
   name: littlefs
   type: package
   version: v2.9.3

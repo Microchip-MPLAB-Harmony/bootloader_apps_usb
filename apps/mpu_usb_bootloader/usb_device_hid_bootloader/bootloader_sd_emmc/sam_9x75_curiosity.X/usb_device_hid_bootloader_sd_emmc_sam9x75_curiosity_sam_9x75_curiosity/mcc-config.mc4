@@ -1,5 +1,5 @@
 configVersion: 1.0.0
-coreVersion: 5.8.3
+coreVersion: 5.8.4
 spaHostVersion: 1.2.0
 device: SAM9X75D2G
 deviceLibrary: {}
@@ -32,7 +32,7 @@ generatedFileHashHistoryMap:
 - file: ..\src\config\sam_9x75_curiosity\bootloader\bootloader_common.h
   hash: fbe22ec231a7dd396208d6f08890a8b7e56f923e0511c7b0c17b041d6ea25e9a
 - file: ..\src\config\sam_9x75_curiosity\bootloader\bootloader_storage.c
-  hash: cb53719282fa0c25fbbd77a0e78e727bcc107a30747861f379f23ed9a8230088
+  hash: 080720ae927d2df6d44e101655bbdb26e2c66f8548577bce6894c7260d3753a5
 - file: ..\src\config\sam_9x75_curiosity\bootloader\bootloader_storage.h
   hash: 306e0b8d62c2708754bb7853dab8da206ae7db9f9911d60b68bfe0bb229a2882
 - file: ..\src\config\sam_9x75_curiosity\bootloader\bootloader_usb_device_hid.c
@@ -56,7 +56,7 @@ generatedFileHashHistoryMap:
 - file: ..\src\config\sam_9x75_curiosity\definitions.h
   hash: 0db8ebb78bb5d9eb243464a2fce6494cc6a6337848fcaca379aed16cf0ab1519
 - file: ..\src\config\sam_9x75_curiosity\device.h
-  hash: a6942ec56b364ca7ce59259450eb2b74fca133605592dabe382afeb005ef56b8
+  hash: c59514bb3f1551407ee3f43109f637b28b915d65539b1eb92c55ded669c4ba5f
 - file: ..\src\config\sam_9x75_curiosity\device_cache.h
   hash: 022a4c6bce1d10badd66bfa60707c3dbc830d5b1a6702dfd825d3317ccba1188
 - file: ..\src\config\sam_9x75_curiosity\driver\driver.h
@@ -68,29 +68,29 @@ generatedFileHashHistoryMap:
 - file: ..\src\config\sam_9x75_curiosity\driver\sdmmc\drv_sdmmc_definitions.h
   hash: 114372fe83a7aabc017360e961ea6aa0cb3006e819af7947393d097fc00f364d
 - file: ..\src\config\sam_9x75_curiosity\driver\sdmmc\src\drv_sdmmc.c
-  hash: 04624146226bd7fed917a45aca20a50c722599a422ab3402715313af8e1e4cb4
+  hash: 8570ca294c5d469123dca55ddee1de8bf3ede0d9cc6c5734f5c301774bb0a71b
 - file: ..\src\config\sam_9x75_curiosity\driver\sdmmc\src\drv_sdmmc_file_system.c
-  hash: d9ccc4228377cc80f855b932d5205c03cf168edf09f05fadf4e3931e1d8822d0
+  hash: d9c88c0eafb1466a34d55f1aa9c303603fd840ea826fdd68d22efd5a11051e1a
 - file: ..\src\config\sam_9x75_curiosity\driver\sdmmc\src\drv_sdmmc_file_system.h
   hash: 3f80d1ef387e9ea48674dd721d301fe0e273ab00870b800ba28a1af40c8cdebd
 - file: ..\src\config\sam_9x75_curiosity\driver\sdmmc\src\drv_sdmmc_local.h
-  hash: 47634ad591fe7997085f4182137b4f4391fed67a52bf87bb0c52e5392993f47e
+  hash: 156dc65671de4e26117a0465893116fcc5adfa89ca7ed22f0b4fb9e999a98400
 - file: ..\src\config\sam_9x75_curiosity\driver\usb\drv_usb.h
   hash: ee59efb38b1cf87e1c4bb6e833a9c9be0c106005daa6c1ccd90fca9fb5c17b44
 - file: ..\src\config\sam_9x75_curiosity\driver\usb\udphs\drv_usb_udphs.h
-  hash: 5531eb875bee36619e0ecca260fbf004d12de51a864cb34143cb2426cd30aaa3
+  hash: b17edfcf64adcddf51df0391be56abdd30cc84236d9ac51a10ae96242ca5239f
 - file: ..\src\config\sam_9x75_curiosity\driver\usb\udphs\src\drv_usb_udphs.c
   hash: ff2332b99454a29abaddcbeac42a5b633d9d0450e282b5ddbe33b80b15ff078f
 - file: ..\src\config\sam_9x75_curiosity\driver\usb\udphs\src\drv_usb_udphs_device.c
-  hash: 82e7765f01e7c1a4f8bb5ed858d39fdac749b0965f7f5bb28cbf9674843112c6
+  hash: 6e9256deabe4011fe49b9cfeb95646dddcb13ccd41d5f25061aa1ec0066daed9
 - file: ..\src\config\sam_9x75_curiosity\driver\usb\udphs\src\drv_usb_udphs_local.h
-  hash: d27f8d052b3b89ab81953d6ab2191d207dc6bfd3533b42a9b4080f721c5f3a91
+  hash: 8fadf20f65f785c2abd3d677163b44b2e361727785f932cc1c6d5eabff0ea2f6
 - file: ..\src\config\sam_9x75_curiosity\driver\usb\udphs\src\drv_usb_udphs_variant_mapping.h
   hash: b0404bd97932bfd81356027e714ec5dbc2b57633d0124ecd6c9c743827d7504f
 - file: ..\src\config\sam_9x75_curiosity\fault_handlers.c
   hash: 931e951cf7431d3d70d6ab81bcd265ff0ac8b3f473b73cd7a541f59d49786b7c
 - file: ..\src\config\sam_9x75_curiosity\initialization.c
-  hash: c6dde39ff556e87591c2c52021f05c6d38189e8fd7b49a1f4210f1bd87aba8a2
+  hash: 0b95815e3f4d7d5e3055f239348eedd99c31bf2bf351322841f961d8cd2060ea
 - file: ..\src\config\sam_9x75_curiosity\interrupts.c
   hash: 3f257c1c617c901d65c7a959e95e16fa3baaacb7c3667d18059a321a4dbab6bf
 - file: ..\src\config\sam_9x75_curiosity\interrupts.h
@@ -100,7 +100,7 @@ generatedFileHashHistoryMap:
 - file: ..\src\config\sam_9x75_curiosity\osal\osal_definitions.h
   hash: 5f0a2513a093b6d228e2b50646b204923a82047335a47f3d35a2938309ab6f37
 - file: ..\src\config\sam_9x75_curiosity\osal\osal_impl_basic.h
-  hash: 65e68edbc0320d0407399f65e6d06ff7e6d3d7697231cf1fe0a1fdf1d65f0463
+  hash: 158c4107f883f6d8c0244b73273361d1ca2ebd57c0934572b11a25c532fd22c5
 - file: ..\src\config\sam_9x75_curiosity\peripheral\aic\plib_aic.c
   hash: d883f9a9349a68936479e30fc6e6001361771f77505893227e0b820ddb8e00e3
 - file: ..\src\config\sam_9x75_curiosity\peripheral\aic\plib_aic.h
@@ -130,7 +130,7 @@ generatedFileHashHistoryMap:
 - file: ..\src\config\sam_9x75_curiosity\peripheral\sdmmc\plib_sdmmc0.h
   hash: 3e4c5d26242522a5fbbc57fdc2650158fec09f032ba8a1c1f2a816ef67f65edb
 - file: ..\src\config\sam_9x75_curiosity\peripheral\sdmmc\plib_sdmmc_common.h
-  hash: 78f696650886b3038dd57727b7948e8806068d77d53b6c3dc9ee7f15a1df1eb0
+  hash: e2b015721e166dc96c96772961f57dbe6df1f26e4b85801609d1344df1f1816e
 - file: ..\src\config\sam_9x75_curiosity\peripheral\tc\plib_tc0.c
   hash: e1ac548e92a3347891aac4b309ed496d2162ded50619f871069d6e3175496fb8
 - file: ..\src\config\sam_9x75_curiosity\peripheral\tc\plib_tc0.h
@@ -144,7 +144,7 @@ generatedFileHashHistoryMap:
 - file: ..\src\config\sam_9x75_curiosity\sys_tasks.h
   hash: 21f254f497a18a024cd00128d06c4776c2643f867a460c1ba9880a7dd41a8d56
 - file: ..\src\config\sam_9x75_curiosity\system\cache\sys_cache.c
-  hash: 9754314ec0e099723a3604ecfe12fb6e682cf64cddf01c968ca931d26c448f0e
+  hash: b591db2acf1ca4ac0bc36b95b019ceaada77251b677bc4719e6209674d5de7b9
 - file: ..\src\config\sam_9x75_curiosity\system\cache\sys_cache.h
   hash: b4b3a4e7434759c9bbcd3c6a0ab97558eb2a007f083a4eb76dbedcb2e2c3d86b
 - file: ..\src\config\sam_9x75_curiosity\system\debug\sys_debug.h
@@ -162,27 +162,27 @@ generatedFileHashHistoryMap:
 - file: ..\src\config\sam_9x75_curiosity\system\fs\fat_fs\hardware_access\diskio.h
   hash: eabe00adfe80de32df0b75244c230f3a04dbc27cb29b1d418cef549e3e7a9ec2
 - file: ..\src\config\sam_9x75_curiosity\system\fs\src\sys_fs.c
-  hash: 8737766cae9b08cadb220137c403b3dd2a09944cca8f7439d82af09995e9b69a
+  hash: 88a754c3218872fe4110b62b29cd9f2991ab16e532572b4207a6511c0f2ac5d0
 - file: ..\src\config\sam_9x75_curiosity\system\fs\src\sys_fs_fat_interface.c
-  hash: 60b86f1de0b9cb870c46cf96730cf666e2f4bedfd2d50a039542de27a750bb5c
+  hash: 3f9af79a4b9c76ae7216556056916b802642e0dc28755f394ff4da4f55615805
 - file: ..\src\config\sam_9x75_curiosity\system\fs\src\sys_fs_local.h
   hash: ef6b5ddf2d37deece42f4f38d4c80cff0c5b4c67b150bfa11a78b78aec79baff
 - file: ..\src\config\sam_9x75_curiosity\system\fs\src\sys_fs_media_manager.c
-  hash: 6400a0cc52c055adda4c1e5475362a391dcd81f4592044049a97308e0f081c8d
+  hash: 874af12a781966c69ba499367ba1bac95d04d6623567e75798cf78db507ae2d7
 - file: ..\src\config\sam_9x75_curiosity\system\fs\src\sys_fs_media_manager_local.h
   hash: 5d471f0372ec41b3ef362ad533beede076e4e959274e57221ed229b996d7231e
 - file: ..\src\config\sam_9x75_curiosity\system\fs\sys_fs.h
-  hash: 4ca0bf61b93d1b4335bad8755bfeeed6dfda8a7eb3f2eabfcd9239a0b78e01af
+  hash: aeaf49359ef924aba8d05e5c67c769485f95bb0e3449f5f8c58efae23d6fcfb2
 - file: ..\src\config\sam_9x75_curiosity\system\fs\sys_fs_fat_interface.h
-  hash: 7d398a893c42258ee2c06a2135087fd6ac9bcec02df07bea5882a5d55373ca4b
+  hash: 2e708c6174fae87333e2aa89c00d21e8b2830644ee890e46199b17121bfdd250
 - file: ..\src\config\sam_9x75_curiosity\system\fs\sys_fs_media_manager.h
-  hash: e777be6440f14c582e5e75fe021664b2eba99f57d781d5d58a22bea3a48ac9dd
+  hash: 7c250f6e613e3f1ee71f3b50b4a3962fa143e10e8d9903e3e340f4104bba7d17
 - file: ..\src\config\sam_9x75_curiosity\system\int\src\sys_int.c
   hash: 5a683ab50cabf3aa131d76d12f4715e103de0e5cce67d22ab26d11665c38614f
 - file: ..\src\config\sam_9x75_curiosity\system\int\sys_int.h
-  hash: dc104ae181fd5309e1bb42896246644fae95915a8e639b23ecfccc8840850274
+  hash: d8207e3358a37e8e964cd563150eda15ac17ec512b6e3c221f5603d9fa2da0ca
 - file: ..\src\config\sam_9x75_curiosity\system\int\sys_int_mapping.h
-  hash: 652a7ea6c065e3a4cbcbfaef7c3519fca207fa36de25351875c3ba746dff242b
+  hash: cf31317ddcb2f4a47d63c746fb032a8466469d1bca0cf68beb0c2ef3d2c08429
 - file: ..\src\config\sam_9x75_curiosity\system\system.h
   hash: 2b75f8e370e5cb2c54f70da7351ee149f0d5a7673e700f39b373099716b31b55
 - file: ..\src\config\sam_9x75_curiosity\system\system_common.h
@@ -190,9 +190,9 @@ generatedFileHashHistoryMap:
 - file: ..\src\config\sam_9x75_curiosity\system\system_media.h
   hash: e61ba67015cfba6a7425d077cd2c633ba9989218bbe585078efe2face729401f
 - file: ..\src\config\sam_9x75_curiosity\system\system_module.h
-  hash: 96c74368801b0a7aaa25aec3ec2cb0d483250385f103ffc1ff64089b4ca2c6d9
+  hash: 7bfe351ce506b843c61e5be013b6e3bf2a6253d73f5db189dbaf0c4f494cb75a
 - file: ..\src\config\sam_9x75_curiosity\system\time\src\sys_time.c
-  hash: fa2d85ab967b80157caf8483f6e28a23b12b548844a1d80f2fef760cd9b99271
+  hash: 4e733ffe4705a0b3f880391fe886ccb0e88c772c1f19c55b4a005747fbf6aa93
 - file: ..\src\config\sam_9x75_curiosity\system\time\src\sys_time_local.h
   hash: df56f970664902417d798760e44978cf4b84c108cf0761647a383e91db76980c
 - file: ..\src\config\sam_9x75_curiosity\system\time\sys_time.h
@@ -202,9 +202,9 @@ generatedFileHashHistoryMap:
 - file: ..\src\config\sam_9x75_curiosity\tasks.c
   hash: b4bab5b1ba2a2cbb5229d0ad17f9642219b6be8e69e5ee7464bbb0ebf18ca5cb
 - file: ..\src\config\sam_9x75_curiosity\toolchain_specifics.h
-  hash: d93ab2a56ea91cac163fc49b5e3f3491fe3c8ada3bd2f72c752b286f280b40ef
+  hash: 61b9d7e2427b11029b90cfefa844e187899beffb4b351ccbfab471fd44dbbf2d
 - file: ..\src\config\sam_9x75_curiosity\usb\src\usb_device.c
-  hash: 25d4e1719a2948619c4f4b38406f896be37bbb74f4b8f631770ca32e1fe45b77
+  hash: af8a74c998876da1c72e4c0ed30b11a3dc98b7577857d659652cd0a0cc3e7078
 - file: ..\src\config\sam_9x75_curiosity\usb\src\usb_device_function_driver.h
   hash: 4c01cbdadca6973294d599811f0e06f51b4e6980fac4de25ccafd2742f6a5dd2
 - file: ..\src\config\sam_9x75_curiosity\usb\src\usb_device_hid.c
@@ -228,7 +228,7 @@ generatedFileHashHistoryMap:
 - file: ..\src\config\sam_9x75_curiosity\usb\usb_hid.h
   hash: 9476f1bbb139fa59f8a1c858126ff1a81cb0acefff7f66be59dca3a9ef745508
 - file: ..\src\config\sam_9x75_curiosity\usb\usb_host.h
-  hash: 9e71096993b82346d36f826b35ff46d1cecadbfda0fee4ae47125da2764391e4
+  hash: 56c248da571d1a46c5d6b5b34e28a978b30b40ee1fb04fa4f2efdcb8a5a1039b
 - file: ..\src\config\sam_9x75_curiosity\usb\usb_host_client_driver.h
   hash: 274e72a8e34ccc3012d2bb4a100cec9d54ffd296091b35c0f7ec45b528cb34ac
 - file: ..\src\config\sam_9x75_curiosity\usb\usb_host_hub_interface.h

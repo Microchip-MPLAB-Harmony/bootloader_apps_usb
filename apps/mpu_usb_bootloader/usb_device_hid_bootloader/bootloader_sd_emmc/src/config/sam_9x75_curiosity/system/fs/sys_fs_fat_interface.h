@@ -34,6 +34,7 @@ extern "C" {
 #include <stdint.h>
 #include <stdbool.h>
 #include <stddef.h>
+/* MISRAC-2023 Rule 17.1 deviation taken for using stdarg.h header file */
 #include <stdarg.h>
 
 int FATFS_mount (uint8_t vol);

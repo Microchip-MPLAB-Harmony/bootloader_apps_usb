@@ -53,6 +53,7 @@ File System Service Library Interface Declarations and Types
 #include <stdint.h>
 #include <stdbool.h>
 #include <stddef.h>
+/* MISRAC-2023 Rule 17.1 deviation taken for using stdarg.h header file */
 #include <stdarg.h>
 
 #include "configuration.h"
@@ -63,7 +64,7 @@ File System Service Library Interface Declarations and Types
     extern "C" {
 
 #endif
-// DOM-IGNORE-END  
+// DOM-IGNORE-END
 
 
 // *****************************************************************************
@@ -330,7 +331,7 @@ typedef enum
                            and data will be written into the newly created file.
     */
     SYS_FS_FILE_OPEN_WRITE,
-    
+
     /*
     reading the file    =  not possible. Read operation returns error
     writing to the file =  possible. If file exists, write happens from
@@ -393,7 +394,7 @@ typedef enum
     None.
 */
 
-typedef enum 
+typedef enum
 {
     /* Success */
     SYS_FS_ERROR_OK = 0,
@@ -461,7 +462,7 @@ SYS_FS_ERROR_NOT_SUPPORTED_IN_NATIVE_FS
     setting the event handler when media mount or unmount is completed.
 */
 
-typedef enum 
+typedef enum
 {
    /* Media has been mounted successfully. */
     SYS_FS_EVENT_MOUNT,
@@ -619,12 +620,12 @@ typedef struct
     Pointer to the File system Handler function.
 
   Description
-    This data type defines the required function signature for the 
+    This data type defines the required function signature for the
     file system event handling callback function. A client must register
     a pointer to an event handling function whose function signature (parameter
     and return value types) match the types specified by this function pointer
     in order to receive event call backs from the file system.
-    
+
   Parameters:
     event           - Identifies the type of event
     eventData      -  Handle returned from the media operation requests
@@ -658,7 +659,7 @@ typedef void (* SYS_FS_EVENT_HANDLER)
   Remarks:
     None.
 */
-typedef struct 
+typedef struct
 {
     /* File size */
     uint32_t    fsize;
@@ -685,7 +686,7 @@ typedef struct
 
 
 // *****************************************************************************
-/* MISRA C-2012 Rule 21.2 deviated:1 Deviation record ID -  H3_MISRAC_2012_R_21_2_DR_1 */
+/* MISRA C-2023 Rule 21.2 deviated:1 Deviation record ID -  H3_MISRAC_2023_R_21_2_DR_1 */
 /* SYS FS File time structure
 
   Summary:
@@ -706,9 +707,9 @@ typedef struct
     None.
 */
 
-typedef union 
+typedef union
 {
-    struct 
+    struct
     {
         /* Second / 2 (0..29) */
         unsigned second:    5;
@@ -724,7 +725,7 @@ typedef union
         unsigned year:      7;
     } discreteTime;
 
-    struct 
+    struct
     {
         /* Time (hour, min, seconds) */
         uint16_t    time;
@@ -777,10 +778,10 @@ typedef union
                            the failure can be retrieved with SYS_FS_Error.
 
     Example:
-      <code>        
+      <code>
 
         #define SYS_FS_MAX_FILE_SYSTEM_TYPE            1
-      
+
         const SYS_FS_FUNCTIONS FatFsFunctions =
         {
             .mount   = FATFS_mount,
@@ -844,7 +845,7 @@ SYS_FS_RESULT SYS_FS_Initialize
         void SYS_Tasks ( void )
         {
             SYS_FS_Tasks ();
-            
+
         }
       </code>
 
@@ -862,10 +863,10 @@ void SYS_FS_Tasks
 /* Function:
     SYS_FS_RESULT SYS_FS_Mount
     (
-        const char *devName, 
+        const char *devName,
         const char *mountName,
-        SYS_FS_FILE_SYSTEM_TYPE filesystemtype, 
-        unsigned long mountflags, 
+        SYS_FS_FILE_SYSTEM_TYPE filesystemtype,
+        unsigned long mountflags,
         const void *data
     );
 
@@ -885,7 +886,7 @@ void SYS_FS_Tasks
       specified volume (devName) is really attached or not. The only available
       possibility is to keep trying to mount the volume (with the devname),
       until success is achieved or use the Automount feature.
-      
+
       It is prudent that the application code implements a time-out mechanism
       while trying to mount a volume (by calling SYS_FS_Mount). The trial for
       mount should continue at least 10 times before assuming that the
@@ -895,7 +896,7 @@ void SYS_FS_Tasks
       Once the mount is successful the application needs to use SYS_FS_Error()
       API to know if the mount was successful with valid filesystem on media
       or not. If SYS_FS_ERROR_NO_FILESYSTEM is returned application needs to
-      Format the media using the SYS_FS_DriveFormat() API before performing 
+      Format the media using the SYS_FS_DriveFormat() API before performing
       any operations.
 
       The standard names for volumes (devName) used in the MPLAB Harmony file
@@ -916,7 +917,7 @@ void SYS_FS_Tasks
       assuming all four partitions are recognized, there will be four devNames:
       - mmcblka1
       - mmcblka2
-      - mmcblka3 and 
+      - mmcblka3 and
       - mmcblka4
 
       Subsequently, if NVM media is attached that has only one partition, the
@@ -963,13 +964,13 @@ void SYS_FS_Tasks
             {
                 if(SYS_FS_Mount("/dev/mmcblka1", "/mnt/myDrive", FAT, 0, NULL) != SYS_FS_RES_SUCCESS)
                 {
-                    
+
                 }
                 else
-                {              
+                {
                     if (SYS_FS_Error() == SYS_FS_ERROR_NO_FILESYSTEM)
                     {
-                        
+
                         SYS_FS_DriveFormat(...);
                     }
 
@@ -986,10 +987,10 @@ void SYS_FS_Tasks
 
 SYS_FS_RESULT SYS_FS_Mount
 (
-    const char *devName, 
+    const char *devName,
     const char *mountName,
-    SYS_FS_FILE_SYSTEM_TYPE filesystemtype, 
-    unsigned long mountflags, 
+    SYS_FS_FILE_SYSTEM_TYPE filesystemtype,
+    unsigned long mountflags,
     const void *data
 );
 
@@ -1024,11 +1025,11 @@ SYS_FS_RESULT SYS_FS_Mount
       <code>
         if(SYS_FS_Unmount("/mnt/myDrive") != SYS_FS_RES_SUCCESS)
         {
-            
+
         }
         else
         {
-            
+
         }
       </code>
 */
@@ -1063,7 +1064,7 @@ SYS_FS_RESULT SYS_FS_Unmount
     Parameters:
       eventHandler - Pointer to the event handler function implemented by the
                      user
-    
+
       context      - The value of parameter will be passed back to the client
                      unchanged, when the eventHandler function is called. It
                      can be used to identify any client specific data object
@@ -1076,10 +1077,10 @@ SYS_FS_RESULT SYS_FS_Unmount
 
     Example:
       <code>
-       
+
         SYS_FS_EventHandlerSet(APP_SysFSEventHandler, (uintptr_t)NULL);
 
-       
+
         void APP_SysFSEventHandler
         (
             SYS_FS_EVENT event,
@@ -1149,7 +1150,7 @@ SYS_FS_RESULT SYS_FS_Unmount
       Note:
         This API is Available only when SYS_FS_AUTOMOUNT_ENABLE is set to true.
 */
-/* MISRA C-2012 Rule 8.6 deviated:5 Deviation record ID -  H3_MISRAC_2012_R_8_6_DR_1 */
+/* MISRA C-2023 Rule 8.6 deviated:5 Deviation record ID -  H3_MISRAC_2023_R_8_6_DR_1 */
 void SYS_FS_EventHandlerSet
 (
     const void * eventHandler,
@@ -1160,7 +1161,7 @@ void SYS_FS_EventHandlerSet
 /* Function:
     SYS_FS_HANDLE SYS_FS_FileOpen
     (
-        const char* fname, 
+        const char* fname,
         SYS_FS_FILE_OPEN_ATTRIBUTES attributes
     );
 
@@ -1172,7 +1173,7 @@ void SYS_FS_EventHandlerSet
 
     Precondition:
       Prior to opening a file, the name of the volume on which the file resides
-      should be known and the volume should be mounted. 
+      should be known and the volume should be mounted.
 
     Parameters:
       fname - The name of the file to be opened along with the path. The fname
@@ -1199,13 +1200,13 @@ void SYS_FS_EventHandlerSet
 
         if(fileHandle != SYS_FS_HANDLE_INVALID)
         {
-           
+
         }
         else
         {
-            
+
         }
-        
+
 
         SYS_FS_HANDLE fileHandle;
 
@@ -1214,11 +1215,11 @@ void SYS_FS_EventHandlerSet
         fileHandle = SYS_FS_FileOpen("FILE.txt", (SYS_FS_FILE_OPEN_READ));
         if(fileHandle != SYS_FS_HANDLE_INVALID)
         {
-            
+
         }
         else
         {
-            
+
         }
       </code>
 
@@ -1228,7 +1229,7 @@ void SYS_FS_EventHandlerSet
 
 SYS_FS_HANDLE SYS_FS_FileOpen
 (
-    const char* fname, 
+    const char* fname,
     SYS_FS_FILE_OPEN_ATTRIBUTES attributes
 );
 
@@ -1266,7 +1267,7 @@ SYS_FS_HANDLE SYS_FS_FileOpen
 
         if(fileHandle != SYS_FS_HANDLE_INVALID)
         {
-            
+
         }
 
         SYS_FS_FileClose(fileHandle);
@@ -1285,8 +1286,8 @@ SYS_FS_RESULT SYS_FS_FileClose
 /* Function:
     size_t SYS_FS_FileRead
     (
-        SYS_FS_HANDLE handle, 
-        void *buf, 
+        SYS_FS_HANDLE handle,
+        void *buf,
         size_t nbyte
     );
 
@@ -1324,7 +1325,7 @@ SYS_FS_RESULT SYS_FS_FileClose
 
         if(fileHandle != SYS_FS_HANDLE_INVALID)
         {
-            
+
         }
 
         nbytes = sizeof(buf);
@@ -1339,8 +1340,8 @@ SYS_FS_RESULT SYS_FS_FileClose
 
 size_t SYS_FS_FileRead
 (
-    SYS_FS_HANDLE handle, 
-    void *buffer, 
+    SYS_FS_HANDLE handle,
+    void *buffer,
     size_t nbyte
 );
 
@@ -1348,7 +1349,7 @@ size_t SYS_FS_FileRead
 /* Function:
     SYS_FS_RESULT SYS_FS_FileStat
     (
-        const char   *fname, 
+        const char   *fname,
         SYS_FS_FSTAT *buf
     )
 
@@ -1406,7 +1407,7 @@ size_t SYS_FS_FileRead
 
         if(SYS_FS_FileStat("/mnt/myDrive/FILE.TXT", &fileStat) == SYS_FS_RES_SUCCESS)
         {
-            
+
         }
       </code>
 
@@ -1416,7 +1417,7 @@ size_t SYS_FS_FileRead
 
 SYS_FS_RESULT SYS_FS_FileStat
 (
-    const char   *fname, 
+    const char   *fname,
     SYS_FS_FSTAT *buf
 );
 
@@ -1424,7 +1425,7 @@ SYS_FS_RESULT SYS_FS_FileStat
 /* Function:
     int32_t SYS_FS_FileSeek
     (
-        SYS_FS_HANDLE handle, 
+        SYS_FS_HANDLE handle,
         int32_t offset,
         SYS_FS_FILE_SEEK_CONTROL whence
     );
@@ -1474,7 +1475,7 @@ SYS_FS_RESULT SYS_FS_FileStat
 
         if(fileHandle != SYS_FS_HANDLE_INVALID)
         {
-           
+
         }
         ...
         ...
@@ -1483,7 +1484,7 @@ SYS_FS_RESULT SYS_FS_FileStat
 
         if((status != -1) && (status == 5))
         {
-            
+
         }
       </code>
 
@@ -1493,8 +1494,8 @@ SYS_FS_RESULT SYS_FS_FileStat
 
 int32_t SYS_FS_FileSeek
 (
-    SYS_FS_HANDLE handle, 
-    int32_t offset, 
+    SYS_FS_HANDLE handle,
+    int32_t offset,
     SYS_FS_FILE_SEEK_CONTROL whence
 );
 
@@ -1533,7 +1534,7 @@ int32_t SYS_FS_FileSeek
 
         if(fileHandle != SYS_FS_HANDLE_INVALID)
         {
-           
+
         }
         ...
         ...
@@ -1542,7 +1543,7 @@ int32_t SYS_FS_FileSeek
 
         if(tell != -1)
         {
-            
+
         }
       </code>
 
@@ -1589,7 +1590,7 @@ int32_t SYS_FS_FileTell
 
         if(fileHandle != SYS_FS_HANDLE_INVALID)
         {
-           
+
         }
         ...
         ...
@@ -1598,14 +1599,14 @@ int32_t SYS_FS_FileTell
 
         if(fileSize != -1)
         {
-            
+
         }
       </code>
 
     Remarks:
       None.
 */
-    
+
 int32_t SYS_FS_FileSize
 (
     SYS_FS_HANDLE handle
@@ -1647,7 +1648,7 @@ int32_t SYS_FS_FileSize
 
         if(fileHandle != SYS_FS_HANDLE_INVALID)
         {
-            
+
         }
         ...
         ...
@@ -1656,14 +1657,14 @@ int32_t SYS_FS_FileSize
 
         if(eof == false)
         {
-            
+
         }
       </code>
 
     Remarks:
       None.
 */
-    
+
 bool SYS_FS_FileEOF
 (
     SYS_FS_HANDLE handle
@@ -1673,8 +1674,8 @@ bool SYS_FS_FileEOF
 /* Function:
     bool SYS_FS_FileNameGet
     (
-        SYS_FS_HANDLE handle, 
-        uint8_t* cName, 
+        SYS_FS_HANDLE handle,
+        uint8_t* cName,
         uint16_t wLen
     );
 
@@ -1708,7 +1709,7 @@ bool SYS_FS_FileEOF
 
         if(fileHandle != SYS_FS_HANDLE_INVALID)
         {
-            
+
         }
         ...
         ...
@@ -1717,18 +1718,18 @@ bool SYS_FS_FileEOF
 
         if(stat == false)
         {
-           
+
         }
       </code>
 
     Remarks:
       None.
 */
-    
+
 bool SYS_FS_FileNameGet
 (
-    SYS_FS_HANDLE handle, 
-    uint8_t* cName, 
+    SYS_FS_HANDLE handle,
+    uint8_t* cName,
     uint16_t wLen
 );
 
@@ -1773,7 +1774,7 @@ bool SYS_FS_FileNameGet
 
         if(fileHandle == SYS_FS_HANDLE_INVALID)
         {
-           
+
             err = SYS_FS_Error();
         }
       </code>
@@ -1832,7 +1833,7 @@ SYS_FS_ERROR SYS_FS_Error
 
         if(bytes_written == -1)
         {
-            
+
             err = SYS_FS_FileError(fd);
         }
       </code>
@@ -1878,11 +1879,11 @@ SYS_FS_ERROR SYS_FS_FileError
       <code>
         SYS_FS_HANDLE dirHandle;
 
-        dirHandle = SYS_FS_DirOpen("/mnt/myDrive/Dir1");       
+        dirHandle = SYS_FS_DirOpen("/mnt/myDrive/Dir1");
 
         if(dirHandle != SYS_FS_HANDLE_INVALID)
         {
-           
+
         }
       </code>
 
@@ -1929,13 +1930,13 @@ SYS_FS_HANDLE SYS_FS_DirOpen
 
         if(dirHandle != SYS_FS_HANDLE_INVALID)
         {
-           
+
         }
 
-        
+
         if(SYS_FS_DirClose(dirHandle) == SYS_FS_RES_FAILURE)
         {
-            
+
         }
       </code>
 
@@ -2007,7 +2008,7 @@ SYS_FS_RESULT SYS_FS_DirClose
                            retrieved with SYS_FS_Error or SYS_FS_FileError.
 
     Example:
-      <code>       
+      <code>
 
         SYS_FS_HANDLE dirHandle;
         SYS_FS_FSTAT stat;
@@ -2016,25 +2017,25 @@ SYS_FS_RESULT SYS_FS_DirClose
 
         if(dirHandle != SYS_FS_HANDLE_INVALID)
         {
-            
+
         }
 
         if(SYS_FS_DirRead(dirHandle, &stat) == SYS_FS_RES_FAILURE)
         {
-            
+
         }
         else
-        {            
+        {
             if (stat.fname[0] == '\0')
             {
-                
+
             }
             else
             {
-               
+
             }
 
-        }       
+        }
 
         SYS_FS_HANDLE dirHandle;
         SYS_FS_FSTAT stat;
@@ -2045,26 +2046,26 @@ SYS_FS_RESULT SYS_FS_DirClose
 
         if(dirHandle != SYS_FS_HANDLE_INVALID)
         {
-           
+
         }
-      
+
         stat.lfname = longFileName;
         stat.lfsize = 512;
 
         if(SYS_FS_DirRead(dirHandle, &stat) == SYS_FS_RES_FAILURE)
         {
-            
+
         }
         else
         {
-           
+
             if ((stat.lfname[0] == '\0') && (stat.fname[0] == '\0'))
             {
-               
+
             }
             else
             {
-                
+
             }
 
         }
@@ -2076,7 +2077,7 @@ SYS_FS_RESULT SYS_FS_DirClose
 
 SYS_FS_RESULT SYS_FS_DirRead
 (
-    SYS_FS_HANDLE handle, 
+    SYS_FS_HANDLE handle,
     SYS_FS_FSTAT *stat
 );
 
@@ -2116,17 +2117,17 @@ SYS_FS_RESULT SYS_FS_DirRead
 
         if(dirHandle != SYS_FS_HANDLE_INVALID)
         {
-            
+
         }
 
         if(SYS_FS_DirRead(dirHandle, &stat) == SYS_FS_RES_FAILURE)
         {
-           
-        }        
+
+        }
 
         if(SYS_FS_DirRewind(dirHandle) == SYS_FS_RES_FAILURE)
         {
-           
+
         }
     </code>
 
@@ -2215,16 +2216,16 @@ SYS_FS_RESULT SYS_FS_DirRewind
 
          if(dirHandle != SYS_FS_HANDLE_INVALID)
          {
-            
+
          }
 
          if(SYS_FS_DirSearch(dirHandle, "FIL*.*", SYS_FS_ATTR_ARC, &stat) == SYS_FS_RES_FAILURE)
          {
-            
+
          }
          else
          {
-            
+
          }
       </code>
 
@@ -2254,9 +2255,9 @@ SYS_FS_RESULT SYS_FS_DirSearch
 
     Description:
       This function reads a string of specified length from the file into a
-      buffer.  The read operation continues until 
-      - '\n' is stored 
-      - reached end of the file or 
+      buffer.  The read operation continues until
+      - '\n' is stored
+      - reached end of the file or
       - the buffer is filled with len - 1 characters. The read string is terminated with a '\0'.
 
     Precondition:
@@ -2284,14 +2285,14 @@ SYS_FS_RESULT SYS_FS_DirSearch
 
         if(fileHandle != SYS_FS_HANDLE_INVALID)
         {
-            
+
         }
-       
+
         res = SYS_FS_FileStringGet(fileHandle, buffer, 50);
 
         if( res != SYS_FS_RES_SUCCESS)
         {
-            
+
         }
       </code>
 
@@ -2340,7 +2341,7 @@ SYS_FS_RESULT SYS_FS_FileStringGet
 
         if(res == SYS_FS_RES_FAILURE)
         {
-           
+
         }
 
       </code>
@@ -2373,12 +2374,12 @@ SYS_FS_RESULT SYS_FS_DirectoryChange
       At least one disk must be mounted.
 
     Parameters:
-      buff  - Pointer to a buffer which will contain the name of the current working 
+      buff  - Pointer to a buffer which will contain the name of the current working
               directory and drive, once the function completes.
       len   - Size of the buffer.
 
     Returns:
-      SYS_FS_RES_SUCCESS - Get current working directory operation was successful. 
+      SYS_FS_RES_SUCCESS - Get current working directory operation was successful.
       SYS_FS_RES_FAILURE - Get current working directory operation was
                            unsucessful. The reason for the failure can be
                            retrieved with SYS_FS_Error.
@@ -2394,11 +2395,11 @@ SYS_FS_RESULT SYS_FS_DirectoryChange
             {
                 if(SYS_FS_Mount("/dev/mmcblka1", "/mnt/myDrive", FAT, 0, NULL) != SYS_FS_RES_SUCCESS)
                 {
-                    
+
                 }
                 else
                 {
-                  
+
                     appState = CREATE_DIR;
                 }
                 break;
@@ -2409,12 +2410,12 @@ SYS_FS_RESULT SYS_FS_DirectoryChange
                 res = SYS_FS_DirectoryMake("Dir1");
                 if(res == SYS_FS_RES_FAILURE)
                 {
-                   
+
                     appState = ERROR;
                 }
                 else
                 {
-                    
+
                     appState = CHANGE_DIR;
                 }
                 break;
@@ -2425,11 +2426,11 @@ SYS_FS_RESULT SYS_FS_DirectoryChange
                 res = SYS_FS_DirectoryChange("Dir1");
                 if(res == SYS_FS_RES_FAILURE)
                 {
-                    
+
                     appState = ERROR;
                 }
                 else
-                {                    
+                {
                     appState = GET_CWD;
                 }
                 break;
@@ -2440,7 +2441,7 @@ SYS_FS_RESULT SYS_FS_DirectoryChange
                 res = SYS_FS_CurrentWorkingDirectoryGet(buffer, 15);
                 if(res == SYS_FS_RES_FAILURE)
                 {
-                   
+
                     appState = ERROR;
                 }
                 break;
@@ -2497,7 +2498,7 @@ SYS_FS_RESULT SYS_FS_CurrentWorkingDirectoryGet
         res = SYS_FS_CurrentDriveSet("/mnt/myDrive");
         if(res == SYS_FS_RES_FAILURE)
         {
-            
+
         }
       </code>
 
@@ -2545,7 +2546,7 @@ SYS_FS_RESULT SYS_FS_CurrentDriveSet
         res = SYS_FS_CurrentDriveGet(buffer);
         if(res == SYS_FS_RES_FAILURE)
         {
-           
+
         }
     </code>
 
@@ -2586,7 +2587,7 @@ SYS_FS_RESULT SYS_FS_CurrentDriveGet
               can be set as NULL.
 
     Returns:
-      SYS_FS_RES_SUCCESS - Drive label information retrieval was successful. 
+      SYS_FS_RES_SUCCESS - Drive label information retrieval was successful.
       SYS_FS_RES_FAILURE - Drive label information retrieval was unsucessful.
                            The reason for the failure can be retrieved with
                            SYS_FS_Error.
@@ -2603,11 +2604,11 @@ SYS_FS_RESULT SYS_FS_CurrentDriveGet
             {
                 if(SYS_FS_Mount("/dev/mmcblka1", "/mnt/myDrive", FAT, 0, NULL) != SYS_FS_RES_SUCCESS)
                 {
-                    
+
                 }
                 else
                 {
-                    
+
                     appState = GET_LABEL;
                 }
                 break;
@@ -2619,7 +2620,7 @@ SYS_FS_RESULT SYS_FS_CurrentDriveGet
 
                 if(res == SYS_FS_RES_FAILURE)
                 {
-                    
+
                 }
                 break;
             }
@@ -2642,8 +2643,8 @@ SYS_FS_RESULT SYS_FS_DriveLabelGet
 /* Function:
     size_t SYS_FS_FileWrite
     (
-        SYS_FS_HANDLE handle, 
-        const void *buf, 
+        SYS_FS_HANDLE handle,
+        const void *buf,
         size_t nbyte
     );
 
@@ -2679,9 +2680,9 @@ SYS_FS_RESULT SYS_FS_DriveLabelGet
 
         if(fileHandle != SYS_FS_HANDLE_INVALID)
         {
-            
+
         }
-        
+
         bytes_written = SYS_FS_FileWrite(fileHandle, (const void *)buf, nbytes);
       </code>
 
@@ -2691,8 +2692,8 @@ SYS_FS_RESULT SYS_FS_DriveLabelGet
 
 size_t SYS_FS_FileWrite
 (
-    SYS_FS_HANDLE handle, 
-    const void *buffer, 
+    SYS_FS_HANDLE handle,
+    const void *buffer,
     size_t nbyte
 );
 
@@ -2737,17 +2738,17 @@ size_t SYS_FS_FileWrite
 
         if(fileHandle != SYS_FS_HANDLE_INVALID)
         {
-            
+
         }
-        
+
         nbytes = sizeof(buf);
         bytes_read = SYS_FS_FileRead(fileHandle, buf, nbytes);
 
-        
+
         res = SYS_FS_FileTruncate(fileHandle);
         if(res != SYS_FS_RES_SUCCESS)
         {
-           
+
         }
 
         SYS_FS_FileClose(fileHandle);
@@ -2805,17 +2806,17 @@ SYS_FS_RESULT SYS_FS_FileTruncate
 
         if(fileHandle != SYS_FS_HANDLE_INVALID)
         {
-            
+
         }
-        
+
         bytes_written = SYS_FS_FileWrite(fileHandle, (const void *)buf, nbytes);
 
-       
+
         res = SYS_FS_FileSync(fileHandle);
 
         if( res != SYS_FS_RES_SUCCESS)
         {
-           
+
         }
     </code>
 
@@ -2866,13 +2867,13 @@ SYS_FS_RESULT SYS_FS_FileSync
         fileHandle = SYS_FS_FileOpen("/mnt/myDrive/FILE.txt", SYS_FS_FILE_OPEN_WRITE_PLUS));
         if(fileHandle != SYS_FS_HANDLE_INVALID)
         {
-          
+
         }
-        
+
         res = SYS_FS_FileStringPut(fileHandle, "Hello World");
         if(res != SYS_FS_RES_SUCCESS)
         {
-           
+
         }
       </code>
 
@@ -2922,13 +2923,13 @@ SYS_FS_RESULT SYS_FS_FileStringPut
         fileHandle = SYS_FS_FileOpen("/mnt/myDrive/FILE.txt", (SYS_FS_FILE_OPEN_WRITE_PLUS));
         if(fileHandle != SYS_FS_HANDLE_INVALID)
         {
-          
+
         }
-      
+
         res = SYS_FS_FileCharacterPut(fileHandle, 'c');
         if(res != SYS_FS_RES_SUCCESS)
         {
-            
+
         }
       </code>
 
@@ -2980,13 +2981,13 @@ SYS_FS_RESULT SYS_FS_FileCharacterPut
 
         if(fileHandle != SYS_FS_HANDLE_INVALID)
         {
-            
+
         }
-       
+
         res = SYS_FS_FilePrintf(fileHandle, "Hello World %d", 1234);
         if( res != SYS_FS_RES_SUCCESS)
         {
-           
+
         }
       </code>
 
@@ -3034,7 +3035,7 @@ SYS_FS_RESULT SYS_FS_FilePrintf
 
         if(fileHandle != SYS_FS_HANDLE_INVALID)
         {
-           
+
         }
         ...
         ...
@@ -3042,7 +3043,7 @@ SYS_FS_RESULT SYS_FS_FilePrintf
         err = SYS_FS_FileTestError(fileHandle);
         if(err == true)
         {
-           
+
         }
 
       </code>
@@ -3089,7 +3090,7 @@ bool SYS_FS_FileTestError
 
         if(res == SYS_FS_RES_FAILURE)
         {
-           
+
         }
 
       </code>
@@ -3143,7 +3144,7 @@ SYS_FS_RESULT SYS_FS_DirectoryMake
 
         if(res == SYS_FS_RES_FAILURE)
         {
-            
+
         }
       </code>
 
@@ -3169,7 +3170,7 @@ SYS_FS_RESULT SYS_FS_FileDirectoryRemove
       Sets the mode for the file or directory.
 
     Description:
-      This function sets the mode for a file or directory from the specified 
+      This function sets the mode for a file or directory from the specified
       list of attributes.
 
     Precondition:
@@ -3180,7 +3181,7 @@ SYS_FS_RESULT SYS_FS_FileDirectoryRemove
       attr  - Attribute flags to be set in one or more combination of the type
               SYS_FS_FILE_DIR_ATTR. The specified flags are set and others are
               cleared.
-      mask  - Attribute mask of type SYS_FS_FILE_DIR_ATTR that specifies which 
+      mask  - Attribute mask of type SYS_FS_FILE_DIR_ATTR that specifies which
               attribute is changed. The specified attributes are set or
               cleared.
 
@@ -3190,7 +3191,7 @@ SYS_FS_RESULT SYS_FS_FileDirectoryRemove
                            the failure can be retrieved with SYS_FS_Error.
 
     Example:
-      <code>        
+      <code>
         SYS_FS_FileDirectoryModeSet("file.txt", SYS_FS_ATTR_RDO, SYS_FS_ATTR_RDO | SYS_FS_ATTR_ARC);
       </code>
 
@@ -3240,18 +3241,18 @@ SYS_FS_RESULT SYS_FS_FileDirectoryModeSet
             SYS_FS_TIME time;
 
             time.packedTime = 0;
-           
-            time.discreteTime.year = (2021 - 1980);  
-            time.discreteTime.month = 8;             
-            time.discreteTime.day = 9;               
-            time.discreteTime.hour = 15;             
-            time.discreteTime.minute = 06;           
-            time.discreteTime.second = 00;          
+
+            time.discreteTime.year = (2021 - 1980);
+            time.discreteTime.month = 8;
+            time.discreteTime.day = 9;
+            time.discreteTime.hour = 15;
+            time.discreteTime.minute = 06;
+            time.discreteTime.second = 00;
 
             res = SYS_FS_FileDirectoryTimeSet("file.txt", &time);
             if( res != SYS_FS_RES_SUCCESS)
             {
-                
+
             }
         }
       </code>
@@ -3298,17 +3299,17 @@ SYS_FS_RESULT SYS_FS_FileDirectoryTimeSet
       <code>
         SYS_FS_RESULT res;
 
-       
+
         res = SYS_FS_FileDirectoryRenameMove("file.txt", "renamed_file.txt");
         if( res != SYS_FS_RES_SUCCESS)
         {
-            
+
         }
-       
+
         res = SYS_FS_FileDirectoryRenameMove("renamed_file.txt", "Dir1/renamed_file.txt");
         if( res != SYS_FS_RES_SUCCESS)
         {
-            
+
         }
       </code>
 
@@ -3363,11 +3364,11 @@ SYS_FS_RESULT SYS_FS_FileDirectoryRenameMove
             {
                 if(SYS_FS_Mount("/dev/mmcblka1", "/mnt/myDrive", FAT, 0, NULL) != SYS_FS_RES_SUCCESS)
                 {
-                   
+
                 }
                 else
                 {
-                   
+
                     appState = SET_LABEL;
                 }
                 break;
@@ -3378,7 +3379,7 @@ SYS_FS_RESULT SYS_FS_FileDirectoryRenameMove
                 res = SYS_FS_DriveLabelSet("/mnt/myDrive", "MY_LABEL");
                 if(res == SYS_FS_RES_FAILURE)
                 {
-                   
+
                 }
                 break;
             }
@@ -3452,11 +3453,11 @@ SYS_FS_RESULT SYS_FS_DriveLabelSet
             {
                 if(SYS_FS_Mount("/dev/mmcblka1", "/mnt/myDrive", FAT, 0, NULL) != SYS_FS_RES_SUCCESS)
                 {
-                   
+
                 }
                 else
                 {
-                    
+
                     if (SYS_FS_Error() == SYS_FS_ERROR_NO_FILESYSTEM)
                     {
                         appState = FORMAT_DRIVE;
@@ -3477,7 +3478,7 @@ SYS_FS_RESULT SYS_FS_DriveLabelSet
                 res = SYS_FS_DriveFormat("/mnt/myDrive", &opt, (void *)work, 512);
                 if(res == SYS_FS_RES_FAILURE)
                 {
-                   
+
                 }
                 break;
             }
@@ -3500,8 +3501,8 @@ SYS_FS_RESULT SYS_FS_DriveFormat
 /* Function:
     SYS_FS_RESULT SYS_FS_DrivePartition
     (
-        const char *path, 
-        const uint32_t partition[], 
+        const char *path,
+        const uint32_t partition[],
         void * work
     );
 
@@ -3538,12 +3539,12 @@ SYS_FS_RESULT SYS_FS_DriveFormat
 
     Example:
       <code>
-        
+
         SYS_FS_RESULT res;
-        
+
         uint32_t plist[] = {524288, 524288, 0, 0};
 
-       
+
         char work[FAT_FS_MAX_SS];
 
         switch(appState)
@@ -3552,11 +3553,11 @@ SYS_FS_RESULT SYS_FS_DriveFormat
             {
                 if(SYS_FS_Mount("/dev/mmcblka1", "/mnt/myDrive", FAT, 0, NULL) != SYS_FS_RES_SUCCESS)
                 {
-                    
+
                 }
                 else
                 {
-                   
+
                     appState = PARTITION_DRIVE;
                 }
                 break;
@@ -3567,11 +3568,11 @@ SYS_FS_RESULT SYS_FS_DriveFormat
                 res = SYS_FS_DrivePartition("/mnt/myDrive", plist, work);
                 if(res == SYS_FS_RES_FAILURE)
                 {
-                   
+
                 }
                 else
                 {
-                   
+
                 }
                 break;
             }
@@ -3582,7 +3583,7 @@ SYS_FS_RESULT SYS_FS_DriveFormat
             }
         }
 
-       
+
         SYS_FS_RESULT res;
 
         switch(appState)
@@ -3591,27 +3592,27 @@ SYS_FS_RESULT SYS_FS_DriveFormat
             {
                 if(SYS_FS_Mount("/dev/mmcblka1", "/mnt/myDrive1", FAT, 0, NULL) != SYS_FS_RES_SUCCESS)
                 {
-                   
+
                     appState = TRY_MOUNT_1ST_PARTITION;
                 }
                 else
                 {
-                   
+
                     appState = TRY_MOUNT_2ND_PARTITION;
                 }
                 break;
             }
-   
+
             case TRY_MOUNT_2ND_PARTITION:
             {
                 if(SYS_FS_Mount("/dev/mmcblka2", "/mnt/myDrive2", FAT, 0, NULL) != SYS_FS_RES_SUCCESS)
                 {
-                   
+
                     appState = TRY_MOUNT_2ND_PARTITION;
                 }
                 else
                 {
-                   
+
                     appState = TRY_FORMATING_1ST_PARTITION;
                 }
                 break;
@@ -3621,25 +3622,25 @@ SYS_FS_RESULT SYS_FS_DriveFormat
             {
                 if(SYS_FS_DriveFormat("/mnt/myDrive1/", SYS_FS_FORMAT_FDISK, 0) == SYS_FS_RES_FAILURE)
                 {
-                    
+
                 }
                 else
                 {
-                   
+
                     appState = TRY_FORMATING_2ND_PARTITION;
                 }
                 break;
             }
-    
+
             case TRY_FORMATING_2ND_PARTITION:
             {
                 if(SYS_FS_DriveFormat("/mnt/myDrive2/", SYS_FS_FORMAT_FDISK, 0) == SYS_FS_RES_FAILURE)
                 {
-                  
+
                 }
                 else
                 {
-                    
+
                 }
                 break;
             }
@@ -3657,8 +3658,8 @@ SYS_FS_RESULT SYS_FS_DriveFormat
 
 SYS_FS_RESULT SYS_FS_DrivePartition
 (
-    const char *path, 
-    const uint32_t partition[], 
+    const char *path,
+    const uint32_t partition[],
     void *work
 );
 
@@ -3706,18 +3707,18 @@ SYS_FS_RESULT SYS_FS_DrivePartition
 
         if(SYS_FS_Mount("/dev/mmcblka1", "/mnt/myDrive", FAT, 0, NULL) != SYS_FS_RES_SUCCESS)
         {
-           
+
         }
         else
         {
-            
-        }    
 
-       
+        }
+
+
         res = SYS_FS_DriveSectorGet("/mnt/myDrive", &totalSectors, &freeSectors);
         if(res == SYS_FS_RES_FAILURE)
         {
-            
+
         }
       </code>
 
@@ -3727,8 +3728,8 @@ SYS_FS_RESULT SYS_FS_DrivePartition
 
 SYS_FS_RESULT SYS_FS_DriveSectorGet
 (
-    const char * path, 
-    uint32_t * totalSectors, 
+    const char * path,
+    uint32_t * totalSectors,
     uint32_t * freeSectors
 );
 

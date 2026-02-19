@@ -215,8 +215,8 @@ static void SYS_FS_MEDIA_T_MANAGER_UpdateVolToPart
 }
 
 //*****************************************************************************
-/* MISRA C-2012 Rule 11.1, 11.8 deviated below. Deviation record ID -
-   H3_MISRAC_2012_R_11_1_DR_1 & H3_MISRAC_2012_R_11_8_DR_1*/
+/* MISRA C-2023 Rule 11.1, 11.8 deviated below. Deviation record ID -
+   H3_MISRAC_2023_R_11_1_DR_1 & H3_MISRAC_2023_R_11_8_DR_1*/
 /* Function:
     static void SYS_FS_MEDIA_T_MANAGER_HandleMediaDetach
     (
@@ -557,9 +557,9 @@ static uint8_t SYS_FS_MEDIA_T_MANAGER_FindNextMedia
     return 0xFF;
 }
 
-     /* MISRA C-2012 Rule 16.1 deviate: 1, 16.3 deviate:2 and 16.6 deviate:1.
-      Deviation record ID - H3_MISRAC_2012_R_16_1_DR_1, H3_MISRAC_2012_R_16_3_DR_1
-      & H3_MISRAC_2012_R_16_6_DR_1 */
+     /* MISRA C-2023 Rule 16.1 deviate: 1, 16.3 deviate:2 and 16.6 deviate:1.
+      Deviation record ID - H3_MISRAC_2023_R_16_1_DR_1, H3_MISRAC_2023_R_16_3_DR_1
+      & H3_MISRAC_2023_R_16_6_DR_1 */
 // *****************************************************************************
 /* Function:
     static bool SYS_FS_MEDIA_MANAGER_IsFSFat
@@ -1311,8 +1311,8 @@ bool SYS_FS_MEDIA_MANAGER_VolumePropertyGet
 
     return false;
 }
-/* MISRA C-2012 Rule 5.1, 5.2 deviated below. Deviation record ID -
-   H3_MISRAC_2012_R_5_1_DR_1 & H3_MISRAC_2012_R_5_2_DR_1*/
+/* MISRA C-2023 Rule 5.1, 5.2 deviated below. Deviation record ID -
+   H3_MISRAC_2023_R_5_1_DR_1 & H3_MISRAC_2023_R_5_2_DR_1*/
 //*****************************************************************************
 /* Function:
     void SYS_FS_MEDIA_MANAGER_EventHandlerSet
@@ -1360,8 +1360,8 @@ void SYS_FS_MEDIA_MANAGER_EventHandlerSet
 
 ***************************************************************************/
 
-/* MISRA C-2012 Rule 11.1, 11.6 & 11.8 deviated below. Deviation record ID -
-   H3_MISRAC_2012_R_11_1_DR_1, H3_MISRAC_2012_R_11_6_DR_1 & H3_MISRAC_2012_R_11_8_DR_1*/
+/* MISRA C-2023 Rule 11.1, 11.6 & 11.8 deviated below. Deviation record ID -
+   H3_MISRAC_2023_R_11_1_DR_1, H3_MISRAC_2023_R_11_6_DR_1 & H3_MISRAC_2023_R_11_8_DR_1*/
 
 void SYS_FS_MEDIA_MANAGER_RegisterTransferHandler
 (

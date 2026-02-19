@@ -39,6 +39,7 @@
 *******************************************************************************/
 //DOM-IGNORE-END
 
+/* MISRAC-2023 Rule 17.1 deviation taken for using stdarg.h header file */
 #include <stdarg.h>
 #include <string.h>
 
@@ -329,7 +330,7 @@ static bool SYS_FS_StringWildCardCompare
     See sys_fs.h for usage information.
 ***************************************************************************/
 
-/* MISRA C-2012 Rule 11.8 deviated:1 Deviation record ID -  H3_MISRAC_2012_R_11_8_DR_1 */
+/* MISRA C-2023 Rule 11.8 deviated:1 Deviation record ID -  H3_MISRAC_2023_R_11_8_DR_1 */
 SYS_FS_RESULT SYS_FS_Initialize
 (
     const void* initData
@@ -2791,7 +2792,7 @@ SYS_FS_RESULT SYS_FS_FileStringPut
     See sys_fs.h for usage information.
 ***************************************************************************/
 
-/* MISRA C-2012 Rule 17.1 deviated:3 Deviation record ID -  H3_MISRAC_2012_R_17_1_DR_1 */
+/* MISRA C-2023 Rule 17.1 deviated:3 Deviation record ID -  H3_MISRAC_2023_R_17_1_DR_1 */
 SYS_FS_RESULT SYS_FS_FilePrintf
 (
     SYS_FS_HANDLE handle,

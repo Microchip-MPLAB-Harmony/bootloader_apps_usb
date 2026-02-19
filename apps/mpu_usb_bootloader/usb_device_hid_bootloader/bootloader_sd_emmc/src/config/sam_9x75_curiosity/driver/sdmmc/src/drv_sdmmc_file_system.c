@@ -54,7 +54,7 @@
 // *****************************************************************************
 // *****************************************************************************
 
-/* MISRA C-2012 Rule 11.1 deviated:5 Deviation record ID -  H3_MISRAC_2012_R_11_1_DR_1 */
+/* MISRA C-2023 Rule 11.1 deviated:5 Deviation record ID -  H3_MISRAC_2023_R_11_1_DR_1 */
 
 static const SYS_FS_MEDIA_FUNCTIONS sdmmcMediaFunctions =
 {

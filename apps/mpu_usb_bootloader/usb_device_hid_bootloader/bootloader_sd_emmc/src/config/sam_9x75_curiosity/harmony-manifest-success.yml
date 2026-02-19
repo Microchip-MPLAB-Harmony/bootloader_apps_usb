@@ -4,23 +4,23 @@
 
 
 project: usb_device_hid_bootloader_sd_emmc_sam9x75_curiosity
-creation_date: 2025-12-10T15:57:03.504+01:00[Europe/Paris]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
+creation_date: 2026-02-25T01:06:50.119+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
 operating_system: Windows 11
 mcc_mode: IDE            # [IDE|Standalone|Headless]
-mcc_version: v5.6.3
-mcc_core_version: v5.8.3
-mplabx_version: v6.25        # if MPLAB X plugin only
-harmony_version: v5.6.3
-compiler: XC32 4.60
+mcc_version: v5.6.4
+mcc_core_version: v5.8.4
+mplabx_version: v6.30        # if MPLAB X plugin only
+harmony_version: v5.6.4
+compiler: XC32 5.00
 
 modules:
-    - {name: "core", version: "v3.15.5"}
-    - {name: "csp", version: "v3.24.0"}
+    - {name: "core", version: "v3.16.0"}
+    - {name: "csp", version: "v3.25.1"}
     - {name: "filex", version: "v6.4.0_rel"}
-    - {name: "usb", version: "v3.16.0"}
-    - {name: "bootloader", version: "v3.8.0"}
+    - {name: "usb", version: "v3.14.0"}
+    - {name: "bootloader", version: "v3.9.0"}
     - {name: "littlefs", version: "v2.9.3"}
-    - {name: "bsp", version: "v3.23.0"}
+    - {name: "bsp", version: "v3.24.0"}
 
 packs:
     - {name: "SAM9X7_DFP", version: "1.9.170"}
