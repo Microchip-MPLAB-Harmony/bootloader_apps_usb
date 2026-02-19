@@ -1,5 +1,5 @@
 configVersion: 1.0.0
-coreVersion: 5.8.3
+coreVersion: 5.8.4
 spaHostVersion: 1.2.0
 device: SAMA7D65
 deviceLibrary: {}
@@ -29,11 +29,11 @@ generatedFileHashHistoryMap:
 - file: ..\src\config\sama7d65_curiosity\bootloader\bootloader_common.h
   hash: 07af21ba8be5e83599fc2e0ef3d70810bb22e451b504c6346fd6a58c105c86f8
 - file: ..\src\config\sama7d65_curiosity\bootloader\bootloader_storage.c
-  hash: 25112e601c58ad2f90e7d7ec37e884c9a6142f2cd6742357b215d8e2232a8893
+  hash: ae1cbfb1588430a153a7bb71b7d64f275f8dd648c9c59de887aaefa964b09d45
 - file: ..\src\config\sama7d65_curiosity\bootloader\bootloader_storage.h
   hash: 9768437df5d82f5cab7fb05d320c3763b59800e9aaa82f41ae5ed398f02af6cc
 - file: ..\src\config\sama7d65_curiosity\bootloader\bootloader_usb_device_hid.c
-  hash: f698731779be61d1d0d7399d9522db9a23977e7e56c8d583389d5fd7d6246a6e
+  hash: 9b868f28ee1fa9e1891219305250cc48a883e3a26493739f6db08c606c63cbb4
 - file: ..\src\config\sama7d65_curiosity\bootloader\bootloader_usb_device_hid.h
   hash: 7c160c6a890bff4c2e1a4c1b42367ba87ea743ad5c198849ae64618ef95e804b
 - file: ..\src\config\sama7d65_curiosity\bootloader\datastream\datastream.h
@@ -53,7 +53,7 @@ generatedFileHashHistoryMap:
 - file: ..\src\config\sama7d65_curiosity\definitions.h
   hash: 38a127f6acecafba48b143c6e86638bbd1cd01b20078d6ab4d03fce7cf7c1805
 - file: ..\src\config\sama7d65_curiosity\device.h
-  hash: 44f59b10d8978003d7779664b040a9f5523f441f0c98c4b365b60d122fd9f9e3
+  hash: 3cf585ea5382f313611833378511af83d16bda35f00a1500229496c745c51767
 - file: ..\src\config\sama7d65_curiosity\device_cache.h
   hash: ce94cf269fc251c24bb9e5a10bef856736681af405f0ac733e14610f9349cbfe
 - file: ..\src\config\sama7d65_curiosity\driver\driver.h
@@ -83,7 +83,7 @@ generatedFileHashHistoryMap:
 - file: ..\src\config\sama7d65_curiosity\fault_handlers.c
   hash: 931e951cf7431d3d70d6ab81bcd265ff0ac8b3f473b73cd7a541f59d49786b7c
 - file: ..\src\config\sama7d65_curiosity\initialization.c
-  hash: 92a4556d569f55ccacfd03b8c8e97795cd68e1663e8b81e52437488054a7b275
+  hash: ba917f293916bafa53b6bc3787cc304e27fac5476850e4b68e2ac96fa3f05fbf
 - file: ..\src\config\sama7d65_curiosity\interrupts.c
   hash: c9c0873f3df64c5c0f086d2b397390386fc60a6fc63c1e6cdb0129f8be7e6f65
 - file: ..\src\config\sama7d65_curiosity\interrupts.h
@@ -121,7 +121,7 @@ generatedFileHashHistoryMap:
 - file: ..\src\config\sama7d65_curiosity\peripheral\pio\plib_pio.h
   hash: 08ae670ddce2ea27db05f6fcf622345c8e26c95c2dbbf0e16f091495d7b316d6
 - file: ..\src\config\sama7d65_curiosity\peripheral\qspi\plib_qspi0.c
-  hash: a24d6251f30b9f323b4bab864ca21594a32543a2763c4200f54d0e9abd38baab
+  hash: 52b78739fdabd44e63ef813c0d48ac0d2cbe4f89971e115f38b087400c104229
 - file: ..\src\config\sama7d65_curiosity\peripheral\qspi\plib_qspi0.h
   hash: 141d0059781dea6a7f49ee710a0e92d76e92492b7fc3ccbdcb97fa69f3b0a2cc
 - file: ..\src\config\sama7d65_curiosity\peripheral\qspi\plib_qspi_common.h

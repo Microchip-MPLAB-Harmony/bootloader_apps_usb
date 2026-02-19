@@ -283,7 +283,7 @@ static void bootloader_ProcessBuffer( BOOTLOADER_DATA *handle )
         {
             /* Following MISRA-C rules are deviated in the below code block */
             /* MISRA C-2012 Rule 11.6 */
-           bootloader_Storage_Erase();
+            bootloader_Storage_Erase();
             /* MISRAC 2012 deviation block end */
             imageStartFlag = true;
             handle->currentState = BOOTLOADER_SEND_RESPONSE;

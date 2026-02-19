@@ -50,22 +50,8 @@
 
 #define APP_PARTITION_SIZE                      (0x100000) /* (1024 * 1024) */
 
-typedef enum
-{
-    /* Transfer being processed */
-    BTL_MEM_TRANSFER_BUSY,
-
-    /* Transfer is successfully completed */
-    BTL_MEM_TRANSFER_COMPLETED,
-
-    /* Transfer had error*/
-    BTL_MEM_TRANSFER_ERROR_UNKNOWN
-
-} BTL_MEM_TRANSFER_STATUS;
-/*
- * Magic value used to validate the metadata content
- */
-#define METADATA_MAGIC_VALUE    0x424F4F54u  /*"BOOT"*/
+// Magic value used to validate the metadata content "BOOT"
+#define METADATA_MAGIC_VALUE    0x424F4F54u
 
 /* metadata used to identify a valid application image */
 typedef struct
@@ -91,6 +77,18 @@ typedef struct
     uint32_t ExtLinAddress;
 } T_HEX_RECORD;
 
+typedef enum
+{
+    /* Transfer being processed */
+    BTL_MEM_TRANSFER_BUSY,
+
+    /* Transfer is successfully completed */
+    BTL_MEM_TRANSFER_COMPLETED,
+
+    /* Transfer had error*/
+    BTL_MEM_TRANSFER_ERROR_UNKNOWN
+
+} BTL_MEM_TRANSFER_STATUS;
 
 typedef struct
 {
@@ -170,18 +168,15 @@ void bootloader_ImageSizeSet(uint32_t size)
     btlData.extMemoryImageSize = size;
 }
 
+
 void bootloader_Storage_Read(void)
 {
     uint32_t readLen = 0U;
-    uint32_t imageSize;
+    uint32_t imageSize = 0xFFFFFFFFU;
     bool status = false;
 
-    status = DRV_SST26_Read(btlData.handle, fileBuffer, PAGE_SIZE, btlData.extMemoryMetaDataAddr);
-    if (status == true)
-    {
-        (void)bootloader_WaitForXferComplete();
-    }
-    status = false;
+    (void)DRV_SST26_Read(btlData.handle, fileBuffer, PAGE_SIZE, btlData.extMemoryMetaDataAddr);
+    (void)bootloader_WaitForXferComplete();
 
     BOOTLOADER_IMAGE_META_DATA *meta = (BOOTLOADER_IMAGE_META_DATA *)fileBuffer;
     if (meta->magic == METADATA_MAGIC_VALUE)
@@ -197,11 +192,8 @@ void bootloader_Storage_Read(void)
         do
         {
             status = DRV_SST26_Read(btlData.handle, fileBuffer, PAGE_SIZE, memoryAddr);
-            if (status == true)
-            {
-                (void)bootloader_WaitForXferComplete();
-            }
-            
+            (void)bootloader_WaitForXferComplete();
+
             (void)memcpy((uint8_t *)btlData.progAddr, fileBuffer, PAGE_SIZE);
 
             btlData.progAddr += PAGE_SIZE;
@@ -293,7 +285,7 @@ bool bootloader_Storage_CRC_Verify(uint32_t crc)
     return status;
 }
 
-  
+
 /*
  * Erase image application partition and metadata partition
  * Should be invoked from host target only via bootloader erase command
@@ -311,7 +303,7 @@ static void flush_page_if_dirty(uint32_t image_base_abs,
                                 uint8_t  *page_valid,
                                 uint8_t  *page_dirty)
 {
-    if (*page_valid && *page_dirty) 
+    if (*page_valid && *page_dirty)
     {
         const uint32_t addr = image_base_abs + *cur_page_base_off;
 
