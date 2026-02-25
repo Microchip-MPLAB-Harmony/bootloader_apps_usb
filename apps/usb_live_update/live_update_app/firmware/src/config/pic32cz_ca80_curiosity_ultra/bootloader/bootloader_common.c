@@ -73,8 +73,8 @@
 // *****************************************************************************
 // *****************************************************************************
 
-/* MISRA C-2012 Rule 8.6 and 5.8 deviated below. Deviation record ID -
-   H3_MISRAC_2012_R_8_6_DR_1, H3_MISRAC_2012_R_5_8_DR_1 */
+/* MISRA C-2023 Rule 8.6 and 5.8 deviated below. Deviation record ID -
+   H3_MISRAC_2023_R_8_6_DR_1, H3_MISRAC_2023_R_5_8_DR_1 */
 
 void __WEAK SYS_DeInitialize( void *data )
 {
@@ -90,8 +90,8 @@ uint16_t __WEAK bootloader_GetVersion( void )
 }
 
 
-/* MISRA C-2012 Rule 10.1, 10.4, 11.1, 11.6 deviated below. Deviation record ID -
-   H3_MISRAC_2012_R_10_1_DR_1, H3_MISRAC_2012_R_10_4_DR_1, H3_MISRAC_2012_R_11_1_DR_1 & H3_MISRAC_2012_R_11_6_DR_1 */
+/* MISRA C-2023 Rule 10.1, 10.4, 11.1, 11.6 deviated below. Deviation record ID -
+   H3_MISRAC_2023_R_10_1_DR_1, H3_MISRAC_2023_R_10_4_DR_1, H3_MISRAC_2023_R_11_1_DR_1 & H3_MISRAC_2023_R_11_6_DR_1 */
 
 
 /* Function to Generate CRC by reading the firmware programmed into internal flash */
@@ -155,7 +155,7 @@ void bootloader_UpdateFlashSerial(uint32_t serial, uint32_t addr)
     update_flash_serial.epilogue  = FLASH_SERIAL_EPILOGUE;
 
     while (FCW_IsBusy()) { /* Nothing to do */ }
-    
+
     FCW_PageErase( addr );
 
     (void)FCW_RowWrite((uint32_t *)&update_flash_serial, addr);
@@ -183,4 +183,4 @@ void bootloader_SwapAndReset( void )
     bootloader_TriggerReset();
 }
 
-/* MISRAC 2012 deviation block end */
+/* MISRAC 2023 deviation block end */

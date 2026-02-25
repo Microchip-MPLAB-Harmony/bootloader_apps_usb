@@ -49,8 +49,8 @@
 #include <stddef.h>
 #include <stdbool.h>
 #include <stdio.h>
-#include "peripheral/fcw/plib_fcw.h"
 #include "peripheral/sercom/usart/plib_sercom1_usart.h"
+#include "peripheral/fcw/plib_fcw.h"
 #include "peripheral/evsys/plib_evsys.h"
 #include "peripheral/port/plib_port.h"
 #include "peripheral/clock/plib_clock.h"
@@ -64,11 +64,11 @@
 #include "usb/usb_hid.h"
 #include "driver/usb/usbhs/drv_usbhs.h"
 #include "bsp/bsp.h"
-#include "peripheral/fcr/plib_fcr.h"
 #include "system/int/sys_int.h"
 #include "system/cache/sys_cache.h"
 #include "osal/osal.h"
 #include "system/debug/sys_debug.h"
+#include "peripheral/fcr/plib_fcr.h"
 #include "app.h"
 
 

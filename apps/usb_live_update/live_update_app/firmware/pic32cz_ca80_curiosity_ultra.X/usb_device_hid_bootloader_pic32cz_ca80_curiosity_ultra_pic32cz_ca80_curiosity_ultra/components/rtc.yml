@@ -1,0 +1,326 @@
+configVersion: 1.0.0
+componentName: rtc
+coreVersion: 5.8.4
+device: PIC32CZ8110CA80208
+library: []
+dependency:
+- dependencyPackage: class com.microchip.mcc.harmony.HarmonyModule
+  name: rtc
+  type: module
+  version: ''
+- dependencyPackage: ''
+  name: CMSIS_5
+  type: package
+  version: 5.9.0
+- dependencyPackage: ''
+  name: bootloader
+  type: package
+  version: v3.9.0
+- dependencyPackage: ''
+  name: bsp
+  type: package
+  version: v3.24.0
+- dependencyPackage: ''
+  name: core
+  type: package
+  version: v3.16.0
+- dependencyPackage: ''
+  name: csp
+  type: package
+  version: v3.25.1
+- dependencyPackage: ''
+  name: usb
+  type: package
+  version: v3.16.0
+customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
+data:
+  attachments:
+    children:
+    - children:
+      - attributes:
+          id: RTC_TMR
+        children:
+        - children:
+          - attributes:
+              id: targetComponentID
+            children:
+            - type: Value
+              value: sys_time
+            type: String
+          - attributes:
+              id: targetAttachmentID
+            children:
+            - type: Value
+              value: sys_time_TMR_dependency
+            type: String
+          type: Attributes
+        type: DirectCapability
+      type: Attachments
+    type: rtc
+  elementPosition:
+    attributes:
+      id: __ROOTVIEW
+    children:
+    - children:
+      - attributes:
+          id: rtc
+          x: '438'
+          y: '108'
+        type: ElementPosition
+      type: ElementPositions
+    type: ComponentGraph
+  symbols:
+    CALLBACK_API_NAME:
+      attributes:
+        id: CALLBACK_API_NAME
+      children:
+      - children:
+        - attributes:
+            id: rtc
+            value: RTC_Timer32CallbackRegister
+          type: Dynamic
+        type: Values
+      type: String
+    COMPARE_SET_API_NAME:
+      attributes:
+        id: COMPARE_SET_API_NAME
+      children:
+      - children:
+        - attributes:
+            id: rtc
+            value: RTC_Timer32Compare0Set
+          type: Dynamic
+        type: Values
+      type: String
+    COUNTER_GET_API_NAME:
+      attributes:
+        id: COUNTER_GET_API_NAME
+      children:
+      - children:
+        - attributes:
+            id: rtc
+            value: RTC_Timer32CounterGet
+          type: Dynamic
+        type: Values
+      type: String
+    FREQUENCY_GET_API_NAME:
+      attributes:
+        id: FREQUENCY_GET_API_NAME
+      children:
+      - children:
+        - attributes:
+            id: rtc
+            value: RTC_Timer32FrequencyGet
+          type: Dynamic
+        type: Values
+      type: String
+    IRQ_ENUM_NAME:
+      attributes:
+        id: IRQ_ENUM_NAME
+      children:
+      - children:
+        - attributes:
+            id: rtc
+            value: RTC_COMPARE_IRQn
+          type: Dynamic
+        type: Values
+      type: String
+    PERIOD_SET_API_NAME:
+      attributes:
+        id: PERIOD_SET_API_NAME
+      children:
+      - children:
+        - attributes:
+            id: rtc
+            value: ''
+          type: Dynamic
+        type: Values
+      type: String
+    RTC_MODE0_INTENSET:
+      attributes:
+        id: RTC_MODE0_INTENSET
+      children:
+      - children:
+        - attributes:
+            id: rtc
+            value: '256'
+          type: Dynamic
+        type: Values
+      type: Hex
+    RTC_MODE0_INTENSET_CMP0_ENABLE:
+      attributes:
+        id: RTC_MODE0_INTENSET_CMP0_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: rtc
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    RTC_MODE0_MATCHCLR:
+      attributes:
+        id: RTC_MODE0_MATCHCLR
+      children:
+      - children:
+        - attributes:
+            id: rtc
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    RTC_MODE0_TIMER_COMPARE0:
+      attributes:
+        id: RTC_MODE0_TIMER_COMPARE0
+      children:
+      - children:
+        - attributes:
+            id: rtc
+            value: '1'
+          type: Dynamic
+        type: Values
+      type: Hex
+    RTC_MODE1_COMPARE0_MATCH_VALUE:
+      attributes:
+        id: RTC_MODE1_COMPARE0_MATCH_VALUE
+      children:
+      - children:
+        - attributes:
+            id: rtc
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Hex
+    RTC_MODE1_INTENSET:
+      attributes:
+        id: RTC_MODE1_INTENSET
+      children:
+      - children:
+        - attributes:
+            id: rtc
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Hex
+    RTC_MODE1_INTENSET_CMP0_ENABLE:
+      attributes:
+        id: RTC_MODE1_INTENSET_CMP0_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: rtc
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    RTC_MODE1_INTENSET_OVF_ENABLE:
+      attributes:
+        id: RTC_MODE1_INTENSET_OVF_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: rtc
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    RTC_MODE1_TIMER_COUNTER_PERIOD:
+      attributes:
+        id: RTC_MODE1_TIMER_COUNTER_PERIOD
+      children:
+      - children:
+        - attributes:
+            id: rtc
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Hex
+    RTC_MODULE_SELECTION:
+      attributes:
+        id: RTC_MODULE_SELECTION
+      children:
+      - children:
+        - attributes:
+            id: rtc
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+    SYS_TIME_COMPONENT_ID:
+      attributes:
+        id: SYS_TIME_COMPONENT_ID
+      children:
+      - children:
+        - attributes:
+            id: rtc
+            value: sys_time
+          type: Dynamic
+        type: Values
+      type: String
+    SYS_TIME_PLIB_OPERATION_MODE:
+      attributes:
+        id: SYS_TIME_PLIB_OPERATION_MODE
+      children:
+      - children:
+        - attributes:
+            id: rtc
+            value: SYS_TIME_PLIB_MODE_PERIOD
+          type: Dynamic
+        type: Values
+      type: String
+    SYS_TIME_TICK_RATE_MS:
+      attributes:
+        id: SYS_TIME_TICK_RATE_MS
+      children:
+      - children:
+        - attributes:
+            id: rtc
+            value: '1.0'
+          type: Dynamic
+        type: Values
+      type: Float
+    TIMER_PERIOD_MAX:
+      attributes:
+        id: TIMER_PERIOD_MAX
+      children:
+      - children:
+        - attributes:
+            id: rtc
+            value: '0xFFFFFFFF'
+          type: Dynamic
+        type: Values
+      type: String
+    TIMER_START_API_NAME:
+      attributes:
+        id: TIMER_START_API_NAME
+      children:
+      - children:
+        - attributes:
+            id: rtc
+            value: RTC_Timer32Start
+          type: Dynamic
+        type: Values
+      type: String
+    TIMER_STOP_API_NAME:
+      attributes:
+        id: TIMER_STOP_API_NAME
+      children:
+      - children:
+        - attributes:
+            id: rtc
+            value: RTC_Timer32Stop
+          type: Dynamic
+        type: Values
+      type: String
+    TIMER_WIDTH:
+      attributes:
+        id: TIMER_WIDTH
+      children:
+      - children:
+        - attributes:
+            id: rtc
+            value: '32'
+          type: Dynamic
+        type: Values
+      type: Integer
+  userData: {}

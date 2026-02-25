@@ -1,0 +1,171 @@
+configVersion: 1.0.0
+componentName: usb_device_0
+coreVersion: 5.8.4
+device: PIC32CZ8110CA80208
+library: []
+dependency:
+- dependencyPackage: class com.microchip.mcc.harmony.HarmonyModule
+  name: usb_device_0
+  type: module
+  version: ''
+- dependencyPackage: ''
+  name: CMSIS_5
+  type: package
+  version: 5.9.0
+- dependencyPackage: ''
+  name: bootloader
+  type: package
+  version: v3.9.0
+- dependencyPackage: ''
+  name: bsp
+  type: package
+  version: v3.24.0
+- dependencyPackage: ''
+  name: core
+  type: package
+  version: v3.16.0
+- dependencyPackage: ''
+  name: csp
+  type: package
+  version: v3.25.1
+- dependencyPackage: ''
+  name: usb
+  type: package
+  version: v3.16.0
+customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
+data:
+  attachments:
+    children:
+    - children:
+      - attributes:
+          id: usb_driver_dependency
+        children:
+        - children:
+          - attributes:
+              id: targetComponentID
+            children:
+            - type: Value
+              value: drv_usbhs_index_0
+            type: String
+          - attributes:
+              id: targetAttachmentID
+            children:
+            - type: Value
+              value: DRV_USB
+            type: String
+          type: Attributes
+        type: DirectDependency
+      type: Attachments
+    type: usb_device_0
+  elementPosition: {}
+  symbols:
+    CONFIG_USB_DEVICE_CONFIG_DESCRPTR_SIZE:
+      attributes:
+        id: CONFIG_USB_DEVICE_CONFIG_DESCRPTR_SIZE
+      children:
+      - children:
+        - attributes:
+            id: usb_device_0
+            value: '41'
+          type: Dynamic
+        type: Values
+      type: Integer
+    CONFIG_USB_DEVICE_ENDPOINTS_NUMBER:
+      attributes:
+        id: CONFIG_USB_DEVICE_ENDPOINTS_NUMBER
+      children:
+      - children:
+        - attributes:
+            id: usb_device_0
+            value: '1'
+          type: Dynamic
+        type: Values
+      type: Integer
+    CONFIG_USB_DEVICE_FUNCTIONS_NUMBER:
+      attributes:
+        id: CONFIG_USB_DEVICE_FUNCTIONS_NUMBER
+      children:
+      - children:
+        - attributes:
+            id: usb_device_0
+            value: '1'
+          type: Dynamic
+        type: Values
+      type: Integer
+    CONFIG_USB_DEVICE_INTERFACES_NUMBER:
+      attributes:
+        id: CONFIG_USB_DEVICE_INTERFACES_NUMBER
+      children:
+      - children:
+        - attributes:
+            id: usb_device_0
+            value: '1'
+          type: Dynamic
+        type: Values
+      type: Integer
+    CONFIG_USB_DEVICE_MSD_DISK_IMAGE:
+      attributes:
+        id: CONFIG_USB_DEVICE_MSD_DISK_IMAGE
+      children:
+      - children:
+        - attributes:
+            id: usb_device_0
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    CONFIG_USB_DEVICE_PRODUCT_ID_IDX0:
+      attributes:
+        id: CONFIG_USB_DEVICE_PRODUCT_ID_IDX0
+      children:
+      - children:
+        - attributes:
+            id: usb_device_0
+            value: '0x003C'
+          type: Dynamic
+        type: Values
+      type: String
+    CONFIG_USB_DEVICE_PRODUCT_ID_SELECTION_IDX0:
+      attributes:
+        id: CONFIG_USB_DEVICE_PRODUCT_ID_SELECTION_IDX0
+      children:
+      - children:
+        - attributes:
+            value: usb_device_hid_bootloader
+          type: User
+        type: Values
+      type: Combo
+    CONFIG_USB_DEVICE_PRODUCT_STRING_DESCRIPTOR:
+      attributes:
+        id: CONFIG_USB_DEVICE_PRODUCT_STRING_DESCRIPTOR
+      children:
+      - children:
+        - attributes:
+            id: usb_device_0
+            value: USB HID Bootloader
+          type: Dynamic
+        type: Values
+      type: String
+    CONFIG_USB_DEVICE_SPEED:
+      attributes:
+        id: CONFIG_USB_DEVICE_SPEED
+      children:
+      - children:
+        - attributes:
+            id: usb_device_0
+            value: High Speed
+          type: Dynamic
+        type: Values
+      type: String
+    USB_DEVICE_INDEX:
+      attributes:
+        id: USB_DEVICE_INDEX
+      children:
+      - children:
+        - attributes:
+            id: usb_device_0
+            value: DRV_USBHS_INDEX_0
+          type: Dynamic
+        type: Values
+      type: String
+  userData: {}

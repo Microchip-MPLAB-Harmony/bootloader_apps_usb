@@ -163,8 +163,8 @@ static uint32_t bootloader_CalculateCrc(uint8_t *data, uint32_t len)
     return ((uint32_t)crc & 0xFFFFU);
 }
 
-/* MISRA C-2012 Rule 16.1, 16.3 deviated below. Deviation record ID -
-   H3_MISRAC_2012_R_16_1_DR_1 & H3_MISRAC_2012_R_16_3_DR_1*/
+/* MISRA C-2023 Rule 16.1, 16.3 deviated below. Deviation record ID -
+   H3_MISRAC_2023_R_16_1_DR_1 & H3_MISRAC_2023_R_16_3_DR_1*/
 
 static void bootloader_BufferEventHandler
 (
@@ -236,7 +236,7 @@ static void bootloader_BufferEventHandler
     /* We don't have a complete command yet. Continue reading. */
     (void) DATASTREAM_Data_Read(btlData.streamHandle, dataBuff.buffers.inputBuff, btlData.buffSize);
 }
-/* MISRAC 2012 deviation block end */
+/* MISRAC 2023 deviation block end */
 
 static void bootloader_ProcessBuffer( BOOTLOADER_DATA *handle )
 {
@@ -326,6 +326,7 @@ void bootloader_USB_DEVICE_HID_Tasks( void )
 
     switch ( btlData.currentState )
     {
+
         case BOOTLOADER_OPEN_DATASTREAM:
         {
             btlData.streamHandle = DATASTREAM_HANDLE_INVALID;
@@ -337,6 +338,7 @@ void bootloader_USB_DEVICE_HID_Tasks( void )
                 DATASTREAM_BufferEventHandlerSet(btlData.streamHandle,
                         bootloader_BufferEventHandler, APP_USR_CONTEXT);
 
+                btlData.prevState = btlData.currentState;
                 btlData.currentState = BOOTLOADER_GET_COMMAND;
             }
             break;

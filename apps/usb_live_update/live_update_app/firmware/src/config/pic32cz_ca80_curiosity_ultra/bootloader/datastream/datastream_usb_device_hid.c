@@ -264,8 +264,8 @@ int DATASTREAM_Data_Write(DATASTREAM_HANDLE handle, uint8_t *buffer, const uint3
     return(0);
 }
 
-/* MISRA C-2012 Rule 11.1, 11.8 deviated below. Deviation record ID -  
-   H3_MISRAC_2012_R_11_1_DR_1 & H3_MISRAC_2012_R_11_8_DR_1*/
+/* MISRA C-2023 Rule 11.1, 11.8 deviated below. Deviation record ID -  
+   H3_MISRAC_2023_R_11_1_DR_1 & H3_MISRAC_2023_R_11_8_DR_1*/
 
 void DATASTREAM_BufferEventHandlerSet
 (
@@ -278,4 +278,4 @@ void DATASTREAM_BufferEventHandlerSet
     usbHIDData.context = context;
 }
 
-/* MISRAC 2012 deviation block end */
+/* MISRAC 2023 deviation block end */
