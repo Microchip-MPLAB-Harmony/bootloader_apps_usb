@@ -686,7 +686,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: '8390'
+            value: '68'
           type: Dynamic
         type: Values
       type: Hex
@@ -697,7 +697,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: '8384'
+            value: '64'
           type: Dynamic
         type: Values
       type: Hex
@@ -719,7 +719,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: '7'
+            value: '5'
           type: Dynamic
         type: Values
       type: Hex
@@ -1180,6 +1180,126 @@ data:
           type: User
         type: Values
       type: Boolean
+    BSP_PIN_72_MODE:
+      attributes:
+        id: BSP_PIN_72_MODE
+      children:
+      - children:
+        - attributes:
+            value: DIGITAL
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_72_FUNCTION_TYPE:
+      attributes:
+        id: BSP_PIN_72_FUNCTION_TYPE
+      children:
+      - children:
+        - attributes:
+            value: GPIO
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_72_FUNCTION_NAME:
+      attributes:
+        id: BSP_PIN_72_FUNCTION_NAME
+      children:
+      - children:
+        - attributes:
+            value: LED1
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_72_DIR:
+      attributes:
+        id: BSP_PIN_72_DIR
+      children:
+      - children:
+        - attributes:
+            value: Out
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_83_MODE:
+      attributes:
+        id: BSP_PIN_83_MODE
+      children:
+      - children:
+        - attributes:
+            value: DIGITAL
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_83_FUNCTION_TYPE:
+      attributes:
+        id: BSP_PIN_83_FUNCTION_TYPE
+      children:
+      - children:
+        - attributes:
+            value: GPIO
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_83_FUNCTION_NAME:
+      attributes:
+        id: BSP_PIN_83_FUNCTION_NAME
+      children:
+      - children:
+        - attributes:
+            value: SWITCH1
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_83_PU:
+      attributes:
+        id: BSP_PIN_83_PU
+      children:
+      - children:
+        - attributes:
+            value: 'True'
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_77_MODE:
+      attributes:
+        id: BSP_PIN_77_MODE
+      children:
+      - children:
+        - attributes:
+            value: DIGITAL
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_77_FUNCTION_TYPE:
+      attributes:
+        id: BSP_PIN_77_FUNCTION_TYPE
+      children:
+      - children:
+        - attributes:
+            value: GPIO
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_77_FUNCTION_NAME:
+      attributes:
+        id: BSP_PIN_77_FUNCTION_NAME
+      children:
+      - children:
+        - attributes:
+            value: LED3
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_77_DIR:
+      attributes:
+        id: BSP_PIN_77_DIR
+      children:
+      - children:
+        - attributes:
+            value: Out
+          type: User
+        type: Values
+      type: String
   userData:
     children:
     - attributes:

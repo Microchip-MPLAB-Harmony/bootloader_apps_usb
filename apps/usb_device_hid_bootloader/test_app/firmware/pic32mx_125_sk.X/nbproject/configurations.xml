@@ -17,7 +17,6 @@
             </logicalFolder>
             <logicalFolder name="f5" displayName="uart" projectFiles="true">
             </logicalFolder>
-            <itemPath>../src/config/pic32mx_125_sk/bsp/bsp.h</itemPath>
           </logicalFolder>
           <logicalFolder name="f2" displayName="peripheral" projectFiles="true">
             <logicalFolder name="f1" displayName="clk" projectFiles="true">
@@ -86,9 +85,6 @@
                    projectFiles="true">
       <logicalFolder name="f1" displayName="config" projectFiles="true">
         <logicalFolder name="f1" displayName="pic32mx_125_sk" projectFiles="true">
-          <logicalFolder name="bsp" displayName="bsp" projectFiles="true">
-            <itemPath>../src/config/pic32mx_125_sk/bsp/bsp.c</itemPath>
-          </logicalFolder>
           <logicalFolder name="f2" displayName="peripheral" projectFiles="true">
             <logicalFolder name="f1" displayName="clk" projectFiles="true">
               <itemPath>../src/config/pic32mx_125_sk/peripheral/clk/plib_clk.c</itemPath>

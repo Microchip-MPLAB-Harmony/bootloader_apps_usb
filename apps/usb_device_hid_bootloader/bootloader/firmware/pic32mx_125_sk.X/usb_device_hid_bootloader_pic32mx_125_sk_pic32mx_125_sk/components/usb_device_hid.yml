@@ -1,0 +1,32 @@
+configVersion: 1.0.0
+componentName: usb_device_hid
+coreVersion: 5.8.4
+device: PIC32MX570F512L
+library: []
+dependency:
+- dependencyPackage: class com.microchip.mcc.harmony.HarmonyModule
+  name: usb_device_hid
+  type: module
+  version: ''
+- dependencyPackage: ''
+  devMode: true
+  name: usb
+  type: package
+  version: v3.14.0
+customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
+data:
+  attachments: {}
+  elementPosition:
+    attributes:
+      id: __ROOTVIEW
+    children:
+    - children:
+      - attributes:
+          id: usb_device_hid
+          x: '169'
+          y: '175'
+        type: ElementPosition
+      type: ElementPositions
+    type: ComponentGraph
+  symbols: {}
+  userData: {}

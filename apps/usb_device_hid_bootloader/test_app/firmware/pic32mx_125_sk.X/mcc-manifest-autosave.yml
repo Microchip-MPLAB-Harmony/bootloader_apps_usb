@@ -2,7 +2,7 @@
 
 manifest_file_version: 1.0.0
 project: usb_device_hid_bootloader_test_app_pic32mx_125_sk
-creation_date: 2026-02-26T18:05:23.091+05:30[Asia/Calcutta]
+creation_date: 2026-02-26T18:23:43.346+05:30[Asia/Calcutta]
 operating_system: Windows 11
 mcc_mode: IDE
 mcc_mode_version: v6.30
@@ -20,4 +20,3 @@ packs: {name: PIC32MX_DFP, version: 1.6.369}
 modules:
 - {name: csp, type: HARMONY, version: v3.22.5}
 - {name: core, type: HARMONY, version: v3.15.2}
-- {name: bsp, type: HARMONY, version: v3.24.0}

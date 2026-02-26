@@ -6,7 +6,6 @@ deviceLibrary:
   className: com.microchip.mcc.harmony.Harmony3Library
 groupModules: []
 modules:
-- BSP_PIC32MX1/2/5_Starter_Kit
 - HarmonyCore
 - core
 - core_timer
@@ -18,20 +17,16 @@ generatedFileHashHistoryMap:
   hash: 632c78c323cb9f8c6359f20337440c08f8461eb4b0304552b6a3cfd5c4052620
 - file: ..\src\app.h
   hash: 8e35d8509552a4d1d6e6f123ad75694cf784a707f7dac592ed33b55121aa8e28
-- file: ..\src\config\pic32mx_125_sk\bsp\bsp.c
-  hash: 9359a3559e2ada22752465e4d372cd65f481e1875cd14b827c88a323e5ea36d0
-- file: ..\src\config\pic32mx_125_sk\bsp\bsp.h
-  hash: aa648dccd27235b0b8f629fcdca615772bd437a6e0684cc65cfc4f73042af1a2
 - file: ..\src\config\pic32mx_125_sk\configuration.h
   hash: 321175fed312776d5e0da9d63da1fca0673933ab0298c1d9a4aeb32cf5873639
 - file: ..\src\config\pic32mx_125_sk\definitions.h
-  hash: 72b3392ab5db856422047dbd5d6c2a1b04190692a7cc08adf953dad98e0bd875
+  hash: 8845fb0a91f12bcc4ffd12d64f3fade00ee6cc160eb95635271131c54af89aca
 - file: ..\src\config\pic32mx_125_sk\device.h
   hash: 4d4341a6f9628cea0bf73f980b639f7cb81089e55a60ad7e434be2a71e477442
 - file: ..\src\config\pic32mx_125_sk\exceptions.c
   hash: ed8f326d4f1abc2e74c1743119304a2f613522e3baacdd8df59fdda14c44619e
 - file: ..\src\config\pic32mx_125_sk\initialization.c
-  hash: c3a19592bc1c9270919b893ad5617d6152e91a514b937723d971e4eeadd7d27f
+  hash: 02ad9658ec45d5624eb67545577ee34791d83f6b521cf9a6b4529a11ca9e9924
 - file: ..\src\config\pic32mx_125_sk\interrupts.c
   hash: 17531324e15a4a2330a352ac375a66c2188da090d7bd5799ab15f95ade978e58
 - file: ..\src\config\pic32mx_125_sk\interrupts.h
@@ -49,9 +44,9 @@ generatedFileHashHistoryMap:
 - file: ..\src\config\pic32mx_125_sk\peripheral\evic\plib_evic.h
   hash: 00192bd3be0120d35b9bd048719f808dd96c5523a5f6f5cf78a9c0fc0770ab1b
 - file: ..\src\config\pic32mx_125_sk\peripheral\gpio\plib_gpio.c
-  hash: 624050d18806b5085fd493833e7c012b03da7895f823fc62303e732f9634b848
+  hash: 56df539af22108f5958c06d807290810cde4f5351e2caa18a9fc5102472595fa
 - file: ..\src\config\pic32mx_125_sk\peripheral\gpio\plib_gpio.h
-  hash: a8c343c1d81647387bcc225aa2e6879e780dc9017c2df5bd9475ac334173756c
+  hash: 58b3eafec97de2f2915ee3eee86f3dc9e1f819da903cb6a3293372d0320a4176
 - file: ..\src\config\pic32mx_125_sk\peripheral\uart\plib_uart2.c
   hash: f544e627da4f9e0530226de80b52b935685430f64c79cfc25dbd4a744b91a1e8
 - file: ..\src\config\pic32mx_125_sk\peripheral\uart\plib_uart2.h

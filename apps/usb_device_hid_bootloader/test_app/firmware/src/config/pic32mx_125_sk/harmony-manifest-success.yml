@@ -4,7 +4,7 @@
 
 
 project: usb_device_hid_bootloader_test_app_pic32mx_125_sk
-creation_date: 2026-02-26T18:05:08.435+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
+creation_date: 2026-02-26T18:23:23.203+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
 operating_system: Windows 11
 mcc_mode: IDE            # [IDE|Standalone|Headless]
 mcc_version: v5.6.4
@@ -16,7 +16,6 @@ compiler: XC32 4.60
 modules:
     - {name: "csp", version: "v3.22.5"}
     - {name: "core", version: "v3.15.2"}
-    - {name: "bsp", version: "v3.24.0"}
 
 packs:
     - {name: "PIC32MX_DFP", version: "1.6.369"}

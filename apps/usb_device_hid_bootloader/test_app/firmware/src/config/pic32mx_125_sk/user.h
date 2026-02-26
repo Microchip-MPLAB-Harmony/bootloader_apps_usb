@@ -43,8 +43,7 @@
 
 #ifndef USER_H
 #define USER_H
-
-#include "bsp/bsp.h"
+#include "peripheral/gpio/plib_gpio.h"
 #include "sys/kmem.h"
 
 // DOM-IGNORE-BEGIN
@@ -60,12 +59,12 @@ extern "C" {
 // Section: User Configuration macros
 // *****************************************************************************
 // *****************************************************************************
-#define LED_ON()        LED3_On()
-#define LED_OFF()       LED3_Off()
+#define LED_ON()        LED3_Set()
+#define LED_OFF()       LED3_Clear()
 #define LED_TOGGLE()    LED3_Toggle()
 
 #define SWITCH_GET()    SWITCH1_Get()
-#define SWITCH_PRESSED  SWITCH1_STATE_PRESSED
+#define SWITCH_PRESSED  0U
     
 #define APP_TIMER_START     CORETIMER_Start
 #define APP_TIMER_DelayMs   CORETIMER_DelayMs
